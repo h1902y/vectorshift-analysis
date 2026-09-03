@@ -484,7 +484,15 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                     {msg.role === 'assistant' ? (
                       <>
                         {/* Live Observable Execution Trace */}
-                        {msg.trace && <AgentTraceView trace={msg.trace} />}
+                        {msg.trace && (
+                          <AgentTraceView 
+                            trace={msg.trace} 
+                            onInspectSchema={(sName) => {
+                              if (sName) setSelectedSchemaKey(sName);
+                              setActiveDialogTab('schemas');
+                            }} 
+                          />
+                        )}
 
                         {/* Markdown Formatted Content */}
                         <AgentMarkdown

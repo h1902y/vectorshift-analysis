@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, CheckCircle, Clock, Database, Sparkles, Cpu, Wrench, ShieldCheck } from 'lucide-react';
 
-export function AgentTraceView({ trace }) {
+export function AgentTraceView({ trace, onInspectSchema }) {
   const [expanded, setExpanded] = useState(true);
   const [inspectedStep, setInspectedStep] = useState(null);
 
@@ -83,8 +83,20 @@ export function AgentTraceView({ trace }) {
               {/* Expandable Step Payload Inspector */}
               {inspectedStep === step.step_id && (
                 <div className="trace-payload-drawer" onClick={e => e.stopPropagation()}>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--ink-muted)', marginBottom: '0.3rem' }}>
-                    Strict Pydantic Validated Payload &middot; Step ID: {step.step_id}
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.3rem' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--ink-muted)' }}>
+                      Strict Pydantic Validated Payload &middot; Step ID: {step.step_id}
+                    </span>
+                    {onInspectSchema && (
+                      <button
+                        type="button"
+                        onClick={() => onInspectSchema('TraceStep')}
+                        style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-mono)', fontSize: '0.62rem', fontWeight: 700, color: 'var(--accent-crimson)', textDecoration: 'underline', padding: 0 }}
+                        title="Open in Schemas Tab"
+                      >
+                        View Schema in Tab &rarr;
+                      </button>
+                    )}
                   </div>
                   <pre className="trace-payload-json">
                     <code>{JSON.stringify(step.payload, null, 2)}</code>

@@ -94,12 +94,15 @@ function FormattedParagraph({ text, onNavigate }) {
         }
 
         // Bullet lists
-        if (trimmed.split('\n').every(line => line.trim().startsWith('• ') || line.trim().startsWith('- ') || line.trim().startsWith('* ') || /^\d+\.\s/.test(line.trim()))) {
-          const items = trimmed.split('\n').filter(l => l.trim().length > 0);
+        const rawLines = trimmed.split('\n');
+        const nonDanglingLines = rawLines.filter(l => !/^[•\-*]\s*$/.test(l.trim()));
+
+        if (nonDanglingLines.length > 0 && nonDanglingLines.every(line => line.trim().startsWith('• ') || line.trim().startsWith('- ') || line.trim().startsWith('* ') || /^\d+\.\s/.test(line.trim()))) {
           return (
             <ul key={pIdx} className="agent-md-list">
-              {items.map((item, iIdx) => {
-                const cleanItem = item.replace(/^[•\-*]\s+/, '').replace(/^\d+\.\s+/, '');
+              {nonDanglingLines.map((item, iIdx) => {
+                const cleanItem = item.replace(/^[•\-*]\s+/, '').replace(/^\d+\.\s+/, '').trim();
+                if (!cleanItem) return null;
                 return (
                   <li key={iIdx} className="agent-md-list-item">
                     <span className="agent-md-bullet">›</span>
@@ -121,16 +124,27 @@ function FormattedParagraph({ text, onNavigate }) {
         }
 
         // Standard Paragraph
-        const lines = trimmed.split('\n');
         return (
-          <p key={pIdx} className="agent-md-p">
-            {lines.map((line, lIdx) => (
-              <React.Fragment key={lIdx}>
-                {renderInlineMarkdown(line, onNavigate)}
-                {lIdx < lines.length - 1 && <br />}
-              </React.Fragment>
-            ))}
-          </p>
+          <div key={pIdx} className="agent-md-p">
+            {nonDanglingLines.map((line, lIdx) => {
+              const isBullet = /^[•\-*]\s+/.test(line.trim());
+              if (isBullet) {
+                const cleanItem = line.trim().replace(/^[•\-*]\s+/, '').trim();
+                if (!cleanItem) return null;
+                return (
+                  <div key={lIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.4rem', margin: '0.2rem 0' }}>
+                    <span className="agent-md-bullet">›</span>
+                    <span>{renderInlineMarkdown(cleanItem, onNavigate)}</span>
+                  </div>
+                );
+              }
+              return (
+                <div key={lIdx} style={{ marginBottom: lIdx < nonDanglingLines.length - 1 ? '0.25rem' : 0 }}>
+                  {renderInlineMarkdown(line, onNavigate)}
+                </div>
+              );
+            })}
+          </div>
         );
       })}
     </>
