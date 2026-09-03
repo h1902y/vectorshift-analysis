@@ -424,6 +424,18 @@ section[id] {
   }
 }
 
+/* Article Subtitle / Deck */
+.story-subtitle {
+  font-family: var(--font-serif-headline);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+  margin-top: -0.2rem;
+  margin-bottom: 1.6rem;
+  max-width: 920px;
+}
+
 /* 2-Column Story Grid (Left Graphic, Right Drop Cap Text) */
 .story-grid-2col {
   display: grid;

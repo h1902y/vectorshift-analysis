@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function NewspaperSection({ id, kicker, byline, headline, children, isLast = false }) {
+export function NewspaperSection({ id, kicker, byline, headline, subtitle, children, isLast = false }) {
   return (
     <article 
       id={id} 
@@ -20,9 +20,15 @@ export function NewspaperSection({ id, kicker, byline, headline, children, isLas
       )}
 
       {headline && (
-        <h2 className="story-headline">
+        <h2 className="story-headline" style={subtitle ? { marginBottom: '0.6rem' } : {}}>
           {headline}
         </h2>
+      )}
+
+      {subtitle && (
+        <div className="story-subtitle">
+          {subtitle}
+        </div>
       )}
 
       {children}

@@ -8,7 +8,9 @@ export function FrontPageStory() {
     <NewspaperSection
       id="lead"
       kicker="TOP STORY &middot; THE STRATEGIC THESIS (TASK 2)"
+      byline="ENTERPRISE ARCHITECTURE &middot; FORWARD-DEPLOYED OPERATOR &middot; PACKAGING LAYER MOAT"
       headline="The Forward-Deployed Operator: Why Private Equity cannot buy consumer chatbots"
+      subtitle="How VectorShift's dual-surface architecture bridges the operational divide between visual DAG builders and executive deal teams."
     >
       <div className="story-grid-2col">
         {/* Left Graphic Box: Persona Triangulation */}
