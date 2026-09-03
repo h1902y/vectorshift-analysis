@@ -3350,6 +3350,58 @@ section[id] {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Minimal Clean Header Tabs & Icon Buttons (Zero Pill Clutter) */
+.omnichat-clean-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.16rem 0.22rem;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.omnichat-clean-tab {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.68);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.22rem 0.6rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.omnichat-clean-tab:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.omnichat-clean-tab.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.omnichat-icon-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.35rem;
+  cursor: pointer;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.omnichat-icon-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
 /* Schema Inspector Tab View */
 .schema-inspector-tab-view {
   display: flex;
@@ -3584,13 +3636,20 @@ section[id] {
 .screen-thumb-container {
   position: relative;
   flex-shrink: 0;
-  width: 96px;
-  height: 60px;
-  border-radius: 3px;
+  width: 130px;
+  height: 84px;
+  border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--ink-rule-subtle);
   cursor: pointer;
-  background: #000;
+  background: #0f172a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.screen-thumb-container:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  border-color: var(--accent-burgundy);
 }
 
 .evidence-screen-thumb {
@@ -3817,3 +3876,76 @@ section[id] {
   letter-spacing: 0.04em;
   padding: 0 0.65rem;
 }
+
+/* ========================================================================= */
+/* ACT INQUIRY & OPINIONATED VERDICT CALLOUT BOXES                           */
+/* ========================================================================= */
+
+.act-inquiry-box {
+  background: var(--paper-surface-alt);
+  border: 1px solid var(--ink-rule-subtle);
+  border-left: 4px solid var(--accent-burgundy);
+  border-radius: 4px;
+  padding: 1.15rem 1.35rem;
+  margin: 1.25rem 0 1.85rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.act-inquiry-row {
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px dashed var(--ink-rule-subtle);
+}
+
+.act-inquiry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-burgundy);
+  margin-bottom: 0.35rem;
+}
+
+.act-inquiry-question {
+  font-family: var(--font-serif-headline);
+  font-size: 1.08rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.45;
+}
+
+.act-opinion-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.act-opinion-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-emerald);
+}
+
+.act-opinion-text {
+  font-family: var(--font-serif-body);
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+}
+
+.act-opinion-text strong {
+  color: var(--ink-primary);
+  font-weight: 700;
+}
+

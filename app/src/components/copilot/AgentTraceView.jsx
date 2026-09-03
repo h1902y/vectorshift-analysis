@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, CheckCircle, Clock, Database, Sparkles, Cpu, Wrench, ShieldCheck } from 'lucide-react';
+import { ChevronDown, ChevronUp, Database, Sparkles, Cpu, Wrench, ShieldCheck } from 'lucide-react';
 
 export function AgentTraceView({ trace, onInspectSchema }) {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
   const [inspectedStep, setInspectedStep] = useState(null);
 
   if (!trace || !trace.steps || trace.steps.length === 0) return null;
@@ -32,26 +32,20 @@ export function AgentTraceView({ trace, onInspectSchema }) {
       <div 
         className="agent-trace-header"
         onClick={() => setExpanded(prev => !prev)}
+        style={{ cursor: 'pointer', padding: '0.38rem 0.65rem' }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <span className="telemetry-dot-pulse green" />
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.08em', color: 'var(--ink-primary)' }}>
-            OBSERVABLE EXECUTION TRACE &middot; {trace.steps.length} STEPS
-          </span>
-          <span className="pydantic-validation-pill">
-            <CheckCircle size={10} />
-            <span>Pydantic V2 Validated</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+          <span className="telemetry-dot-pulse green" style={{ width: 6, height: 6 }} />
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 600, color: 'var(--ink-secondary)' }}>
+            Verified across {trace.steps.length} execution steps ({trace.total_elapsed_ms}ms)
           </span>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--ink-muted)' }}>
-            <Clock size={11} style={{ display: 'inline', marginRight: '0.2rem' }} />
-            {trace.total_elapsed_ms}ms
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--accent-burgundy)', fontWeight: 700 }}>
+            {expanded ? 'Hide Trace' : 'Inspect Trace'}
           </span>
-          <button style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--ink-muted)' }}>
-            {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-          </button>
+          {expanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
         </div>
       </div>
 

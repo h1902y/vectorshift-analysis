@@ -6,12 +6,10 @@ import {
   ArrowRight,
   RefreshCw,
   X,
-  ShieldCheck,
   Cpu
 } from 'lucide-react';
 import { ROTATING_PROMPTS, POPOVER_CATEGORIES, PREDEFINED_JOURNEYS } from '../../data/agentKnowledgeBase';
 import { PydanticAgentRuntime } from '../../lib/agent/pydanticAgentRuntime';
-import { SubsystemTelemetryBar } from './SubsystemTelemetryBar';
 import { AgentTraceView } from './AgentTraceView';
 import { AgentMarkdown } from './AgentMarkdown';
 import { SchemaInspectorView } from './SchemaInspectorView';
@@ -30,7 +28,6 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [activeOptions, setActiveOptions] = useState([]);
-  const [activeSubsystem, setActiveSubsystem] = useState(null);
   const [toolToast, setToolToast] = useState(null);
 
   const containerRef = useRef(null);
@@ -362,71 +359,59 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
         >
           <div className="omnichat-modal-container" onClick={e => e.stopPropagation()}>
             {/* Header Ribbon */}
-            <div className="omnichat-modal-header">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <span className="telemetry-dot-pulse green" />
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.64rem', textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--paper-surface-alt)', opacity: 0.9 }}>
-                    THE VECTORSHIFT DIFF &middot; AUTONOMOUS AGENT
-                  </span>
-                </div>
-                <div style={{ fontFamily: 'var(--font-sans)', fontSize: '1.2rem', fontWeight: 900, color: '#ffffff', letterSpacing: '-0.01em' }}>
-                  Observable Autonomous Agent
-                </div>
-              </div>
-
-              {/* In-Dialog Tabbed Navigation */}
-              <div className="omnichat-header-tab-bar">
-                <button
-                  type="button"
-                  className={`omnichat-header-tab-btn ${activeDialogTab === 'chat' ? 'active' : ''}`}
-                  onClick={() => setActiveDialogTab('chat')}
-                >
-                  <Sparkles size={12} />
-                  <span>Chat &amp; Execution</span>
-                </button>
-
-                <button
-                  type="button"
-                  className={`omnichat-header-tab-btn ${activeDialogTab === 'schemas' ? 'active' : ''}`}
-                  onClick={() => setActiveDialogTab('schemas')}
-                >
-                  <ShieldCheck size={12} style={{ color: 'var(--accent-gold)' }} />
-                  <span>Schemas &amp; MCP (8)</span>
-                </button>
-              </div>
-
-              {/* Header Action Buttons */}
+            <div className="omnichat-modal-header" style={{ padding: '0.75rem 1.2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <button
-                  type="button"
-                  onClick={handleReset}
-                  className="omnichat-header-action-btn"
-                  title="Reset conversation"
-                >
-                  <RefreshCw size={12} />
-                  <span>Reset</span>
-                </button>
+                <span className="telemetry-dot-pulse green" />
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.82rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em' }}>
+                  AGENT
+                </span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.35)', fontSize: '0.75rem' }}>&middot;</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.72rem', fontFamily: 'var(--font-sans)', fontWeight: 500 }}>
+                  Architecture Oracle
+                </span>
+              </div>
 
-                <button
-                  type="button"
-                  onClick={() => setIsOpen(false)}
-                  className="omnichat-header-close-btn"
-                  title="Close Drawer"
-                >
-                  <X size={16} />
-                </button>
+              {/* Minimal Clean Tabs & Actions (Zero Pill Noise) */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <div className="omnichat-clean-tabs">
+                  <button
+                    type="button"
+                    className={`omnichat-clean-tab ${activeDialogTab === 'chat' ? 'active' : ''}`}
+                    onClick={() => setActiveDialogTab('chat')}
+                  >
+                    Chat
+                  </button>
+
+                  <button
+                    type="button"
+                    className={`omnichat-clean-tab ${activeDialogTab === 'schemas' ? 'active' : ''}`}
+                    onClick={() => setActiveDialogTab('schemas')}
+                  >
+                    Schemas &amp; Tools (8)
+                  </button>
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
+                  <button
+                    type="button"
+                    onClick={handleReset}
+                    className="omnichat-icon-btn"
+                    title="Clear conversation"
+                  >
+                    <RefreshCw size={13} />
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setIsOpen(false)}
+                    className="omnichat-icon-btn"
+                    title="Close"
+                  >
+                    <X size={15} />
+                  </button>
+                </div>
               </div>
             </div>
-
-            {/* Subsystem Telemetry Ribbon (Always Visible) */}
-            <SubsystemTelemetryBar 
-              activeSubsystem={activeSubsystem}
-              onOpenInspector={(schemaKey) => {
-                if (typeof schemaKey === 'string') setSelectedSchemaKey(schemaKey);
-                setActiveDialogTab('schemas');
-              }} 
-            />
 
             {/* Active MCP Tool Execution Toast Banner */}
             {toolToast && (
@@ -484,12 +469,6 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                 >
                   <div className="chat-role-label">
                     <span>{msg.role === 'user' ? 'YOU' : 'AGENT'}</span>
-                    {msg.role === 'assistant' && (
-                      <span className="pydantic-validation-pill mini">
-                        <ShieldCheck size={9} />
-                        <span>Validated</span>
-                      </span>
-                    )}
                   </div>
 
                   <div className={`chat-bubble-card ${msg.role === 'user' ? 'user' : 'assistant'}`}>
@@ -520,9 +499,9 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                         />
 
                         {isLoading && i === messages.length - 1 && !msg.content && (
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-crimson)', padding: '0.5rem 0' }}>
-                            <span className="telemetry-dot-pulse red" />
-                            <span>Mounting Pydantic skills and querying MCP bus...</span>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--ink-secondary)', padding: '0.4rem 0' }}>
+                            <span className="telemetry-dot-pulse green" style={{ width: 6, height: 6 }} />
+                            <span>Synthesizing verified architectural response...</span>
                           </div>
                         )}
                       </>
