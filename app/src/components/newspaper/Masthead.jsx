@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Printer } from 'lucide-react';
+import { Globe } from 'lucide-react';
 
 function GithubIcon({ size = 15 }) {
   return (
@@ -34,17 +34,6 @@ export function Masthead() {
         </div>
 
         <div className="masthead-right-actions">
-          {/* Export Paginated PDF Action */}
-          <button
-            type="button"
-            onClick={() => window.print()}
-            className="masthead-print-btn no-print"
-            title="Export complete assessment as paginated PDF (Print Edition)"
-          >
-            <Printer size={13} />
-            <span>Export PDF</span>
-          </button>
-
           {/* Social Profiles: Icons Only */}
           <div className="masthead-social-links">
             <a

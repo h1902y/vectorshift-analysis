@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SCREENSHOTS_CATALOG } from '../../data/screenshotsData';
 import { CITATIONS_DATA } from '../../data/citationsData';
+import { getAssetUrl } from '../../utils/assetHelper';
 import { ZoomIn, BookOpen, ArrowDown } from 'lucide-react';
 import { NewspaperSection, Button, ModalDialog } from '../../design-system';
 import { CitationLink } from './CitationLink';
@@ -177,7 +178,7 @@ export function ExhibitsSection() {
             >
               <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--paper-bg)' }}>
                 <img
-                  src={`/screenshots/${item.name}`}
+                  src={encodeURI(getAssetUrl(`screenshots/${item.name}`))}
                   alt={item.title}
                   loading="lazy"
                 />
@@ -235,7 +236,7 @@ export function ExhibitsSection() {
         {selectedExhibit && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img
-              src={`/screenshots/${selectedExhibit.name}`}
+              src={encodeURI(getAssetUrl(`screenshots/${selectedExhibit.name}`))}
               alt={selectedExhibit.title}
               style={{ maxWidth: '100%', maxHeight: '55vh', objectFit: 'contain', border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px' }}
             />

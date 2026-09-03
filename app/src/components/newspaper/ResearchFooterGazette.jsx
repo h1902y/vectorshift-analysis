@@ -17,6 +17,7 @@ import { CITATIONS_DATA } from '../../data/citationsData';
 import { SCREENSHOTS_CATALOG } from '../../data/screenshotsData';
 import { ModalDialog } from '../../design-system';
 import { ActInquiryBox } from './ActInquiryBox';
+import { getAssetUrl } from '../../utils/assetHelper';
 
 const PLATES_PER_PAGE = 12;
 const LITERATURE_PER_PAGE = 6;
@@ -472,7 +473,7 @@ export function ResearchFooterGazette() {
                           title="Click to inspect high-resolution screenshot in lightbox"
                         >
                           <img 
-                            src={encodeURI(item.screen.thumbnail)} 
+                            src={encodeURI(getAssetUrl(item.screen.thumbnail))} 
                             alt={item.screen.title} 
                             className="evidence-screen-thumb" 
                           />
@@ -618,7 +619,7 @@ export function ResearchFooterGazette() {
                             title={`Inspect Plate #${p.id}: ${p.title}`}
                           >
                             <img 
-                              src={encodeURI(`/screenshots/${p.name}`)} 
+                              src={encodeURI(getAssetUrl(`screenshots/${p.name}`))} 
                               alt={`Plate #${p.id}`}
                               className="field-proof-mini-thumb" 
                             />
@@ -708,7 +709,7 @@ export function ResearchFooterGazette() {
                   {/* Plate Thumbnail with safe URL encoding */}
                   <div className="exhibit-img-container">
                     <img 
-                      src={encodeURI(`/screenshots/${item.name}`)} 
+                      src={encodeURI(getAssetUrl(`screenshots/${item.name}`))} 
                       alt={item.title} 
                       loading="lazy"
                       className="exhibit-img"
@@ -848,7 +849,7 @@ export function ResearchFooterGazette() {
                   <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}>
                     <div style={{ width: '220px', flexShrink: 0, border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px', overflow: 'hidden', background: '#fafafa' }}>
                       <img 
-                        src={encodeURI(item.screen.thumbnail)} 
+                        src={encodeURI(getAssetUrl(item.screen.thumbnail))} 
                         alt={item.screen.title} 
                         style={{ width: '100%', height: 'auto', maxHeight: '140px', objectFit: 'contain', display: 'block' }} 
                       />
@@ -924,9 +925,9 @@ export function ResearchFooterGazette() {
               >
                 <div style={{ width: '100%', height: '100px', overflow: 'hidden', borderRadius: '2px', border: '1px solid var(--ink-rule-subtle)', background: '#ffffff' }}>
                   <img 
-                    src={encodeURI(`/screenshots/${p.name}`)} 
+                    src={encodeURI(getAssetUrl(`screenshots/${p.name}`))} 
                     alt={`Plate #${p.id}`}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
                   />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -960,7 +961,7 @@ export function ResearchFooterGazette() {
         {selectedExhibit && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img
-              src={encodeURI(`/screenshots/${selectedExhibit.name}`)}
+              src={encodeURI(getAssetUrl(`screenshots/${selectedExhibit.name}`))}
               alt={selectedExhibit.title}
               style={{ maxWidth: '100%', maxHeight: '55vh', objectFit: 'contain', border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px' }}
             />
@@ -1020,7 +1021,7 @@ export function ResearchFooterGazette() {
         {selectedScreenExhibit && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img
-              src={encodeURI(selectedScreenExhibit.fullImage || selectedScreenExhibit.thumbnail)}
+              src={encodeURI(getAssetUrl(selectedScreenExhibit.fullImage || selectedScreenExhibit.thumbnail))}
               alt={selectedScreenExhibit.title}
               style={{ 
                 maxWidth: '100%', 

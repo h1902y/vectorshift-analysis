@@ -1,5 +1,6 @@
 import React, { useRef, useState, useCallback } from 'react';
 import { ExternalLink } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export function ProfileCard({ className = '' }) {
   const cardRef = useRef(null);
@@ -89,7 +90,7 @@ export function ProfileCard({ className = '' }) {
           }}
         >
           <img
-            src="/images/harshit_max_out.png"
+            src={getAssetUrl('images/harshit_max_out.png')}
             alt="Harshit · AI Product Manager & Architect"
             className="h1902y-profile-portrait-img"
             loading="eager"
