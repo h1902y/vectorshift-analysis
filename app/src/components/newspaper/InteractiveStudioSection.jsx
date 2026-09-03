@@ -113,18 +113,22 @@ export function InteractiveStudioSection({ simulation }) {
       </div>
 
       {/* ── STREAMLINED PROCESS PIPELINE TRACK (SINGLE-LINE & LIGHTWEIGHT) ── */}
-      <div style={{
-        background: 'var(--paper-bg)',
-        border: '1px solid var(--ink-rule-subtle)',
-        borderRadius: '6px',
-        padding: '0.5rem 0.8rem',
-        marginBottom: '1rem',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: '0.4rem',
-        overflowX: 'auto'
-      }}>
+      <div 
+        className="studio-stepper-container"
+        style={{
+          background: 'var(--paper-bg)',
+          border: '1px solid var(--ink-rule-subtle)',
+          borderRadius: '6px',
+          padding: '0.5rem 0.8rem',
+          marginBottom: '1rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '0.4rem',
+          overflowX: 'auto',
+          WebkitOverflowScrolling: 'touch'
+        }}
+      >
         {stages.map((st, idx) => {
           const isActive = activeStage === st.num;
           const isDone = st.num < activeStage || (st.num === 5 && hardeningApplied);
@@ -132,6 +136,7 @@ export function InteractiveStudioSection({ simulation }) {
             <React.Fragment key={st.num}>
               <button
                 type="button"
+                className="studio-stepper-btn"
                 onClick={() => setActiveStage(st.num)}
                 style={{
                   display: 'flex',
@@ -144,7 +149,8 @@ export function InteractiveStudioSection({ simulation }) {
                   cursor: 'pointer',
                   textAlign: 'left',
                   whiteSpace: 'nowrap',
-                  transition: 'all 0.15s ease'
+                  transition: 'all 0.15s ease',
+                  flexShrink: 0
                 }}
               >
                 <span style={{
@@ -173,7 +179,7 @@ export function InteractiveStudioSection({ simulation }) {
               </button>
 
               {idx < stages.length - 1 && (
-                <span style={{ color: 'var(--ink-rule-subtle)', fontSize: '0.75rem', padding: '0 2px' }}>───</span>
+                <span className="studio-stepper-divider" style={{ color: 'var(--ink-rule-subtle)', fontSize: '0.75rem', padding: '0 2px' }}>───</span>
               )}
             </React.Fragment>
           );
@@ -604,7 +610,7 @@ export function InteractiveStudioSection({ simulation }) {
             Rather than testing against a single hand-typed prompt, the test bench generates a 50-cell Cartesian matrix cross-multiplying 5 Private Equity fund mandates against 10 adversarial financial stress traps:
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem' }}>
+          <div className="blueprint-mandates-traps-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem' }}>
             {/* 5 PE Fund Mandates */}
             <div style={{ background: 'var(--paper-bg)', border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px', padding: '0.6rem' }}>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 800, color: 'var(--accent-burgundy)', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
@@ -648,36 +654,38 @@ export function InteractiveStudioSection({ simulation }) {
             Decoupled slow OCR/parsing from prompt tuning using an in-memory LRU cache keyed by SHA-256 AST input hashes. When tuning prompt nodes, upstream PDF extraction remains cached in memory:
           </p>
 
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.75rem', background: 'var(--paper-bg)' }}>
-            <thead>
-              <tr style={{ borderBottom: '1px solid var(--ink-rule-subtle)', background: 'var(--paper-surface-alt)', textAlign: 'left' }}>
-                <th style={{ padding: '0.35rem 0.5rem', fontFamily: 'var(--font-mono)' }}>METRIC</th>
-                <th style={{ padding: '0.35rem 0.5rem', fontFamily: 'var(--font-mono)' }}>MONOLITHIC COLD RUN</th>
-                <th style={{ padding: '0.35rem 0.5rem', fontFamily: 'var(--font-mono)' }}>IN-MEMORY NODE REPL</th>
-                <th style={{ padding: '0.35rem 0.5rem', fontFamily: 'var(--font-mono)' }}>EFFICIENCY GAIN</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid var(--ink-rule-subtle)' }}>
-                <td style={{ padding: '0.35rem 0.5rem', fontWeight: 600 }}>Iteration Cycle Time</td>
-                <td style={{ padding: '0.35rem 0.5rem', color: 'var(--accent-burgundy)' }}>48,200 ms</td>
-                <td style={{ padding: '0.35rem 0.5rem', color: 'var(--accent-emerald)', fontWeight: 700 }}>1,462 ms</td>
-                <td style={{ padding: '0.35rem 0.5rem', fontWeight: 700 }}>-97.0% Latency</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--ink-rule-subtle)' }}>
-                <td style={{ padding: '0.35rem 0.5rem', fontWeight: 600 }}>Token Consumption / Run</td>
-                <td style={{ padding: '0.35rem 0.5rem' }}>28,400 tokens ($0.37)</td>
-                <td style={{ padding: '0.35rem 0.5rem', color: 'var(--accent-emerald)' }}>850 tokens ($0.01)</td>
-                <td style={{ padding: '0.35rem 0.5rem', fontWeight: 700 }}>-97.3% Cost</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '0.35rem 0.5rem', fontWeight: 600 }}>50-Vector Suite Execution</td>
-                <td style={{ padding: '0.35rem 0.5rem' }}>2,410 sec (~40 mins)</td>
-                <td style={{ padding: '0.35rem 0.5rem', color: 'var(--accent-emerald)', fontWeight: 700 }}>11.8 sec (50-worker pool)</td>
-                <td style={{ padding: '0.35rem 0.5rem', fontWeight: 700 }}>204x Throughput</td>
-              </tr>
-            </tbody>
-          </table>
+          <div style={{ width: '100%', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <table style={{ width: '100%', minWidth: '480px', borderCollapse: 'collapse', fontSize: '0.75rem', background: 'var(--paper-bg)' }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid var(--ink-rule-subtle)', background: 'var(--paper-surface-alt)', textAlign: 'left' }}>
+                  <th style={{ padding: '0.35rem 0.5rem', fontFamily: 'var(--font-mono)' }}>METRIC</th>
+                  <th style={{ padding: '0.35rem 0.5rem', fontFamily: 'var(--font-mono)' }}>MONOLITHIC COLD RUN</th>
+                  <th style={{ padding: '0.35rem 0.5rem', fontFamily: 'var(--font-mono)' }}>IN-MEMORY NODE REPL</th>
+                  <th style={{ padding: '0.35rem 0.5rem', fontFamily: 'var(--font-mono)' }}>EFFICIENCY GAIN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: '1px solid var(--ink-rule-subtle)' }}>
+                  <td style={{ padding: '0.35rem 0.5rem', fontWeight: 600 }}>Iteration Cycle Time</td>
+                  <td style={{ padding: '0.35rem 0.5rem', color: 'var(--accent-burgundy)' }}>48,200 ms</td>
+                  <td style={{ padding: '0.35rem 0.5rem', color: 'var(--accent-emerald)', fontWeight: 700 }}>1,462 ms</td>
+                  <td style={{ padding: '0.35rem 0.5rem', fontWeight: 700 }}>-97.0% Latency</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--ink-rule-subtle)' }}>
+                  <td style={{ padding: '0.35rem 0.5rem', fontWeight: 600 }}>Token Consumption / Run</td>
+                  <td style={{ padding: '0.35rem 0.5rem' }}>28,400 tokens ($0.37)</td>
+                  <td style={{ padding: '0.35rem 0.5rem', color: 'var(--accent-emerald)' }}>850 tokens ($0.01)</td>
+                  <td style={{ padding: '0.35rem 0.5rem', fontWeight: 700 }}>-97.3% Cost</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '0.35rem 0.5rem', fontWeight: 600 }}>50-Vector Suite Execution</td>
+                  <td style={{ padding: '0.35rem 0.5rem' }}>2,410 sec (~40 mins)</td>
+                  <td style={{ padding: '0.35rem 0.5rem', color: 'var(--accent-emerald)', fontWeight: 700 }}>11.8 sec (50-worker pool)</td>
+                  <td style={{ padding: '0.35rem 0.5rem', fontWeight: 700 }}>204x Throughput</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Phase 3: 4D Rubrics */}
@@ -688,7 +696,7 @@ export function InteractiveStudioSection({ simulation }) {
             </span>
             <StatusBadge variant="burgundy">Quantitative Rubric Suite</StatusBadge>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.6rem', marginTop: '0.5rem' }}>
+          <div className="blueprint-rubrics-4col-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.6rem', marginTop: '0.5rem' }}>
             <div style={{ background: 'var(--paper-bg)', padding: '0.5rem', borderRadius: '3px', border: '1px solid var(--ink-rule-subtle)' }}>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1rem', fontWeight: 800, color: 'var(--accent-emerald)' }}>98%</div>
               <div style={{ fontSize: '0.72rem', fontWeight: 700, margin: '0.15rem 0' }}>Factuality &amp; Provenance</div>

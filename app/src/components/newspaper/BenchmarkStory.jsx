@@ -117,7 +117,7 @@ export function BenchmarkStory() {
           </span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+        <div className="moat-pillars-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
           {VECTORSHIFT_MOAT_PILLARS.map(p => (
             <div 
               key={p.id}

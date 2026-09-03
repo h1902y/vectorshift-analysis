@@ -205,19 +205,15 @@ body {
 /* The Main Newspaper Title */
 .masthead-main-title {
   font-family: var(--font-serif-headline);
-  font-size: 4rem;
+  font-size: clamp(1.75rem, 6.2vw, 4rem);
   font-weight: 900;
   text-align: center;
-  line-height: 1;
+  line-height: 1.08;
   letter-spacing: -0.025em;
   color: var(--ink-primary);
   margin: 0.2rem 0 0.4rem 0;
-}
-
-@media (max-width: 768px) {
-  .masthead-main-title {
-    font-size: 2.8rem;
-  }
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .masthead-sub-motto {
@@ -410,18 +406,14 @@ section[id] {
 /* Article Headline: Bold Neo-Grotesque Sans (Exact Daily Diff Style) */
 .story-headline {
   font-family: var(--font-sans-headline);
-  font-size: 2.35rem;
+  font-size: clamp(1.25rem, 4.4vw, 2.35rem);
   font-weight: 800;
-  line-height: 1.18;
+  line-height: 1.22;
   letter-spacing: -0.025em;
   color: var(--ink-primary);
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .story-headline {
-    font-size: 1.8rem;
-  }
+  margin-bottom: 1.2rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Article Subtitle / Deck */
@@ -4138,9 +4130,492 @@ section[id] {
   transition: all 0.15s ease;
 }
 
-.masthead-print-btn:hover {
-  background: #5c0017;
-  border-color: #5c0017;
+/* ========================================================================= */
+/* EXHIBITS BROADSHEET GRID & CARD FOUNDATION (Plates Dimension)            */
+/* ========================================================================= */
+.exhibits-broadsheet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.exhibit-broadsheet-card {
+  background: var(--paper-surface);
+  border: 1px solid var(--ink-rule-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.exhibit-broadsheet-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink-rule);
+  box-shadow: var(--shadow-editorial);
+}
+
+.exhibit-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: var(--paper-surface-alt);
+  border-bottom: 1px solid var(--ink-rule-subtle);
+}
+
+.exhibit-number-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--accent-burgundy);
+  letter-spacing: 0.05em;
+}
+
+.exhibit-cat-tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  background: var(--paper-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  border: 1px solid var(--ink-rule-subtle);
+}
+
+.exhibit-inspect-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent-burgundy);
+}
+
+.exhibit-img-container {
+  width: 100%;
+  height: 195px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--ink-rule-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.exhibit-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.exhibit-broadsheet-card:hover .exhibit-img {
+  transform: scale(1.03);
+}
+
+.exhibit-card-content {
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.exhibit-card-title {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.exhibit-card-desc {
+  font-family: var(--font-serif-body);
+  font-size: 0.76rem;
+  color: var(--ink-secondary);
+  line-height: 1.45;
+}
+
+/* ========================================================================= */
+/* MOBILE-FIRST COMPREHENSIVE RESPONSIVE ENGINE                             */
+/* ========================================================================= */
+
+/* Prevent accidental horizontal page overflow */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* --- TABLET BREAKPOINT (<= 960px) --- */
+@media (max-width: 960px) {
+  .story-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .exhibits-broadsheet-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* --- MOBILE LANDSCAPE & PHONES (<= 768px) --- */
+@media (max-width: 768px) {
+  .broadsheet-wrapper {
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    padding: 0.65rem 0.85rem calc(5.5rem + env(safe-area-inset-bottom, 0px)) 0.85rem !important;
+  }
+
+  /* Masthead Mobile Flow: Clean Stacked Rows */
+  .masthead-sub-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.45rem !important;
+    padding: 0.25rem 0 0.75rem 0 !important;
+  }
+
+  .masthead-center-date {
+    font-size: 0.76rem !important;
+    order: 2 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .masthead-right-actions {
+    order: 3 !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .masthead-main-title {
+    font-size: clamp(1.25rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
+    margin: 0.2rem 0 0.35rem 0 !important;
+    text-align: center !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+  }
+
+  .masthead-sub-motto {
+    font-size: clamp(0.8rem, 2.9vw, 0.98rem) !important;
+    text-align: center !important;
+    margin-bottom: 0.85rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Sticky Navigation Touch Optimization */
+  .sticky-sectional-nav {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0.35rem 0 !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .sticky-sectional-track {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 0.15rem 0.5rem !important;
+    gap: 0.35rem !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    scrollbar-width: none !important;
+  }
+
+  .sticky-sectional-track::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .editorial-tab-btn {
+    font-size: 0.68rem !important;
+    padding: 0.35rem 0.6rem !important;
+    min-height: 36px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Left Graphic Box Padding */
+  .story-graphic-box {
+    padding: 0.85rem !important;
+    min-height: auto !important;
+  }
+
+  /* Headlines & Typography */
+  .story-headline {
+    font-size: clamp(1.15rem, 4.5vw, 1.7rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.9rem !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+  }
+
+  .story-subtitle {
+    font-size: clamp(0.88rem, 2.9vw, 1.02rem) !important;
+    line-height: 1.45 !important;
+    margin-bottom: 1.1rem !important;
+  }
+
+  .story-kicker {
+    font-size: 0.68rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .story-byline {
+    font-size: 0.66rem !important;
+    margin-bottom: 0.6rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .daily-drop-cap::first-letter {
+    font-size: 2.6rem !important;
+    line-height: 0.85 !important;
+    margin-right: 0.4rem !important;
+  }
+
+  /* Act Inquiry & Opinion Verdict Box */
+  .act-inquiry-box {
+    padding: 0.75rem 0.9rem !important;
+    margin: 0.9rem 0 1.25rem 0 !important;
+  }
+
+  .act-inquiry-question {
+    font-size: 0.88rem !important;
+    line-height: 1.42 !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+  }
+
+  .act-opinion-text {
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Profile Card Touch Adaptation */
+  .h1902y-profile-card-wrapper {
+    padding: 0.4rem;
+  }
+
+  .h1902y-profile-card-3d {
+    height: 300px;
+    transform: none !important;
+  }
+
+  /* Interactive Test Bench (Section III Task 5) */
+  .studio-stepper-container {
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.45rem 0.6rem !important;
+    gap: 0.35rem !important;
+  }
+
+  .studio-stepper-btn {
+    flex-shrink: 0 !important;
+    min-height: 40px;
+    padding: 0.35rem 0.6rem !important;
+  }
+
+  .studio-stepper-divider {
+    display: none !important;
+  }
+
+  .blueprint-mandates-traps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.6rem !important;
+  }
+
+  .blueprint-rubrics-4col-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Section IV Moat Pillars & Playbook Grid */
+  .moat-pillars-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .strategic-playbook-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  /* Exhibits Section Mobile 1-Column */
+  .exhibits-broadsheet-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.9rem;
+  }
+
+  .exhibit-img-container {
+    height: 210px;
+  }
+
+  .evidence-screen-body {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .screen-thumb-container {
+    width: 100% !important;
+    height: 180px !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .screen-thumb-container img {
+    object-fit: contain !important;
+    background: #0f172a;
+  }
+
+  /* Floating Omnichat Anchor & Bottom Bar */
+  .floating-omnichat-anchor {
+    bottom: 0.65rem;
+    padding: 0 0.5rem;
+    max-width: 100%;
+  }
+
+  .omnichat-input-bar {
+    padding: 0.35rem 0.5rem;
+    height: auto;
+  }
+
+  .omnichat-cmd-kbd {
+    display: none !important;
+  }
+
+  .omnichat-text-input {
+    font-size: 0.84rem;
+  }
+
+  .omnichat-chip {
+    padding: 0.2rem 0.45rem;
+    font-size: 0.62rem;
+  }
+
+  /* Full-Screen Native Mobile Chat Experience */
+  .omnichat-modal-overlay {
+    padding: 0 !important;
+    align-items: stretch !important;
+  }
+
+  .omnichat-modal-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  .omnichat-modal-header {
+    padding: 0.75rem 1rem !important;
+  }
+
+  .omnichat-modal-body {
+    padding: 0.9rem !important;
+  }
+
+  .omnichat-modal-footer {
+    padding: 0.65rem 0.85rem !important;
+  }
+
+  /* Accessible Lightboxes */
+  .modal-backdrop {
+    padding: 0.5rem !important;
+  }
+
+  .modal-container {
+    max-height: 94vh !important;
+    border-radius: 2px !important;
+  }
+
+  .modal-header {
+    padding: 0.75rem 1rem !important;
+  }
+
+  .modal-body {
+    padding: 0.85rem !important;
+  }
+
+  .modal-body img {
+    max-height: 45vh !important;
+  }
+
+  /* Horizontal Scrolling for All Tables and Code */
+  .diff-table-container,
+  .code-block-pre,
+  .diff-table {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .code-block-pre {
+    font-size: 0.68rem;
+    padding: 0.75rem 0.85rem;
+  }
+}
+
+/* --- SMALL MOBILE PHONES (<= 480px) --- */
+@media (max-width: 480px) {
+  .broadsheet-wrapper {
+    padding: 0.5rem 0.65rem calc(5.2rem + env(safe-area-inset-bottom, 0px)) 0.65rem;
+  }
+
+  .masthead-main-title {
+    font-size: clamp(1.3rem, 5.8vw, 1.75rem) !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+  }
+
+  .story-headline {
+    font-size: clamp(1.1rem, 4.4vw, 1.35rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  .blueprint-rubrics-4col-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .guided-journeys-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .omnichat-clean-tabs {
+    gap: 0.4rem;
+  }
+
+  .omnichat-clean-tab {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .colophon-social-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .colophon-social-btn {
+    justify-content: center;
+  }
 }
 
 /* Default screen state for print-only stages */
