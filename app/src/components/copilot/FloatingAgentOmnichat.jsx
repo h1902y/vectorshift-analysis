@@ -29,6 +29,8 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [activeOptions, setActiveOptions] = useState([]);
+  const [activeSubsystem, setActiveSubsystem] = useState(null);
+  const [toolToast, setToolToast] = useState(null);
 
   const containerRef = useRef(null);
   const messagesEndRef = useRef(null);
@@ -47,7 +49,7 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
     return () => clearInterval(timer);
   }, [isOpen, isFocused, isPopOpen]);
 
-  // 2. Click outside & Escape key listeners
+  // 2. Click outside, Cmd+K, & Escape key listeners
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (containerRef.current && !containerRef.current.contains(e.target)) {
@@ -58,6 +60,10 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
     };
 
     const handleKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsOpen(prev => !prev);
+      }
       if (e.key === 'Escape') {
         setIsOpen(false);
         setIsFocused(false);
@@ -113,6 +119,14 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
       const result = await runtime.processQuery({
         text: cleanText,
         onTraceUpdate: (liveTrace) => {
+          const lastStep = liveTrace.steps[liveTrace.steps.length - 1];
+          if (lastStep) {
+            setActiveSubsystem(lastStep.subsystem);
+            if (lastStep.subsystem === 'TOOL_EXECUTION') {
+              setToolToast(`⚡ MCP Dispatched: ${lastStep.title}`);
+              setTimeout(() => setToolToast(null), 3800);
+            }
+          }
           setMessages(prev => {
             const next = [...prev];
             if (next[assistantMsgIndex]) {
@@ -160,13 +174,14 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
         if (next[assistantMsgIndex]) {
           next[assistantMsgIndex] = {
             ...next[assistantMsgIndex],
-            content: `**Pydantic Runtime Notice**: Encountered execution error: ${err.message}. Please retry with another architectural query.`
+            content: `**Agent Runtime Notice**: Encountered execution error: ${err.message}. Please retry with another architectural query.`
           };
         }
         return next;
       });
     } finally {
       setIsLoading(false);
+      setActiveSubsystem(null);
     }
   };
 
@@ -270,7 +285,7 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
           }}
           className="omnichat-input-bar"
         >
-          {/* Agent Badge (Pydantic Chip) */}
+          {/* Agent Badge (Agent Chip) */}
           <div
             onClick={(e) => {
               e.stopPropagation();
@@ -281,11 +296,11 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
               }
             }}
             className="omnichat-chip"
-            title="Toggle Pydantic Agent Drawer"
+            title="Toggle Agent Drawer"
           >
             <span className="telemetry-dot-pulse green" />
             <span>
-              {messages.length > 0 ? `PYDANTIC AI (${messages.length})` : 'PYDANTIC AI'}
+              {messages.length > 0 ? `AGENT (${messages.length})` : 'AGENT'}
             </span>
           </div>
 
@@ -322,16 +337,18 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
               onChange={(e) => setInputVal(e.target.value)}
               placeholder={
                 messages.length > 0
-                  ? "Resume active conversation with Pydantic Agent..."
+                  ? "Resume conversation with Agent..."
                   : ROTATING_PROMPTS[promptIndex]
               }
               className="omnichat-text-input"
             />
 
+            <kbd className="omnichat-cmd-kbd" title="Press ⌘K to open">⌘K</kbd>
+
             <button
               type="submit"
               className="omnichat-submit-btn"
-              title="Send to Pydantic Agent"
+              title="Send to Agent"
             >
               <ArrowUp size={15} />
             </button>
@@ -354,11 +371,11 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <span className="telemetry-dot-pulse green" />
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.64rem', textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--paper-surface-alt)', opacity: 0.9 }}>
-                    THE VECTORSHIFT DIFF &middot; PYDANTIC AGENT ORACLE
+                    THE VECTORSHIFT DIFF &middot; AUTONOMOUS AGENT
                   </span>
                 </div>
                 <div style={{ fontFamily: 'var(--font-sans)', fontSize: '1.2rem', fontWeight: 900, color: '#ffffff', letterSpacing: '-0.01em' }}>
-                  Observable End-to-End Pydantic AI Copilot
+                  Observable Autonomous Agent
                 </div>
               </div>
 
@@ -396,7 +413,18 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
             </div>
 
             {/* Subsystem Telemetry Ribbon (Always Visible) */}
-            <SubsystemTelemetryBar onOpenInspector={() => setIsInspectorOpen(true)} />
+            <SubsystemTelemetryBar 
+              activeSubsystem={activeSubsystem}
+              onOpenInspector={() => setIsInspectorOpen(true)} 
+            />
+
+            {/* Active MCP Tool Execution Toast Banner */}
+            {toolToast && (
+              <div className="omnichat-tool-toast-banner animate-in">
+                <span className="telemetry-dot-pulse green" />
+                <span>{toolToast}</span>
+              </div>
+            )}
 
             {/* Modal Body / Chat Flow */}
             <div className="omnichat-modal-body">
@@ -443,7 +471,7 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                   className={`chat-message-bubble ${msg.role === 'user' ? 'user-turn' : 'assistant-turn'}`}
                 >
                   <div className="chat-role-label">
-                    <span>{msg.role === 'user' ? 'YOU' : 'PYDANTIC AGENT ORACLE'}</span>
+                    <span>{msg.role === 'user' ? 'YOU' : 'AGENT'}</span>
                     {msg.role === 'assistant' && (
                       <span className="pydantic-validation-pill mini">
                         <ShieldCheck size={9} />
@@ -461,6 +489,7 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                         {/* Markdown Formatted Content */}
                         <AgentMarkdown
                           content={msg.content}
+                          isStreaming={isLoading && i === messages.length - 1}
                           onNavigate={(sec) => {
                             if (onNavigate) onNavigate(sec);
                             else {

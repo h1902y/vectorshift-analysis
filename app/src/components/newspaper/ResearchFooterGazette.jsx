@@ -16,7 +16,7 @@ import { SCREENSHOTS_CATALOG } from '../../data/screenshotsData';
 import { ModalDialog } from '../../design-system';
 
 // Intelligent mapping between exploration plates and research citations
-export function getPlateCitations(plate) {
+function getPlateCitations(plate) {
   if (!plate) return ['c12'];
   if ([2, 3, 4].includes(plate.id)) return ['c1', 'c6', 'c12'];
   if ([19, 21, 22, 23, 25].includes(plate.id)) return ['c10', 'c11', 'c12'];

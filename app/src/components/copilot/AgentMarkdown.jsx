@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Terminal, Check, Copy, ArrowRight, ExternalLink } from 'lucide-react';
 
-export function AgentMarkdown({ content, onNavigate }) {
+export function AgentMarkdown({ content, onNavigate, isStreaming = false }) {
   if (!content) return null;
 
   // Split by code blocks
@@ -16,7 +16,14 @@ export function AgentMarkdown({ content, onNavigate }) {
           const codeContent = language ? lines.slice(1).join('\n') : lines.join('\n');
           return <CodeSnippet key={idx} language={language} code={codeContent} />;
         }
-        return <FormattedParagraph key={idx} text={block} onNavigate={onNavigate} />;
+        return (
+          <React.Fragment key={idx}>
+            <FormattedParagraph text={block} onNavigate={onNavigate} />
+            {isStreaming && idx === blocks.length - 1 && (
+              <span className="agent-ink-cursor" aria-hidden="true">▋</span>
+            )}
+          </React.Fragment>
+        );
       })}
     </div>
   );

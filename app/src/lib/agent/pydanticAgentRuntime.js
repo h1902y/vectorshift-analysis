@@ -365,9 +365,9 @@ export class PydanticAgentRuntime {
     } else if (selectedSkill === "competitor-auditor") {
       toolName = "navigate_broadsheet";
       toolArgs = { section: "competitors" };
-    } else if (qLower.includes("plate") || qLower.includes("screenshot")) {
+    } else if (qLower.includes("plate") || qLower.includes("screenshot") || qLower.includes("citation") || qLower.includes("research") || qLower.includes("arxiv")) {
       toolName = "navigate_broadsheet";
-      toolArgs = { section: "plates" };
+      toolArgs = { section: "research-archive" };
     }
 
     pushStep(

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Zap, ArrowRight, X, Check, ShieldCheck, BarChart2, Layers } from 'lucide-react';
+import { Play, Zap, ArrowRight, X, Check } from 'lucide-react';
 import { 
   NewspaperSection, 
   GraphicCard, 
@@ -167,11 +167,6 @@ export function InteractiveStudioSection({ simulation }) {
             {isRunning ? `Testing (${progress}%)...` : 'Run 50-Scenario Test Bench'}
           </Button>
         </div>
-            icon={!isRunning ? <Play size={12} /> : null}
-          >
-            {isRunning ? `Testing (${progress}%)...` : 'Run 50-Scenario Test Bench'}
-          </Button>
-        </div>
 
         {/* Bench Body */}
         <div style={{ padding: '1.2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -288,11 +283,14 @@ export function InteractiveStudioSection({ simulation }) {
             <Button
               variant={hardeningApplied ? 'outline' : 'solid'}
               size="sm"
-              onClick={applyHardening}
+              onClick={() => {
+                setActiveStep(5);
+                applyHardening();
+              }}
               disabled={hardeningApplied}
               icon={hardeningApplied ? <Check size={12} /> : null}
             >
-              {hardeningApplied ? 'Hardened Rule Active in System Prompt' : 'Apply Hardened Rule to Node 3'}
+              {hardeningApplied ? 'Hardened Rule Active in System Prompt (+4% Lift)' : 'Apply Hardened Rule to Node 3'}
             </Button>
           </div>
         </div>

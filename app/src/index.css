@@ -3114,3 +3114,65 @@ section[id] {
   transform: translate(2px, -2px);
   color: #ffffff;
 }
+
+/* Omnichat ⌘K Badge */
+.omnichat-cmd-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.35rem;
+  background: var(--paper-surface-alt);
+  border: 1px solid var(--ink-rule-subtle);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* Active Subsystem Telemetry Pulsing Chip */
+.telemetry-chip.active-pulse {
+  border-color: var(--accent-burgundy) !important;
+  background: var(--paper-surface-hover) !important;
+  color: var(--accent-burgundy) !important;
+  box-shadow: 0 0 8px rgba(128, 20, 20, 0.25);
+  animation: telemetry-chip-flash 1s infinite alternate;
+}
+
+@keyframes telemetry-chip-flash {
+  0% { transform: scale(1); opacity: 0.85; }
+  100% { transform: scale(1.03); opacity: 1; }
+}
+
+/* Active MCP Tool Execution Toast Banner */
+.omnichat-tool-toast-banner {
+  background: rgba(128, 20, 20, 0.08);
+  border-bottom: 1px solid var(--ink-rule-subtle);
+  padding: 0.4rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--accent-burgundy);
+}
+
+/* Streaming Ink Cursor */
+.agent-ink-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: var(--accent-crimson);
+  animation: blink-ink 0.8s infinite;
+  vertical-align: baseline;
+}
+
+@keyframes blink-ink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
