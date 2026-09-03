@@ -3725,3 +3725,95 @@ section[id] {
   border: 1px solid var(--ink-rule-subtle);
   display: block;
 }
+
+/* ==========================================================================
+   ARCHIVE REGISTER PAGINATION BAR (SECTION VI)
+   ========================================================================== */
+.archive-pagination-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0.85rem 1.1rem;
+  background: var(--paper-surface);
+  border: 1px solid var(--ink-rule-subtle);
+  border-left: 3px solid var(--accent-burgundy);
+  border-radius: var(--radius-xs);
+}
+
+.archive-pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--ink-secondary);
+}
+
+.archive-pagination-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-burgundy);
+}
+
+.archive-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.archive-page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.archive-page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  height: 28px;
+  min-width: 28px;
+  padding: 0 0.5rem;
+  border-radius: 2px;
+  border: 1px solid var(--ink-rule-subtle);
+  background: var(--paper-bg);
+  color: var(--ink-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.archive-page-btn:hover:not(:disabled) {
+  background: var(--paper-surface-hover);
+  color: var(--ink-primary);
+  border-color: var(--ink-rule);
+}
+
+.archive-page-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.archive-page-num-btn.active {
+  background: var(--accent-burgundy);
+  border-color: var(--accent-burgundy);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.archive-page-nav-btn {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0 0.65rem;
+}
