@@ -64,12 +64,8 @@ export function ProfileCard({ className = '' }) {
         className={`h1902y-profile-back-bloom ${isHovered ? 'hovered' : ''}`}
       />
 
-      {/* ── TOP FLOATING STATUS CHIPS (SEMANTIC PRIMITIVE BADGES) ── */}
-      <div className="h1902y-profile-status-bar">
-        <div className="h1902y-status-chip live">
-          <span className="telemetry-dot-pulse green" />
-          <span>Available for Sprints</span>
-        </div>
+      {/* ── TOP FLOATING STATUS CHIP ── */}
+      <div className="h1902y-profile-status-bar" style={{ justifyContent: 'flex-end' }}>
         <div className="h1902y-status-chip telemetry">
           <span>🇮🇳 Bengaluru, IST</span>
         </div>
