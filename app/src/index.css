@@ -3949,3 +3949,411 @@ section[id] {
   font-weight: 700;
 }
 
+/* ========================================================================= */
+/* GFM (GITHUB FLAVORED MARKDOWN) STYLING FOR AGENT CHAT BUBBLES             */
+/* ========================================================================= */
+
+.agent-gfm-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0.6rem 0;
+  border-radius: 4px;
+  border: 1px solid var(--ink-rule-subtle);
+  background: var(--paper-surface-alt);
+  -webkit-overflow-scrolling: touch;
+}
+
+.agent-gfm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.agent-gfm-table th {
+  background: var(--paper-bg);
+  border-bottom: 2px solid var(--ink-rule);
+  padding: 0.45rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--accent-burgundy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.agent-gfm-table td {
+  padding: 0.45rem 0.65rem;
+  border-bottom: 1px solid var(--ink-rule-subtle);
+  color: var(--ink-primary);
+}
+
+.agent-gfm-table tr:last-child td {
+  border-bottom: none;
+}
+
+.agent-gfm-table tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="dark"] .agent-gfm-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.agent-gfm-table td.align-left, .agent-gfm-table th.align-left { text-align: left; }
+.agent-gfm-table td.align-center, .agent-gfm-table th.align-center { text-align: center; }
+.agent-gfm-table td.align-right, .agent-gfm-table th.align-right { text-align: right; }
+
+/* GFM Task Lists */
+.agent-gfm-task-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.agent-gfm-task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.agent-gfm-checkbox {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.agent-gfm-del {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+/* GFM Horizontal Rule */
+.agent-gfm-hr {
+  border: none;
+  border-top: 1px solid var(--ink-rule-subtle);
+  margin: 0.8rem 0;
+  width: 100%;
+}
+
+/* GFM Alerts */
+.agent-gfm-alert {
+  border-left: 3px solid var(--accent-burgundy);
+  border-radius: 3px;
+  padding: 0.6rem 0.8rem;
+  margin: 0.6rem 0;
+  background: var(--paper-surface-alt);
+}
+
+.agent-gfm-alert.note {
+  border-color: #2563eb;
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.agent-gfm-alert.tip {
+  border-color: #16a34a;
+  background: rgba(22, 163, 74, 0.06);
+}
+
+.agent-gfm-alert.important {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.06);
+}
+
+.agent-gfm-alert.warning {
+  border-color: #d97706;
+  background: rgba(217, 119, 6, 0.06);
+}
+
+.agent-gfm-alert.caution {
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, 0.06);
+}
+
+.agent-gfm-alert-header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.agent-gfm-alert.note .agent-gfm-alert-header { color: #2563eb; }
+.agent-gfm-alert.tip .agent-gfm-alert-header { color: #16a34a; }
+.agent-gfm-alert.important .agent-gfm-alert-header { color: #8b5cf6; }
+.agent-gfm-alert.warning .agent-gfm-alert-header { color: #d97706; }
+.agent-gfm-alert.caution .agent-gfm-alert-header { color: #dc2626; }
+
+.agent-gfm-alert-body {
+  font-size: 0.82rem;
+  color: var(--ink-primary);
+  line-height: 1.45;
+}
+
+/* GFM Ordered Lists */
+.agent-gfm-ol {
+  margin: 0.4rem 0;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.agent-gfm-ol li {
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+/* ========================================================================= */
+/* MASTHEAD PRINT BUTTON & PAGINATED PDF EXPORT SYSTEM                       */
+/* ========================================================================= */
+
+.masthead-print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  background: var(--accent-burgundy);
+  color: #ffffff;
+  border: 1px solid var(--accent-burgundy);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.masthead-print-btn:hover {
+  background: #5c0017;
+  border-color: #5c0017;
+}
+
+/* Default screen state for print-only stages */
+.print-only-all-stages {
+  display: none;
+}
+
+/* ========================================================================= */
+/* PUBLICATION-GRADE @media print RULES (A4 PAGINATION & HIGH FIDELITY)       */
+/* ========================================================================= */
+
+@page {
+  size: A4 portrait;
+  margin: 12mm 10mm 14mm 10mm;
+}
+
+@media print {
+  /* Force exact background colors, borders, and high-contrast ink */
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide interactive web-only chrome */
+  .no-print,
+  .floating-omnichat-anchor,
+  .omnichat-modal-overlay,
+  .sticky-section-nav,
+  .newspaper-jump-bar,
+  .masthead-print-btn,
+  .masthead-social-links,
+  .screen-only-console,
+  .screen-only-archive,
+  .archive-pagination-bar,
+  .citations-search-box,
+  .archive-filter-row,
+  .archive-pagination-controls,
+  button.agent-action-chip,
+  button.agent-copy-btn,
+  button.journey-card-btn,
+  .accordion-trigger-btn,
+  .accordion-collapse-all-bar,
+  .theme-toggle-btn {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Full container width on paper */
+  .newspaper-container,
+  .broadsheet-masthead,
+  .newspaper-section {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Crisp 2-column broadsheet story grid in print */
+  .story-grid-2col {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.8rem !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  .story-left-col,
+  .story-right-col {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Clean pagination for Section IV Moat Pillars and Playbook */
+  .moat-pillars-block {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding-top: 0.8rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .playbook-lessons-block {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding-top: 0.8rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Automatically expand ALL accordions in print */
+  .accordion-body {
+    display: block !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    padding-top: 0.5rem !important;
+  }
+
+  /* Reveal Deserialized Test Bench Process in Section III */
+  .print-only-all-stages {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.9rem !important;
+  }
+
+  /* Reveal Deserialized Research Archive in Section V */
+  .print-only-archive {
+    display: block !important;
+  }
+
+  /* Clean Page Breaks ONLY between major thematic Acts */
+  #architecture,
+  #roadmap,
+  #simulation,
+  #competitors {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding-top: 0.8rem !important;
+  }
+
+  /* First page: Masthead + Strategic Wedge flow together */
+  #strategic-wedge {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+  }
+
+  /* Prevent awkward page cutoffs inside cards, figures, tables, and callouts */
+  .act-inquiry-box,
+  .graphic-card,
+  .boxed-callout,
+  .accordion-card,
+  .citation-card,
+  .citation-explainer-card,
+  .ledger-table-container,
+  .agent-gfm-table-wrapper,
+  .exhibits-deck-container,
+  tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* High fidelity, uncropped image rendering for print */
+  .screen-thumb-container {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    max-height: 220px !important;
+    background: #fafafa !important;
+    border: 1px solid #cccccc !important;
+    margin: 0.3rem 0 !important;
+  }
+
+  .evidence-screen-thumb {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 220px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .field-proof-mini-thumb {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: cover !important;
+  }
+
+  /* Clean headings */
+  h1, h2, h3, h4 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Crisp table borders */
+  table, th, td {
+    border-color: #d1d5db !important;
+  }
+
+  /* 4 Strategic Playbook lessons 2x2 spacious grid on its dedicated page */
+  .strategic-playbook-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.9rem !important;
+  }
+
+  .strategic-playbook-grid .boxed-callout {
+    padding: 0.8rem 1rem !important;
+  }
+
+  .strategic-playbook-grid p {
+    font-size: 0.76rem !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+  }
+
+  /* Compact preformatted code and DAG diagrams to prevent awkward orphan pages */
+  pre {
+    font-size: 0.68rem !important;
+    line-height: 1.25 !important;
+  }
+}
+
+
+

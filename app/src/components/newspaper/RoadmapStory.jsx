@@ -2,9 +2,29 @@ import React, { useState } from 'react';
 import { IMPROVEMENTS_DATA } from '../../data/improvementsData';
 import { NewspaperSection, GraphicCard, LedgerTable, AccordionCard, StatusBadge } from '../../design-system';
 import { CitationLink } from './CitationLink';
+import { ActInquiryBox } from './ActInquiryBox';
 
 export function RoadmapStory() {
-  const [expandedId, setExpandedId] = useState('sim-eval-bench');
+  // All 5 interventions uncollapsed by default
+  const [collapsedIds, setCollapsedIds] = useState(() => new Set());
+
+  const toggleItem = (id) => {
+    setCollapsedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const toggleAll = () => {
+    setCollapsedIds(prev => 
+      prev.size > 0 ? new Set() : new Set(IMPROVEMENTS_DATA.map(i => i.id))
+    );
+  };
 
   const metricColumns = [
     { key: 'label', label: 'Target Metric', cellStyle: { fontWeight: 600 } },
@@ -26,10 +46,22 @@ export function RoadmapStory() {
   return (
     <NewspaperSection
       id="roadmap"
-      kicker="SECTION III &middot; FIELD PRIORITIZATION (TASK 4)"
+      kicker="SECTION II &middot; FIELD PRIORITIZATION (TASK 4)"
       byline="BUILDER CANVAS AUDIT &middot; RANKED UX INTERVENTIONS &middot; VELOCITY ROADMAP"
       headline="Ranked roadmap: Five critical interventions for the builder canvas"
     >
+      {/* ACT 2: The Central Inquiry & My Opinionated Verdict */}
+      <ActInquiryBox
+        actNumber={2}
+        inquiryLabel="THE DIAGNOSIS & ROADMAP (TASK 4)"
+        question="Having pushed the builder to institutional limits, what are the top things broken, and what is the prioritized intervention plan?"
+        opinion={
+          <>
+            In my assessment, the single greatest threat to enterprise retention is the <strong>Single-Sample Trap</strong> in the canvas test drawer. Operators waste 75% of iteration cycles waiting 45 seconds for monolithic graph re-runs upon minor prompt edits. My #1 priority is an in-canvas Simulation Bench with ephemeral node caching (&lt;12s) and pre-flight graph linting to eliminate silent runtime failures.
+          </>
+        }
+      />
+
       <div className="story-grid-2col" style={{ marginBottom: '2rem' }}>
         {/* Left Graphic: Top Metrics */}
         <GraphicCard
@@ -47,15 +79,59 @@ export function RoadmapStory() {
           </p>
 
           <p>
-            The five engineering interventions below are ranked strictly by enterprise retention leverage, prioritizing developer velocity <CitationLink id="c1" />, compile-time validation <CitationLink id="c4" />, and domain-native financial accuracy <CitationLink id="c9" />.
+            I have ranked the five engineering interventions below strictly by enterprise retention leverage and ARR impact, prioritizing developer velocity <CitationLink id="c1" />, compile-time validation <CitationLink id="c4" />, and domain-native financial accuracy <CitationLink id="c9" />.
           </p>
         </div>
+      </div>
+
+      {/* 5 Ranked Interventions Header & Controls */}
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        marginBottom: '0.9rem',
+        padding: '0.4rem 0.6rem',
+        background: 'var(--paper-surface-alt)',
+        border: '1px solid var(--ink-rule-subtle)',
+        borderRadius: '3px'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <span style={{ 
+            fontFamily: 'var(--font-mono)', 
+            fontSize: '0.7rem', 
+            fontWeight: 700, 
+            color: 'var(--accent-burgundy)', 
+            textTransform: 'uppercase', 
+            letterSpacing: '0.04em' 
+          }}>
+            All 5 Interventions Fully Uncollapsed ({IMPROVEMENTS_DATA.length - collapsedIds.size}/{IMPROVEMENTS_DATA.length} Visible)
+          </span>
+        </div>
+
+        <button
+          type="button"
+          onClick={toggleAll}
+          style={{
+            background: 'var(--paper-bg)',
+            border: '1px solid var(--ink-rule-subtle)',
+            borderRadius: '2px',
+            padding: '0.2rem 0.6rem',
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.68rem',
+            color: 'var(--ink-secondary)',
+            cursor: 'pointer',
+            fontWeight: 700,
+            textTransform: 'uppercase'
+          }}
+        >
+          {collapsedIds.size > 0 ? 'Expand All (5)' : 'Collapse All'}
+        </button>
       </div>
 
       {/* 5 Ranked Interventions using AccordionCard */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
         {IMPROVEMENTS_DATA.map(item => {
-          const isExpanded = expandedId === item.id;
+          const isExpanded = !collapsedIds.has(item.id);
           return (
             <AccordionCard
               key={item.id}
@@ -70,7 +146,7 @@ export function RoadmapStory() {
               badge={<StatusBadge variant="burgundy">Priority #{item.rank}</StatusBadge>}
               meta={<span>Pillar: <strong style={{ color: 'var(--ink-primary)' }}>{item.lifecyclePillar}</strong></span>}
               expanded={isExpanded}
-              onToggle={() => setExpandedId(isExpanded ? null : item.id)}
+              onToggle={() => toggleItem(item.id)}
             >
               <p style={{ color: 'var(--ink-secondary)', marginBottom: '0.6rem' }}>
                 <strong>The Friction:</strong> {item.friction}

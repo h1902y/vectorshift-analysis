@@ -88,7 +88,7 @@ export const CITATIONS_DATA = [
       roadmapAnchor: 'Validates Task 3: CIM Deconstructor Audit-Grade Provenance'
     },
     verbatimFinding: 'Intercom Fin enforces audit-grade grounding by appending interactive footnote badges to every factual assertion. Clicking a badge opens a side-by-side drawer highlighting the exact source document, page, and excerpt, accompanied by an explicit "Confidence & Provenance Score" to guarantee institutional trust.',
-    explainer: 'Validates our Private Market Domain Moat & CIM Deconstructor (Task 3). Managing Directors will never accept a $50M acquisition memo without click-to-verify page and table citations.',
+    explainer: 'Validates my Private Market Domain Moat & CIM Deconstructor (Task 3). Managing Directors will never accept a $50M acquisition memo without click-to-verify page and table citations.',
     justifies: 'Task 3: CIM Deconstructor & Provenance',
     storyRefId: 'cim',
     storyRefLabel: 'Section II: CIM Blueprint ↑',
@@ -248,7 +248,7 @@ export const CITATIONS_DATA = [
       roadmapAnchor: 'Validates Priority #1: Quantitative Evaluation Rubric Engine'
     },
     verbatimFinding: 'Strong LLM judges (such as GPT-4 and Claude 3.5 Sonnet) achieve over 80% agreement with human expert preferences, matching the agreement rate between human evaluators themselves. The authors identify and formalize mitigations for key judge biases: position bias (order of candidates), verbosity bias (favoring longer responses), and self-enhancement bias.',
-    explainer: 'Provides the theoretical foundation for our Quantitative Evaluation Rubrics. Verifies that automated LLM evaluation across Factuality, Provenance, Math Precision, and Schema Integrity is statistically rigorous enough for financial institutions.',
+    explainer: 'Provides the theoretical foundation for my Quantitative Evaluation Rubrics. Verifies that automated LLM evaluation across Factuality, Provenance, Math Precision, and Schema Integrity is statistically rigorous enough for financial institutions.',
     justifies: 'Priority #1: Quantitative Rubric Engine',
     storyRefId: 'simulation',
     storyRefLabel: 'IV. Simulation Studio ↑',
@@ -344,7 +344,7 @@ export const CITATIONS_DATA = [
       roadmapAnchor: 'Validates Task 3: CIM Deconstructor Audit-Grade Page/Chunk Provenance'
     },
     verbatimFinding: 'A citation is only faithful if counterfactual perturbation of the cited source text causes the generated claim to change. Many LLMs generate plausible-looking citations that fail counterfactual tests. Standardizing citation faithfulness requires causal dependency verification between extracted values and source spans.',
-    explainer: 'Informs our CIM Deconstructor rubric. Verifies that extracted revenue and EBITDA figures have causal dependency with specific financial tables in CIM pitch decks rather than plausible hallucinations.',
+    explainer: 'Informs my CIM Deconstructor rubric. Verifies that extracted revenue and EBITDA figures have causal dependency with specific financial tables in CIM pitch decks rather than plausible hallucinations.',
     justifies: 'Domain Moat: Private Market Provenance',
     storyRefId: 'cim',
     storyRefLabel: 'Section II: CIM Blueprint ↑',

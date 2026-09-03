@@ -11,7 +11,7 @@ export function AccordionCard({
   children,
   expanded: controlledExpanded = undefined,
   onToggle = null,
-  defaultExpanded = false,
+  defaultExpanded = true,
   style = {}
 }) {
   const [internalExpanded, setInternalExpanded] = useState(defaultExpanded);

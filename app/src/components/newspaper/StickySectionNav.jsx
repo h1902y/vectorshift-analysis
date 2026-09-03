@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 const SECTIONS = [
   { id: 'lead', num: 'TOP', label: 'Lead Story' },
-  { id: 'lifecycle', num: 'I', label: 'Lifecycle' },
-  { id: 'cim', num: 'II', label: 'CIM DAG' },
-  { id: 'roadmap', num: 'III', label: 'Roadmap' },
-  { id: 'simulation', num: 'IV', label: 'Eval Bench' },
-  { id: 'competitors', num: 'V', label: 'Teardown' },
-  { id: 'research-archive', num: 'VI', label: 'Research & Evidence' }
+  { id: 'cim', num: 'I', label: 'CIM DAG' },
+  { id: 'roadmap', num: 'II', label: 'Roadmap' },
+  { id: 'simulation', num: 'III', label: 'Eval Bench' },
+  { id: 'competitors', num: 'IV', label: 'Teardown' },
+  { id: 'research-archive', num: 'V', label: 'Research & Evidence' }
 ];
 
 export function StickySectionNav({ activeSection, onActiveSectionChange }) {

@@ -16,8 +16,10 @@ import {
 import { CITATIONS_DATA } from '../../data/citationsData';
 import { SCREENSHOTS_CATALOG } from '../../data/screenshotsData';
 import { ModalDialog } from '../../design-system';
+import { ActInquiryBox } from './ActInquiryBox';
 
 const PLATES_PER_PAGE = 12;
+const LITERATURE_PER_PAGE = 6;
 
 // Intelligent mapping between exploration plates and research citations
 function getPlateCitations(plate) {
@@ -87,8 +89,6 @@ function EditorialPagination({
               type="button"
               onClick={() => onPageChange(pageNum)}
               className={`archive-page-btn archive-page-num-btn ${pageNum === currentPage ? 'active' : ''}`}
-              aria-label={`Page ${pageNum}`}
-              aria-current={pageNum === currentPage ? 'page' : undefined}
             >
               {pageNum}
             </button>
@@ -117,6 +117,7 @@ export function ResearchFooterGazette() {
   const [plateCategory, setPlateCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedExhibit, setSelectedExhibit] = useState(null);
+  const [selectedScreenExhibit, setSelectedScreenExhibit] = useState(null);
   const [platesPage, setPlatesPage] = useState(1);
   const [literaturePage, setLiteraturePage] = useState(1);
 
@@ -195,7 +196,7 @@ export function ResearchFooterGazette() {
 
   const filteredPlates = SCREENSHOTS_CATALOG.filter(item => {
     const matchesCategory = plateCategory === 'all' || item.cat === plateCategory;
-    const matchesSearch = searchQuery === '' ||
+    const matchesSearch = searchQuery === '' || 
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.cat.toLowerCase().includes(searchQuery.toLowerCase());
@@ -238,6 +239,7 @@ export function ResearchFooterGazette() {
 
   const jumpToCitationFromModal = (citationId) => {
     setSelectedExhibit(null);
+    setSelectedScreenExhibit(null);
     setActiveDimension('literature');
     const citIdx = CITATIONS_DATA.findIndex(c => c.id === citationId);
     if (citIdx !== -1) {
@@ -286,7 +288,7 @@ export function ResearchFooterGazette() {
 
       {/* Section Header */}
       <div className="section-kicker" style={{ color: 'var(--accent-burgundy)' }}>
-        SECTION VI &middot; RESEARCH, PRIOR ART &amp; FIELD EVIDENCE ARCHIVE (TASKS 1 &amp; 5)
+        SECTION V &middot; RESEARCH, PRIOR ART &amp; FIELD EVIDENCE ARCHIVE (TASKS 1 &amp; 5)
       </div>
       
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.75rem' }}>
@@ -298,12 +300,26 @@ export function ResearchFooterGazette() {
         </span>
       </div>
 
-      <p style={{ fontFamily: 'var(--font-serif-body)', fontSize: '1.02rem', color: 'var(--ink-secondary)', maxWidth: '940px', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-        Every strategic thesis, persona assertion, and ranked builder intervention in this broadsheet is grounded in empirical research. This unified archive pairs <strong>external literature</strong> (peer-reviewed arXiv papers, Mobbin UI teardowns, and practitioner debates) with <strong>firsthand field ground truth</strong> (forty-three captured plates of the live <code>app.vectorshift.ai</code> platform).
+      <p style={{ fontFamily: 'var(--font-serif-body)', fontSize: '1.02rem', color: 'var(--ink-secondary)', maxWidth: '940px', lineHeight: 1.6, marginBottom: '1.2rem' }}>
+        Every strategic thesis, persona assertion, and ranked builder intervention in my evaluation is grounded in empirical research. This unified archive pairs <strong>external literature</strong> (peer-reviewed arXiv papers, Mobbin UI teardowns, and practitioner debates) with <strong>my firsthand field ground truth</strong>: forty-three captured exploration plates from my audit of the live <code>app.vectorshift.ai</code> platform.
       </p>
 
+      {/* ACT 5: The Central Inquiry & My Opinionated Verdict */}
+      <ActInquiryBox
+        actNumber={5}
+        inquiryLabel="THE EMPIRICAL RIGOR (TASKS 1 & 5)"
+        question="What verifiable evidence proves these architectural critiques reflect reality rather than subjective opinion?"
+        opinion={
+          <>
+            Product roadmaps without empirical proof are merely preferences. I have triangulated every priority in this briefing against <strong>forty-three photographic exploration plates</strong> of my live exploration of the <code>app.vectorshift.ai</code> environment, verified <strong>Mobbin design patterns</strong> from category leaders, and <strong>peer-reviewed arXiv benchmark methodologies</strong>.
+          </>
+        }
+      />
+
+      {/* ── SCREEN-ONLY ARCHIVE CONTROLS & PAGINATION ── */}
+      <div className="screen-only-archive">
       {/* PRIMARY DIMENSION SELECTOR: Literature vs Field Plates */}
-      <div style={{ 
+      <div id="archive-controls-top" style={{ 
         display: 'flex', 
         alignItems: 'center', 
         gap: '0.8rem', 
@@ -393,189 +409,266 @@ export function ResearchFooterGazette() {
       </div>
 
       {/* ========================================================================= */}
-      {/* DIMENSION 1: LITERATURE & PRIOR ART CARDS                                */}
+      {/* DIMENSION 1: LITERATURE & PRIOR ART CARDS (WITH STRUCTURED 2-ROW EVIDENCE) */}
       {/* ========================================================================= */}
       {activeDimension === 'literature' && (
         <div>
           <div className="citations-explainer-grid">
             {displayedCitations.map((item) => {
-            const mappedPlates = SCREENSHOTS_CATALOG.filter(p => getPlateCitations(p).includes(item.id));
-            
-            return (
-              <article 
-                key={item.id} 
-                id={`citation-${item.id}`}
-                className="citation-explainer-card"
-              >
-                {/* Card Header */}
-                <div className="citation-card-header">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span className="citation-badge-mono">[{item.badge}]</span>
-                    <span 
-                      className="citation-category-pill"
-                      style={{ color: getCategoryColor(item.categoryKey), borderColor: `${getCategoryColor(item.categoryKey)}44` }}
-                    >
-                      {getCategoryIcon(item.categoryKey)}
-                      <span>{item.category}</span>
-                    </span>
+              const mappedPlates = SCREENSHOTS_CATALOG.filter(p => getPlateCitations(p).includes(item.id));
+              
+              return (
+                <article 
+                  key={item.id} 
+                  id={`citation-${item.id}`}
+                  className="citation-explainer-card"
+                >
+                  {/* Card Header */}
+                  <div className="citation-card-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span className="citation-badge-mono">[{item.badge}]</span>
+                      <span 
+                        className="citation-category-pill"
+                        style={{ color: getCategoryColor(item.categoryKey), borderColor: `${getCategoryColor(item.categoryKey)}44` }}
+                      >
+                        {getCategoryIcon(item.categoryKey)}
+                        <span>{item.category}</span>
+                      </span>
+                    </div>
+
+                    {item.url && (
+                      <a 
+                        href={item.url} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="citation-source-link"
+                        title="Open canonical source link"
+                      >
+                        <span>Canonical Source</span>
+                        <ArrowUpRight size={13} />
+                      </a>
+                    )}
                   </div>
 
-                  {item.url && (
-                    <a 
-                      href={item.url} 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="citation-source-link"
-                      title="Open canonical source link"
-                    >
-                      <span>Canonical Source</span>
-                      <ArrowUpRight size={13} />
-                    </a>
+                  {/* Title & Source */}
+                  <h3 className="citation-card-title">
+                    {item.title}
+                  </h3>
+                  <div className="citation-card-source">
+                    {item.source}
+                  </div>
+
+                  {/* ROW 1: 'SCREEN' EVIDENCE (Mobbin UI or Platform Screencap) */}
+                  {item.screen && (
+                    <div className="evidence-row-screen">
+                      <div className="evidence-row-tag">
+                        <Camera size={12} />
+                        <span>ROW 1 &middot; SCREEN EVIDENCE ({item.screen.platform || 'Mobbin UI Screen'})</span>
+                      </div>
+                      <div className="evidence-screen-body">
+                        <div 
+                          className="screen-thumb-container" 
+                          onClick={() => setSelectedScreenExhibit(item.screen)}
+                          title="Click to inspect high-resolution screenshot in lightbox"
+                        >
+                          <img 
+                            src={encodeURI(item.screen.thumbnail)} 
+                            alt={item.screen.title} 
+                            className="evidence-screen-thumb" 
+                          />
+                          <div className="screen-thumb-overlay">
+                            <ZoomIn size={14} />
+                          </div>
+                        </div>
+                        <div className="evidence-screen-meta">
+                          <div className="evidence-screen-title">
+                            {item.screen.title}
+                          </div>
+                          <div className="evidence-screen-pattern">
+                            {item.screen.pattern}
+                          </div>
+                          <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap', marginTop: '3px' }}>
+                            <button
+                              type="button"
+                              onClick={() => setSelectedScreenExhibit(item.screen)}
+                              style={{
+                                background: 'none',
+                                border: 'none',
+                                padding: 0,
+                                fontFamily: 'var(--font-mono)',
+                                fontSize: '0.65rem',
+                                fontWeight: 700,
+                                color: 'var(--accent-burgundy)',
+                                cursor: 'pointer',
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '3px'
+                              }}
+                            >
+                              <ZoomIn size={11} />
+                              <span>Inspect Screen</span>
+                            </button>
+                            {item.screen.mobbinUrl && (
+                              <a 
+                                href={item.screen.mobbinUrl} 
+                                target="_blank" 
+                                rel="noreferrer" 
+                                className="mobbin-screen-link"
+                              >
+                                <span>Mobbin Catalog</span>
+                                <ArrowUpRight size={11} />
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   )}
-                </div>
 
-                {/* Title & Source */}
-                <h3 className="citation-card-title">
-                  {item.title}
-                </h3>
-                <div className="citation-card-source">
-                  {item.source}
-                </div>
-
-                {/* Verbatim Finding Block */}
-                <div className="citation-finding-box">
-                  <div className="citation-finding-label">Verbatim Evidence / Finding:</div>
-                  <blockquote className="citation-finding-quote">
-                    &ldquo;{item.verbatimFinding}&rdquo;
-                  </blockquote>
-                </div>
-
-                {/* The VectorShift Architectural Explainer */}
-                <div className="citation-explainer-callout">
-                  <div className="citation-explainer-heading">
-                    <span style={{ fontSize: '1rem' }}>💡</span>
-                    <strong>The VectorShift Explainer &amp; Architectural Rationale:</strong>
-                  </div>
-                  <p className="citation-explainer-text">
-                    {item.explainer}
-                  </p>
-                </div>
-
-                {/* Mapped Field Plates Proof Row */}
-                {item.id === 'c12' ? (
-                  <div style={{ 
-                    background: 'rgba(21, 128, 61, 0.08)', 
-                    border: '1px solid rgba(21, 128, 61, 0.25)', 
-                    borderRadius: '4px', 
-                    padding: '0.6rem 0.8rem', 
-                    marginBottom: '0.8rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    flexWrap: 'wrap',
-                    gap: '0.5rem'
-                  }}>
-                    <div style={{ fontSize: '0.74rem', color: 'var(--ink-secondary)' }}>
-                      <strong style={{ color: 'var(--accent-emerald)' }}>Field Evidence Ground Truth:</strong> 43 High-Resolution Exploration Plates captured across all platform modules.
+                  {/* ROW 2: OFFICIAL 'DOCS' CITATION */}
+                  {item.docs && (
+                    <div className="evidence-row-docs">
+                      <div className="evidence-row-tag">
+                        <BookOpen size={12} />
+                        <span>ROW 2 &middot; OFFICIAL DOCS CITATION</span>
+                      </div>
+                      <div className="evidence-docs-body">
+                        <div className="evidence-docs-citation-line">
+                          <a 
+                            href={item.docs.url} 
+                            target="_blank" 
+                            rel="noreferrer" 
+                            className="evidence-docs-url"
+                            title="Open official documentation in new tab"
+                          >
+                            <span>{item.docs.citation}</span>
+                            <ArrowUpRight size={11} />
+                          </a>
+                        </div>
+                        <div className="evidence-docs-spec">
+                          &ldquo;{item.docs.specExcerpt}&rdquo;
+                        </div>
+                        <div className="evidence-docs-roadmap">
+                          <span>✓</span> {item.docs.roadmapAnchor}
+                        </div>
+                      </div>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() => setActiveDimension('plates')}
-                      className="modal-research-jump-btn"
-                      style={{ padding: '0.2rem 0.5rem', fontSize: '0.7rem' }}
+                  )}
+
+                  {/* The VectorShift Architectural Explainer */}
+                  <div className="citation-explainer-callout">
+                    <div className="citation-explainer-heading">
+                      <span style={{ fontSize: '1rem' }}>💡</span>
+                      <strong>The VectorShift Explainer &amp; Strategic Rationale:</strong>
+                    </div>
+                    <p className="citation-explainer-text">
+                      {item.explainer}
+                    </p>
+                  </div>
+
+                  {/* Mapped Field Plates Proof Row (with miniature screenshot thumbnail icons) */}
+                  {item.id === 'c12' ? (
+                    <div style={{ 
+                      background: 'rgba(21, 128, 61, 0.08)', 
+                      border: '1px solid rgba(21, 128, 61, 0.25)', 
+                      borderRadius: '4px', 
+                      padding: '0.6rem 0.8rem', 
+                      marginBottom: '0.8rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      flexWrap: 'wrap',
+                      gap: '0.5rem'
+                    }}>
+                      <div style={{ fontSize: '0.74rem', color: 'var(--ink-secondary)' }}>
+                        <strong style={{ color: 'var(--accent-emerald)' }}>Field Evidence Ground Truth:</strong> 43 High-Resolution Exploration Plates captured across all platform modules.
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setActiveDimension('plates')}
+                        className="modal-research-jump-btn"
+                        style={{ padding: '0.2rem 0.5rem', fontSize: '0.7rem' }}
+                      >
+                        <span>Explore All 43 Plates</span>
+                        <ArrowRight size={11} />
+                      </button>
+                    </div>
+                  ) : mappedPlates.length > 0 && (
+                    <div style={{ 
+                      background: 'var(--paper-bg)', 
+                      border: '1px solid var(--ink-rule-subtle)', 
+                      borderRadius: '3px', 
+                      padding: '0.45rem 0.65rem', 
+                      marginBottom: '0.8rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      flexWrap: 'wrap'
+                    }}>
+                      <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.68rem', fontWeight: 700, color: 'var(--accent-burgundy)', textTransform: 'uppercase' }}>
+                        Field Proof:
+                      </span>
+                      <div style={{ display: 'inline-flex', gap: '5px', flexWrap: 'wrap' }}>
+                        {mappedPlates.slice(0, 4).map(p => (
+                          <button
+                            key={p.id}
+                            type="button"
+                            onClick={() => setSelectedExhibit(p)}
+                            className="field-proof-thumb-pill"
+                            title={`Inspect Plate #${p.id}: ${p.title}`}
+                          >
+                            <img 
+                              src={encodeURI(`/screenshots/${p.name}`)} 
+                              alt={`Plate #${p.id}`}
+                              className="field-proof-mini-thumb" 
+                            />
+                            <span>Plate #{p.id}</span>
+                          </button>
+                        ))}
+                        {mappedPlates.length > 4 && (
+                          <button
+                            type="button"
+                            onClick={() => setActiveDimension('plates')}
+                            className="field-proof-thumb-pill"
+                            style={{ fontStyle: 'italic' }}
+                            title="View remaining plates in catalog"
+                          >
+                            <span>+{mappedPlates.length - 4} more</span>
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Card Footer: Bidirectional link & Tags */}
+                  <div className="citation-card-footer">
+                    <button 
+                      onClick={() => jumpToStory(item.storyRefId)}
+                      className="citation-jump-btn"
+                      title={`Jump back to ${item.storyRefLabel}`}
                     >
-                      <span>Explore All 43 Plates</span>
-                      <ArrowRight size={11} />
+                      <ArrowUp size={12} />
+                      <span>Referenced in: {item.storyRefLabel}</span>
                     </button>
-                  </div>
-                ) : mappedPlates.length > 0 && (
-                  <div style={{ 
-                    background: 'var(--paper-bg)', 
-                    border: '1px solid var(--ink-rule-subtle)', 
-                    borderRadius: '3px', 
-                    padding: '0.45rem 0.65rem', 
-                    marginBottom: '0.8rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    flexWrap: 'wrap'
-                  }}>
-                    <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.68rem', fontWeight: 700, color: 'var(--accent-burgundy)', textTransform: 'uppercase' }}>
-                      Field Proof:
-                    </span>
-                    <div style={{ display: 'inline-flex', gap: '4px', flexWrap: 'wrap' }}>
-                      {mappedPlates.slice(0, 4).map(p => (
-                        <button
-                          key={p.id}
-                          type="button"
-                          onClick={() => {
-                            setSelectedExhibit(p);
-                          }}
-                          style={{
-                            background: 'var(--paper-surface-alt)',
-                            border: '1px solid var(--ink-rule-subtle)',
-                            borderRadius: '2px',
-                            padding: '0.1rem 0.35rem',
-                            fontSize: '0.66rem',
-                            fontFamily: 'var(--font-mono)',
-                            color: 'var(--ink-secondary)',
-                            cursor: 'pointer'
-                          }}
-                          title={`Click to inspect Plate #${p.id}: ${p.title}`}
-                        >
-                          Plate #{p.id}
-                        </button>
+
+                    <div className="citation-tags-row">
+                      {item.tags.map(t => (
+                        <span key={t} className="citation-tag">#{t}</span>
                       ))}
-                      {mappedPlates.length > 4 && (
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setActiveDimension('plates');
-                          }}
-                          style={{
-                            background: 'none',
-                            border: 'none',
-                            fontSize: '0.66rem',
-                            color: 'var(--accent-burgundy)',
-                            cursor: 'pointer',
-                            textDecoration: 'underline'
-                          }}
-                        >
-                          +{mappedPlates.length - 4} more
-                        </button>
-                      )}
                     </div>
                   </div>
-                )}
-
-                {/* Card Footer: Bidirectional link & Tags */}
-                <div className="citation-card-footer">
-                  <button 
-                    onClick={() => jumpToStory(item.storyRefId)}
-                    className="citation-jump-btn"
-                    title={`Jump back to ${item.storyRefLabel}`}
-                  >
-                    <ArrowUp size={12} />
-                    <span>Referenced in: {item.storyRefLabel}</span>
-                  </button>
-
-                  <div className="citation-tags-row">
-                    {item.tags.map((tag, idx) => (
-                      <span key={idx} className="citation-tag">#{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+                </article>
+              );
+            })}
           </div>
 
+          {/* Literature Pagination */}
           <EditorialPagination
             currentPage={currentLiteraturePage}
             totalPages={totalLiteraturePages}
             totalItems={filteredCitations.length}
             itemsPerPage={LITERATURE_PER_PAGE}
-            dimensionLabel="Literature Explainer Cards"
+            dimensionLabel="Explainer Citations"
             onPageChange={(page) => {
               setLiteraturePage(page);
               scrollToArchiveTop();
@@ -585,95 +678,69 @@ export function ResearchFooterGazette() {
       )}
 
       {/* ========================================================================= */}
-      {/* DIMENSION 2: FIELD AUDIT PLATES (43 HIGH-RES SCREENCAPS)                  */}
+      {/* DIMENSION 2: 43 PHOTOGRAPHIC EXPLORATION PLATES                           */}
       {/* ========================================================================= */}
       {activeDimension === 'plates' && (
         <div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.2rem' }}>
-            {displayedPlates.map(item => {
-              const mappedCitations = getPlateCitations(item);
+          <div className="exhibits-broadsheet-grid">
+            {displayedPlates.map((item) => {
+              const mappedCitationIds = getPlateCitations(item);
 
               return (
-                <div
-                  key={item.id}
-                  id={`plate-${item.id}`}
-                  className="plate-card"
+                <div 
+                  key={item.id} 
+                  className="exhibit-broadsheet-card"
                   onClick={() => setSelectedExhibit(item)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') setSelectedExhibit(item);
-                  }}
-                  style={{ cursor: 'pointer' }}
+                  title={`Click to inspect Plate #${item.id}: ${item.title}`}
                 >
-                  <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--paper-bg)' }}>
-                    <img
-                      src={`/screenshots/${item.name}`}
-                      alt={item.title}
-                      loading="lazy"
-                      style={{ width: '100%', height: '160px', objectFit: 'cover', display: 'block' }}
-                    />
-                    <div style={{
-                      position: 'absolute',
-                      top: '6px',
-                      right: '6px',
-                      background: 'rgba(0, 0, 0, 0.78)',
-                      color: '#ffffff',
-                      fontSize: '0.65rem',
-                      fontFamily: 'var(--font-mono)',
-                      padding: '0.15rem 0.4rem',
-                      borderRadius: '2px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.25rem'
-                    }}>
-                      <ZoomIn size={10} /> Plate #{item.id}
+                  {/* Plate Header Bar */}
+                  <div className="exhibit-card-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <span className="exhibit-number-badge">PLATE #{item.id}</span>
+                      <span className="exhibit-cat-tag">{item.cat}</span>
                     </div>
-
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '6px',
-                      left: '6px',
-                      background: 'var(--paper-surface)',
-                      color: 'var(--ink-secondary)',
-                      fontSize: '0.62rem',
-                      fontFamily: 'var(--font-sans)',
-                      fontWeight: 700,
-                      textTransform: 'uppercase',
-                      padding: '0.1rem 0.35rem',
-                      borderRadius: '2px',
-                      border: '1px solid var(--ink-rule-subtle)'
-                    }}>
-                      {item.cat}
+                    <div className="exhibit-inspect-hint">
+                      <ZoomIn size={12} />
+                      <span>Inspect</span>
                     </div>
                   </div>
 
-                  <div className="plate-caption" style={{ padding: '0.8rem' }}>
-                    <strong style={{ display: 'block', color: 'var(--ink-primary)', fontSize: '0.84rem', marginBottom: '0.2rem' }}>
-                      {item.title}
-                    </strong>
-                    <span style={{ display: 'block', color: 'var(--ink-muted)', fontSize: '0.74rem', marginBottom: '0.6rem', lineHeight: 1.35 }}>
-                      {item.desc}
-                    </span>
+                  {/* Plate Thumbnail with safe URL encoding */}
+                  <div className="exhibit-img-container">
+                    <img 
+                      src={encodeURI(`/screenshots/${item.name}`)} 
+                      alt={item.title} 
+                      loading="lazy"
+                      className="exhibit-img"
+                    />
+                  </div>
 
-                    {/* Mapped Literature Badges */}
-                    <div 
-                      className="plate-citations-row"
-                      onClick={(e) => e.stopPropagation()}
-                      style={{ display: 'flex', alignItems: 'center', gap: '4px', flexWrap: 'wrap' }}
-                    >
-                      <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.66rem', color: 'var(--ink-muted)' }}>
-                        Research:
+                  {/* Plate Content Meta */}
+                  <div className="exhibit-card-content">
+                    <div className="exhibit-card-title">
+                      {item.title}
+                    </div>
+                    <div className="exhibit-card-desc">
+                      {item.desc}
+                    </div>
+
+                    {/* Empirical Evidence Badges */}
+                    <div style={{ marginTop: '0.6rem', display: 'flex', alignItems: 'center', gap: '4px', flexWrap: 'wrap' }}>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--ink-muted)', textTransform: 'uppercase' }}>
+                        Proves:
                       </span>
-                      {mappedCitations.map(cId => {
+                      {mappedCitationIds.map(cId => {
                         const cit = CITATIONS_DATA.find(c => c.id === cId);
                         return (
                           <button
                             key={cId}
                             type="button"
-                            onClick={() => jumpToCitationFromModal(cId)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              jumpToCitationFromModal(cId);
+                            }}
                             style={{
-                              background: 'var(--paper-bg)',
+                              background: 'var(--paper-surface-alt)',
                               border: '1px solid var(--ink-rule-subtle)',
                               borderRadius: '2px',
                               padding: '0.1rem 0.35rem',
@@ -701,6 +768,7 @@ export function ResearchFooterGazette() {
             </div>
           )}
 
+          {/* Plates Pagination */}
           <EditorialPagination
             currentPage={currentPlatePage}
             totalPages={totalPlatePages}
@@ -715,7 +783,174 @@ export function ResearchFooterGazette() {
         </div>
       )}
 
-      {/* Accessible Full-Resolution Broadsheet Modal with Literature Grounding */}
+      </div> {/* Close screen-only-archive */}
+
+      {/* ── PRINT-ONLY DESERIALIZED ARCHIVE (CONTAINS ALL 11 CITATIONS & ALL 43 PLATES) ── */}
+      <div className="print-only-archive" style={{ display: 'none' }}>
+        {/* PART A HEADER */}
+        <div style={{ borderBottom: '2px solid var(--ink-primary)', paddingBottom: '0.4rem', marginBottom: '1rem', breakInside: 'avoid' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 800, color: 'var(--accent-burgundy)', textTransform: 'uppercase' }}>
+            SECTION V (PART A) · PEER-REVIEWED LITERATURE &amp; UI BENCHMARKS
+          </div>
+          <h3 style={{ fontFamily: 'var(--font-serif-headline)', fontSize: '1.45rem', margin: '0.2rem 0', color: 'var(--ink-primary)' }}>
+            Complete Annotated Bibliography &amp; Verification Citations (All 11 References)
+          </h3>
+          <p style={{ fontSize: '0.78rem', color: 'var(--ink-secondary)', margin: 0, lineHeight: 1.4 }}>
+            Unpaginated academic register linking external benchmark literature, Mobbin teardowns, and practitioner debates directly to each engineering priority in this evaluation.
+          </p>
+        </div>
+
+        {/* ALL 11 CITATIONS DESERIALIZED */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {CITATIONS_DATA.map((item) => (
+            <article 
+              key={item.id}
+              style={{
+                background: 'var(--paper-surface-alt)',
+                border: '1px solid var(--ink-rule-subtle)',
+                borderRadius: '4px',
+                padding: '0.9rem 1rem',
+                breakInside: 'avoid',
+                pageBreakInside: 'avoid'
+              }}
+            >
+              {/* Citation Header */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.74rem', fontWeight: 800, color: 'var(--accent-burgundy)' }}>
+                    [{item.badge}]
+                  </span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.66rem', textTransform: 'uppercase', color: 'var(--ink-muted)' }}>
+                    &middot; {item.category}
+                  </span>
+                </div>
+                {item.url && (
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.66rem', color: 'var(--ink-muted)' }}>
+                    {item.url.replace('https://', '')}
+                  </span>
+                )}
+              </div>
+
+              {/* Title & Source */}
+              <h4 style={{ fontFamily: 'var(--font-serif-headline)', fontSize: '1.05rem', color: 'var(--ink-primary)', margin: '0 0 0.2rem 0' }}>
+                {item.title}
+              </h4>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--ink-muted)', marginBottom: '0.6rem' }}>
+                Source: {item.source}
+              </div>
+
+              {/* ROW 1: Screen Evidence with High Quality Preview */}
+              {item.screen && (
+                <div style={{ background: 'var(--paper-bg)', border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px', padding: '0.65rem', marginBottom: '0.6rem' }}>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', fontWeight: 800, color: 'var(--accent-burgundy)', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
+                    &sect; ROW 1 &middot; SCREEN EVIDENCE ({item.screen.platform})
+                  </div>
+                  <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}>
+                    <div style={{ width: '220px', flexShrink: 0, border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px', overflow: 'hidden', background: '#fafafa' }}>
+                      <img 
+                        src={encodeURI(item.screen.thumbnail)} 
+                        alt={item.screen.title} 
+                        style={{ width: '100%', height: 'auto', maxHeight: '140px', objectFit: 'contain', display: 'block' }} 
+                      />
+                    </div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.78rem', fontWeight: 700, color: 'var(--ink-primary)', marginBottom: '0.2rem' }}>
+                        {item.screen.title}
+                      </div>
+                      <div style={{ fontSize: '0.72rem', color: 'var(--ink-secondary)', lineHeight: 1.4 }}>
+                        {item.screen.pattern}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* ROW 2: Official Documentation Citation */}
+              {item.docs && (
+                <div style={{ background: 'var(--paper-bg)', borderLeft: '3px solid var(--accent-burgundy)', padding: '0.5rem 0.75rem', marginBottom: '0.5rem' }}>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', fontWeight: 800, color: 'var(--accent-burgundy)', textTransform: 'uppercase', marginBottom: '0.2rem' }}>
+                    &sect; ROW 2 &middot; OFFICIAL SPECIFICATION CITATION
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--ink-primary)', fontWeight: 600 }}>
+                    {item.docs.citation}
+                  </div>
+                  <div style={{ fontStyle: 'italic', fontSize: '0.72rem', color: 'var(--ink-secondary)', margin: '0.2rem 0' }}>
+                    "{item.docs.specExcerpt}"
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.66rem', color: 'var(--accent-emerald)', fontWeight: 700 }}>
+                    &check; {item.docs.roadmapAnchor}
+                  </div>
+                </div>
+              )}
+
+              {/* Verbatim Finding & Architectural Explainer */}
+              <p style={{ fontSize: '0.74rem', color: 'var(--ink-primary)', lineHeight: 1.45, margin: '0.4rem 0' }}>
+                <strong>Field Finding:</strong> {item.verbatimFinding}
+              </p>
+              <p style={{ fontSize: '0.74rem', color: 'var(--ink-secondary)', lineHeight: 1.45, margin: 0 }}>
+                <strong>Strategic Synthesis:</strong> {item.explainer}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        {/* PART B: 43 EXPLORATION PLATES CATALOG */}
+        <div style={{ breakBefore: 'page', pageBreakBefore: 'always', paddingTop: '1rem', marginTop: '1.5rem', borderTop: '2px solid var(--ink-primary)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 800, color: 'var(--accent-burgundy)', textTransform: 'uppercase' }}>
+            SECTION V (PART B) · EMPIRICAL PLATFORM ARTIFACTS
+          </div>
+          <h3 style={{ fontFamily: 'var(--font-serif-headline)', fontSize: '1.45rem', margin: '0.2rem 0', color: 'var(--ink-primary)' }}>
+            The Field Audit Specimens: 43 Captured Platform Exploration Plates
+          </h3>
+          <p style={{ fontSize: '0.78rem', color: 'var(--ink-secondary)', marginBottom: '0.9rem', lineHeight: 1.4 }}>
+            Visual photographic catalog of 43 high-resolution exploration plates captured during firsthand testing of <code>app.vectorshift.ai</code> across knowledge bases, visual DAG canvas, table workflows, custom skills, and execution telemetry.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.6rem' }}>
+            {SCREENSHOTS_CATALOG.map((p) => (
+              <div 
+                key={p.id}
+                style={{
+                  background: 'var(--paper-surface-alt)',
+                  border: '1px solid var(--ink-rule-subtle)',
+                  borderRadius: '3px',
+                  padding: '0.45rem',
+                  breakInside: 'avoid',
+                  pageBreakInside: 'avoid',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.3rem'
+                }}
+              >
+                <div style={{ width: '100%', height: '100px', overflow: 'hidden', borderRadius: '2px', border: '1px solid var(--ink-rule-subtle)', background: '#ffffff' }}>
+                  <img 
+                    src={encodeURI(`/screenshots/${p.name}`)} 
+                    alt={`Plate #${p.id}`}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.64rem', fontWeight: 800, color: 'var(--accent-burgundy)' }}>
+                    PLATE #{p.id}
+                  </span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.58rem', textTransform: 'uppercase', background: 'var(--paper-bg)', padding: '0.1rem 0.3rem', borderRadius: '2px' }}>
+                    {p.cat}
+                  </span>
+                </div>
+                <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.7rem', fontWeight: 700, color: 'var(--ink-primary)', lineHeight: 1.25 }}>
+                  {p.title}
+                </div>
+                <div style={{ fontSize: '0.64rem', color: 'var(--ink-secondary)', lineHeight: 1.3 }}>
+                  {p.desc}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+
+      {/* Accessible Full-Resolution Broadsheet Plate Modal */}
       <ModalDialog
         isOpen={Boolean(selectedExhibit)}
         onClose={() => setSelectedExhibit(null)}
@@ -725,7 +960,7 @@ export function ResearchFooterGazette() {
         {selectedExhibit && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img
-              src={`/screenshots/${selectedExhibit.name}`}
+              src={encodeURI(`/screenshots/${selectedExhibit.name}`)}
               alt={selectedExhibit.title}
               style={{ maxWidth: '100%', maxHeight: '55vh', objectFit: 'contain', border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px' }}
             />
@@ -770,6 +1005,54 @@ export function ResearchFooterGazette() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        )}
+      </ModalDialog>
+
+      {/* Accessible Full-Resolution Competitor & Mobbin Screen Lightbox Modal */}
+      <ModalDialog
+        isOpen={Boolean(selectedScreenExhibit)}
+        onClose={() => setSelectedScreenExhibit(null)}
+        title={selectedScreenExhibit?.title || ''}
+        subtitle={selectedScreenExhibit ? `${selectedScreenExhibit.platform || 'Mobbin UI Screen'} · Competitive Benchmark Inspection` : ''}
+      >
+        {selectedScreenExhibit && (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <img
+              src={encodeURI(selectedScreenExhibit.fullImage || selectedScreenExhibit.thumbnail)}
+              alt={selectedScreenExhibit.title}
+              style={{ 
+                maxWidth: '100%', 
+                maxHeight: '56vh', 
+                objectFit: 'contain', 
+                border: '1px solid var(--ink-rule-subtle)', 
+                borderRadius: '3px',
+                boxShadow: '0 6px 20px rgba(0, 0, 0, 0.12)' 
+              }}
+            />
+
+            <div style={{ marginTop: '1rem', width: '100%', background: 'var(--paper-surface-alt)', border: '1px solid var(--ink-rule-subtle)', borderRadius: '4px', padding: '0.85rem 1rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.45rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 800, color: 'var(--accent-burgundy)', textTransform: 'uppercase' }}>
+                  Observed UX &amp; Architecture Pattern
+                </span>
+                {selectedScreenExhibit.mobbinUrl && (
+                  <a
+                    href={selectedScreenExhibit.mobbinUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mobbin-screen-link"
+                    style={{ fontSize: '0.72rem' }}
+                  >
+                    <span>View in Mobbin Catalog</span>
+                    <ArrowUpRight size={12} />
+                  </a>
+                )}
+              </div>
+              <p style={{ fontSize: '0.84rem', color: 'var(--ink-secondary)', lineHeight: 1.5, margin: 0 }}>
+                {selectedScreenExhibit.pattern}
+              </p>
             </div>
           </div>
         )}

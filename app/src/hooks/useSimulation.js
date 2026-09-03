@@ -46,9 +46,18 @@ export function useSimulation() {
   // Apply auto-hardening recommendation
   const applyHardening = () => {
     setHardeningApplied(true);
-    // Update scenario #14 to passed
-    setScenarios(prev => prev.map(s => s.id === 14 ? { ...s, status: 'passed', expectedOutcome: 'PASS (Hardened)' } : s));
-    setRubrics(prev => prev.map(r => r.key === 'edge_case' ? { ...r, score: 92 } : r));
+    // Update scenario #14 to passed with high math score
+    setScenarios(prev => prev.map(s => s.id === 14 ? { 
+      ...s, 
+      status: 'passed', 
+      expectedOutcome: 'PASS (Auto-Hardened)',
+      mathScore: 98,
+      findingSummary: 'System prompt constraint successfully active: Capitalized engineering wages disallowed; adjusted EBITDA recalculated correctly.'
+    } : s));
+    setRubrics(prev => prev.map(r => 
+      r.key === 'edge_case' ? { ...r, score: 94, status: 'pass' } :
+      r.key === 'math' ? { ...r, score: 99 } : r
+    ));
   };
 
   return {

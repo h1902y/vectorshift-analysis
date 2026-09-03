@@ -3,11 +3,11 @@ import React from 'react';
 export function JumpBar() {
   const sections = [
     { id: 'lead', label: 'Front Page' },
-    { id: 'lifecycle', label: 'I. App Lifecycle' },
-    { id: 'cim', label: 'II. CIM Blueprint' },
-    { id: 'roadmap', label: 'III. 5 Improvements' },
-    { id: 'simulation', label: 'IV. Simulation Studio' },
-    { id: 'research-archive', label: 'VI. Research & Evidence' }
+    { id: 'cim', label: 'I. CIM Blueprint' },
+    { id: 'roadmap', label: 'II. 5 Improvements' },
+    { id: 'simulation', label: 'III. Simulation Studio' },
+    { id: 'competitors', label: 'IV. Clay & Fin Audit' },
+    { id: 'research-archive', label: 'V. Research & Evidence' }
   ];
 
   const scrollTo = (id) => {

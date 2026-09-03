@@ -43,23 +43,22 @@ export function EditorialFooter() {
     {
       title: '01 · STRATEGIC THESIS',
       links: [
-        { id: 'lead', num: 'TOP', label: 'The Forward-Deployed Thesis', badge: 'Lead' },
-        { id: 'lifecycle', num: 'I', label: 'Application Lifecycle & Moat' }
+        { id: 'lead', num: 'TOP', label: 'The Forward-Deployed Thesis', badge: 'Task 2' },
+        { id: 'cim', num: 'I', label: 'Technical Blueprint & CIM DAG', badge: 'Task 3' }
       ]
     },
     {
-      title: '02 · ARCHITECTURE & ROADMAP',
+      title: '02 · ROADMAP & PROTOTYPE',
       links: [
-        { id: 'cim', num: 'II', label: 'Technical Blueprint & CIM DAG' },
-        { id: 'roadmap', num: 'III', label: '5 Ranked UX Interventions', badge: 'Ranked' },
-        { id: 'simulation', num: 'IV', label: 'Working Simulation Studio', badge: 'Live Lab' }
+        { id: 'roadmap', num: 'II', label: '5 Ranked UX Interventions', badge: 'Task 4' },
+        { id: 'simulation', num: 'III', label: 'Simulation & Eval Test Bench', badge: 'Task 5' }
       ]
     },
     {
-      title: '03 · FIELD AUDIT & STANDARDS',
+      title: '03 · BENCHMARKS & RESEARCH',
       links: [
-        { id: 'competitors', num: 'V', label: 'Clay & Fin Teardown' },
-        { id: 'research-archive', num: 'VI', label: 'Research & Evidence Archive', badge: '12 + 43' }
+        { id: 'competitors', num: 'IV', label: 'Clay & Fin Teardown', badge: 'Bonus' },
+        { id: 'research-archive', num: 'V', label: 'Research & Field Evidence Archive', badge: 'Task 1' }
       ]
     }
   ];

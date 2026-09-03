@@ -1,6 +1,7 @@
 import React from 'react';
 import { NewspaperSection, GraphicCard, BoxedCallout, NoticeBanner, CodeBlock, StatusBadge } from '../../design-system';
 import { CitationLink } from './CitationLink';
+import { ActInquiryBox } from './ActInquiryBox';
 
 export function TechnicalBlueprint() {
   const dagAscii = `[Inbound 50-Page CIM PDF]
@@ -25,10 +26,21 @@ export function TechnicalBlueprint() {
   return (
     <NewspaperSection
       id="cim"
-      kicker="SECTION II &middot; TECHNICAL BLUEPRINT (TASK 3)"
+      kicker="SECTION I &middot; TECHNICAL BLUEPRINT (TASK 3)"
       byline="PRIVATE EQUITY DILIGENCE &middot; DESTRUCTURING ENGINE &middot; ZERO HALLUCINATION MATH"
       headline="Autonomous CIM deconstruction and the deterministic EBITDA bridge"
     >
+      {/* ACT 1: The Central Inquiry & My Opinionated Verdict */}
+      <ActInquiryBox
+        actNumber={1}
+        inquiryLabel="THE BUILT PROOF (TASK 3)"
+        question="Can an operator actually build an institution-grade diligence pipeline on VectorShift end-to-end, or does it stall on complex multi-modal data?"
+        opinion={
+          <>
+            I proved it by building an <strong>Autonomous CIM Deconstructor &amp; EBITDA Bridge</strong> end-to-end on the platform. But pure visual LLM chains fail in finance because autoregressive models hallucinate 14–28% of financial math. In my design, the only institutionally viable architecture is a <strong>neuro-symbolic pipeline</strong>: LLMs extract qualitative figures, deterministic Python nodes compute Adjusted EBITDA, and 100% of assertions cite exact page coordinates.
+          </>
+        }
+      />
       {/* Field Dispatch Credit Note */}
       <NoticeBanner
         intent="warning"
@@ -63,7 +75,7 @@ export function TechnicalBlueprint() {
             To eliminate mathematical hallucinations, VectorShift pairs qualitative extraction with deterministic calculator nodes <CitationLink id="c3" /> <CitationLink id="c11" />:
           </p>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '0.8rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.6rem', marginTop: '0.6rem' }}>
             <BoxedCallout
               title="Approved Add-Back Additions"
               accent="var(--accent-emerald)"

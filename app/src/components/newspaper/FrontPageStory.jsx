@@ -2,6 +2,7 @@ import React from 'react';
 import { Cpu, UserCheck, Lock, ArrowDown } from 'lucide-react';
 import { NewspaperSection, GraphicCard, InlineCode, StatusBadge } from '../../design-system';
 import { CitationLink } from './CitationLink';
+import { ActInquiryBox } from './ActInquiryBox';
 
 export function FrontPageStory() {
   return (
@@ -12,6 +13,18 @@ export function FrontPageStory() {
       headline="The Forward-Deployed Operator: Why Private Equity cannot buy consumer chatbots"
       subtitle="How VectorShift's dual-surface architecture bridges the operational divide between visual DAG builders and executive deal teams."
     >
+      {/* ACT 0: The Central Inquiry & My Opinionated Verdict */}
+      <ActInquiryBox
+        actNumber={0}
+        inquiryLabel="THE STRATEGIC WEDGE (TASK 2)"
+        question="Who is VectorShift really for, and what is its unassailable commercial wedge in the crowded enterprise AI ecosystem?"
+        opinion={
+          <>
+            In my assessment, VectorShift is not a toy for casual prompt engineers or generalist SMBs. Its true high-LTV ICP is the <strong>Forward-Deployed AI Operator in Private Markets</strong>—boutique technical consultancies and internal M&A innovation teams. My core thesis is that VectorShift's unassailable moat is the <strong>6-Stage Client Packaging Lifecycle</strong>: assembling multi-modal DAGs visually and instantly deploying them as client-facing, white-label portals with role-based governance.
+          </>
+        }
+      />
+
       <div className="story-grid-2col">
         {/* Left Graphic Box: Persona Triangulation */}
         <GraphicCard

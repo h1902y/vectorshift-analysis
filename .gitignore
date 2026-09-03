@@ -6,6 +6,7 @@ app/node_modules/
 dist/
 app/dist/
 build/
+app/public/screenshots/
 
 # Logs
 logs

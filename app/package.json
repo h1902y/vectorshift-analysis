@@ -4,10 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node -e \"const fs=require('fs'); if(fs.existsSync('../screenshots')) fs.cpSync('../screenshots', './public/screenshots', {recursive:true});\"",
+    "prebuild": "node -e \"const fs=require('fs'); if(fs.existsSync('../screenshots')) fs.cpSync('../screenshots', './public/screenshots', {recursive:true});\"",
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "export-pdf": "node scripts/export-pdf.js"
   },
   "dependencies": {
     "lucide-react": "^1.40.0",

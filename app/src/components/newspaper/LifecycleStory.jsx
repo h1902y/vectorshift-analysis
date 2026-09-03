@@ -15,7 +15,7 @@ export function LifecycleStory() {
   return (
     <NewspaperSection
       id="lifecycle"
-      kicker="SECTION I &middot; AGENTIC APPLICATION LIFECYCLE (TASKS 1 & 2)"
+      kicker="THE OPERATOR'S DISPATCH &middot; APPLICATION LIFECYCLE &middot; PRIVATE MARKET MOAT"
       byline="PLATFORM AUDIT &middot; FIELD GOVERNANCE &middot; ARCHITECTURAL DISPATCH"
       headline="Beyond prompt engineering: The three pillars of the agentic application lifecycle"
     >
@@ -32,7 +32,7 @@ export function LifecycleStory() {
         {/* Right Drop Cap Editorial Text */}
         <div className="story-editorial-text">
           <p className="daily-drop-cap">
-            Moving beyond isolated prompt composition, the true operational bottleneck in enterprise AI is lifecycle governance. Forward-deployed operators do not maintain static chatbot drawers; they maintain mission-critical pipelines that ingest shifting corporate data rooms, interface with external APIs, and execute high-stakes logic where mathematical inaccuracies are intolerable.
+            As a forward-deployed operator, I have observed that the true operational bottleneck in enterprise AI is lifecycle governance rather than prompt syntax. Operators do not maintain static chatbot drawers; they engineer mission-critical pipelines that ingest shifting corporate data rooms, interface with external APIs, and execute high-stakes logic where mathematical inaccuracies are intolerable.
           </p>
 
           <p>

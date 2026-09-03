@@ -64,22 +64,22 @@ export default function App() {
           {/* Top Story: The Forward-Deployed Operator Thesis (Task 2) */}
           <FrontPageStory />
 
-          {/* Section I: Agentic Application Lifecycle & Moat (Tasks 1 & 2) */}
+          {/* Section: Agentic Application Lifecycle & Moat (Task 2) */}
           <LifecycleStory />
 
-          {/* Section II: Technical Blueprint & CIM Deconstructor (Task 3) */}
+          {/* Section I: Technical Blueprint & CIM Deconstructor (Task 3 Built Use Case) */}
           <TechnicalBlueprint />
 
-          {/* Section III: Field Prioritization & 5 Ranked Interventions (Task 4) */}
+          {/* Section II: Field Prioritization & 5 Ranked Interventions (Task 4) */}
           <RoadmapStory />
 
-          {/* Section IV: Working Prototype: The Simulation & Eval Test Bench (Task 5) */}
+          {/* Section III: Working Prototype: The Simulation & Eval Test Bench (Task 5 Hero Deep Dive) */}
           <InteractiveStudioSection simulation={simulation} />
 
-          {/* Section V: Comparative Intelligence: VectorShift vs. Clay vs. Fin (Bonus) */}
+          {/* Section IV: Comparative Intelligence: VectorShift vs. Clay vs. Fin (Bonus Competitor Analysis) */}
           <BenchmarkStory />
 
-          {/* Section VI: Research, Prior Art & Field Evidence Archive (Tasks 1 & 5) */}
+          {/* Section V: Research, Prior Art & Field Evidence Archive (Tasks 1 & 5) */}
           <ResearchFooterGazette />
         </main>
 

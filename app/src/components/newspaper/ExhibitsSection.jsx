@@ -80,7 +80,7 @@ export function ExhibitsSection() {
             <span>INTELLIGENT EVIDENCE MAPPING &middot; REVERSE-INDEX TO RESEARCH FOOTER</span>
           </div>
           <p className="research-mapping-text">
-            Every plate in this 43-screen archive provides empirical ground truth for our strategic recommendations. Select an evidence cluster below to jump directly to its verified explainer box in the Research Footer Gazette:
+            Every plate in this 43-screen archive provides empirical ground truth for my strategic recommendations. Select an evidence cluster below to jump directly to its verified explainer box in the Research Footer Gazette:
           </p>
         </div>
 
