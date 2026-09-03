@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, ArrowUp } from 'lucide-react';
+import { Globe, Mail, ArrowUp } from 'lucide-react';
 import { EditorialDivider } from '../../design-system';
 import { ProfileCard } from '../ProfileCard';
 
@@ -43,16 +43,31 @@ export function EditorialFooter() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const directoryLinks = [
-    { id: 'lead', num: 'TOP', label: 'The Forward-Deployed Thesis' },
-    { id: 'lifecycle', num: 'I', label: 'Application Lifecycle & Moat' },
-    { id: 'cim', num: 'II', label: 'Technical Blueprint & CIM DAG' },
-    { id: 'roadmap', num: 'III', label: '5 Ranked Builder UX Interventions' },
-    { id: 'simulation', num: 'IV', label: 'Working Simulation Test Bench' },
-    { id: 'competitors', num: 'V', label: 'Comparative Intelligence Teardown' },
-    { id: 'plates', num: 'VI', label: '43 Photographic Exploration Plates' },
-    { id: 'specimen', num: 'VII', label: 'Living Design System Specimen' },
-    { id: 'citations-gazette', num: 'VIII', label: 'Research Notes & Citations' }
+  const directoryClusters = [
+    {
+      title: '01 · STRATEGIC THESIS',
+      links: [
+        { id: 'lead', num: 'TOP', label: 'The Forward-Deployed Thesis', badge: 'Lead' },
+        { id: 'lifecycle', num: 'I', label: 'Application Lifecycle & Moat' }
+      ]
+    },
+    {
+      title: '02 · ARCHITECTURE & ROADMAP',
+      links: [
+        { id: 'cim', num: 'II', label: 'Technical Blueprint & CIM DAG' },
+        { id: 'roadmap', num: 'III', label: '5 Ranked UX Interventions', badge: 'Ranked' },
+        { id: 'simulation', num: 'IV', label: 'Working Simulation Studio', badge: 'Live Lab' }
+      ]
+    },
+    {
+      title: '03 · FIELD AUDIT & STANDARDS',
+      links: [
+        { id: 'competitors', num: 'V', label: 'Clay & Fin Teardown' },
+        { id: 'plates', num: 'VI', label: '43 Photographic Exploration Plates', badge: '43 Plates' },
+        { id: 'specimen', num: 'VII', label: 'Living Design System Specimen', badge: 'Tokens' },
+        { id: 'citations-gazette', num: 'VIII', label: 'Research Notes & Citations', badge: '12 Items' }
+      ]
+    }
   ];
 
   return (
@@ -61,28 +76,50 @@ export function EditorialFooter() {
 
       <div className="editorial-colophon-box">
         <div className="editorial-colophon-grid">
-          {/* Column 1: Colophon & Candidate Identity */}
+          {/* Column 1: Colophon, Assessment Metadata & Candidate Connect */}
           <div className="colophon-col colophon-col--main">
-            <h2 className="colophon-masthead-title">Analysis of VectorShift</h2>
-            <div className="colophon-masthead-sub">
-              Architectural Evaluation &amp; Field Blueprint for Private Markets
+            <div>
+              <h2 className="colophon-masthead-title">Analysis of VectorShift</h2>
+              <div className="colophon-masthead-sub">
+                Architectural Evaluation &amp; Field Blueprint for Private Markets
+              </div>
+
+              <p className="colophon-description">
+                An independent platform teardown, persona model, and field roadmap for VectorShift. Prepared by <strong>Harshit Choudhary</strong> for the Product Manager (Platform) evaluation. All assertions verified against 292 Mintlify documentation pages, 227 marketing assets, 43 live builder exploration plates, and an end-to-end editorial design system.
+              </p>
+
+              {/* Executive Metadata Micro-Ledger to balance vertical column height */}
+              <div className="colophon-meta-ledger">
+                <div className="colophon-meta-row">
+                  <span className="colophon-meta-label">Assessment Scope</span>
+                  <span className="colophon-meta-val">3 Core Tasks + 2 Deep Dives</span>
+                </div>
+                <div className="colophon-meta-row">
+                  <span className="colophon-meta-label">Empirical Evidence</span>
+                  <span className="colophon-meta-val">43 Exploration Plates</span>
+                </div>
+                <div className="colophon-meta-row">
+                  <span className="colophon-meta-label">Pipeline Engine</span>
+                  <span className="colophon-meta-val">Deterministic Python AST Bridge</span>
+                </div>
+                <div className="colophon-meta-row">
+                  <span className="colophon-meta-label">Documentation Base</span>
+                  <span className="colophon-meta-val">292 Pages &middot; 12 Research Citations</span>
+                </div>
+              </div>
             </div>
 
-            <p className="colophon-description">
-              An independent platform teardown, persona model, and field roadmap for VectorShift. Prepared by <strong>Harshit Choudhary</strong> for the Product Manager (Platform) evaluation. All assertions verified against 292 Mintlify documentation pages, 227 marketing assets, 43 live builder exploration plates, and an end-to-end editorial design system.
-            </p>
-
-            {/* Candidate Connect Icons */}
-            <div className="colophon-social-row">
+            {/* Candidate Connect Icons docked cleanly at base */}
+            <div className="colophon-social-row" style={{ marginTop: '1.2rem' }}>
               <a
                 href="https://github.com/harshit-vibes"
                 target="_blank"
                 rel="noreferrer"
                 className="colophon-social-btn"
-                title="GitHub Profile"
+                title="GitHub Profile (harshit-vibes)"
                 aria-label="GitHub Profile"
               >
-                <GithubIcon size={14} />
+                <GithubIcon size={13} />
                 <span>GitHub</span>
               </a>
 
@@ -94,7 +131,7 @@ export function EditorialFooter() {
                 title="LinkedIn Profile"
                 aria-label="LinkedIn Profile"
               >
-                <LinkedinIcon size={14} />
+                <LinkedinIcon size={13} />
                 <span>LinkedIn</span>
               </a>
 
@@ -106,33 +143,55 @@ export function EditorialFooter() {
                 title="Personal Website (h1902y.com)"
                 aria-label="Personal Website"
               >
-                <Globe size={14} />
+                <Globe size={13} />
                 <span>Website</span>
+              </a>
+
+              <a
+                href="mailto:contactingharshit@gmail.com"
+                className="colophon-social-btn"
+                title="Email Candidate (contactingharshit@gmail.com)"
+                aria-label="Email Candidate"
+              >
+                <Mail size={13} />
+                <span>Email</span>
               </a>
             </div>
           </div>
 
-          {/* Column 2: Clickable Directory */}
+          {/* Column 2: Thematic Clustered Directory */}
           <div className="colophon-col colophon-col--directory">
             <div className="colophon-section-eyebrow">
               <span>&sect;</span> Publication Directory
             </div>
-            <nav className="colophon-dir-list" aria-label="Footer Publication Directory">
-              {directoryLinks.map(link => (
-                <button
-                  key={link.id}
-                  type="button"
-                  className="colophon-dir-link"
-                  onClick={() => scrollTo(link.id)}
-                >
-                  <span className="colophon-dir-num">{link.num}</span>
-                  <span className="colophon-dir-title">{link.label}</span>
-                </button>
+
+            <nav className="colophon-dir-clustered" aria-label="Footer Publication Directory">
+              {directoryClusters.map(cluster => (
+                <div key={cluster.title} className="colophon-cluster-group">
+                  <div className="colophon-cluster-title">{cluster.title}</div>
+                  <div className="colophon-dir-list">
+                    {cluster.links.map(link => (
+                      <button
+                        key={link.id}
+                        type="button"
+                        className="colophon-dir-link"
+                        onClick={() => scrollTo(link.id)}
+                      >
+                        <span className="colophon-dir-num">{link.num}</span>
+                        <span className="colophon-dir-title">{link.label}</span>
+                        {link.badge && (
+                          <span className="colophon-dir-badge">{link.badge}</span>
+                        )}
+                        <span className="colophon-dir-arrow" aria-hidden="true">&rsaquo;</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
               ))}
             </nav>
           </div>
 
-          {/* Column 3: Candidate Profile from h1902y */}
+          {/* Column 3: Candidate Profile Card from h1902y */}
           <div className="colophon-col colophon-col--dossier">
             <div className="colophon-section-eyebrow">
               <span>&sect;</span> Candidate Architect
@@ -156,6 +215,10 @@ export function EditorialFooter() {
         <div className="colophon-bottom-strip">
           <div className="colophon-copyright">
             &copy; 2026 Analysis of VectorShift &middot; Prepared by Harshit Choudhary
+          </div>
+
+          <div className="colophon-origin-seal">
+            Bengaluru &middot; San Francisco &middot; h1902y.com
           </div>
 
           <div className="colophon-typesetting">
