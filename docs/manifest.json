@@ -1,0 +1,2068 @@
+{
+  "scraped_at": "2026-09-03T07:46:53Z",
+  "base_url": "https://docs.vectorshift.ai",
+  "platform": "Mintlify",
+  "total_pages": 292,
+  "total_assets": 445,
+  "total_words": 284608,
+  "sections": {
+    "account": 6,
+    "api-reference": 31,
+    "root": 4,
+    "nodes": 53,
+    "platform": 61,
+    "sdk": 137
+  },
+  "failed_pages": [
+    {
+      "url": "https://docs.vectorshift.ai/sdk/*`",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Enterprise Connections",
+      "url": "https://docs.vectorshift.ai/account/organizations/enterprise-connections",
+      "file": "account/organizations/enterprise-connections.md",
+      "word_count": 265,
+      "assets_count": 0
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/account/organizations/overview",
+      "file": "account/organizations/overview.md",
+      "word_count": 234,
+      "assets_count": 0
+    },
+    {
+      "title": "Profile",
+      "url": "https://docs.vectorshift.ai/account/profile",
+      "file": "account/profile.md",
+      "word_count": 140,
+      "assets_count": 1
+    },
+    {
+      "title": "Organization Subscriptions",
+      "url": "https://docs.vectorshift.ai/account/subscriptions/organization",
+      "file": "account/subscriptions/organization.md",
+      "word_count": 59,
+      "assets_count": 0
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/account/subscriptions/overview",
+      "file": "account/subscriptions/overview.md",
+      "word_count": 80,
+      "assets_count": 0
+    },
+    {
+      "title": "Personal Subscriptions",
+      "url": "https://docs.vectorshift.ai/account/subscriptions/personal",
+      "file": "account/subscriptions/personal.md",
+      "word_count": 61,
+      "assets_count": 0
+    },
+    {
+      "title": "Create a new chatbot",
+      "url": "https://docs.vectorshift.ai/api-reference/chatbots/create",
+      "file": "api-reference/chatbots/create.md",
+      "word_count": 507,
+      "assets_count": 0
+    },
+    {
+      "title": "Delete a chatbot",
+      "url": "https://docs.vectorshift.ai/api-reference/chatbots/delete",
+      "file": "api-reference/chatbots/delete.md",
+      "word_count": 188,
+      "assets_count": 0
+    },
+    {
+      "title": "Fetch an existing chatbot",
+      "url": "https://docs.vectorshift.ai/api-reference/chatbots/fetch",
+      "file": "api-reference/chatbots/fetch.md",
+      "word_count": 288,
+      "assets_count": 0
+    },
+    {
+      "title": "List all available chatbots",
+      "url": "https://docs.vectorshift.ai/api-reference/chatbots/list",
+      "file": "api-reference/chatbots/list.md",
+      "word_count": 256,
+      "assets_count": 0
+    },
+    {
+      "title": "Run a chatbot",
+      "url": "https://docs.vectorshift.ai/api-reference/chatbots/run",
+      "file": "api-reference/chatbots/run.md",
+      "word_count": 448,
+      "assets_count": 0
+    },
+    {
+      "title": "Terminate a chatbot session",
+      "url": "https://docs.vectorshift.ai/api-reference/chatbots/terminate",
+      "file": "api-reference/chatbots/terminate.md",
+      "word_count": 249,
+      "assets_count": 0
+    },
+    {
+      "title": "Upload files to a chatbot",
+      "url": "https://docs.vectorshift.ai/api-reference/chatbots/upload",
+      "file": "api-reference/chatbots/upload.md",
+      "word_count": 211,
+      "assets_count": 0
+    },
+    {
+      "title": "Add data to a knowledge base",
+      "url": "https://docs.vectorshift.ai/api-reference/knowledge-bases",
+      "file": "api-reference/knowledge-bases.md",
+      "word_count": 754,
+      "assets_count": 0
+    },
+    {
+      "title": "Create a knowledge base",
+      "url": "https://docs.vectorshift.ai/api-reference/knowledge-bases/create",
+      "file": "api-reference/knowledge-bases/create.md",
+      "word_count": 231,
+      "assets_count": 0
+    },
+    {
+      "title": "Delete documents from a knowledge base",
+      "url": "https://docs.vectorshift.ai/api-reference/knowledge-bases/delete-documents",
+      "file": "api-reference/knowledge-bases/delete-documents.md",
+      "word_count": 205,
+      "assets_count": 0
+    },
+    {
+      "title": "Delete a knowledge base",
+      "url": "https://docs.vectorshift.ai/api-reference/knowledge-bases/delete",
+      "file": "api-reference/knowledge-bases/delete.md",
+      "word_count": 174,
+      "assets_count": 0
+    },
+    {
+      "title": "Fetch an existing knowledge base",
+      "url": "https://docs.vectorshift.ai/api-reference/knowledge-bases/fetch",
+      "file": "api-reference/knowledge-bases/fetch.md",
+      "word_count": 314,
+      "assets_count": 0
+    },
+    {
+      "title": "Find documents in a knowledge base",
+      "url": "https://docs.vectorshift.ai/api-reference/knowledge-bases/find-documents",
+      "file": "api-reference/knowledge-bases/find-documents.md",
+      "word_count": 234,
+      "assets_count": 0
+    },
+    {
+      "title": "List all available knowledge bases",
+      "url": "https://docs.vectorshift.ai/api-reference/knowledge-bases/list",
+      "file": "api-reference/knowledge-bases/list.md",
+      "word_count": 314,
+      "assets_count": 0
+    },
+    {
+      "title": "Query a knowledge base",
+      "url": "https://docs.vectorshift.ai/api-reference/knowledge-bases/query",
+      "file": "api-reference/knowledge-bases/query.md",
+      "word_count": 277,
+      "assets_count": 0
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/api-reference",
+      "file": "api-reference/overview.md",
+      "word_count": 243,
+      "assets_count": 0
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/api-reference/overview",
+      "file": "api-reference/overview.md",
+      "word_count": 243,
+      "assets_count": 0
+    },
+    {
+      "title": "Run a pipeline in bulk",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/bulk-run",
+      "file": "api-reference/pipelines/bulk-run.md",
+      "word_count": 434,
+      "assets_count": 0
+    },
+    {
+      "title": "Create a new pipeline",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/create",
+      "file": "api-reference/pipelines/create.md",
+      "word_count": 277,
+      "assets_count": 0
+    },
+    {
+      "title": "Delete a pipeline",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/delete",
+      "file": "api-reference/pipelines/delete.md",
+      "word_count": 226,
+      "assets_count": 0
+    },
+    {
+      "title": "Fetch an existing pipeline",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/fetch",
+      "file": "api-reference/pipelines/fetch.md",
+      "word_count": 301,
+      "assets_count": 0
+    },
+    {
+      "title": "List all available pipelines",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/list",
+      "file": "api-reference/pipelines/list.md",
+      "word_count": 248,
+      "assets_count": 0
+    },
+    {
+      "title": "Pause a pipeline run",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/pause",
+      "file": "api-reference/pipelines/pause.md",
+      "word_count": 256,
+      "assets_count": 0
+    },
+    {
+      "title": "Resume a paused pipeline run",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/resume",
+      "file": "api-reference/pipelines/resume.md",
+      "word_count": 262,
+      "assets_count": 0
+    },
+    {
+      "title": "Run a pipeline",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/run",
+      "file": "api-reference/pipelines/run.md",
+      "word_count": 436,
+      "assets_count": 0
+    },
+    {
+      "title": "Terminate a pipeline run",
+      "url": "https://docs.vectorshift.ai/api-reference/pipelines/terminate",
+      "file": "api-reference/pipelines/terminate.md",
+      "word_count": 256,
+      "assets_count": 0
+    },
+    {
+      "title": "Create a new transformation",
+      "url": "https://docs.vectorshift.ai/api-reference/transformations/create",
+      "file": "api-reference/transformations/create.md",
+      "word_count": 256,
+      "assets_count": 0
+    },
+    {
+      "title": "Delete a transformation",
+      "url": "https://docs.vectorshift.ai/api-reference/transformations/delete",
+      "file": "api-reference/transformations/delete.md",
+      "word_count": 203,
+      "assets_count": 0
+    },
+    {
+      "title": "Fetch an existing transformation",
+      "url": "https://docs.vectorshift.ai/api-reference/transformations/fetch",
+      "file": "api-reference/transformations/fetch.md",
+      "word_count": 283,
+      "assets_count": 0
+    },
+    {
+      "title": "List all available transformations",
+      "url": "https://docs.vectorshift.ai/api-reference/transformations/list",
+      "file": "api-reference/transformations/list.md",
+      "word_count": 246,
+      "assets_count": 0
+    },
+    {
+      "title": "Run a transformation",
+      "url": "https://docs.vectorshift.ai/api-reference/transformations/run",
+      "file": "api-reference/transformations/run.md",
+      "word_count": 254,
+      "assets_count": 0
+    },
+    {
+      "title": "Introduction",
+      "url": "https://docs.vectorshift.ai/introduction",
+      "file": "introduction.md",
+      "word_count": 124,
+      "assets_count": 0
+    },
+    {
+      "title": "Agent Node",
+      "url": "https://docs.vectorshift.ai/nodes/agent/overview",
+      "file": "nodes/agent/overview.md",
+      "word_count": 2299,
+      "assets_count": 7
+    },
+    {
+      "title": "AI Routing",
+      "url": "https://docs.vectorshift.ai/nodes/ai-routing/overview",
+      "file": "nodes/ai-routing/overview.md",
+      "word_count": 1270,
+      "assets_count": 2
+    },
+    {
+      "title": "Anthropic LLM",
+      "url": "https://docs.vectorshift.ai/nodes/anthropic/overview",
+      "file": "nodes/anthropic/overview.md",
+      "word_count": 1589,
+      "assets_count": 4
+    },
+    {
+      "title": "AWS Bedrock LLM",
+      "url": "https://docs.vectorshift.ai/nodes/aws-bedrock/overview",
+      "file": "nodes/aws-bedrock/overview.md",
+      "word_count": 1521,
+      "assets_count": 2
+    },
+    {
+      "title": "Browser Extension",
+      "url": "https://docs.vectorshift.ai/nodes/browser-extension/overview",
+      "file": "nodes/browser-extension/overview.md",
+      "word_count": 898,
+      "assets_count": 2
+    },
+    {
+      "title": "Chat File Reader",
+      "url": "https://docs.vectorshift.ai/nodes/chat-file-reader/overview",
+      "file": "nodes/chat-file-reader/overview.md",
+      "word_count": 1068,
+      "assets_count": 3
+    },
+    {
+      "title": "Chat Memory",
+      "url": "https://docs.vectorshift.ai/nodes/chat-memory/overview",
+      "file": "nodes/chat-memory/overview.md",
+      "word_count": 1202,
+      "assets_count": 4
+    },
+    {
+      "title": "Code",
+      "url": "https://docs.vectorshift.ai/nodes/code/overview",
+      "file": "nodes/code/overview.md",
+      "word_count": 2161,
+      "assets_count": 5
+    },
+    {
+      "title": "Cohere LLM",
+      "url": "https://docs.vectorshift.ai/nodes/cohere/overview",
+      "file": "nodes/cohere/overview.md",
+      "word_count": 1427,
+      "assets_count": 4
+    },
+    {
+      "title": "Condition",
+      "url": "https://docs.vectorshift.ai/nodes/condition/overview",
+      "file": "nodes/condition/overview.md",
+      "word_count": 1437,
+      "assets_count": 2
+    },
+    {
+      "title": "Create Knowledge Base",
+      "url": "https://docs.vectorshift.ai/nodes/create-knowledge-base/overview",
+      "file": "nodes/create-knowledge-base/overview.md",
+      "word_count": 2204,
+      "assets_count": 6
+    },
+    {
+      "title": "Create Session",
+      "url": "https://docs.vectorshift.ai/nodes/create-session/overview",
+      "file": "nodes/create-session/overview.md",
+      "word_count": 1016,
+      "assets_count": 3
+    },
+    {
+      "title": "Create Workspace",
+      "url": "https://docs.vectorshift.ai/nodes/create-workspace/overview",
+      "file": "nodes/create-workspace/overview.md",
+      "word_count": 871,
+      "assets_count": 2
+    },
+    {
+      "title": "Custom LLM",
+      "url": "https://docs.vectorshift.ai/nodes/custom/overview",
+      "file": "nodes/custom/overview.md",
+      "word_count": 1446,
+      "assets_count": 2
+    },
+    {
+      "title": "Data Collector",
+      "url": "https://docs.vectorshift.ai/nodes/data-collector/overview",
+      "file": "nodes/data-collector/overview.md",
+      "word_count": 1313,
+      "assets_count": 3
+    },
+    {
+      "title": "Deep Research",
+      "url": "https://docs.vectorshift.ai/nodes/deep-research/overview",
+      "file": "nodes/deep-research/overview.md",
+      "word_count": 1335,
+      "assets_count": 2
+    },
+    {
+      "title": "File Save",
+      "url": "https://docs.vectorshift.ai/nodes/file-save/overview",
+      "file": "nodes/file-save/overview.md",
+      "word_count": 1232,
+      "assets_count": 3
+    },
+    {
+      "title": "File",
+      "url": "https://docs.vectorshift.ai/nodes/file/overview",
+      "file": "nodes/file/overview.md",
+      "word_count": 949,
+      "assets_count": 2
+    },
+    {
+      "title": "Get Run Data",
+      "url": "https://docs.vectorshift.ai/nodes/get-run-data/overview",
+      "file": "nodes/get-run-data/overview.md",
+      "word_count": 846,
+      "assets_count": 2
+    },
+    {
+      "title": "Google LLM",
+      "url": "https://docs.vectorshift.ai/nodes/google/overview",
+      "file": "nodes/google/overview.md",
+      "word_count": 1481,
+      "assets_count": 4
+    },
+    {
+      "title": "Image to Image",
+      "url": "https://docs.vectorshift.ai/nodes/image-to-image/overview",
+      "file": "nodes/image-to-image/overview.md",
+      "word_count": 1134,
+      "assets_count": 1
+    },
+    {
+      "title": "Image to Text",
+      "url": "https://docs.vectorshift.ai/nodes/image-to-text/overview",
+      "file": "nodes/image-to-text/overview.md",
+      "word_count": 1400,
+      "assets_count": 2
+    },
+    {
+      "title": "Input",
+      "url": "https://docs.vectorshift.ai/nodes/input/overview",
+      "file": "nodes/input/overview.md",
+      "word_count": 1071,
+      "assets_count": 3
+    },
+    {
+      "title": "Knowledge Base Agent",
+      "url": "https://docs.vectorshift.ai/nodes/knowledge-base-agent/overview",
+      "file": "nodes/knowledge-base-agent/overview.md",
+      "word_count": 2071,
+      "assets_count": 6
+    },
+    {
+      "title": "Knowledge Base Fetch Document Content",
+      "url": "https://docs.vectorshift.ai/nodes/knowledge-base-fetch-document-content/overview",
+      "file": "nodes/knowledge-base-fetch-document-content/overview.md",
+      "word_count": 1660,
+      "assets_count": 4
+    },
+    {
+      "title": "Knowledge Base Fetch Items",
+      "url": "https://docs.vectorshift.ai/nodes/knowledge-base-fetch-items/overview",
+      "file": "nodes/knowledge-base-fetch-items/overview.md",
+      "word_count": 2000,
+      "assets_count": 3
+    },
+    {
+      "title": "Knowledge Base Loader",
+      "url": "https://docs.vectorshift.ai/nodes/knowledge-base-loader/overview",
+      "file": "nodes/knowledge-base-loader/overview.md",
+      "word_count": 1661,
+      "assets_count": 5
+    },
+    {
+      "title": "Knowledge Base Reader",
+      "url": "https://docs.vectorshift.ai/nodes/knowledge-base-v3/overview",
+      "file": "nodes/knowledge-base-v3/overview.md",
+      "word_count": 2072,
+      "assets_count": 6
+    },
+    {
+      "title": "Listen \u2014 Button",
+      "url": "https://docs.vectorshift.ai/nodes/listen-button/overview",
+      "file": "nodes/listen-button/overview.md",
+      "word_count": 1114,
+      "assets_count": 2
+    },
+    {
+      "title": "Listen \u2014 Capture",
+      "url": "https://docs.vectorshift.ai/nodes/listen-capture/overview",
+      "file": "nodes/listen-capture/overview.md",
+      "word_count": 885,
+      "assets_count": 2
+    },
+    {
+      "title": "Merge - Join All",
+      "url": "https://docs.vectorshift.ai/nodes/merge-join-all/overview",
+      "file": "nodes/merge-join-all/overview.md",
+      "word_count": 1087,
+      "assets_count": 2
+    },
+    {
+      "title": "Merge - Pick First",
+      "url": "https://docs.vectorshift.ai/nodes/merge-pick-first/overview",
+      "file": "nodes/merge-pick-first/overview.md",
+      "word_count": 1101,
+      "assets_count": 2
+    },
+    {
+      "title": "Note",
+      "url": "https://docs.vectorshift.ai/nodes/note/overview",
+      "file": "nodes/note/overview.md",
+      "word_count": 710,
+      "assets_count": 3
+    },
+    {
+      "title": "Open Source LLM",
+      "url": "https://docs.vectorshift.ai/nodes/open-source/overview",
+      "file": "nodes/open-source/overview.md",
+      "word_count": 1161,
+      "assets_count": 3
+    },
+    {
+      "title": "OpenAI LLM",
+      "url": "https://docs.vectorshift.ai/nodes/openai/overview",
+      "file": "nodes/openai/overview.md",
+      "word_count": 1389,
+      "assets_count": 4
+    },
+    {
+      "title": "Output",
+      "url": "https://docs.vectorshift.ai/nodes/output/overview",
+      "file": "nodes/output/overview.md",
+      "word_count": 917,
+      "assets_count": 3
+    },
+    {
+      "title": "Perplexity LLM",
+      "url": "https://docs.vectorshift.ai/nodes/perplexity/overview",
+      "file": "nodes/perplexity/overview.md",
+      "word_count": 1200,
+      "assets_count": 4
+    },
+    {
+      "title": "Post Message",
+      "url": "https://docs.vectorshift.ai/nodes/post-message/overview",
+      "file": "nodes/post-message/overview.md",
+      "word_count": 989,
+      "assets_count": 2
+    },
+    {
+      "title": "Read Session Messages",
+      "url": "https://docs.vectorshift.ai/nodes/read-session-messages/overview",
+      "file": "nodes/read-session-messages/overview.md",
+      "word_count": 928,
+      "assets_count": 3
+    },
+    {
+      "title": "Semantic Search",
+      "url": "https://docs.vectorshift.ai/nodes/semantic-search/overview",
+      "file": "nodes/semantic-search/overview.md",
+      "word_count": 1624,
+      "assets_count": 3
+    },
+    {
+      "title": "Set Variable",
+      "url": "https://docs.vectorshift.ai/nodes/set-variable/overview",
+      "file": "nodes/set-variable/overview.md",
+      "word_count": 948,
+      "assets_count": 2
+    },
+    {
+      "title": "Speech to Text",
+      "url": "https://docs.vectorshift.ai/nodes/speech-to-text/overview",
+      "file": "nodes/speech-to-text/overview.md",
+      "word_count": 1069,
+      "assets_count": 3
+    },
+    {
+      "title": "Start",
+      "url": "https://docs.vectorshift.ai/nodes/start-node/overview",
+      "file": "nodes/start-node/overview.md",
+      "word_count": 770,
+      "assets_count": 2
+    },
+    {
+      "title": "Sync Knowledge Base",
+      "url": "https://docs.vectorshift.ai/nodes/sync-knowledge-base/overview",
+      "file": "nodes/sync-knowledge-base/overview.md",
+      "word_count": 734,
+      "assets_count": 2
+    },
+    {
+      "title": "Talk \u2014 Card",
+      "url": "https://docs.vectorshift.ai/nodes/talk-card/overview",
+      "file": "nodes/talk-card/overview.md",
+      "word_count": 904,
+      "assets_count": 2
+    },
+    {
+      "title": "Talk \u2014 Carousel",
+      "url": "https://docs.vectorshift.ai/nodes/talk-carousel/overview",
+      "file": "nodes/talk-carousel/overview.md",
+      "word_count": 853,
+      "assets_count": 2
+    },
+    {
+      "title": "Talk \u2014 Image",
+      "url": "https://docs.vectorshift.ai/nodes/talk-image/overview",
+      "file": "nodes/talk-image/overview.md",
+      "word_count": 692,
+      "assets_count": 2
+    },
+    {
+      "title": "Talk \u2014 Message",
+      "url": "https://docs.vectorshift.ai/nodes/talk-message/overview",
+      "file": "nodes/talk-message/overview.md",
+      "word_count": 768,
+      "assets_count": 2
+    },
+    {
+      "title": "Text to Image",
+      "url": "https://docs.vectorshift.ai/nodes/text-to-image/overview",
+      "file": "nodes/text-to-image/overview.md",
+      "word_count": 1077,
+      "assets_count": 4
+    },
+    {
+      "title": "Text to Speech",
+      "url": "https://docs.vectorshift.ai/nodes/text-to-speech/overview",
+      "file": "nodes/text-to-speech/overview.md",
+      "word_count": 1058,
+      "assets_count": 4
+    },
+    {
+      "title": "Trigger",
+      "url": "https://docs.vectorshift.ai/nodes/trigger/overview",
+      "file": "nodes/trigger/overview.md",
+      "word_count": 1490,
+      "assets_count": 4
+    },
+    {
+      "title": "Workflow Node",
+      "url": "https://docs.vectorshift.ai/nodes/workflow/overview",
+      "file": "nodes/workflow/overview.md",
+      "word_count": 1665,
+      "assets_count": 5
+    },
+    {
+      "title": "xAI LLM",
+      "url": "https://docs.vectorshift.ai/nodes/xai/overview",
+      "file": "nodes/xai/overview.md",
+      "word_count": 1055,
+      "assets_count": 4
+    },
+    {
+      "title": "Agent Instructions",
+      "url": "https://docs.vectorshift.ai/platform/agents/agent-instructions",
+      "file": "platform/agents/agent-instructions.md",
+      "word_count": 535,
+      "assets_count": 1
+    },
+    {
+      "title": "Agent Tools",
+      "url": "https://docs.vectorshift.ai/platform/agents/agent-tools",
+      "file": "platform/agents/agent-tools.md",
+      "word_count": 1557,
+      "assets_count": 7
+    },
+    {
+      "title": "AI Model",
+      "url": "https://docs.vectorshift.ai/platform/agents/ai-model",
+      "file": "platform/agents/ai-model.md",
+      "word_count": 394,
+      "assets_count": 2
+    },
+    {
+      "title": "@ Tag References",
+      "url": "https://docs.vectorshift.ai/platform/agents/at-tag-references",
+      "file": "platform/agents/at-tag-references.md",
+      "word_count": 409,
+      "assets_count": 1
+    },
+    {
+      "title": "Build an Agent",
+      "url": "https://docs.vectorshift.ai/platform/agents/build-an-agent",
+      "file": "platform/agents/build-an-agent.md",
+      "word_count": 1121,
+      "assets_count": 7
+    },
+    {
+      "title": "Test and Deploy",
+      "url": "https://docs.vectorshift.ai/platform/agents/chat-preview",
+      "file": "platform/agents/chat-preview.md",
+      "word_count": 192,
+      "assets_count": 2
+    },
+    {
+      "title": "Customize Your Agent",
+      "url": "https://docs.vectorshift.ai/platform/agents/interface-tab",
+      "file": "platform/agents/interface-tab.md",
+      "word_count": 732,
+      "assets_count": 6
+    },
+    {
+      "title": "Agents",
+      "url": "https://docs.vectorshift.ai/platform/agents/introduction",
+      "file": "platform/agents/introduction.md",
+      "word_count": 1167,
+      "assets_count": 0
+    },
+    {
+      "title": "Knowledge Base",
+      "url": "https://docs.vectorshift.ai/platform/agents/knowledge-base",
+      "file": "platform/agents/knowledge-base.md",
+      "word_count": 622,
+      "assets_count": 3
+    },
+    {
+      "title": "Monitor Your Agent",
+      "url": "https://docs.vectorshift.ai/platform/agents/manager-tab",
+      "file": "platform/agents/manager-tab.md",
+      "word_count": 221,
+      "assets_count": 4
+    },
+    {
+      "title": "Save and Version",
+      "url": "https://docs.vectorshift.ai/platform/agents/saving-and-versioning",
+      "file": "platform/agents/saving-and-versioning.md",
+      "word_count": 181,
+      "assets_count": 1
+    },
+    {
+      "title": "Session Memory",
+      "url": "https://docs.vectorshift.ai/platform/agents/session-memory",
+      "file": "platform/agents/session-memory.md",
+      "word_count": 283,
+      "assets_count": 1
+    },
+    {
+      "title": "Share with Teammates",
+      "url": "https://docs.vectorshift.ai/platform/agents/sharing",
+      "file": "platform/agents/sharing.md",
+      "word_count": 138,
+      "assets_count": 1
+    },
+    {
+      "title": "Tips and Best Practices",
+      "url": "https://docs.vectorshift.ai/platform/agents/tips",
+      "file": "platform/agents/tips.md",
+      "word_count": 850,
+      "assets_count": 1
+    },
+    {
+      "title": "Files",
+      "url": "https://docs.vectorshift.ai/platform/files",
+      "file": "platform/files.md",
+      "word_count": 104,
+      "assets_count": 1
+    },
+    {
+      "title": "Agentic Chatbot",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/agentic",
+      "file": "platform/interfaces/chatbots/agentic.md",
+      "word_count": 1059,
+      "assets_count": 5
+    },
+    {
+      "title": "Chat analytics",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/analytics",
+      "file": "platform/interfaces/chatbots/analytics.md",
+      "word_count": 1983,
+      "assets_count": 7
+    },
+    {
+      "title": "Chat via API",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/api",
+      "file": "platform/interfaces/chatbots/api.md",
+      "word_count": 1068,
+      "assets_count": 1
+    },
+    {
+      "title": "Chat Assistant vs Website Chatbot",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/assistant-vs-website",
+      "file": "platform/interfaces/chatbots/assistant-vs-website.md",
+      "word_count": 502,
+      "assets_count": 2
+    },
+    {
+      "title": "Chat Assistant",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/assistant",
+      "file": "platform/interfaces/chatbots/assistant.md",
+      "word_count": 1880,
+      "assets_count": 12
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/overview",
+      "file": "platform/interfaces/chatbots/overview.md",
+      "word_count": 691,
+      "assets_count": 0
+    },
+    {
+      "title": "Deploy to Slack",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/slack",
+      "file": "platform/interfaces/chatbots/slack.md",
+      "word_count": 839,
+      "assets_count": 8
+    },
+    {
+      "title": "Website Chatbot",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/website",
+      "file": "platform/interfaces/chatbots/website.md",
+      "word_count": 2699,
+      "assets_count": 16
+    },
+    {
+      "title": "Deploy via WhatsApp and SMS",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/whatsapp",
+      "file": "platform/interfaces/chatbots/whatsapp.md",
+      "word_count": 757,
+      "assets_count": 9
+    },
+    {
+      "title": "Workflow chatbot",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/chatbots/workflow",
+      "file": "platform/interfaces/chatbots/workflow.md",
+      "word_count": 1021,
+      "assets_count": 4
+    },
+    {
+      "title": "Additional Features",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/forms/additional-features",
+      "file": "platform/interfaces/forms/additional-features.md",
+      "word_count": 266,
+      "assets_count": 2
+    },
+    {
+      "title": "Tracking Performance",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/forms/analytics",
+      "file": "platform/interfaces/forms/analytics.md",
+      "word_count": 456,
+      "assets_count": 4
+    },
+    {
+      "title": "Building Your First Form",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/forms/building",
+      "file": "platform/interfaces/forms/building.md",
+      "word_count": 1520,
+      "assets_count": 14
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/forms/overview",
+      "file": "platform/interfaces/forms/overview.md",
+      "word_count": 569,
+      "assets_count": 0
+    },
+    {
+      "title": "Personalizing Your Form",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/forms/personalizing",
+      "file": "platform/interfaces/forms/personalizing.md",
+      "word_count": 1554,
+      "assets_count": 12
+    },
+    {
+      "title": "Sharing Your Form",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/forms/sharing",
+      "file": "platform/interfaces/forms/sharing.md",
+      "word_count": 1164,
+      "assets_count": 10
+    },
+    {
+      "title": "Reviewing Submissions",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/forms/submissions",
+      "file": "platform/interfaces/forms/submissions.md",
+      "word_count": 539,
+      "assets_count": 4
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/overview",
+      "file": "platform/interfaces/overview.md",
+      "word_count": 126,
+      "assets_count": 0
+    },
+    {
+      "title": "Search",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/search",
+      "file": "platform/interfaces/search.md",
+      "word_count": 823,
+      "assets_count": 8
+    },
+    {
+      "title": "Voicebots",
+      "url": "https://docs.vectorshift.ai/platform/interfaces/voicebots",
+      "file": "platform/interfaces/voicebots.md",
+      "word_count": 893,
+      "assets_count": 4
+    },
+    {
+      "title": "Adding Data to Your Knowledge Base",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/adding-data",
+      "file": "platform/knowledge/adding-data.md",
+      "word_count": 1447,
+      "assets_count": 12
+    },
+    {
+      "title": "Accessing the API",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/api",
+      "file": "platform/knowledge/api.md",
+      "word_count": 348,
+      "assets_count": 1
+    },
+    {
+      "title": "Configuring Metadata on an Existing Knowledge Base",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/configure-metadata",
+      "file": "platform/knowledge/configure-metadata.md",
+      "word_count": 489,
+      "assets_count": 1
+    },
+    {
+      "title": "Creating a New Knowledge Base",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/creating",
+      "file": "platform/knowledge/creating.md",
+      "word_count": 1792,
+      "assets_count": 6
+    },
+    {
+      "title": "Monitoring Usage with the Manager Tab",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/manager-tab",
+      "file": "platform/knowledge/manager-tab.md",
+      "word_count": 502,
+      "assets_count": 2
+    },
+    {
+      "title": "Managing Documents",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/managing-documents",
+      "file": "platform/knowledge/managing-documents.md",
+      "word_count": 1135,
+      "assets_count": 7
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/overview",
+      "file": "platform/knowledge/overview.md",
+      "word_count": 1002,
+      "assets_count": 5
+    },
+    {
+      "title": "Reference",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/reference",
+      "file": "platform/knowledge/reference.md",
+      "word_count": 563,
+      "assets_count": 0
+    },
+    {
+      "title": "Using the Search Experience",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/search-experience",
+      "file": "platform/knowledge/search-experience.md",
+      "word_count": 417,
+      "assets_count": 2
+    },
+    {
+      "title": "Setting Up the Search Interface",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/search-interface",
+      "file": "platform/knowledge/search-interface.md",
+      "word_count": 1190,
+      "assets_count": 11
+    },
+    {
+      "title": "Knowledge Base Settings",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/settings",
+      "file": "platform/knowledge/settings.md",
+      "word_count": 583,
+      "assets_count": 3
+    },
+    {
+      "title": "Sharing a Knowledge Base",
+      "url": "https://docs.vectorshift.ai/platform/knowledge/sharing",
+      "file": "platform/knowledge/sharing.md",
+      "word_count": 291,
+      "assets_count": 1
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/platform/marketplaces/overview",
+      "file": "platform/marketplaces/overview.md",
+      "word_count": 1222,
+      "assets_count": 8
+    },
+    {
+      "title": "Publish to Marketplace",
+      "url": "https://docs.vectorshift.ai/platform/marketplaces/publish",
+      "file": "platform/marketplaces/publish.md",
+      "word_count": 1077,
+      "assets_count": 3
+    },
+    {
+      "title": "Ready-to-use templates",
+      "url": "https://docs.vectorshift.ai/platform/marketplaces/templates",
+      "file": "platform/marketplaces/templates.md",
+      "word_count": 1265,
+      "assets_count": 0
+    },
+    {
+      "title": "Data Types",
+      "url": "https://docs.vectorshift.ai/platform/pipelines/data-types",
+      "file": "platform/pipelines/data-types.md",
+      "word_count": 420,
+      "assets_count": 0
+    },
+    {
+      "title": "Dependencies",
+      "url": "https://docs.vectorshift.ai/platform/pipelines/dependencies",
+      "file": "platform/pipelines/dependencies.md",
+      "word_count": 299,
+      "assets_count": 1
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/platform/pipelines/overview",
+      "file": "platform/pipelines/overview.md",
+      "word_count": 148,
+      "assets_count": 0
+    },
+    {
+      "title": "Variables",
+      "url": "https://docs.vectorshift.ai/platform/pipelines/variables",
+      "file": "platform/pipelines/variables.md",
+      "word_count": 427,
+      "assets_count": 2
+    },
+    {
+      "title": "Configuring a Portal",
+      "url": "https://docs.vectorshift.ai/platform/portals/configuring-a-portal",
+      "file": "platform/portals/configuring-a-portal.md",
+      "word_count": 1258,
+      "assets_count": 8
+    },
+    {
+      "title": "Creating a Portal",
+      "url": "https://docs.vectorshift.ai/platform/portals/creating-a-portal",
+      "file": "platform/portals/creating-a-portal.md",
+      "word_count": 285,
+      "assets_count": 3
+    },
+    {
+      "title": "Deploying and Sharing a Portal",
+      "url": "https://docs.vectorshift.ai/platform/portals/deploying-and-sharing",
+      "file": "platform/portals/deploying-and-sharing.md",
+      "word_count": 771,
+      "assets_count": 8
+    },
+    {
+      "title": "Overview",
+      "url": "https://docs.vectorshift.ai/platform/portals/overview",
+      "file": "platform/portals/overview.md",
+      "word_count": 322,
+      "assets_count": 0
+    },
+    {
+      "title": "The Portal User Experience",
+      "url": "https://docs.vectorshift.ai/platform/portals/portal-user-experience",
+      "file": "platform/portals/portal-user-experience.md",
+      "word_count": 946,
+      "assets_count": 11
+    },
+    {
+      "title": "Workspace",
+      "url": "https://docs.vectorshift.ai/platform/portals/workspace",
+      "file": "platform/portals/workspace.md",
+      "word_count": 575,
+      "assets_count": 7
+    },
+    {
+      "title": "Transformations",
+      "url": "https://docs.vectorshift.ai/platform/transformations",
+      "file": "platform/transformations.md",
+      "word_count": 688,
+      "assets_count": 11
+    },
+    {
+      "title": "Quickstart",
+      "url": "https://docs.vectorshift.ai/quickstart",
+      "file": "quickstart.md",
+      "word_count": 1076,
+      "assets_count": 9
+    },
+    {
+      "title": "Agent CRUD",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/agent-crud",
+      "file": "sdk/agent/examples/agent-crud.md",
+      "word_count": 245,
+      "assets_count": 0
+    },
+    {
+      "title": "Chatbot session",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/chatbot-session",
+      "file": "sdk/agent/examples/chatbot-session.md",
+      "word_count": 288,
+      "assets_count": 0
+    },
+    {
+      "title": "Conversational agent run",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/conversational-agent-run",
+      "file": "sdk/agent/examples/conversational-agent-run.md",
+      "word_count": 265,
+      "assets_count": 0
+    },
+    {
+      "title": "Conversational agent with tools",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/conversational-agent-tools",
+      "file": "sdk/agent/examples/conversational-agent-tools.md",
+      "word_count": 185,
+      "assets_count": 0
+    },
+    {
+      "title": "Functional agent run",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/functional-agent-run",
+      "file": "sdk/agent/examples/functional-agent-run.md",
+      "word_count": 198,
+      "assets_count": 0
+    },
+    {
+      "title": "Functional agent with typed I/O",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/functional-agent-with-io",
+      "file": "sdk/agent/examples/functional-agent-with-io.md",
+      "word_count": 214,
+      "assets_count": 0
+    },
+    {
+      "title": "Sending files in a session",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/send-file",
+      "file": "sdk/agent/examples/send-file.md",
+      "word_count": 244,
+      "assets_count": 0
+    },
+    {
+      "title": "Multimodal send_many",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/send-many-multimodal",
+      "file": "sdk/agent/examples/send-many-multimodal.md",
+      "word_count": 275,
+      "assets_count": 0
+    },
+    {
+      "title": "Session approval respond",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/session-approval-respond",
+      "file": "sdk/agent/examples/session-approval-respond.md",
+      "word_count": 347,
+      "assets_count": 0
+    },
+    {
+      "title": "Multi-turn session",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/session-multi-turn",
+      "file": "sdk/agent/examples/session-multi-turn.md",
+      "word_count": 261,
+      "assets_count": 0
+    },
+    {
+      "title": "Resume a session",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/session-resume",
+      "file": "sdk/agent/examples/session-resume.md",
+      "word_count": 185,
+      "assets_count": 0
+    },
+    {
+      "title": "Session send_many",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/session-send-many",
+      "file": "sdk/agent/examples/session-send-many.md",
+      "word_count": 194,
+      "assets_count": 0
+    },
+    {
+      "title": "Repeated sends",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/session-send-send-send",
+      "file": "sdk/agent/examples/session-send-send-send.md",
+      "word_count": 301,
+      "assets_count": 0
+    },
+    {
+      "title": "Single-turn session",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/session-single-turn",
+      "file": "sdk/agent/examples/session-single-turn.md",
+      "word_count": 237,
+      "assets_count": 0
+    },
+    {
+      "title": "Streaming tool events",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/session-tool-events",
+      "file": "sdk/agent/examples/session-tool-events.md",
+      "word_count": 249,
+      "assets_count": 0
+    },
+    {
+      "title": "Template placeholders",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/template-placeholders",
+      "file": "sdk/agent/examples/template-placeholders.md",
+      "word_count": 507,
+      "assets_count": 0
+    },
+    {
+      "title": "Terminating a session",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/terminate-session",
+      "file": "sdk/agent/examples/terminate-session.md",
+      "word_count": 284,
+      "assets_count": 0
+    },
+    {
+      "title": "Tool approval config",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/tool-approval-config",
+      "file": "sdk/agent/examples/tool-approval-config.md",
+      "word_count": 279,
+      "assets_count": 0
+    },
+    {
+      "title": "Vs context stringification",
+      "url": "https://docs.vectorshift.ai/sdk/agent/examples/vs-context-stringification",
+      "file": "sdk/agent/examples/vs-context-stringification.md",
+      "word_count": 362,
+      "assets_count": 0
+    },
+    {
+      "title": "Agent overview",
+      "url": "https://docs.vectorshift.ai/sdk/agent/overview",
+      "file": "sdk/agent/overview.md",
+      "word_count": 488,
+      "assets_count": 0
+    },
+    {
+      "title": "Agent reference",
+      "url": "https://docs.vectorshift.ai/sdk/agent/reference",
+      "file": "sdk/agent/reference.md",
+      "word_count": 1893,
+      "assets_count": 0
+    },
+    {
+      "title": "Data tools",
+      "url": "https://docs.vectorshift.ai/sdk/agent/tools/data",
+      "file": "sdk/agent/tools/data.md",
+      "word_count": 869,
+      "assets_count": 0
+    },
+    {
+      "title": "File Ops tools",
+      "url": "https://docs.vectorshift.ai/sdk/agent/tools/file-ops",
+      "file": "sdk/agent/tools/file-ops.md",
+      "word_count": 740,
+      "assets_count": 0
+    },
+    {
+      "title": "Integrations tools",
+      "url": "https://docs.vectorshift.ai/sdk/agent/tools/integrations",
+      "file": "sdk/agent/tools/integrations.md",
+      "word_count": 31581,
+      "assets_count": 0
+    },
+    {
+      "title": "LLM tools",
+      "url": "https://docs.vectorshift.ai/sdk/agent/tools/llm-ai",
+      "file": "sdk/agent/tools/llm-ai.md",
+      "word_count": 929,
+      "assets_count": 0
+    },
+    {
+      "title": "VectorShift tools",
+      "url": "https://docs.vectorshift.ai/sdk/agent/tools/vectorshift",
+      "file": "sdk/agent/tools/vectorshift.md",
+      "word_count": 2880,
+      "assets_count": 0
+    },
+    {
+      "title": "Web Search tools",
+      "url": "https://docs.vectorshift.ai/sdk/agent/tools/web-search",
+      "file": "sdk/agent/tools/web-search.md",
+      "word_count": 1257,
+      "assets_count": 0
+    },
+    {
+      "title": "Aggregations & group-by",
+      "url": "https://docs.vectorshift.ai/sdk/analytics/examples/aggregations-and-groupby",
+      "file": "sdk/analytics/examples/aggregations-and-groupby.md",
+      "word_count": 429,
+      "assets_count": 0
+    },
+    {
+      "title": "Events & traces",
+      "url": "https://docs.vectorshift.ai/sdk/analytics/examples/events-and-traces",
+      "file": "sdk/analytics/examples/events-and-traces.md",
+      "word_count": 476,
+      "assets_count": 0
+    },
+    {
+      "title": "Filters & overloads",
+      "url": "https://docs.vectorshift.ai/sdk/analytics/examples/filters-and-overloads",
+      "file": "sdk/analytics/examples/filters-and-overloads.md",
+      "word_count": 493,
+      "assets_count": 0
+    },
+    {
+      "title": "Async API",
+      "url": "https://docs.vectorshift.ai/sdk/analytics/examples/query-async",
+      "file": "sdk/analytics/examples/query-async.md",
+      "word_count": 257,
+      "assets_count": 0
+    },
+    {
+      "title": "Query basics",
+      "url": "https://docs.vectorshift.ai/sdk/analytics/examples/query-basics",
+      "file": "sdk/analytics/examples/query-basics.md",
+      "word_count": 407,
+      "assets_count": 0
+    },
+    {
+      "title": "Data tables & export",
+      "url": "https://docs.vectorshift.ai/sdk/analytics/examples/table-and-export",
+      "file": "sdk/analytics/examples/table-and-export.md",
+      "word_count": 374,
+      "assets_count": 0
+    },
+    {
+      "title": "Analytics overview",
+      "url": "https://docs.vectorshift.ai/sdk/analytics/overview",
+      "file": "sdk/analytics/overview.md",
+      "word_count": 861,
+      "assets_count": 0
+    },
+    {
+      "title": "Analytics reference",
+      "url": "https://docs.vectorshift.ai/sdk/analytics/reference",
+      "file": "sdk/analytics/reference.md",
+      "word_count": 2591,
+      "assets_count": 0
+    },
+    {
+      "title": "Authentication",
+      "url": "https://docs.vectorshift.ai/sdk/authentication",
+      "file": "sdk/authentication.md",
+      "word_count": 391,
+      "assets_count": 0
+    },
+    {
+      "title": "Building with AI",
+      "url": "https://docs.vectorshift.ai/sdk/building-with-ai",
+      "file": "sdk/building-with-ai.md",
+      "word_count": 157,
+      "assets_count": 0
+    },
+    {
+      "title": "Concepts",
+      "url": "https://docs.vectorshift.ai/sdk/concepts",
+      "file": "sdk/concepts.md",
+      "word_count": 650,
+      "assets_count": 0
+    },
+    {
+      "title": "Errors",
+      "url": "https://docs.vectorshift.ai/sdk/errors",
+      "file": "sdk/errors.md",
+      "word_count": 931,
+      "assets_count": 0
+    },
+    {
+      "title": "Background batch jobs",
+      "url": "https://docs.vectorshift.ai/sdk/guides/background-batch",
+      "file": "sdk/guides/background-batch.md",
+      "word_count": 1018,
+      "assets_count": 0
+    },
+    {
+      "title": "Multi-step content workflow",
+      "url": "https://docs.vectorshift.ai/sdk/guides/content-workflow",
+      "file": "sdk/guides/content-workflow.md",
+      "word_count": 1070,
+      "assets_count": 0
+    },
+    {
+      "title": "Integrations end-to-end",
+      "url": "https://docs.vectorshift.ai/sdk/guides/integrations-end-to-end",
+      "file": "sdk/guides/integrations-end-to-end.md",
+      "word_count": 1569,
+      "assets_count": 0
+    },
+    {
+      "title": "RAG end-to-end",
+      "url": "https://docs.vectorshift.ai/sdk/guides/rag-end-to-end",
+      "file": "sdk/guides/rag-end-to-end.md",
+      "word_count": 1020,
+      "assets_count": 0
+    },
+    {
+      "title": "Customer support bot",
+      "url": "https://docs.vectorshift.ai/sdk/guides/support-bot",
+      "file": "sdk/guides/support-bot.md",
+      "word_count": 1159,
+      "assets_count": 0
+    },
+    {
+      "title": "VectorShift Python SDK",
+      "url": "https://docs.vectorshift.ai/sdk",
+      "file": "sdk/index.md",
+      "word_count": 470,
+      "assets_count": 0
+    },
+    {
+      "title": "VectorShift Python SDK",
+      "url": "https://docs.vectorshift.ai/sdk/index",
+      "file": "sdk/index.md",
+      "word_count": 470,
+      "assets_count": 0
+    },
+    {
+      "title": "Installation",
+      "url": "https://docs.vectorshift.ai/sdk/installation",
+      "file": "sdk/installation.md",
+      "word_count": 491,
+      "assets_count": 0
+    },
+    {
+      "title": "CLI reference",
+      "url": "https://docs.vectorshift.ai/sdk/integrations/cli",
+      "file": "sdk/integrations/cli.md",
+      "word_count": 933,
+      "assets_count": 0
+    },
+    {
+      "title": "Integrations overview",
+      "url": "https://docs.vectorshift.ai/sdk/integrations/overview",
+      "file": "sdk/integrations/overview.md",
+      "word_count": 779,
+      "assets_count": 0
+    },
+    {
+      "title": "Integrations reference",
+      "url": "https://docs.vectorshift.ai/sdk/integrations/reference",
+      "file": "sdk/integrations/reference.md",
+      "word_count": 2326,
+      "assets_count": 0
+    },
+    {
+      "title": "Add files",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/add-files",
+      "file": "sdk/knowledge-base/examples/add-files.md",
+      "word_count": 343,
+      "assets_count": 0
+    },
+    {
+      "title": "Add folder",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/add-folder",
+      "file": "sdk/knowledge-base/examples/add-folder.md",
+      "word_count": 316,
+      "assets_count": 0
+    },
+    {
+      "title": "Add tables",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/add-tables",
+      "file": "sdk/knowledge-base/examples/add-tables.md",
+      "word_count": 284,
+      "assets_count": 0
+    },
+    {
+      "title": "Add URLs",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/add-urls",
+      "file": "sdk/knowledge-base/examples/add-urls.md",
+      "word_count": 271,
+      "assets_count": 0
+    },
+    {
+      "title": "Async API",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/async",
+      "file": "sdk/knowledge-base/examples/async.md",
+      "word_count": 311,
+      "assets_count": 0
+    },
+    {
+      "title": "Items and folders",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/items-and-folders",
+      "file": "sdk/knowledge-base/examples/items-and-folders.md",
+      "word_count": 447,
+      "assets_count": 0
+    },
+    {
+      "title": "Knowledge Base CRUD",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/kb-crud",
+      "file": "sdk/knowledge-base/examples/kb-crud.md",
+      "word_count": 310,
+      "assets_count": 0
+    },
+    {
+      "title": "Metadata autogen",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/metadata-autogen",
+      "file": "sdk/knowledge-base/examples/metadata-autogen.md",
+      "word_count": 430,
+      "assets_count": 0
+    },
+    {
+      "title": "Advanced query",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/query-advanced",
+      "file": "sdk/knowledge-base/examples/query-advanced.md",
+      "word_count": 315,
+      "assets_count": 0
+    },
+    {
+      "title": "Resync integration",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/examples/resync-integration",
+      "file": "sdk/knowledge-base/examples/resync-integration.md",
+      "word_count": 549,
+      "assets_count": 0
+    },
+    {
+      "title": "Knowledge Base overview",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/overview",
+      "file": "sdk/knowledge-base/overview.md",
+      "word_count": 774,
+      "assets_count": 0
+    },
+    {
+      "title": "Knowledge Base reference",
+      "url": "https://docs.vectorshift.ai/sdk/knowledge-base/reference",
+      "file": "sdk/knowledge-base/reference.md",
+      "word_count": 2355,
+      "assets_count": 0
+    },
+    {
+      "title": "AI routing node",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/ai-routing-node",
+      "file": "sdk/pipeline/examples/ai-routing-node.md",
+      "word_count": 247,
+      "assets_count": 0
+    },
+    {
+      "title": "Background runs (async)",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/background-run-async",
+      "file": "sdk/pipeline/examples/background-run-async.md",
+      "word_count": 141,
+      "assets_count": 0
+    },
+    {
+      "title": "Background runs",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/background-run",
+      "file": "sdk/pipeline/examples/background-run.md",
+      "word_count": 191,
+      "assets_count": 0
+    },
+    {
+      "title": "Batch config",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/batch-config",
+      "file": "sdk/pipeline/examples/batch-config.md",
+      "word_count": 263,
+      "assets_count": 0
+    },
+    {
+      "title": "Button node",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/button-node",
+      "file": "sdk/pipeline/examples/button-node.md",
+      "word_count": 254,
+      "assets_count": 0
+    },
+    {
+      "title": "Condition node",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/condition-node",
+      "file": "sdk/pipeline/examples/condition-node.md",
+      "word_count": 298,
+      "assets_count": 0
+    },
+    {
+      "title": "Create-list pipeline",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/create-list-pipeline",
+      "file": "sdk/pipeline/examples/create-list-pipeline.md",
+      "word_count": 127,
+      "assets_count": 0
+    },
+    {
+      "title": "Gmail node",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/gmail-node",
+      "file": "sdk/pipeline/examples/gmail-node.md",
+      "word_count": 161,
+      "assets_count": 0
+    },
+    {
+      "title": "Intermediate results",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/intermediate-results",
+      "file": "sdk/pipeline/examples/intermediate-results.md",
+      "word_count": 344,
+      "assets_count": 0
+    },
+    {
+      "title": "LLM pipeline",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/llm-pipeline",
+      "file": "sdk/pipeline/examples/llm-pipeline.md",
+      "word_count": 142,
+      "assets_count": 0
+    },
+    {
+      "title": "RAG pipeline",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/rag-pipeline",
+      "file": "sdk/pipeline/examples/rag-pipeline.md",
+      "word_count": 201,
+      "assets_count": 0
+    },
+    {
+      "title": "Read-JSON pipeline",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/read-json-pipeline",
+      "file": "sdk/pipeline/examples/read-json-pipeline.md",
+      "word_count": 233,
+      "assets_count": 0
+    },
+    {
+      "title": "Revert and manage versions",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/revert-and-manage",
+      "file": "sdk/pipeline/examples/revert-and-manage.md",
+      "word_count": 110,
+      "assets_count": 0
+    },
+    {
+      "title": "Run pipeline (async)",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/run-pipeline-async",
+      "file": "sdk/pipeline/examples/run-pipeline-async.md",
+      "word_count": 150,
+      "assets_count": 0
+    },
+    {
+      "title": "Session and overrides",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/session-and-overrides",
+      "file": "sdk/pipeline/examples/session-and-overrides.md",
+      "word_count": 383,
+      "assets_count": 0
+    },
+    {
+      "title": "Share and publish",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/share-and-publish",
+      "file": "sdk/pipeline/examples/share-and-publish.md",
+      "word_count": 196,
+      "assets_count": 0
+    },
+    {
+      "title": "Streaming (async)",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/streaming-async",
+      "file": "sdk/pipeline/examples/streaming-async.md",
+      "word_count": 129,
+      "assets_count": 0
+    },
+    {
+      "title": "Streaming with chunks",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/streaming-with-chunks",
+      "file": "sdk/pipeline/examples/streaming-with-chunks.md",
+      "word_count": 133,
+      "assets_count": 0
+    },
+    {
+      "title": "Streaming",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/streaming",
+      "file": "sdk/pipeline/examples/streaming.md",
+      "word_count": 164,
+      "assets_count": 0
+    },
+    {
+      "title": "Sub-pipelines (list mode)",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/sub-pipeline-list-mode",
+      "file": "sdk/pipeline/examples/sub-pipeline-list-mode.md",
+      "word_count": 239,
+      "assets_count": 0
+    },
+    {
+      "title": "Sub-pipelines",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/sub-pipeline",
+      "file": "sdk/pipeline/examples/sub-pipeline.md",
+      "word_count": 190,
+      "assets_count": 0
+    },
+    {
+      "title": "Terminate a run",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/terminate-run",
+      "file": "sdk/pipeline/examples/terminate-run.md",
+      "word_count": 181,
+      "assets_count": 0
+    },
+    {
+      "title": "Text processing pipeline",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/text-processing-pipeline",
+      "file": "sdk/pipeline/examples/text-processing-pipeline.md",
+      "word_count": 133,
+      "assets_count": 0
+    },
+    {
+      "title": "Type warnings: parallel search",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/examples/type-warnings-parallel-search",
+      "file": "sdk/pipeline/examples/type-warnings-parallel-search.md",
+      "word_count": 147,
+      "assets_count": 0
+    },
+    {
+      "title": "Chat nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/chat",
+      "file": "sdk/pipeline/nodes/chat.md",
+      "word_count": 801,
+      "assets_count": 0
+    },
+    {
+      "title": "Conversational nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/conversational",
+      "file": "sdk/pipeline/nodes/conversational.md",
+      "word_count": 260,
+      "assets_count": 0
+    },
+    {
+      "title": "Data Loaders nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/data-loaders",
+      "file": "sdk/pipeline/nodes/data-loaders.md",
+      "word_count": 2687,
+      "assets_count": 0
+    },
+    {
+      "title": "Data Transformation nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/data-transformation",
+      "file": "sdk/pipeline/nodes/data-transformation.md",
+      "word_count": 6325,
+      "assets_count": 0
+    },
+    {
+      "title": "General nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/general",
+      "file": "sdk/pipeline/nodes/general.md",
+      "word_count": 454,
+      "assets_count": 0
+    },
+    {
+      "title": "Integration nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/integration",
+      "file": "sdk/pipeline/nodes/integration.md",
+      "word_count": 38350,
+      "assets_count": 0
+    },
+    {
+      "title": "Knowledge nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/knowledge",
+      "file": "sdk/pipeline/nodes/knowledge.md",
+      "word_count": 2466,
+      "assets_count": 0
+    },
+    {
+      "title": "Large Language Models (LLMs) nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/llms",
+      "file": "sdk/pipeline/nodes/llms.md",
+      "word_count": 1175,
+      "assets_count": 0
+    },
+    {
+      "title": "Logic nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/logic",
+      "file": "sdk/pipeline/nodes/logic.md",
+      "word_count": 1644,
+      "assets_count": 0
+    },
+    {
+      "title": "Multi-Modal nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/multi-modal",
+      "file": "sdk/pipeline/nodes/multi-modal.md",
+      "word_count": 1362,
+      "assets_count": 0
+    },
+    {
+      "title": "Start nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/start",
+      "file": "sdk/pipeline/nodes/start.md",
+      "word_count": 561,
+      "assets_count": 0
+    },
+    {
+      "title": "Triggers nodes",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/nodes/triggers",
+      "file": "sdk/pipeline/nodes/triggers.md",
+      "word_count": 1772,
+      "assets_count": 0
+    },
+    {
+      "title": "Pipeline overview",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/overview",
+      "file": "sdk/pipeline/overview.md",
+      "word_count": 316,
+      "assets_count": 0
+    },
+    {
+      "title": "Pipeline reference",
+      "url": "https://docs.vectorshift.ai/sdk/pipeline/reference",
+      "file": "sdk/pipeline/reference.md",
+      "word_count": 2763,
+      "assets_count": 0
+    },
+    {
+      "title": "Quickstart",
+      "url": "https://docs.vectorshift.ai/sdk/quickstart",
+      "file": "sdk/quickstart.md",
+      "word_count": 800,
+      "assets_count": 0
+    },
+    {
+      "title": "Session overview",
+      "url": "https://docs.vectorshift.ai/sdk/session/overview",
+      "file": "sdk/session/overview.md",
+      "word_count": 312,
+      "assets_count": 0
+    },
+    {
+      "title": "Session reference",
+      "url": "https://docs.vectorshift.ai/sdk/session/reference",
+      "file": "sdk/session/reference.md",
+      "word_count": 1047,
+      "assets_count": 0
+    },
+    {
+      "title": "Aggregation and run",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/aggregation-and-run",
+      "file": "sdk/table/examples/aggregation-and-run.md",
+      "word_count": 540,
+      "assets_count": 0
+    },
+    {
+      "title": "Common filter recipes",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/all-filter-operators",
+      "file": "sdk/table/examples/all-filter-operators.md",
+      "word_count": 689,
+      "assets_count": 0
+    },
+    {
+      "title": "Schema and AI-generated columns",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/columns-full",
+      "file": "sdk/table/examples/columns-full.md",
+      "word_count": 738,
+      "assets_count": 0
+    },
+    {
+      "title": "Compose filters with AND and OR",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/compound-filters",
+      "file": "sdk/table/examples/compound-filters.md",
+      "word_count": 748,
+      "assets_count": 0
+    },
+    {
+      "title": "Export and query",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/export-and-query",
+      "file": "sdk/table/examples/export-and-query.md",
+      "word_count": 440,
+      "assets_count": 0
+    },
+    {
+      "title": "End-to-end: a vendor scorecard",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/full-workflow",
+      "file": "sdk/table/examples/full-workflow.md",
+      "word_count": 647,
+      "assets_count": 0
+    },
+    {
+      "title": "Rows and filters",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/rows-and-filters",
+      "file": "sdk/table/examples/rows-and-filters.md",
+      "word_count": 587,
+      "assets_count": 0
+    },
+    {
+      "title": "Table CRUD (async)",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/table-crud-async",
+      "file": "sdk/table/examples/table-crud-async.md",
+      "word_count": 296,
+      "assets_count": 0
+    },
+    {
+      "title": "Table CRUD",
+      "url": "https://docs.vectorshift.ai/sdk/table/examples/table-crud",
+      "file": "sdk/table/examples/table-crud.md",
+      "word_count": 341,
+      "assets_count": 0
+    },
+    {
+      "title": "Table overview",
+      "url": "https://docs.vectorshift.ai/sdk/table/overview",
+      "file": "sdk/table/overview.md",
+      "word_count": 1058,
+      "assets_count": 0
+    },
+    {
+      "title": "Table reference",
+      "url": "https://docs.vectorshift.ai/sdk/table/reference",
+      "file": "sdk/table/reference.md",
+      "word_count": 3029,
+      "assets_count": 0
+    },
+    {
+      "title": "Async API",
+      "url": "https://docs.vectorshift.ai/sdk/transformation/examples/async",
+      "file": "sdk/transformation/examples/async.md",
+      "word_count": 268,
+      "assets_count": 0
+    },
+    {
+      "title": "From a Python function",
+      "url": "https://docs.vectorshift.ai/sdk/transformation/examples/from-function",
+      "file": "sdk/transformation/examples/from-function.md",
+      "word_count": 404,
+      "assets_count": 0
+    },
+    {
+      "title": "As a pipeline node",
+      "url": "https://docs.vectorshift.ai/sdk/transformation/examples/pipeline-node",
+      "file": "sdk/transformation/examples/pipeline-node.md",
+      "word_count": 310,
+      "assets_count": 0
+    },
+    {
+      "title": "Run & I/O types",
+      "url": "https://docs.vectorshift.ai/sdk/transformation/examples/run-and-io-types",
+      "file": "sdk/transformation/examples/run-and-io-types.md",
+      "word_count": 367,
+      "assets_count": 0
+    },
+    {
+      "title": "Transformation CRUD",
+      "url": "https://docs.vectorshift.ai/sdk/transformation/examples/transformation-crud",
+      "file": "sdk/transformation/examples/transformation-crud.md",
+      "word_count": 391,
+      "assets_count": 0
+    },
+    {
+      "title": "Transformation overview",
+      "url": "https://docs.vectorshift.ai/sdk/transformation/overview",
+      "file": "sdk/transformation/overview.md",
+      "word_count": 627,
+      "assets_count": 0
+    },
+    {
+      "title": "Transformation reference",
+      "url": "https://docs.vectorshift.ai/sdk/transformation/reference",
+      "file": "sdk/transformation/reference.md",
+      "word_count": 1301,
+      "assets_count": 0
+    },
+    {
+      "title": "Async (full surface)",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/async-full",
+      "file": "sdk/workspace/examples/async-full.md",
+      "word_count": 395,
+      "assets_count": 0
+    },
+    {
+      "title": "Async usage",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/async",
+      "file": "sdk/workspace/examples/async.md",
+      "word_count": 177,
+      "assets_count": 0
+    },
+    {
+      "title": "Documents and files",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/documents-and-files",
+      "file": "sdk/workspace/examples/documents-and-files.md",
+      "word_count": 201,
+      "assets_count": 0
+    },
+    {
+      "title": "Documents",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/documents",
+      "file": "sdk/workspace/examples/documents.md",
+      "word_count": 163,
+      "assets_count": 0
+    },
+    {
+      "title": "End-to-end walkthrough",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/end-to-end",
+      "file": "sdk/workspace/examples/end-to-end.md",
+      "word_count": 241,
+      "assets_count": 0
+    },
+    {
+      "title": "Managing a portal",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/portal-admin",
+      "file": "sdk/workspace/examples/portal-admin.md",
+      "word_count": 245,
+      "assets_count": 0
+    },
+    {
+      "title": "Portals and workspaces",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/portal-and-workspace-crud",
+      "file": "sdk/workspace/examples/portal-and-workspace-crud.md",
+      "word_count": 201,
+      "assets_count": 0
+    },
+    {
+      "title": "Chat sessions",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/sessions",
+      "file": "sdk/workspace/examples/sessions.md",
+      "word_count": 169,
+      "assets_count": 0
+    },
+    {
+      "title": "Skills",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/skills",
+      "file": "sdk/workspace/examples/skills.md",
+      "word_count": 224,
+      "assets_count": 0
+    },
+    {
+      "title": "Verification (advanced)",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/verification-advanced",
+      "file": "sdk/workspace/examples/verification-advanced.md",
+      "word_count": 227,
+      "assets_count": 0
+    },
+    {
+      "title": "Verification",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/examples/verification",
+      "file": "sdk/workspace/examples/verification.md",
+      "word_count": 205,
+      "assets_count": 0
+    },
+    {
+      "title": "Verification issue reference",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/issue",
+      "file": "sdk/workspace/issue.md",
+      "word_count": 395,
+      "assets_count": 0
+    },
+    {
+      "title": "Workspace overview",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/overview",
+      "file": "sdk/workspace/overview.md",
+      "word_count": 662,
+      "assets_count": 0
+    },
+    {
+      "title": "Portal reference",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/portal",
+      "file": "sdk/workspace/portal.md",
+      "word_count": 624,
+      "assets_count": 0
+    },
+    {
+      "title": "Workspace reference",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/reference",
+      "file": "sdk/workspace/reference.md",
+      "word_count": 496,
+      "assets_count": 0
+    },
+    {
+      "title": "Verification reference",
+      "url": "https://docs.vectorshift.ai/sdk/workspace/verification",
+      "file": "sdk/workspace/verification.md",
+      "word_count": 759,
+      "assets_count": 0
+    },
+    {
+      "title": "Sub-processors",
+      "url": "https://docs.vectorshift.ai/sub-processors",
+      "file": "sub-processors.md",
+      "word_count": 228,
+      "assets_count": 0
+    },
+    {
+      "title": "Support",
+      "url": "https://docs.vectorshift.ai/support",
+      "file": "support.md",
+      "word_count": 267,
+      "assets_count": 0
+    }
+  ]
+}

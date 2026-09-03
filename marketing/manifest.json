@@ -1,0 +1,1829 @@
+{
+  "scraped_at": "2026-09-03T08:26:45Z",
+  "base_url": "https://vectorshift.ai",
+  "total_pages": 227,
+  "total_assets": 391,
+  "total_words": 283076,
+  "categories": {
+    "glossary": 216,
+    "core_marketing": 11
+  },
+  "pages": [
+    {
+      "title": "News \u2014 VectorShift",
+      "url": "https://vectorshift.ai/blog",
+      "html_file": "blog.html",
+      "markdown_file": "blog.md",
+      "word_count": 257,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Privacy Statement | VectorShift",
+      "url": "https://vectorshift.ai/data-and-privacy",
+      "html_file": "data-and-privacy.html",
+      "markdown_file": "data-and-privacy.md",
+      "word_count": 2622,
+      "category": "core_marketing"
+    },
+    {
+      "title": "100-day plan \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/100-day-plan",
+      "html_file": "glossary/100-day-plan.html",
+      "markdown_file": "glossary/100-day-plan.md",
+      "word_count": 1267,
+      "category": "glossary"
+    },
+    {
+      "title": "Accretion / dilution \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/accretion-dilution",
+      "html_file": "glossary/accretion-dilution.html",
+      "markdown_file": "glossary/accretion-dilution.md",
+      "word_count": 1225,
+      "category": "glossary"
+    },
+    {
+      "title": "Add-on acquisition \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/add-on-acquisition",
+      "html_file": "glossary/add-on-acquisition.html",
+      "markdown_file": "glossary/add-on-acquisition.md",
+      "word_count": 1259,
+      "category": "glossary"
+    },
+    {
+      "title": "Add-on pipeline \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/add-on-pipeline",
+      "html_file": "glossary/add-on-pipeline.html",
+      "markdown_file": "glossary/add-on-pipeline.md",
+      "word_count": 1390,
+      "category": "glossary"
+    },
+    {
+      "title": "Adjusted EBITDA \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/adjusted-ebitda",
+      "html_file": "glossary/adjusted-ebitda.html",
+      "markdown_file": "glossary/adjusted-ebitda.md",
+      "word_count": 1211,
+      "category": "glossary"
+    },
+    {
+      "title": "Amortization schedule \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/amortization-schedule",
+      "html_file": "glossary/amortization-schedule.html",
+      "markdown_file": "glossary/amortization-schedule.md",
+      "word_count": 1175,
+      "category": "glossary"
+    },
+    {
+      "title": "Anti-dilution protection \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/anti-dilution-protection",
+      "html_file": "glossary/anti-dilution-protection.html",
+      "markdown_file": "glossary/anti-dilution-protection.md",
+      "word_count": 1322,
+      "category": "glossary"
+    },
+    {
+      "title": "Antitrust clearance \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/antitrust-clearance",
+      "html_file": "glossary/antitrust-clearance.html",
+      "markdown_file": "glossary/antitrust-clearance.md",
+      "word_count": 1403,
+      "category": "glossary"
+    },
+    {
+      "title": "Appraisal rights \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/appraisal-rights",
+      "html_file": "glossary/appraisal-rights.html",
+      "markdown_file": "glossary/appraisal-rights.md",
+      "word_count": 1292,
+      "category": "glossary"
+    },
+    {
+      "title": "ARR multiple \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/arr-multiple",
+      "html_file": "glossary/arr-multiple.html",
+      "markdown_file": "glossary/arr-multiple.md",
+      "word_count": 1194,
+      "category": "glossary"
+    },
+    {
+      "title": "Asset-based lending \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/asset-based-lending",
+      "html_file": "glossary/asset-based-lending.html",
+      "markdown_file": "glossary/asset-based-lending.md",
+      "word_count": 991,
+      "category": "glossary"
+    },
+    {
+      "title": "Asset purchase \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/asset-purchase",
+      "html_file": "glossary/asset-purchase.html",
+      "markdown_file": "glossary/asset-purchase.md",
+      "word_count": 1334,
+      "category": "glossary"
+    },
+    {
+      "title": "BDC \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/bdc",
+      "html_file": "glossary/bdc.html",
+      "markdown_file": "glossary/bdc.md",
+      "word_count": 1123,
+      "category": "glossary"
+    },
+    {
+      "title": "Board control \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/board-control",
+      "html_file": "glossary/board-control.html",
+      "markdown_file": "glossary/board-control.md",
+      "word_count": 1269,
+      "category": "glossary"
+    },
+    {
+      "title": "Board reporting \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/board-reporting",
+      "html_file": "glossary/board-reporting.html",
+      "markdown_file": "glossary/board-reporting.md",
+      "word_count": 1373,
+      "category": "glossary"
+    },
+    {
+      "title": "Bolt-on sourcing \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/bolt-on-sourcing",
+      "html_file": "glossary/bolt-on-sourcing.html",
+      "markdown_file": "glossary/bolt-on-sourcing.md",
+      "word_count": 1313,
+      "category": "glossary"
+    },
+    {
+      "title": "Bolt-on \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/bolt-on",
+      "html_file": "glossary/bolt-on.html",
+      "markdown_file": "glossary/bolt-on.md",
+      "word_count": 1243,
+      "category": "glossary"
+    },
+    {
+      "title": "Bridge loan \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/bridge-loan",
+      "html_file": "glossary/bridge-loan.html",
+      "markdown_file": "glossary/bridge-loan.md",
+      "word_count": 1092,
+      "category": "glossary"
+    },
+    {
+      "title": "Bridge to equity value \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/bridge-to-equity-value",
+      "html_file": "glossary/bridge-to-equity-value.html",
+      "markdown_file": "glossary/bridge-to-equity-value.md",
+      "word_count": 1168,
+      "category": "glossary"
+    },
+    {
+      "title": "Bullet maturity \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/bullet-maturity",
+      "html_file": "glossary/bullet-maturity.html",
+      "markdown_file": "glossary/bullet-maturity.md",
+      "word_count": 1218,
+      "category": "glossary"
+    },
+    {
+      "title": "Buy-and-build \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/buy-and-build",
+      "html_file": "glossary/buy-and-build.html",
+      "markdown_file": "glossary/buy-and-build.md",
+      "word_count": 1265,
+      "category": "glossary"
+    },
+    {
+      "title": "Buy-side diligence \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/buy-side-diligence",
+      "html_file": "glossary/buy-side-diligence.html",
+      "markdown_file": "glossary/buy-side-diligence.md",
+      "word_count": 1270,
+      "category": "glossary"
+    },
+    {
+      "title": "CAC payback \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/cac-payback",
+      "html_file": "glossary/cac-payback.html",
+      "markdown_file": "glossary/cac-payback.md",
+      "word_count": 1302,
+      "category": "glossary"
+    },
+    {
+      "title": "Capital call \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/capital-call",
+      "html_file": "glossary/capital-call.html",
+      "markdown_file": "glossary/capital-call.md",
+      "word_count": 1471,
+      "category": "glossary"
+    },
+    {
+      "title": "Carried interest \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/carried-interest",
+      "html_file": "glossary/carried-interest.html",
+      "markdown_file": "glossary/carried-interest.md",
+      "word_count": 1451,
+      "category": "glossary"
+    },
+    {
+      "title": "Carve-out financials \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/carve-out-financials",
+      "html_file": "glossary/carve-out-financials.html",
+      "markdown_file": "glossary/carve-out-financials.md",
+      "word_count": 1336,
+      "category": "glossary"
+    },
+    {
+      "title": "Carve-out \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/carve-out",
+      "html_file": "glossary/carve-out.html",
+      "markdown_file": "glossary/carve-out.md",
+      "word_count": 1416,
+      "category": "glossary"
+    },
+    {
+      "title": "Cash conversion cycle \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/cash-conversion-cycle",
+      "html_file": "glossary/cash-conversion-cycle.html",
+      "markdown_file": "glossary/cash-conversion-cycle.md",
+      "word_count": 1363,
+      "category": "glossary"
+    },
+    {
+      "title": "Catch-up \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/catch-up",
+      "html_file": "glossary/catch-up.html",
+      "markdown_file": "glossary/catch-up.md",
+      "word_count": 1282,
+      "category": "glossary"
+    },
+    {
+      "title": "Change of control \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/change-of-control",
+      "html_file": "glossary/change-of-control.html",
+      "markdown_file": "glossary/change-of-control.md",
+      "word_count": 1329,
+      "category": "glossary"
+    },
+    {
+      "title": "Churn \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/churn",
+      "html_file": "glossary/churn.html",
+      "markdown_file": "glossary/churn.md",
+      "word_count": 1412,
+      "category": "glossary"
+    },
+    {
+      "title": "Clawback \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/clawback",
+      "html_file": "glossary/clawback.html",
+      "markdown_file": "glossary/clawback.md",
+      "word_count": 1277,
+      "category": "glossary"
+    },
+    {
+      "title": "Clean team \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/clean-team",
+      "html_file": "glossary/clean-team.html",
+      "markdown_file": "glossary/clean-team.md",
+      "word_count": 1331,
+      "category": "glossary"
+    },
+    {
+      "title": "CLO \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/clo",
+      "html_file": "glossary/clo.html",
+      "markdown_file": "glossary/clo.md",
+      "word_count": 1179,
+      "category": "glossary"
+    },
+    {
+      "title": "Closing balance sheet \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/closing-balance-sheet",
+      "html_file": "glossary/closing-balance-sheet.html",
+      "markdown_file": "glossary/closing-balance-sheet.md",
+      "word_count": 1075,
+      "category": "glossary"
+    },
+    {
+      "title": "Club deal \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/club-deal",
+      "html_file": "glossary/club-deal.html",
+      "markdown_file": "glossary/club-deal.md",
+      "word_count": 1271,
+      "category": "glossary"
+    },
+    {
+      "title": "Co-investment \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/co-investment",
+      "html_file": "glossary/co-investment.html",
+      "markdown_file": "glossary/co-investment.md",
+      "word_count": 1246,
+      "category": "glossary"
+    },
+    {
+      "title": "Commercial due diligence \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/commercial-due-diligence",
+      "html_file": "glossary/commercial-due-diligence.html",
+      "markdown_file": "glossary/commercial-due-diligence.md",
+      "word_count": 1038,
+      "category": "glossary"
+    },
+    {
+      "title": "Committed capital \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/committed-capital",
+      "html_file": "glossary/committed-capital.html",
+      "markdown_file": "glossary/committed-capital.md",
+      "word_count": 1423,
+      "category": "glossary"
+    },
+    {
+      "title": "Comparable company analysis \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/comparable-company-analysis",
+      "html_file": "glossary/comparable-company-analysis.html",
+      "markdown_file": "glossary/comparable-company-analysis.md",
+      "word_count": 1252,
+      "category": "glossary"
+    },
+    {
+      "title": "Confidential information memorandum \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/confidential-information-memorandum",
+      "html_file": "glossary/confidential-information-memorandum.html",
+      "markdown_file": "glossary/confidential-information-memorandum.md",
+      "word_count": 1071,
+      "category": "glossary"
+    },
+    {
+      "title": "Confirmatory diligence \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/confirmatory-diligence",
+      "html_file": "glossary/confirmatory-diligence.html",
+      "markdown_file": "glossary/confirmatory-diligence.md",
+      "word_count": 1331,
+      "category": "glossary"
+    },
+    {
+      "title": "Continuation fund \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/continuation-fund",
+      "html_file": "glossary/continuation-fund.html",
+      "markdown_file": "glossary/continuation-fund.md",
+      "word_count": 1554,
+      "category": "glossary"
+    },
+    {
+      "title": "Covenant-lite \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/covenant-lite",
+      "html_file": "glossary/covenant-lite.html",
+      "markdown_file": "glossary/covenant-lite.md",
+      "word_count": 1240,
+      "category": "glossary"
+    },
+    {
+      "title": "Credit spread \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/credit-spread",
+      "html_file": "glossary/credit-spread.html",
+      "markdown_file": "glossary/credit-spread.md",
+      "word_count": 1003,
+      "category": "glossary"
+    },
+    {
+      "title": "Crossover fund \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/crossover-fund",
+      "html_file": "glossary/crossover-fund.html",
+      "markdown_file": "glossary/crossover-fund.md",
+      "word_count": 1498,
+      "category": "glossary"
+    },
+    {
+      "title": "Customer cohort analysis \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/customer-cohort-analysis",
+      "html_file": "glossary/customer-cohort-analysis.html",
+      "markdown_file": "glossary/customer-cohort-analysis.md",
+      "word_count": 1324,
+      "category": "glossary"
+    },
+    {
+      "title": "Customer reference call \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/customer-reference-call",
+      "html_file": "glossary/customer-reference-call.html",
+      "markdown_file": "glossary/customer-reference-call.md",
+      "word_count": 1316,
+      "category": "glossary"
+    },
+    {
+      "title": "Data room index \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/data-room-index",
+      "html_file": "glossary/data-room-index.html",
+      "markdown_file": "glossary/data-room-index.md",
+      "word_count": 1375,
+      "category": "glossary"
+    },
+    {
+      "title": "Data room \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/data-room",
+      "html_file": "glossary/data-room.html",
+      "markdown_file": "glossary/data-room.md",
+      "word_count": 1255,
+      "category": "glossary"
+    },
+    {
+      "title": "Data tape \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/data-tape",
+      "html_file": "glossary/data-tape.html",
+      "markdown_file": "glossary/data-tape.md",
+      "word_count": 1291,
+      "category": "glossary"
+    },
+    {
+      "title": "DCF \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/dcf",
+      "html_file": "glossary/dcf.html",
+      "markdown_file": "glossary/dcf.md",
+      "word_count": 1231,
+      "category": "glossary"
+    },
+    {
+      "title": "Deal-by-deal carry \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/deal-by-deal-carry",
+      "html_file": "glossary/deal-by-deal-carry.html",
+      "markdown_file": "glossary/deal-by-deal-carry.md",
+      "word_count": 1251,
+      "category": "glossary"
+    },
+    {
+      "title": "Debt service coverage ratio \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/debt-service-coverage-ratio",
+      "html_file": "glossary/debt-service-coverage-ratio.html",
+      "markdown_file": "glossary/debt-service-coverage-ratio.md",
+      "word_count": 1259,
+      "category": "glossary"
+    },
+    {
+      "title": "Delayed draw term loan \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/delayed-draw-term-loan",
+      "html_file": "glossary/delayed-draw-term-loan.html",
+      "markdown_file": "glossary/delayed-draw-term-loan.md",
+      "word_count": 993,
+      "category": "glossary"
+    },
+    {
+      "title": "Diligence checklist \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/diligence-checklist",
+      "html_file": "glossary/diligence-checklist.html",
+      "markdown_file": "glossary/diligence-checklist.md",
+      "word_count": 1099,
+      "category": "glossary"
+    },
+    {
+      "title": "Direct lending \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/direct-lending",
+      "html_file": "glossary/direct-lending.html",
+      "markdown_file": "glossary/direct-lending.md",
+      "word_count": 1208,
+      "category": "glossary"
+    },
+    {
+      "title": "Disclosure schedule \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/disclosure-schedule",
+      "html_file": "glossary/disclosure-schedule.html",
+      "markdown_file": "glossary/disclosure-schedule.md",
+      "word_count": 1093,
+      "category": "glossary"
+    },
+    {
+      "title": "Distribution waterfall \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/distribution-waterfall",
+      "html_file": "glossary/distribution-waterfall.html",
+      "markdown_file": "glossary/distribution-waterfall.md",
+      "word_count": 1525,
+      "category": "glossary"
+    },
+    {
+      "title": "Dividend recapitalization \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/dividend-recapitalization",
+      "html_file": "glossary/dividend-recapitalization.html",
+      "markdown_file": "glossary/dividend-recapitalization.md",
+      "word_count": 1262,
+      "category": "glossary"
+    },
+    {
+      "title": "Down round \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/down-round",
+      "html_file": "glossary/down-round.html",
+      "markdown_file": "glossary/down-round.md",
+      "word_count": 1217,
+      "category": "glossary"
+    },
+    {
+      "title": "DPI \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/dpi",
+      "html_file": "glossary/dpi.html",
+      "markdown_file": "glossary/dpi.md",
+      "word_count": 1237,
+      "category": "glossary"
+    },
+    {
+      "title": "Drag-along rights \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/drag-along-rights",
+      "html_file": "glossary/drag-along-rights.html",
+      "markdown_file": "glossary/drag-along-rights.md",
+      "word_count": 1288,
+      "category": "glossary"
+    },
+    {
+      "title": "Dry powder \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/dry-powder",
+      "html_file": "glossary/dry-powder.html",
+      "markdown_file": "glossary/dry-powder.md",
+      "word_count": 1439,
+      "category": "glossary"
+    },
+    {
+      "title": "Earnout \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/earnout",
+      "html_file": "glossary/earnout.html",
+      "markdown_file": "glossary/earnout.md",
+      "word_count": 1270,
+      "category": "glossary"
+    },
+    {
+      "title": "EBITDA multiple \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/ebitda-multiple",
+      "html_file": "glossary/ebitda-multiple.html",
+      "markdown_file": "glossary/ebitda-multiple.md",
+      "word_count": 1183,
+      "category": "glossary"
+    },
+    {
+      "title": "EBITDA \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/ebitda",
+      "html_file": "glossary/ebitda.html",
+      "markdown_file": "glossary/ebitda.md",
+      "word_count": 1146,
+      "category": "glossary"
+    },
+    {
+      "title": "Enterprise value \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/enterprise-value",
+      "html_file": "glossary/enterprise-value.html",
+      "markdown_file": "glossary/enterprise-value.md",
+      "word_count": 1177,
+      "category": "glossary"
+    },
+    {
+      "title": "Entry multiple \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/entry-multiple",
+      "html_file": "glossary/entry-multiple.html",
+      "markdown_file": "glossary/entry-multiple.md",
+      "word_count": 1279,
+      "category": "glossary"
+    },
+    {
+      "title": "Equity rollover pool \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/equity-rollover-pool",
+      "html_file": "glossary/equity-rollover-pool.html",
+      "markdown_file": "glossary/equity-rollover-pool.md",
+      "word_count": 1386,
+      "category": "glossary"
+    },
+    {
+      "title": "Equity value \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/equity-value",
+      "html_file": "glossary/equity-value.html",
+      "markdown_file": "glossary/equity-value.md",
+      "word_count": 1070,
+      "category": "glossary"
+    },
+    {
+      "title": "ERP migration \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/erp-migration",
+      "html_file": "glossary/erp-migration.html",
+      "markdown_file": "glossary/erp-migration.md",
+      "word_count": 1423,
+      "category": "glossary"
+    },
+    {
+      "title": "Escrow \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/escrow",
+      "html_file": "glossary/escrow.html",
+      "markdown_file": "glossary/escrow.md",
+      "word_count": 1358,
+      "category": "glossary"
+    },
+    {
+      "title": "Excess cash flow sweep \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/excess-cash-flow-sweep",
+      "html_file": "glossary/excess-cash-flow-sweep.html",
+      "markdown_file": "glossary/excess-cash-flow-sweep.md",
+      "word_count": 1205,
+      "category": "glossary"
+    },
+    {
+      "title": "Exit multiple \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/exit-multiple",
+      "html_file": "glossary/exit-multiple.html",
+      "markdown_file": "glossary/exit-multiple.md",
+      "word_count": 1367,
+      "category": "glossary"
+    },
+    {
+      "title": "Exit readiness \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/exit-readiness",
+      "html_file": "glossary/exit-readiness.html",
+      "markdown_file": "glossary/exit-readiness.md",
+      "word_count": 1394,
+      "category": "glossary"
+    },
+    {
+      "title": "Fairness opinion \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/fairness-opinion",
+      "html_file": "glossary/fairness-opinion.html",
+      "markdown_file": "glossary/fairness-opinion.md",
+      "word_count": 1306,
+      "category": "glossary"
+    },
+    {
+      "title": "Fiduciary duty \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/fiduciary-duty",
+      "html_file": "glossary/fiduciary-duty.html",
+      "markdown_file": "glossary/fiduciary-duty.md",
+      "word_count": 1307,
+      "category": "glossary"
+    },
+    {
+      "title": "First lien \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/first-lien",
+      "html_file": "glossary/first-lien.html",
+      "markdown_file": "glossary/first-lien.md",
+      "word_count": 1078,
+      "category": "glossary"
+    },
+    {
+      "title": "Football field \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/football-field",
+      "html_file": "glossary/football-field.html",
+      "markdown_file": "glossary/football-field.md",
+      "word_count": 1188,
+      "category": "glossary"
+    },
+    {
+      "title": "Founder vesting \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/founder-vesting",
+      "html_file": "glossary/founder-vesting.html",
+      "markdown_file": "glossary/founder-vesting.md",
+      "word_count": 1368,
+      "category": "glossary"
+    },
+    {
+      "title": "Fund-of-funds \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/fund-of-funds",
+      "html_file": "glossary/fund-of-funds.html",
+      "markdown_file": "glossary/fund-of-funds.md",
+      "word_count": 1222,
+      "category": "glossary"
+    },
+    {
+      "title": "Go-shop period \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/go-shop-period",
+      "html_file": "glossary/go-shop-period.html",
+      "markdown_file": "glossary/go-shop-period.md",
+      "word_count": 1305,
+      "category": "glossary"
+    },
+    {
+      "title": "Goodwill \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/goodwill",
+      "html_file": "glossary/goodwill.html",
+      "markdown_file": "glossary/goodwill.md",
+      "word_count": 1145,
+      "category": "glossary"
+    },
+    {
+      "title": "GP commitment \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/gp-commitment",
+      "html_file": "glossary/gp-commitment.html",
+      "markdown_file": "glossary/gp-commitment.md",
+      "word_count": 1295,
+      "category": "glossary"
+    },
+    {
+      "title": "GP-led secondary \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/gp-led-secondary",
+      "html_file": "glossary/gp-led-secondary.html",
+      "markdown_file": "glossary/gp-led-secondary.md",
+      "word_count": 1337,
+      "category": "glossary"
+    },
+    {
+      "title": "Gross IRR \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/gross-irr",
+      "html_file": "glossary/gross-irr.html",
+      "markdown_file": "glossary/gross-irr.md",
+      "word_count": 1074,
+      "category": "glossary"
+    },
+    {
+      "title": "Gross retention \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/gross-retention",
+      "html_file": "glossary/gross-retention.html",
+      "markdown_file": "glossary/gross-retention.md",
+      "word_count": 1285,
+      "category": "glossary"
+    },
+    {
+      "title": "High-yield bond \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/high-yield-bond",
+      "html_file": "glossary/high-yield-bond.html",
+      "markdown_file": "glossary/high-yield-bond.md",
+      "word_count": 1174,
+      "category": "glossary"
+    },
+    {
+      "title": "Holdback \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/holdback",
+      "html_file": "glossary/holdback.html",
+      "markdown_file": "glossary/holdback.md",
+      "word_count": 1354,
+      "category": "glossary"
+    },
+    {
+      "title": "Hurdle rate \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/hurdle-rate",
+      "html_file": "glossary/hurdle-rate.html",
+      "markdown_file": "glossary/hurdle-rate.md",
+      "word_count": 1403,
+      "category": "glossary"
+    },
+    {
+      "title": "Implied multiple \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/implied-multiple",
+      "html_file": "glossary/implied-multiple.html",
+      "markdown_file": "glossary/implied-multiple.md",
+      "word_count": 1184,
+      "category": "glossary"
+    },
+    {
+      "title": "Incremental facility \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/incremental-facility",
+      "html_file": "glossary/incremental-facility.html",
+      "markdown_file": "glossary/incremental-facility.md",
+      "word_count": 1048,
+      "category": "glossary"
+    },
+    {
+      "title": "Indemnification cap \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/indemnification-cap",
+      "html_file": "glossary/indemnification-cap.html",
+      "markdown_file": "glossary/indemnification-cap.md",
+      "word_count": 1324,
+      "category": "glossary"
+    },
+    {
+      "title": "Glossary \u00b7 VectorShift",
+      "url": "https://vectorshift.ai/glossary",
+      "html_file": "glossary/index.html",
+      "markdown_file": "glossary/index.md",
+      "word_count": 301,
+      "category": "glossary"
+    },
+    {
+      "title": "Indication of interest \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/indication-of-interest",
+      "html_file": "glossary/indication-of-interest.html",
+      "markdown_file": "glossary/indication-of-interest.md",
+      "word_count": 1273,
+      "category": "glossary"
+    },
+    {
+      "title": "Information rights \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/information-rights",
+      "html_file": "glossary/information-rights.html",
+      "markdown_file": "glossary/information-rights.md",
+      "word_count": 1218,
+      "category": "glossary"
+    },
+    {
+      "title": "Integration playbook \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/integration-playbook",
+      "html_file": "glossary/integration-playbook.html",
+      "markdown_file": "glossary/integration-playbook.md",
+      "word_count": 1273,
+      "category": "glossary"
+    },
+    {
+      "title": "IRR \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/irr",
+      "html_file": "glossary/irr.html",
+      "markdown_file": "glossary/irr.md",
+      "word_count": 1287,
+      "category": "glossary"
+    },
+    {
+      "title": "J-curve \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/j-curve",
+      "html_file": "glossary/j-curve.html",
+      "markdown_file": "glossary/j-curve.md",
+      "word_count": 1254,
+      "category": "glossary"
+    },
+    {
+      "title": "Joint venture \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/joint-venture",
+      "html_file": "glossary/joint-venture.html",
+      "markdown_file": "glossary/joint-venture.md",
+      "word_count": 1302,
+      "category": "glossary"
+    },
+    {
+      "title": "KPI dashboard \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/kpi-dashboard",
+      "html_file": "glossary/kpi-dashboard.html",
+      "markdown_file": "glossary/kpi-dashboard.md",
+      "word_count": 1375,
+      "category": "glossary"
+    },
+    {
+      "title": "Legal due diligence \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/legal-due-diligence",
+      "html_file": "glossary/legal-due-diligence.html",
+      "markdown_file": "glossary/legal-due-diligence.md",
+      "word_count": 1015,
+      "category": "glossary"
+    },
+    {
+      "title": "Letter of intent \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/letter-of-intent",
+      "html_file": "glossary/letter-of-intent.html",
+      "markdown_file": "glossary/letter-of-intent.md",
+      "word_count": 1383,
+      "category": "glossary"
+    },
+    {
+      "title": "Leverage ratio \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/leverage-ratio",
+      "html_file": "glossary/leverage-ratio.html",
+      "markdown_file": "glossary/leverage-ratio.md",
+      "word_count": 1226,
+      "category": "glossary"
+    },
+    {
+      "title": "Leveraged buyout \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/leveraged-buyout",
+      "html_file": "glossary/leveraged-buyout.html",
+      "markdown_file": "glossary/leveraged-buyout.md",
+      "word_count": 1266,
+      "category": "glossary"
+    },
+    {
+      "title": "Lifetime value \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/lifetime-value",
+      "html_file": "glossary/lifetime-value.html",
+      "markdown_file": "glossary/lifetime-value.md",
+      "word_count": 1368,
+      "category": "glossary"
+    },
+    {
+      "title": "Liquidation preference \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/liquidation-preference",
+      "html_file": "glossary/liquidation-preference.html",
+      "markdown_file": "glossary/liquidation-preference.md",
+      "word_count": 1177,
+      "category": "glossary"
+    },
+    {
+      "title": "LP advisory committee \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/lp-advisory-committee",
+      "html_file": "glossary/lp-advisory-committee.html",
+      "markdown_file": "glossary/lp-advisory-committee.md",
+      "word_count": 1227,
+      "category": "glossary"
+    },
+    {
+      "title": "LTM multiple \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/ltm-multiple",
+      "html_file": "glossary/ltm-multiple.html",
+      "markdown_file": "glossary/ltm-multiple.md",
+      "word_count": 1234,
+      "category": "glossary"
+    },
+    {
+      "title": "Management buyout \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/management-buyout",
+      "html_file": "glossary/management-buyout.html",
+      "markdown_file": "glossary/management-buyout.md",
+      "word_count": 1307,
+      "category": "glossary"
+    },
+    {
+      "title": "Management fee \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/management-fee",
+      "html_file": "glossary/management-fee.html",
+      "markdown_file": "glossary/management-fee.md",
+      "word_count": 1511,
+      "category": "glossary"
+    },
+    {
+      "title": "Management incentive plan \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/management-incentive-plan",
+      "html_file": "glossary/management-incentive-plan.html",
+      "markdown_file": "glossary/management-incentive-plan.md",
+      "word_count": 1509,
+      "category": "glossary"
+    },
+    {
+      "title": "Management presentation \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/management-presentation",
+      "html_file": "glossary/management-presentation.html",
+      "markdown_file": "glossary/management-presentation.md",
+      "word_count": 1298,
+      "category": "glossary"
+    },
+    {
+      "title": "Margin expansion \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/margin-expansion",
+      "html_file": "glossary/margin-expansion.html",
+      "markdown_file": "glossary/margin-expansion.md",
+      "word_count": 1298,
+      "category": "glossary"
+    },
+    {
+      "title": "Material adverse change \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/material-adverse-change",
+      "html_file": "glossary/material-adverse-change.html",
+      "markdown_file": "glossary/material-adverse-change.md",
+      "word_count": 1326,
+      "category": "glossary"
+    },
+    {
+      "title": "Merger of equals \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/merger-of-equals",
+      "html_file": "glossary/merger-of-equals.html",
+      "markdown_file": "glossary/merger-of-equals.md",
+      "word_count": 1321,
+      "category": "glossary"
+    },
+    {
+      "title": "Mezzanine debt \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/mezzanine-debt",
+      "html_file": "glossary/mezzanine-debt.html",
+      "markdown_file": "glossary/mezzanine-debt.md",
+      "word_count": 1113,
+      "category": "glossary"
+    },
+    {
+      "title": "Minority recapitalization \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/minority-recapitalization",
+      "html_file": "glossary/minority-recapitalization.html",
+      "markdown_file": "glossary/minority-recapitalization.md",
+      "word_count": 1329,
+      "category": "glossary"
+    },
+    {
+      "title": "MOIC \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/moic",
+      "html_file": "glossary/moic.html",
+      "markdown_file": "glossary/moic.md",
+      "word_count": 1211,
+      "category": "glossary"
+    },
+    {
+      "title": "Monthly operating review \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/monthly-operating-review",
+      "html_file": "glossary/monthly-operating-review.html",
+      "markdown_file": "glossary/monthly-operating-review.md",
+      "word_count": 1397,
+      "category": "glossary"
+    },
+    {
+      "title": "Most favored nation \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/most-favored-nation",
+      "html_file": "glossary/most-favored-nation.html",
+      "markdown_file": "glossary/most-favored-nation.md",
+      "word_count": 1300,
+      "category": "glossary"
+    },
+    {
+      "title": "Multiple arbitrage \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/multiple-arbitrage",
+      "html_file": "glossary/multiple-arbitrage.html",
+      "markdown_file": "glossary/multiple-arbitrage.md",
+      "word_count": 1268,
+      "category": "glossary"
+    },
+    {
+      "title": "Net debt \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/net-debt",
+      "html_file": "glossary/net-debt.html",
+      "markdown_file": "glossary/net-debt.md",
+      "word_count": 1115,
+      "category": "glossary"
+    },
+    {
+      "title": "Net IRR \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/net-irr",
+      "html_file": "glossary/net-irr.html",
+      "markdown_file": "glossary/net-irr.md",
+      "word_count": 1118,
+      "category": "glossary"
+    },
+    {
+      "title": "Net revenue retention \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/net-revenue-retention",
+      "html_file": "glossary/net-revenue-retention.html",
+      "markdown_file": "glossary/net-revenue-retention.md",
+      "word_count": 1330,
+      "category": "glossary"
+    },
+    {
+      "title": "Net working capital \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/net-working-capital",
+      "html_file": "glossary/net-working-capital.html",
+      "markdown_file": "glossary/net-working-capital.md",
+      "word_count": 1053,
+      "category": "glossary"
+    },
+    {
+      "title": "No-shop clause \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/no-shop-clause",
+      "html_file": "glossary/no-shop-clause.html",
+      "markdown_file": "glossary/no-shop-clause.md",
+      "word_count": 1227,
+      "category": "glossary"
+    },
+    {
+      "title": "Non-compete \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/non-compete",
+      "html_file": "glossary/non-compete.html",
+      "markdown_file": "glossary/non-compete.md",
+      "word_count": 1315,
+      "category": "glossary"
+    },
+    {
+      "title": "Non-solicit \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/non-solicit",
+      "html_file": "glossary/non-solicit.html",
+      "markdown_file": "glossary/non-solicit.md",
+      "word_count": 1231,
+      "category": "glossary"
+    },
+    {
+      "title": "Normalized earnings \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/normalized-earnings",
+      "html_file": "glossary/normalized-earnings.html",
+      "markdown_file": "glossary/normalized-earnings.md",
+      "word_count": 1273,
+      "category": "glossary"
+    },
+    {
+      "title": "NTM multiple \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/ntm-multiple",
+      "html_file": "glossary/ntm-multiple.html",
+      "markdown_file": "glossary/ntm-multiple.md",
+      "word_count": 1292,
+      "category": "glossary"
+    },
+    {
+      "title": "Operating agreement \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/operating-agreement",
+      "html_file": "glossary/operating-agreement.html",
+      "markdown_file": "glossary/operating-agreement.md",
+      "word_count": 1270,
+      "category": "glossary"
+    },
+    {
+      "title": "Operating partner \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/operating-partner",
+      "html_file": "glossary/operating-partner.html",
+      "markdown_file": "glossary/operating-partner.md",
+      "word_count": 1293,
+      "category": "glossary"
+    },
+    {
+      "title": "Operational due diligence \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/operational-due-diligence",
+      "html_file": "glossary/operational-due-diligence.html",
+      "markdown_file": "glossary/operational-due-diligence.md",
+      "word_count": 1331,
+      "category": "glossary"
+    },
+    {
+      "title": "Original issue discount \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/original-issue-discount",
+      "html_file": "glossary/original-issue-discount.html",
+      "markdown_file": "glossary/original-issue-discount.md",
+      "word_count": 994,
+      "category": "glossary"
+    },
+    {
+      "title": "Paid-in capital \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/paid-in-capital",
+      "html_file": "glossary/paid-in-capital.html",
+      "markdown_file": "glossary/paid-in-capital.md",
+      "word_count": 1139,
+      "category": "glossary"
+    },
+    {
+      "title": "Pay-to-play \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/pay-to-play",
+      "html_file": "glossary/pay-to-play.html",
+      "markdown_file": "glossary/pay-to-play.md",
+      "word_count": 1289,
+      "category": "glossary"
+    },
+    {
+      "title": "PIK toggle \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/pik-toggle",
+      "html_file": "glossary/pik-toggle.html",
+      "markdown_file": "glossary/pik-toggle.md",
+      "word_count": 1053,
+      "category": "glossary"
+    },
+    {
+      "title": "Platform acquisition \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/platform-acquisition",
+      "html_file": "glossary/platform-acquisition.html",
+      "markdown_file": "glossary/platform-acquisition.md",
+      "word_count": 1314,
+      "category": "glossary"
+    },
+    {
+      "title": "Portfolio monitoring \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/portfolio-monitoring",
+      "html_file": "glossary/portfolio-monitoring.html",
+      "markdown_file": "glossary/portfolio-monitoring.md",
+      "word_count": 1298,
+      "category": "glossary"
+    },
+    {
+      "title": "Precedent transactions \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/precedent-transactions",
+      "html_file": "glossary/precedent-transactions.html",
+      "markdown_file": "glossary/precedent-transactions.md",
+      "word_count": 1286,
+      "category": "glossary"
+    },
+    {
+      "title": "Preferred return \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/preferred-return",
+      "html_file": "glossary/preferred-return.html",
+      "markdown_file": "glossary/preferred-return.md",
+      "word_count": 1429,
+      "category": "glossary"
+    },
+    {
+      "title": "Pricing optimization \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/pricing-optimization",
+      "html_file": "glossary/pricing-optimization.html",
+      "markdown_file": "glossary/pricing-optimization.md",
+      "word_count": 1296,
+      "category": "glossary"
+    },
+    {
+      "title": "Private credit \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/private-credit",
+      "html_file": "glossary/private-credit.html",
+      "markdown_file": "glossary/private-credit.md",
+      "word_count": 1208,
+      "category": "glossary"
+    },
+    {
+      "title": "Pro rata rights \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/pro-rata-rights",
+      "html_file": "glossary/pro-rata-rights.html",
+      "markdown_file": "glossary/pro-rata-rights.md",
+      "word_count": 1283,
+      "category": "glossary"
+    },
+    {
+      "title": "Procurement savings \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/procurement-savings",
+      "html_file": "glossary/procurement-savings.html",
+      "markdown_file": "glossary/procurement-savings.md",
+      "word_count": 1345,
+      "category": "glossary"
+    },
+    {
+      "title": "Protective provisions \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/protective-provisions",
+      "html_file": "glossary/protective-provisions.html",
+      "markdown_file": "glossary/protective-provisions.md",
+      "word_count": 1320,
+      "category": "glossary"
+    },
+    {
+      "title": "Purchase price allocation \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/purchase-price-allocation",
+      "html_file": "glossary/purchase-price-allocation.html",
+      "markdown_file": "glossary/purchase-price-allocation.md",
+      "word_count": 1233,
+      "category": "glossary"
+    },
+    {
+      "title": "Quality of earnings report \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/quality-of-earnings-report",
+      "html_file": "glossary/quality-of-earnings-report.html",
+      "markdown_file": "glossary/quality-of-earnings-report.md",
+      "word_count": 1423,
+      "category": "glossary"
+    },
+    {
+      "title": "Quality of earnings \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/quality-of-earnings",
+      "html_file": "glossary/quality-of-earnings.html",
+      "markdown_file": "glossary/quality-of-earnings.md",
+      "word_count": 1307,
+      "category": "glossary"
+    },
+    {
+      "title": "Recapitalization \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/recapitalization",
+      "html_file": "glossary/recapitalization.html",
+      "markdown_file": "glossary/recapitalization.md",
+      "word_count": 1295,
+      "category": "glossary"
+    },
+    {
+      "title": "Recycling provision \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/recycling-provision",
+      "html_file": "glossary/recycling-provision.html",
+      "markdown_file": "glossary/recycling-provision.md",
+      "word_count": 1145,
+      "category": "glossary"
+    },
+    {
+      "title": "Red flag report \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/red-flag-report",
+      "html_file": "glossary/red-flag-report.html",
+      "markdown_file": "glossary/red-flag-report.md",
+      "word_count": 1029,
+      "category": "glossary"
+    },
+    {
+      "title": "Refinancing \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/refinancing",
+      "html_file": "glossary/refinancing.html",
+      "markdown_file": "glossary/refinancing.md",
+      "word_count": 1197,
+      "category": "glossary"
+    },
+    {
+      "title": "Repricing \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/repricing",
+      "html_file": "glossary/repricing.html",
+      "markdown_file": "glossary/repricing.md",
+      "word_count": 1254,
+      "category": "glossary"
+    },
+    {
+      "title": "Reps and warranties insurance \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/reps-and-warranties-insurance",
+      "html_file": "glossary/reps-and-warranties-insurance.html",
+      "markdown_file": "glossary/reps-and-warranties-insurance.md",
+      "word_count": 1089,
+      "category": "glossary"
+    },
+    {
+      "title": "Reps and warranties \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/reps-and-warranties",
+      "html_file": "glossary/reps-and-warranties.html",
+      "markdown_file": "glossary/reps-and-warranties.md",
+      "word_count": 1097,
+      "category": "glossary"
+    },
+    {
+      "title": "Revenue multiple \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/revenue-multiple",
+      "html_file": "glossary/revenue-multiple.html",
+      "markdown_file": "glossary/revenue-multiple.md",
+      "word_count": 1185,
+      "category": "glossary"
+    },
+    {
+      "title": "Reverse merger \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/reverse-merger",
+      "html_file": "glossary/reverse-merger.html",
+      "markdown_file": "glossary/reverse-merger.md",
+      "word_count": 1395,
+      "category": "glossary"
+    },
+    {
+      "title": "Reverse termination fee \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/reverse-termination-fee",
+      "html_file": "glossary/reverse-termination-fee.html",
+      "markdown_file": "glossary/reverse-termination-fee.md",
+      "word_count": 1312,
+      "category": "glossary"
+    },
+    {
+      "title": "Reverse triangular merger \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/reverse-triangular-merger",
+      "html_file": "glossary/reverse-triangular-merger.html",
+      "markdown_file": "glossary/reverse-triangular-merger.md",
+      "word_count": 1314,
+      "category": "glossary"
+    },
+    {
+      "title": "Revolving credit facility \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/revolving-credit-facility",
+      "html_file": "glossary/revolving-credit-facility.html",
+      "markdown_file": "glossary/revolving-credit-facility.md",
+      "word_count": 1039,
+      "category": "glossary"
+    },
+    {
+      "title": "Right of first refusal \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/right-of-first-refusal",
+      "html_file": "glossary/right-of-first-refusal.html",
+      "markdown_file": "glossary/right-of-first-refusal.md",
+      "word_count": 1348,
+      "category": "glossary"
+    },
+    {
+      "title": "Roll-up \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/roll-up",
+      "html_file": "glossary/roll-up.html",
+      "markdown_file": "glossary/roll-up.md",
+      "word_count": 1232,
+      "category": "glossary"
+    },
+    {
+      "title": "Rollover equity \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/rollover-equity",
+      "html_file": "glossary/rollover-equity.html",
+      "markdown_file": "glossary/rollover-equity.md",
+      "word_count": 1297,
+      "category": "glossary"
+    },
+    {
+      "title": "Rule of 40 \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/rule-of-40",
+      "html_file": "glossary/rule-of-40.html",
+      "markdown_file": "glossary/rule-of-40.md",
+      "word_count": 1135,
+      "category": "glossary"
+    },
+    {
+      "title": "Run-rate EBITDA \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/run-rate-ebitda",
+      "html_file": "glossary/run-rate-ebitda.html",
+      "markdown_file": "glossary/run-rate-ebitda.md",
+      "word_count": 1296,
+      "category": "glossary"
+    },
+    {
+      "title": "RVPI \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/rvpi",
+      "html_file": "glossary/rvpi.html",
+      "markdown_file": "glossary/rvpi.md",
+      "word_count": 1191,
+      "category": "glossary"
+    },
+    {
+      "title": "Sandbagging \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/sandbagging",
+      "html_file": "glossary/sandbagging.html",
+      "markdown_file": "glossary/sandbagging.md",
+      "word_count": 1064,
+      "category": "glossary"
+    },
+    {
+      "title": "Second lien \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/second-lien",
+      "html_file": "glossary/second-lien.html",
+      "markdown_file": "glossary/second-lien.md",
+      "word_count": 1058,
+      "category": "glossary"
+    },
+    {
+      "title": "Secondaries \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/secondaries",
+      "html_file": "glossary/secondaries.html",
+      "markdown_file": "glossary/secondaries.md",
+      "word_count": 1431,
+      "category": "glossary"
+    },
+    {
+      "title": "Sell-side diligence \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/sell-side-diligence",
+      "html_file": "glossary/sell-side-diligence.html",
+      "markdown_file": "glossary/sell-side-diligence.md",
+      "word_count": 1321,
+      "category": "glossary"
+    },
+    {
+      "title": "Seller note \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/seller-note",
+      "html_file": "glossary/seller-note.html",
+      "markdown_file": "glossary/seller-note.md",
+      "word_count": 1313,
+      "category": "glossary"
+    },
+    {
+      "title": "Senior secured notes \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/senior-secured-notes",
+      "html_file": "glossary/senior-secured-notes.html",
+      "markdown_file": "glossary/senior-secured-notes.md",
+      "word_count": 1214,
+      "category": "glossary"
+    },
+    {
+      "title": "Shared services \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/shared-services",
+      "html_file": "glossary/shared-services.html",
+      "markdown_file": "glossary/shared-services.md",
+      "word_count": 1369,
+      "category": "glossary"
+    },
+    {
+      "title": "Shareholders agreement \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/shareholders-agreement",
+      "html_file": "glossary/shareholders-agreement.html",
+      "markdown_file": "glossary/shareholders-agreement.md",
+      "word_count": 1256,
+      "category": "glossary"
+    },
+    {
+      "title": "Side letter \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/side-letter",
+      "html_file": "glossary/side-letter.html",
+      "markdown_file": "glossary/side-letter.md",
+      "word_count": 1165,
+      "category": "glossary"
+    },
+    {
+      "title": "Site visit \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/site-visit",
+      "html_file": "glossary/site-visit.html",
+      "markdown_file": "glossary/site-visit.md",
+      "word_count": 1323,
+      "category": "glossary"
+    },
+    {
+      "title": "SOFR \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/sofr",
+      "html_file": "glossary/sofr.html",
+      "markdown_file": "glossary/sofr.md",
+      "word_count": 1235,
+      "category": "glossary"
+    },
+    {
+      "title": "Special committee \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/special-committee",
+      "html_file": "glossary/special-committee.html",
+      "markdown_file": "glossary/special-committee.md",
+      "word_count": 1275,
+      "category": "glossary"
+    },
+    {
+      "title": "Spin-off \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/spin-off",
+      "html_file": "glossary/spin-off.html",
+      "markdown_file": "glossary/spin-off.md",
+      "word_count": 1317,
+      "category": "glossary"
+    },
+    {
+      "title": "Split-off \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/split-off",
+      "html_file": "glossary/split-off.html",
+      "markdown_file": "glossary/split-off.md",
+      "word_count": 1224,
+      "category": "glossary"
+    },
+    {
+      "title": "Sponsor finance \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/sponsor-finance",
+      "html_file": "glossary/sponsor-finance.html",
+      "markdown_file": "glossary/sponsor-finance.md",
+      "word_count": 1022,
+      "category": "glossary"
+    },
+    {
+      "title": "Stapled financing \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/stapled-financing",
+      "html_file": "glossary/stapled-financing.html",
+      "markdown_file": "glossary/stapled-financing.md",
+      "word_count": 1135,
+      "category": "glossary"
+    },
+    {
+      "title": "Stock purchase \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/stock-purchase",
+      "html_file": "glossary/stock-purchase.html",
+      "markdown_file": "glossary/stock-purchase.md",
+      "word_count": 1278,
+      "category": "glossary"
+    },
+    {
+      "title": "Subscription line \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/subscription-line",
+      "html_file": "glossary/subscription-line.html",
+      "markdown_file": "glossary/subscription-line.md",
+      "word_count": 1288,
+      "category": "glossary"
+    },
+    {
+      "title": "Sum-of-the-parts \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/sum-of-the-parts",
+      "html_file": "glossary/sum-of-the-parts.html",
+      "markdown_file": "glossary/sum-of-the-parts.md",
+      "word_count": 1117,
+      "category": "glossary"
+    },
+    {
+      "title": "Survival period \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/survival-period",
+      "html_file": "glossary/survival-period.html",
+      "markdown_file": "glossary/survival-period.md",
+      "word_count": 1257,
+      "category": "glossary"
+    },
+    {
+      "title": "Syndicated loan \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/syndicated-loan",
+      "html_file": "glossary/syndicated-loan.html",
+      "markdown_file": "glossary/syndicated-loan.md",
+      "word_count": 1245,
+      "category": "glossary"
+    },
+    {
+      "title": "Synergies \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/synergies",
+      "html_file": "glossary/synergies.html",
+      "markdown_file": "glossary/synergies.md",
+      "word_count": 1233,
+      "category": "glossary"
+    },
+    {
+      "title": "Synergy tracking \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/synergy-tracking",
+      "html_file": "glossary/synergy-tracking.html",
+      "markdown_file": "glossary/synergy-tracking.md",
+      "word_count": 1302,
+      "category": "glossary"
+    },
+    {
+      "title": "Tag-along rights \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/tag-along-rights",
+      "html_file": "glossary/tag-along-rights.html",
+      "markdown_file": "glossary/tag-along-rights.md",
+      "word_count": 1275,
+      "category": "glossary"
+    },
+    {
+      "title": "Take-private \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/take-private",
+      "html_file": "glossary/take-private.html",
+      "markdown_file": "glossary/take-private.md",
+      "word_count": 1152,
+      "category": "glossary"
+    },
+    {
+      "title": "Teaser \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/teaser",
+      "html_file": "glossary/teaser.html",
+      "markdown_file": "glossary/teaser.md",
+      "word_count": 1001,
+      "category": "glossary"
+    },
+    {
+      "title": "Technical due diligence \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/technical-due-diligence",
+      "html_file": "glossary/technical-due-diligence.html",
+      "markdown_file": "glossary/technical-due-diligence.md",
+      "word_count": 1016,
+      "category": "glossary"
+    },
+    {
+      "title": "Tender offer \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/tender-offer",
+      "html_file": "glossary/tender-offer.html",
+      "markdown_file": "glossary/tender-offer.md",
+      "word_count": 1244,
+      "category": "glossary"
+    },
+    {
+      "title": "Term loan A \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/term-loan-a",
+      "html_file": "glossary/term-loan-a.html",
+      "markdown_file": "glossary/term-loan-a.md",
+      "word_count": 1209,
+      "category": "glossary"
+    },
+    {
+      "title": "Term loan B \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/term-loan-b",
+      "html_file": "glossary/term-loan-b.html",
+      "markdown_file": "glossary/term-loan-b.md",
+      "word_count": 1210,
+      "category": "glossary"
+    },
+    {
+      "title": "Term sheet \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/term-sheet",
+      "html_file": "glossary/term-sheet.html",
+      "markdown_file": "glossary/term-sheet.md",
+      "word_count": 1383,
+      "category": "glossary"
+    },
+    {
+      "title": "Terminal value \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/terminal-value",
+      "html_file": "glossary/terminal-value.html",
+      "markdown_file": "glossary/terminal-value.md",
+      "word_count": 1234,
+      "category": "glossary"
+    },
+    {
+      "title": "Tuck-in \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/tuck-in",
+      "html_file": "glossary/tuck-in.html",
+      "markdown_file": "glossary/tuck-in.md",
+      "word_count": 1217,
+      "category": "glossary"
+    },
+    {
+      "title": "TVPI \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/tvpi",
+      "html_file": "glossary/tvpi.html",
+      "markdown_file": "glossary/tvpi.md",
+      "word_count": 1256,
+      "category": "glossary"
+    },
+    {
+      "title": "Unitranche \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/unitranche",
+      "html_file": "glossary/unitranche.html",
+      "markdown_file": "glossary/unitranche.md",
+      "word_count": 1123,
+      "category": "glossary"
+    },
+    {
+      "title": "Value bridge \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/value-bridge",
+      "html_file": "glossary/value-bridge.html",
+      "markdown_file": "glossary/value-bridge.md",
+      "word_count": 1349,
+      "category": "glossary"
+    },
+    {
+      "title": "Value creation plan \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/value-creation-plan",
+      "html_file": "glossary/value-creation-plan.html",
+      "markdown_file": "glossary/value-creation-plan.md",
+      "word_count": 1397,
+      "category": "glossary"
+    },
+    {
+      "title": "Vendor due diligence \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/vendor-due-diligence",
+      "html_file": "glossary/vendor-due-diligence.html",
+      "markdown_file": "glossary/vendor-due-diligence.md",
+      "word_count": 1418,
+      "category": "glossary"
+    },
+    {
+      "title": "Vendor financing \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/vendor-financing",
+      "html_file": "glossary/vendor-financing.html",
+      "markdown_file": "glossary/vendor-financing.md",
+      "word_count": 1430,
+      "category": "glossary"
+    },
+    {
+      "title": "Vintage year \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/vintage-year",
+      "html_file": "glossary/vintage-year.html",
+      "markdown_file": "glossary/vintage-year.md",
+      "word_count": 1168,
+      "category": "glossary"
+    },
+    {
+      "title": "Virtual data room \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/virtual-data-room",
+      "html_file": "glossary/virtual-data-room.html",
+      "markdown_file": "glossary/virtual-data-room.md",
+      "word_count": 1050,
+      "category": "glossary"
+    },
+    {
+      "title": "Voting agreement \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/voting-agreement",
+      "html_file": "glossary/voting-agreement.html",
+      "markdown_file": "glossary/voting-agreement.md",
+      "word_count": 1361,
+      "category": "glossary"
+    },
+    {
+      "title": "WACC \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/wacc",
+      "html_file": "glossary/wacc.html",
+      "markdown_file": "glossary/wacc.md",
+      "word_count": 1253,
+      "category": "glossary"
+    },
+    {
+      "title": "Whole-fund carry \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/whole-fund-carry",
+      "html_file": "glossary/whole-fund-carry.html",
+      "markdown_file": "glossary/whole-fund-carry.md",
+      "word_count": 1193,
+      "category": "glossary"
+    },
+    {
+      "title": "Working capital adjustment \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/working-capital-adjustment",
+      "html_file": "glossary/working-capital-adjustment.html",
+      "markdown_file": "glossary/working-capital-adjustment.md",
+      "word_count": 1375,
+      "category": "glossary"
+    },
+    {
+      "title": "Working capital optimization \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/working-capital-optimization",
+      "html_file": "glossary/working-capital-optimization.html",
+      "markdown_file": "glossary/working-capital-optimization.md",
+      "word_count": 1336,
+      "category": "glossary"
+    },
+    {
+      "title": "Working capital peg \u2014 Glossary \u2014 VectorShift",
+      "url": "https://vectorshift.ai/glossary/working-capital-peg",
+      "html_file": "glossary/working-capital-peg.html",
+      "markdown_file": "glossary/working-capital-peg.md",
+      "word_count": 1101,
+      "category": "glossary"
+    },
+    {
+      "title": "VectorShift",
+      "url": "https://vectorshift.ai/",
+      "html_file": "index.html",
+      "markdown_file": "index.md",
+      "word_count": 837,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Privacy Policy has moved | VectorShift",
+      "url": "https://vectorshift.ai/privacy-policy",
+      "html_file": "privacy-policy.html",
+      "markdown_file": "privacy-policy.md",
+      "word_count": 19,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Product | VectorShift",
+      "url": "https://vectorshift.ai/product",
+      "html_file": "product.html",
+      "markdown_file": "product.md",
+      "word_count": 909,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Research directory \u00b7 VectorShift",
+      "url": "https://vectorshift.ai/research",
+      "html_file": "research.html",
+      "markdown_file": "research.md",
+      "word_count": 291,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Resources \u00b7 VectorShift",
+      "url": "https://vectorshift.ai/resources",
+      "html_file": "resources.html",
+      "markdown_file": "resources.md",
+      "word_count": 3606,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Security | VectorShift",
+      "url": "https://vectorshift.ai/security",
+      "html_file": "security.html",
+      "markdown_file": "security.md",
+      "word_count": 603,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Terms and Conditions | VectorShift",
+      "url": "https://vectorshift.ai/terms-conditions",
+      "html_file": "terms-conditions.html",
+      "markdown_file": "terms-conditions.md",
+      "word_count": 2783,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Terms of Service has moved | VectorShift",
+      "url": "https://vectorshift.ai/terms-of-service",
+      "html_file": "terms-of-service.html",
+      "markdown_file": "terms-of-service.md",
+      "word_count": 19,
+      "category": "core_marketing"
+    },
+    {
+      "title": "Use Cases | VectorShift",
+      "url": "https://vectorshift.ai/use-cases",
+      "html_file": "use-cases.html",
+      "markdown_file": "use-cases.md",
+      "word_count": 789,
+      "category": "core_marketing"
+    }
+  ]
+}

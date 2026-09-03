@@ -1,0 +1,93 @@
+{
+  "theme": "mint",
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "VectorShift",
+  "colors": {
+    "primary": "#6366f1",
+    "light": "#818cf8",
+    "dark": "#4f46e5"
+  },
+  "logo": {
+    "light": "/assets/vectorshift-logo_24ed4e0f.png",
+    "dark": "/assets/vectorshift-logo_24ed4e0f.png"
+  },
+  "favicon": "/assets/android-chrome-512x512_eb86c21a.png",
+  "appearance": "$18:2:props:children:1:props:appearance",
+  "navbar": {
+    "links": [
+      {
+        "href": "/support",
+        "label": "Support"
+      },
+      {
+        "href": "https://app.vectorshift.ai/account/api-keys",
+        "label": "API Keys"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Platform",
+      "href": "https://app.vectorshift.ai"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/vectorshiftai",
+      "linkedin": "https://linkedin.com/company/vectorshift"
+    }
+  },
+  "search": {
+    "prompt": "Search the SDK, API, and platform docs\u2026"
+  },
+  "seo": {
+    "metatags": {
+      "og:image": "/logo/vectorshift-logo.png"
+    },
+    "indexing": "navigable"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "codeblocks": "$18:2:props:children:1:props:codeblockTheme",
+    "latex": true
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "aistudio",
+      "perplexity"
+    ],
+    "display": "header"
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Book a Demo",
+          "icon": "calendar",
+          "href": "https://calendly.com/albert_mao/vectorshift-intro-chat"
+        },
+        {
+          "anchor": "Changelog",
+          "icon": "history",
+          "href": "https://vectorshift.ai/blog?tag=changelog"
+        },
+        {
+          "anchor": "Blog",
+          "icon": "newspaper",
+          "href": "https://vectorshift.ai/blog"
+        },
+        {
+          "anchor": "Tutorials",
+          "icon": "youtube",
+          "href": "https://www.youtube.com/@VectorShiftAI"
+        }
+      ]
+    },
+    "pages": []
+  }
+}

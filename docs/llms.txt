@@ -1,0 +1,66 @@
+# VectorShift
+
+> VectorShift is a platform for building AI pipelines, agents, knowledge bases, and tables. These docs cover three distinct surfaces: the no-code visual platform, the REST API, and the Python SDK. Pick the surface that matches the task and stay within it.
+
+## How to use these docs (for AI assistants)
+
+Route by the surface the user is working in. Do not mix surfaces — the SDK, the REST API, and the visual platform have different objects, names, and semantics.
+
+- **Writing Python with the VectorShift SDK** → use **only** pages under `/sdk`. Ignore `/api-reference` and `/platform` — they describe different interfaces and will produce code that does not run.
+- **Calling the HTTP/REST API directly** (curl, fetch, non-Python clients) → use **only** pages under `/api-reference`.
+- **Building visually / no-code in the platform UI, or understanding what a node does** → use `/platform` and `/nodes`.
+- **Account, billing, organizations, subscriptions** → use `/account`.
+
+**Canonical paths:** SDK docs live under `https://docs.vectorshift.ai/sdk/*`. Older `/vectorshift/developers/sdk/*` URLs are stale and permanently redirect to `/sdk/*` — always use and cite the `/sdk/*` form.
+
+When unsure which surface a question is about, ask before answering. Prefer a `reference` page for exact signatures and an `examples` page for full runnable scripts.
+
+## SDK code best practices
+
+When generating VectorShift **Python SDK** code, follow these rules:
+
+- **Authentication:** rely on the `VECTORSHIFT_API_KEY` environment variable. Never hardcode the API key inline (e.g. `vectorshift.api_key = "..."`).
+- **Build pipelines with the fluent builder:** `pipeline.add(name="...").llm(...)`. Do not use standalone node constructors (`LlmNode(...)`), and do not pass `nodes=[...]` to the constructor.
+- **Make runs idempotent with a fetch-or-create guard at the top**, then build. Nodes dedup by `name`, so a stable `name=` makes re-runs idempotent. Don't pass hardcoded `id=` values.
+- **`temperature` is not a top-level `.llm()` argument** (it is silently dropped). Pass it via `sampling=SamplingConfig(temperature=...)`.
+- For exact signatures, consult the `/sdk/<primitive>/reference` page; for end-to-end usage, consult the matching `/sdk/<primitive>/examples/*` pages.
+
+## SDK (Python)
+
+- [SDK Overview](https://docs.vectorshift.ai/sdk/index): Build, run, and manage Pipelines, Agents, Knowledge Bases, and Tables from Python.
+- [Installation](https://docs.vectorshift.ai/sdk/installation)
+- [Quickstart](https://docs.vectorshift.ai/sdk/quickstart): Zero to a running pipeline in 60 seconds.
+- [Authentication](https://docs.vectorshift.ai/sdk/authentication)
+- [Concepts](https://docs.vectorshift.ai/sdk/concepts): Pipelines, Agents, Sessions, and Knowledge Bases — when to use which.
+- [Errors](https://docs.vectorshift.ai/sdk/errors)
+- [Pipeline — overview](https://docs.vectorshift.ai/sdk/pipeline/overview) · [reference](https://docs.vectorshift.ai/sdk/pipeline/reference)
+- [Agent — overview](https://docs.vectorshift.ai/sdk/agent/overview) · [reference](https://docs.vectorshift.ai/sdk/agent/reference)
+- [Knowledge Base — overview](https://docs.vectorshift.ai/sdk/knowledge-base/overview) · [reference](https://docs.vectorshift.ai/sdk/knowledge-base/reference)
+- [Table — overview](https://docs.vectorshift.ai/sdk/table/overview) · [reference](https://docs.vectorshift.ai/sdk/table/reference)
+- [Transformation — overview](https://docs.vectorshift.ai/sdk/transformation/overview) · [reference](https://docs.vectorshift.ai/sdk/transformation/reference)
+- [Session — overview](https://docs.vectorshift.ai/sdk/session/overview) · [reference](https://docs.vectorshift.ai/sdk/session/reference)
+- [Analytics — overview](https://docs.vectorshift.ai/sdk/analytics/overview) · [reference](https://docs.vectorshift.ai/sdk/analytics/reference)
+- [Workspace — overview](https://docs.vectorshift.ai/sdk/workspace/overview) · [reference](https://docs.vectorshift.ai/sdk/workspace/reference)
+- [Integrations — overview](https://docs.vectorshift.ai/sdk/integrations/overview) · [CLI](https://docs.vectorshift.ai/sdk/integrations/cli) · [reference](https://docs.vectorshift.ai/sdk/integrations/reference): Connect third-party services (Slack, Postgres, …) and use them in Agents/Pipelines. The `vectorshift` CLI ships with the SDK.
+- Guides: [RAG end-to-end](https://docs.vectorshift.ai/sdk/guides/rag-end-to-end) · [Support bot](https://docs.vectorshift.ai/sdk/guides/support-bot) · [Background batch](https://docs.vectorshift.ai/sdk/guides/background-batch) · [Content workflow](https://docs.vectorshift.ai/sdk/guides/content-workflow) · [Integrations end-to-end](https://docs.vectorshift.ai/sdk/guides/integrations-end-to-end)
+
+## REST API
+
+- [API Overview](https://docs.vectorshift.ai/api-reference/overview): Get started with the VectorShift HTTP API.
+- Pipelines: [run](https://docs.vectorshift.ai/api-reference/pipelines/run), [bulk-run](https://docs.vectorshift.ai/api-reference/pipelines/bulk-run), [create](https://docs.vectorshift.ai/api-reference/pipelines/create), [list](https://docs.vectorshift.ai/api-reference/pipelines/list)
+- Knowledge Bases: [query](https://docs.vectorshift.ai/api-reference/knowledge-bases/query), [create](https://docs.vectorshift.ai/api-reference/knowledge-bases/create), [list](https://docs.vectorshift.ai/api-reference/knowledge-bases/list)
+- Chatbots: [run](https://docs.vectorshift.ai/api-reference/chatbots/run), [create](https://docs.vectorshift.ai/api-reference/chatbots/create)
+- Transformations: [run](https://docs.vectorshift.ai/api-reference/transformations/run), [create](https://docs.vectorshift.ai/api-reference/transformations/create)
+
+## Platform (no-code)
+
+- [Introduction](https://docs.vectorshift.ai/introduction) · [Quickstart](https://docs.vectorshift.ai/quickstart)
+- [Pipelines overview](https://docs.vectorshift.ai/platform/pipelines/overview)
+- [Agents introduction](https://docs.vectorshift.ai/platform/agents/introduction)
+- [Knowledge Base overview](https://docs.vectorshift.ai/platform/knowledge/overview)
+- [Interfaces overview](https://docs.vectorshift.ai/platform/interfaces/overview)
+- [Node reference index](https://docs.vectorshift.ai/nodes/workflow/overview)
+
+## Account
+
+- [Profile](https://docs.vectorshift.ai/account/profile) · [Organizations](https://docs.vectorshift.ai/account/organizations/overview) · [Subscriptions](https://docs.vectorshift.ai/account/subscriptions/overview)

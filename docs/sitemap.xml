@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+  <url>
+    <loc>https://docs.vectorshift.ai/account/organizations/enterprise-connections</loc>
+    <lastmod>2026-01-06T23:44:18.559Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/account/organizations/overview</loc>
+    <lastmod>2026-07-06T08:21:43.929Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/account/profile</loc>
+    <lastmod>2026-07-06T08:21:43.930Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/account/subscriptions/organization</loc>
+    <lastmod>2026-01-06T23:44:18.567Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/account/subscriptions/overview</loc>
+    <lastmod>2026-01-06T23:44:18.567Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/account/subscriptions/personal</loc>
+    <lastmod>2026-01-06T23:44:18.561Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/chatbots/create</loc>
+    <lastmod>2026-07-09T17:54:22.079Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/chatbots/delete</loc>
+    <lastmod>2026-07-09T17:54:22.077Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/chatbots/fetch</loc>
+    <lastmod>2026-07-09T17:54:22.073Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/chatbots/list</loc>
+    <lastmod>2026-07-09T17:54:22.074Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/chatbots/run</loc>
+    <lastmod>2026-07-09T17:54:22.118Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/chatbots/terminate</loc>
+    <lastmod>2026-07-09T17:54:22.118Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/chatbots/upload</loc>
+    <lastmod>2026-07-09T17:54:22.116Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/knowledge-bases/create</loc>
+    <lastmod>2026-07-09T17:54:22.115Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/knowledge-bases/delete</loc>
+    <lastmod>2026-07-09T17:54:22.120Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/knowledge-bases/delete-documents</loc>
+    <lastmod>2026-07-09T17:54:22.121Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/knowledge-bases/fetch</loc>
+    <lastmod>2026-07-09T17:54:22.116Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/knowledge-bases/find-documents</loc>
+    <lastmod>2026-07-09T17:54:22.117Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/knowledge-bases</loc>
+    <lastmod>2026-07-09T17:54:22.114Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/knowledge-bases/list</loc>
+    <lastmod>2026-07-09T17:54:22.114Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/knowledge-bases/query</loc>
+    <lastmod>2026-07-09T17:54:22.145Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/overview</loc>
+    <lastmod>2026-01-06T23:44:19.065Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/bulk-run</loc>
+    <lastmod>2026-01-06T23:44:19.064Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/create</loc>
+    <lastmod>2026-01-06T23:44:19.065Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/delete</loc>
+    <lastmod>2026-01-06T23:44:19.063Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/fetch</loc>
+    <lastmod>2026-01-06T23:44:19.067Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/list</loc>
+    <lastmod>2026-07-09T17:54:22.139Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/pause</loc>
+    <lastmod>2026-01-06T23:44:19.068Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/resume</loc>
+    <lastmod>2026-01-06T23:44:19.066Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/run</loc>
+    <lastmod>2026-01-06T23:44:19.069Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/pipelines/terminate</loc>
+    <lastmod>2026-01-06T23:44:19.298Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/transformations/create</loc>
+    <lastmod>2026-07-09T17:54:22.169Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/transformations/delete</loc>
+    <lastmod>2026-07-09T17:54:22.167Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/transformations/fetch</loc>
+    <lastmod>2026-07-09T17:54:22.165Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/transformations/list</loc>
+    <lastmod>2026-07-09T17:54:22.169Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/api-reference/transformations/run</loc>
+    <lastmod>2026-07-09T17:54:22.166Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/introduction</loc>
+    <lastmod>2026-07-06T08:21:44.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/agent/overview</loc>
+    <lastmod>2026-07-06T08:21:44.221Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/ai-routing/overview</loc>
+    <lastmod>2026-07-06T08:21:44.217Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/anthropic/overview</loc>
+    <lastmod>2026-07-06T08:21:44.220Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/aws-bedrock/overview</loc>
+    <lastmod>2026-07-06T08:21:44.219Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/browser-extension/overview</loc>
+    <lastmod>2026-07-06T08:21:44.216Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/chat-file-reader/overview</loc>
+    <lastmod>2026-07-06T08:21:44.212Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/chat-memory/overview</loc>
+    <lastmod>2026-06-29T10:40:53.445Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/code/overview</loc>
+    <lastmod>2026-07-06T08:21:44.983Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/cohere/overview</loc>
+    <lastmod>2026-07-06T08:21:44.984Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/condition/overview</loc>
+    <lastmod>2026-07-06T08:21:44.988Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/create-knowledge-base/overview</loc>
+    <lastmod>2026-07-06T08:21:44.987Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/create-session/overview</loc>
+    <lastmod>2026-06-29T10:40:53.446Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/create-workspace/overview</loc>
+    <lastmod>2026-07-06T08:21:44.989Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/custom/overview</loc>
+    <lastmod>2026-07-06T08:21:44.987Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/data-collector/overview</loc>
+    <lastmod>2026-07-06T08:21:44.985Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/deep-research/overview</loc>
+    <lastmod>2026-07-06T08:21:44.986Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/file-save/overview</loc>
+    <lastmod>2026-07-06T08:21:45.870Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/file/overview</loc>
+    <lastmod>2026-07-06T08:21:45.869Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/get-run-data/overview</loc>
+    <lastmod>2026-07-01T06:04:39.773Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/google/overview</loc>
+    <lastmod>2026-07-06T08:21:45.867Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/image-to-image/overview</loc>
+    <lastmod>2026-07-06T08:21:45.866Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/image-to-text/overview</loc>
+    <lastmod>2026-07-06T08:21:45.865Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/input/overview</loc>
+    <lastmod>2026-07-01T06:04:39.772Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/knowledge-base-agent/overview</loc>
+    <lastmod>2026-07-06T08:21:45.864Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/knowledge-base-fetch-document-content/overview</loc>
+    <lastmod>2026-07-06T08:21:45.868Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/knowledge-base-fetch-items/overview</loc>
+    <lastmod>2026-07-06T08:21:45.867Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/knowledge-base-loader/overview</loc>
+    <lastmod>2026-07-06T08:21:47.026Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/knowledge-base-v3/overview</loc>
+    <lastmod>2026-07-06T08:21:47.027Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/listen-button/overview</loc>
+    <lastmod>2026-07-06T08:21:47.004Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/listen-capture/overview</loc>
+    <lastmod>2026-07-06T08:21:47.025Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/merge-join-all/overview</loc>
+    <lastmod>2026-07-01T06:04:40.901Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/merge-pick-first/overview</loc>
+    <lastmod>2026-07-06T08:21:47.006Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/note/overview</loc>
+    <lastmod>2026-07-06T08:21:47.005Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/open-source/overview</loc>
+    <lastmod>2026-07-06T08:21:47.026Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/openai/overview</loc>
+    <lastmod>2026-07-06T08:21:47.023Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/output/overview</loc>
+    <lastmod>2026-07-01T06:04:40.892Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/perplexity/overview</loc>
+    <lastmod>2026-07-06T08:21:47.784Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/post-message/overview</loc>
+    <lastmod>2026-07-06T08:21:47.783Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/read-session-messages/overview</loc>
+    <lastmod>2026-07-06T08:21:47.782Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/semantic-search/overview</loc>
+    <lastmod>2026-07-06T08:21:47.781Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/set-variable/overview</loc>
+    <lastmod>2026-07-06T08:21:47.778Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/speech-to-text/overview</loc>
+    <lastmod>2026-07-06T08:21:47.780Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/start-node/overview</loc>
+    <lastmod>2026-07-06T08:21:47.777Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/sync-knowledge-base/overview</loc>
+    <lastmod>2026-07-06T08:21:47.778Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/talk-card/overview</loc>
+    <lastmod>2026-07-01T06:04:41.548Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/talk-carousel/overview</loc>
+    <lastmod>2026-07-01T06:04:41.552Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/talk-image/overview</loc>
+    <lastmod>2026-07-06T08:21:48.443Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/talk-message/overview</loc>
+    <lastmod>2026-07-06T08:21:48.446Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/text-to-image/overview</loc>
+    <lastmod>2026-07-06T08:21:48.444Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/text-to-speech/overview</loc>
+    <lastmod>2026-07-06T08:21:48.443Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/trigger/overview</loc>
+    <lastmod>2026-07-06T08:21:48.441Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/workflow/overview</loc>
+    <lastmod>2026-07-06T08:21:48.439Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/nodes/xai/overview</loc>
+    <lastmod>2026-07-06T08:21:48.440Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/agent-instructions</loc>
+    <lastmod>2026-04-10T10:26:54.138Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/agent-tools</loc>
+    <lastmod>2026-06-29T10:40:56.956Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/ai-model</loc>
+    <lastmod>2026-04-07T12:17:17.697Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/at-tag-references</loc>
+    <lastmod>2026-04-07T12:17:17.698Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/build-an-agent</loc>
+    <lastmod>2026-04-07T12:17:17.703Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/chat-preview</loc>
+    <lastmod>2026-04-07T12:17:17.702Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/interface-tab</loc>
+    <lastmod>2026-04-07T12:17:17.700Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/introduction</loc>
+    <lastmod>2026-07-06T08:21:49.300Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/knowledge-base</loc>
+    <lastmod>2026-04-07T12:17:17.696Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/manager-tab</loc>
+    <lastmod>2026-04-07T12:17:17.701Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/saving-and-versioning</loc>
+    <lastmod>2026-04-07T12:17:18.625Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/session-memory</loc>
+    <lastmod>2026-04-07T12:17:18.625Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/sharing</loc>
+    <lastmod>2026-04-10T10:26:54.139Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/agents/tips</loc>
+    <lastmod>2026-04-07T12:17:18.622Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/files</loc>
+    <lastmod>2026-07-06T08:21:49.322Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/agentic</loc>
+    <lastmod>2026-07-06T08:21:49.322Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/analytics</loc>
+    <lastmod>2026-07-06T08:21:49.329Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/api</loc>
+    <lastmod>2026-07-06T08:21:49.318Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/assistant</loc>
+    <lastmod>2026-07-06T08:21:49.325Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/assistant-vs-website</loc>
+    <lastmod>2026-07-06T08:21:49.321Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/overview</loc>
+    <lastmod>2026-07-06T08:21:50.268Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/slack</loc>
+    <lastmod>2026-03-27T15:35:21.396Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/website</loc>
+    <lastmod>2026-07-06T08:21:50.264Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/whatsapp</loc>
+    <lastmod>2026-07-06T08:21:50.267Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/chatbots/workflow</loc>
+    <lastmod>2026-07-06T08:21:50.266Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/forms/additional-features</loc>
+    <lastmod>2026-04-24T15:53:47.343Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/forms/analytics</loc>
+    <lastmod>2026-03-25T17:45:27.449Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/forms/building</loc>
+    <lastmod>2026-03-25T17:45:27.450Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/forms/overview</loc>
+    <lastmod>2026-03-25T17:45:27.449Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/forms/personalizing</loc>
+    <lastmod>2026-04-24T15:53:47.333Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/forms/sharing</loc>
+    <lastmod>2026-04-07T11:51:04.767Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/forms/submissions</loc>
+    <lastmod>2026-07-06T08:21:51.410Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/overview</loc>
+    <lastmod>2026-07-06T08:21:51.407Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/search</loc>
+    <lastmod>2026-07-06T08:21:51.407Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/interfaces/voicebots</loc>
+    <lastmod>2026-07-06T08:21:51.409Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/adding-data</loc>
+    <lastmod>2026-04-13T07:19:29.493Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/api</loc>
+    <lastmod>2026-04-13T07:19:29.496Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/configure-metadata</loc>
+    <lastmod>2026-04-13T07:19:29.494Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/creating</loc>
+    <lastmod>2026-04-13T07:19:29.495Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/manager-tab</loc>
+    <lastmod>2026-04-13T07:19:29.502Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/managing-documents</loc>
+    <lastmod>2026-07-06T08:21:51.834Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/overview</loc>
+    <lastmod>2026-07-06T08:21:51.832Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/reference</loc>
+    <lastmod>2026-04-13T07:19:29.501Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/search-experience</loc>
+    <lastmod>2026-04-13T07:19:29.503Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/search-interface</loc>
+    <lastmod>2026-04-13T07:19:29.508Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/settings</loc>
+    <lastmod>2026-04-13T07:19:30.912Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/knowledge/sharing</loc>
+    <lastmod>2026-04-13T07:19:30.910Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/marketplaces/overview</loc>
+    <lastmod>2026-07-06T08:21:52.243Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/marketplaces/publish</loc>
+    <lastmod>2026-07-06T08:21:52.239Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/marketplaces/templates</loc>
+    <lastmod>2026-06-12T11:54:42.931Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/pipelines/data-types</loc>
+    <lastmod>2026-07-06T08:21:52.754Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/pipelines/dependencies</loc>
+    <lastmod>2026-07-06T08:21:52.753Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/pipelines/overview</loc>
+    <lastmod>2026-07-06T08:21:52.985Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/pipelines/variables</loc>
+    <lastmod>2026-07-06T08:21:52.961Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/portals/configuring-a-portal</loc>
+    <lastmod>2026-07-06T08:21:52.959Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/portals/creating-a-portal</loc>
+    <lastmod>2026-04-10T10:28:58.648Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/portals/deploying-and-sharing</loc>
+    <lastmod>2026-04-10T10:28:58.650Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/portals/overview</loc>
+    <lastmod>2026-04-10T10:28:58.655Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/portals/portal-user-experience</loc>
+    <lastmod>2026-04-10T10:28:58.652Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/portals/workspace</loc>
+    <lastmod>2026-04-10T10:28:58.653Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/platform/transformations</loc>
+    <lastmod>2026-07-06T08:21:53.428Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/quickstart</loc>
+    <lastmod>2026-07-09T17:54:22.649Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/agent-crud</loc>
+    <lastmod>2026-06-23T09:36:46.585Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/chatbot-session</loc>
+    <lastmod>2026-06-23T09:36:46.583Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/conversational-agent-run</loc>
+    <lastmod>2026-06-23T09:36:46.583Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/conversational-agent-tools</loc>
+    <lastmod>2026-06-23T09:36:46.582Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/functional-agent-run</loc>
+    <lastmod>2026-06-23T09:36:46.582Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/functional-agent-with-io</loc>
+    <lastmod>2026-06-23T09:36:46.578Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/send-file</loc>
+    <lastmod>2026-06-23T09:36:46.580Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/send-many-multimodal</loc>
+    <lastmod>2026-06-23T09:36:46.580Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/session-approval-respond</loc>
+    <lastmod>2026-06-23T09:36:46.579Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/session-multi-turn</loc>
+    <lastmod>2026-06-23T09:36:46.581Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/session-resume</loc>
+    <lastmod>2026-06-23T09:36:49.894Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/session-send-many</loc>
+    <lastmod>2026-06-23T09:36:49.895Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/session-send-send-send</loc>
+    <lastmod>2026-06-23T09:36:49.895Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/session-single-turn</loc>
+    <lastmod>2026-06-23T09:36:49.893Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/session-tool-events</loc>
+    <lastmod>2026-06-23T09:36:49.892Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/template-placeholders</loc>
+    <lastmod>2026-06-23T09:36:49.889Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/terminate-session</loc>
+    <lastmod>2026-06-23T09:36:49.890Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/tool-approval-config</loc>
+    <lastmod>2026-06-23T09:36:49.892Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/examples/vs-context-stringification</loc>
+    <lastmod>2026-06-23T09:36:49.890Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/overview</loc>
+    <lastmod>2026-06-25T10:16:14.481Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/reference</loc>
+    <lastmod>2026-06-22T11:20:38.153Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/tools/data</loc>
+    <lastmod>2026-07-09T17:54:23.081Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/tools/file-ops</loc>
+    <lastmod>2026-07-01T06:04:43.620Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/tools/integrations</loc>
+    <lastmod>2026-07-01T06:04:43.629Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/tools/llm-ai</loc>
+    <lastmod>2026-07-01T06:04:43.667Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/tools/vectorshift</loc>
+    <lastmod>2026-07-09T17:54:23.106Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/agent/tools/web-search</loc>
+    <lastmod>2026-07-01T06:04:43.672Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/analytics/examples/aggregations-and-groupby</loc>
+    <lastmod>2026-06-17T18:22:42.125Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/analytics/examples/events-and-traces</loc>
+    <lastmod>2026-06-22T11:20:38.155Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/analytics/examples/filters-and-overloads</loc>
+    <lastmod>2026-06-17T18:22:42.150Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/analytics/examples/query-async</loc>
+    <lastmod>2026-06-17T18:22:42.147Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/analytics/examples/query-basics</loc>
+    <lastmod>2026-06-17T18:22:42.149Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/analytics/examples/table-and-export</loc>
+    <lastmod>2026-06-17T18:22:42.152Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/analytics/overview</loc>
+    <lastmod>2026-06-17T18:22:42.148Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/analytics/reference</loc>
+    <lastmod>2026-06-25T10:16:14.479Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/authentication</loc>
+    <lastmod>2026-07-09T17:54:23.147Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/building-with-ai</loc>
+    <lastmod>2026-06-25T19:10:11.642Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/concepts</loc>
+    <lastmod>2026-06-25T10:16:14.480Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/errors</loc>
+    <lastmod>2026-05-22T18:17:40.182Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/guides/background-batch</loc>
+    <lastmod>2026-06-23T09:36:49.891Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/guides/content-workflow</loc>
+    <lastmod>2026-06-23T09:36:54.100Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/guides/integrations-end-to-end</loc>
+    <lastmod>2026-07-09T17:54:23.171Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/guides/rag-end-to-end</loc>
+    <lastmod>2026-06-22T11:20:38.157Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/guides/support-bot</loc>
+    <lastmod>2026-05-22T18:17:40.210Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk</loc>
+    <lastmod>2026-07-09T17:54:23.173Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/installation</loc>
+    <lastmod>2026-07-09T17:54:23.168Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/integrations/cli</loc>
+    <lastmod>2026-07-09T17:54:23.170Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/integrations/overview</loc>
+    <lastmod>2026-07-09T17:54:23.170Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/integrations/reference</loc>
+    <lastmod>2026-07-09T17:54:23.168Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/add-files</loc>
+    <lastmod>2026-05-22T18:17:40.211Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/add-folder</loc>
+    <lastmod>2026-05-22T18:17:40.212Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/add-tables</loc>
+    <lastmod>2026-05-22T18:17:40.211Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/add-urls</loc>
+    <lastmod>2026-06-23T09:36:54.101Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/async</loc>
+    <lastmod>2026-05-22T18:17:40.208Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/items-and-folders</loc>
+    <lastmod>2026-06-23T09:36:54.101Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/kb-crud</loc>
+    <lastmod>2026-06-23T09:36:54.100Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/metadata-autogen</loc>
+    <lastmod>2026-06-23T09:36:54.098Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/query-advanced</loc>
+    <lastmod>2026-05-22T18:17:40.235Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/examples/resync-integration</loc>
+    <lastmod>2026-06-23T09:36:54.096Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/overview</loc>
+    <lastmod>2026-06-23T09:36:54.098Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/knowledge-base/reference</loc>
+    <lastmod>2026-06-25T10:16:14.476Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/ai-routing-node</loc>
+    <lastmod>2026-06-23T09:36:54.097Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/background-run</loc>
+    <lastmod>2026-06-23T09:36:54.095Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/background-run-async</loc>
+    <lastmod>2026-06-23T09:36:54.096Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/batch-config</loc>
+    <lastmod>2026-06-23T09:36:58.263Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/button-node</loc>
+    <lastmod>2026-06-23T09:36:58.264Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/condition-node</loc>
+    <lastmod>2026-06-23T09:36:58.262Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/create-list-pipeline</loc>
+    <lastmod>2026-06-23T09:36:58.256Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/gmail-node</loc>
+    <lastmod>2026-06-23T09:36:58.257Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/intermediate-results</loc>
+    <lastmod>2026-06-23T09:36:58.253Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/llm-pipeline</loc>
+    <lastmod>2026-06-23T09:36:58.254Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/rag-pipeline</loc>
+    <lastmod>2026-06-23T09:36:58.253Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/read-json-pipeline</loc>
+    <lastmod>2026-06-23T09:36:58.255Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/revert-and-manage</loc>
+    <lastmod>2026-06-23T09:36:58.252Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/run-pipeline-async</loc>
+    <lastmod>2026-06-23T09:36:58.555Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/session-and-overrides</loc>
+    <lastmod>2026-06-23T09:36:58.556Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/share-and-publish</loc>
+    <lastmod>2026-06-23T09:36:58.555Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/streaming</loc>
+    <lastmod>2026-06-23T09:36:58.551Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/streaming-async</loc>
+    <lastmod>2026-06-23T09:36:58.551Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/streaming-with-chunks</loc>
+    <lastmod>2026-06-23T09:36:58.557Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/sub-pipeline</loc>
+    <lastmod>2026-06-23T09:36:58.553Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/sub-pipeline-list-mode</loc>
+    <lastmod>2026-06-23T09:36:58.553Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/terminate-run</loc>
+    <lastmod>2026-06-23T09:36:58.552Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/text-processing-pipeline</loc>
+    <lastmod>2026-06-23T09:36:58.554Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/examples/type-warnings-parallel-search</loc>
+    <lastmod>2026-06-23T09:37:01.910Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/chat</loc>
+    <lastmod>2026-07-01T06:04:44.599Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/conversational</loc>
+    <lastmod>2026-07-01T06:04:44.597Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/data-loaders</loc>
+    <lastmod>2026-07-01T06:04:44.751Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/data-transformation</loc>
+    <lastmod>2026-07-01T06:04:44.714Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/general</loc>
+    <lastmod>2026-07-01T06:04:44.750Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/integration</loc>
+    <lastmod>2026-07-01T06:04:44.746Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/knowledge</loc>
+    <lastmod>2026-07-01T06:04:44.714Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/llms</loc>
+    <lastmod>2026-07-01T06:04:44.710Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/logic</loc>
+    <lastmod>2026-07-01T06:04:44.713Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/multi-modal</loc>
+    <lastmod>2026-07-01T06:04:44.709Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/start</loc>
+    <lastmod>2026-07-01T06:04:44.712Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/nodes/triggers</loc>
+    <lastmod>2026-07-01T06:04:44.711Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/overview</loc>
+    <lastmod>2026-06-25T10:16:14.474Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/pipeline/reference</loc>
+    <lastmod>2026-06-25T10:16:14.476Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/quickstart</loc>
+    <lastmod>2026-07-09T17:54:23.345Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/session/overview</loc>
+    <lastmod>2026-05-22T18:17:40.313Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/session/reference</loc>
+    <lastmod>2026-05-22T18:17:40.313Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/aggregation-and-run</loc>
+    <lastmod>2026-06-09T09:08:10.377Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/all-filter-operators</loc>
+    <lastmod>2026-06-23T09:37:01.911Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/columns-full</loc>
+    <lastmod>2026-06-23T09:37:01.912Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/compound-filters</loc>
+    <lastmod>2026-06-09T09:08:10.412Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/export-and-query</loc>
+    <lastmod>2026-06-22T11:20:38.158Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/full-workflow</loc>
+    <lastmod>2026-06-22T11:20:46.538Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/rows-and-filters</loc>
+    <lastmod>2026-06-23T09:37:01.910Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/table-crud</loc>
+    <lastmod>2026-06-09T09:08:10.413Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/examples/table-crud-async</loc>
+    <lastmod>2026-06-09T09:08:10.411Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/overview</loc>
+    <lastmod>2026-06-09T09:08:10.408Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/table/reference</loc>
+    <lastmod>2026-06-25T10:16:14.475Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/transformation/examples/async</loc>
+    <lastmod>2026-06-17T18:22:42.310Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/transformation/examples/from-function</loc>
+    <lastmod>2026-06-22T11:20:46.537Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/transformation/examples/pipeline-node</loc>
+    <lastmod>2026-06-23T09:37:01.908Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/transformation/examples/run-and-io-types</loc>
+    <lastmod>2026-06-23T09:37:01.909Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/transformation/examples/transformation-crud</loc>
+    <lastmod>2026-06-17T18:22:42.302Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/transformation/overview</loc>
+    <lastmod>2026-06-22T11:20:46.535Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/transformation/reference</loc>
+    <lastmod>2026-06-22T11:20:46.537Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/async</loc>
+    <lastmod>2026-06-29T10:40:58.311Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/async-full</loc>
+    <lastmod>2026-06-29T10:40:58.314Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/documents</loc>
+    <lastmod>2026-06-29T10:40:58.310Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/documents-and-files</loc>
+    <lastmod>2026-06-29T10:40:58.312Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/end-to-end</loc>
+    <lastmod>2026-06-29T10:40:58.310Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/portal-admin</loc>
+    <lastmod>2026-06-29T10:40:58.309Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/portal-and-workspace-crud</loc>
+    <lastmod>2026-06-29T10:40:58.342Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/sessions</loc>
+    <lastmod>2026-06-29T10:40:58.335Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/skills</loc>
+    <lastmod>2026-06-29T10:40:58.338Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/verification</loc>
+    <lastmod>2026-06-29T10:40:58.337Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/examples/verification-advanced</loc>
+    <lastmod>2026-06-29T10:40:58.339Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/issue</loc>
+    <lastmod>2026-06-29T10:40:58.344Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/overview</loc>
+    <lastmod>2026-06-29T10:40:58.343Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/portal</loc>
+    <lastmod>2026-06-29T10:40:58.342Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/reference</loc>
+    <lastmod>2026-06-29T10:40:58.338Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sdk/workspace/verification</loc>
+    <lastmod>2026-06-29T10:40:58.336Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/sub-processors</loc>
+    <lastmod>2026-06-16T12:50:38.743Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.vectorshift.ai/support</loc>
+    <lastmod>2026-07-06T08:21:54.182Z</lastmod>
+  </url>
+</urlset>

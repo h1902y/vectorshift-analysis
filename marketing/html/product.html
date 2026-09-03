@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://vectorshift.ai/product">
+<meta property="og:url" content="https://vectorshift.ai/product">
+<meta property="og:image" content="../assets/VS_logo_b101eeb1.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product | VectorShift</title>
+<link rel="icon" type="image/png" href="../assets/VS_logo_b101eeb1.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VectorShift">
+<meta property="og:title" content="Product | VectorShift">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+
+:root {
+  --bg:        #FFFEFB;
+  --bg-alt:    #FCF9F0;
+  --paper:     #FBF9F4;
+  --ink:       #0F131A;
+  --ink-soft:  #20242C;
+  --muted:     #54585F;
+  --dim:       #8B867D;
+  --rule:      #D9D3C5;
+  --rule-dk:   #BFB7A4;
+  --accent:    #5B4824;
+  --accent-soft: rgba(91,72,36,0.08);
+
+  --serif: 'Newsreader', 'Times New Roman', Georgia, serif;
+  --sans:  'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono:  'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --mono:  'JetBrains Mono', ui-monospace, Menlo, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 1000;
+  opacity: 0.035; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.7 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* ─── NAV ──────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: 56px;
+  background: rgba(255,254,251,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-inner {
+  max-width: 1440px; margin: 0 auto; padding: 0 40px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  position: relative; z-index: 2;
+  font-family: var(--sans);
+  font-size: 24px; font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink); white-space: nowrap;
+}
+.nav-logo em { font-style: normal; font-weight: 600; color: var(--accent); }
+.nav-links {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; gap: 36px; list-style: none;
+}
+.nav-links a {
+  font-size: 14px; font-weight: 400;
+  color: var(--ink-soft);
+  position: relative; padding: 6px 0;
+  transition: color 0.2s; white-space: nowrap;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 1px; background: var(--ink);
+}
+.nav-actions { display: flex; align-items: center; gap: 24px; }
+.nav-login {
+  font-size: 14px; font-weight: 400;
+  color: var(--ink-soft);
+  transition: color 0.2s; white-space: nowrap;
+}
+.nav-login:hover { color: var(--accent); }
+.nav-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 500;
+  color: var(--ink);
+  padding: 8px 16px;
+  border: 1px solid var(--ink);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cta:hover { background: var(--ink); color: var(--bg); }
+
+/* ─── HERO ────────────────────────────────────────── */
+.p-hero {
+  position: relative;
+  margin-top: 56px;
+  min-height: 64vh;
+  overflow: hidden;
+  background: #06080b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--rule);
+}
+.p-hero-bg {
+  position: absolute; inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=2400&q=85&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  animation: p-kenburns 32s ease-in-out infinite alternate;
+  z-index: 0;
+  filter: saturate(0.20) brightness(1.02) contrast(1.05);
+}
+.p-hero-bg::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: #14245a;
+  mix-blend-mode: hard-light;
+  opacity: 0.78;
+  pointer-events: none;
+}
+.p-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(8,11,18,0.30) 0%, rgba(8,11,18,0.18) 35%, rgba(8,11,18,0.60) 75%, rgba(8,11,18,0.92) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+@keyframes p-kenburns {
+  0%   { transform: scale(1.04) translate(-0.5%, 0.5%); }
+  100% { transform: scale(1.10) translate(0.5%, -0.5%); }
+}
+.p-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 64px 56px;
+  text-align: center;
+}
+.p-eyebrow {
+  display: inline-flex; align-items: center; justify-content: center; gap: 16px;
+  margin-bottom: 28px;
+  color: var(--muted);
+}
+.p-eyebrow-rule { flex: 0 0 56px; height: 1px; background: rgba(251,249,244,0.5); transform-origin: left; animation: p-draw-rule 1.2s cubic-bezier(.16,1,.3,1) 0.2s both; }
+@keyframes p-draw-rule { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+.p-hero-inner > * { animation: p-hero-in 1s cubic-bezier(.16,1,.3,1) both; }
+.p-hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
+.p-hero-inner > *:nth-child(2) { animation-delay: 0.20s; }
+.p-hero-inner > *:nth-child(3) { animation-delay: 0.40s; }
+.p-hero-inner > *:nth-child(4) { animation-delay: 0.55s; }
+@keyframes p-hero-in { 0% { opacity: 0; transform: translateY(14px); } 100% { opacity: 1; transform: none; } }
+.p-eyebrow-label {
+  font-family: var(--mono);
+  font-size: 14px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(251,249,244,0.9);
+}
+.p-headline {
+  font-family: var(--sans);
+  font-size: clamp(40px, 5.4vw, 88px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  color: var(--paper);
+  max-width: 18ch;
+  margin: 0 auto;
+  text-shadow: 0 2px 32px rgba(0,0,0,0.55);
+}
+.p-headline em { font-style: italic; color: inherit; }
+.p-sub {
+  font-family: var(--sans);
+  font-size: 16px;
+  color: rgba(251,249,244,0.88);
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 28px auto 0;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.4);
+}
+
+/* ─── SECTION HEADER ──────────────────────────────── */
+.section { padding: 96px 0; border-bottom: 1px solid var(--rule); }
+.section-alt { background: var(--bg-alt); }
+.section-inner { max-width: 1320px; margin: 0 auto; padding: 0 64px; }
+.section-header {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+.section-label {
+  font-family: var(--mono);
+  font-size: 14px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+}
+.section-heading {
+  font-family: var(--sans);
+  font-size: clamp(32px, 3.8vw, 56px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  max-width: 880px;
+}
+.section-heading em { font-style: italic; color: inherit; }
+.section-sub {
+  font-family: var(--sans);
+  font-size: 17px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 560px;
+  margin-top: 24px;
+}
+
+/* ─── STACK DIAGRAM (Section 1) ───────────────────── */
+/* OVERVIEW CARDS */
+.ov-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.ov-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.ov-grid-5 { grid-template-columns: repeat(5, 1fr); }
+.ov-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.ov-card { padding: 48px 36px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; gap: 14px; }
+.ov-card:last-child { border-right: none; }
+.ov-card-num { font-family: var(--mono); font-style: normal; font-size: 14px; color: var(--accent); }
+.ov-card-title { font-family: var(--sans); font-size: 24px; font-weight: 400; letter-spacing: -0.018em; line-height: 1.15; color: var(--ink); }
+.ov-grid-4 .ov-card-title, .ov-grid-5 .ov-card-title { min-height: calc(24px * 1.15 * 3); display: flex; align-items: flex-start; }
+.ov-card-body { font-size: 14px; color: var(--ink-soft); line-height: 1.6; max-width: 360px; }
+.data-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); margin-top: 16px; }
+.data-cell { padding: 22px 20px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--paper); display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: var(--ink); }
+.data-cell-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+.int-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px; }
+.int-logo { background: var(--bg); border: 1px solid var(--rule); padding: 12px; display: flex; align-items: center; justify-content: center; min-height: 56px; font-family: var(--serif); font-size: 14px; font-weight: 400; color: var(--ink); letter-spacing: -0.01em; text-align: center; min-width: 0; }
+.int-logo img { max-height: 22px; width: auto; max-width: 70%; opacity: 0.85; object-fit: contain; }
+.int-logo-more { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--muted); }
+@media (max-width: 900px) { .ov-grid, .ov-grid-4, .ov-grid-2 { grid-template-columns: 1fr; } .ov-card { border-right: none; border-bottom: 1px solid var(--rule); } .data-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 920px;
+  margin: 0 auto;
+  position: relative;
+}
+.stack-layer {
+  border: 1px solid var(--rule-dk);
+  background: var(--paper);
+  padding: 36px 44px 40px;
+  position: relative;
+}
+.stack-layer + .stack-layer { margin-top: -1px; }
+.stack-layer-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 24px;
+}
+.stack-layer-title {
+  font-family: var(--sans);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+.stack-layer-num {
+  font-family: var(--mono); font-style: normal;
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 0;
+}
+.stack-layer-desc {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  max-width: 640px;
+  line-height: 1.6;
+}
+.stack-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.stack-row-4 { grid-template-columns: repeat(4, 1fr); }
+.stack-chip {
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 76px;
+  justify-content: center;
+}
+.stack-chip-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.stack-chip-sub {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  letter-spacing: -0.01em;
+}
+
+/* connectors between layers */
+.stack-connector {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 22%;
+  position: relative;
+}
+.stack-arrow {
+  width: 1px;
+  background: var(--rule-dk);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stack-arrow-down::before,
+.stack-arrow-up::before {
+  content: "";
+  position: absolute;
+  width: 6px; height: 6px;
+  border-right: 1px solid var(--rule-dk);
+  border-bottom: 1px solid var(--rule-dk);
+}
+.stack-arrow-down::before {
+  bottom: 0;
+  transform: translateY(50%) rotate(45deg);
+}
+.stack-arrow-up::before {
+  top: 0;
+  transform: translateY(-50%) rotate(-135deg);
+}
+.stack-arrow-label {
+  position: absolute;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--bg);
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+.stack-arrow-down .stack-arrow-label { left: 12px; top: 50%; transform: translateY(-50%); }
+.stack-arrow-up   .stack-arrow-label { right: 12px; top: 50%; transform: translateY(-50%); }
+
+/* ─── FLOW (Section 2 — agentic orchestration) ──── */
+.flow {
+  margin-top: 16px;
+  position: relative;
+}
+.flow-track {
+  background: var(--bg-alt);
+  color: var(--ink);
+  padding: 48px 32px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+}
+.flow-track::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(91,72,36,0.06), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(91,72,36,0.04), transparent 60%);
+  pointer-events: none;
+}
+.flow-track-label {
+  position: absolute; top: 18px; left: 32px;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted);
+  z-index: 2;
+}
+.flow-row {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 90px repeat(5, 1fr) 110px;
+  gap: 0;
+  align-items: center;
+  padding-top: 28px;
+}
+.flow-end {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.flow-end strong {
+  display: block;
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.flow-step {
+  position: relative;
+  text-align: center;
+  padding: 18px 8px;
+  border-left: 1px dashed var(--rule-dk);
+}
+.flow-step:first-of-type { border-left: 1px dashed var(--rule-dk); }
+.flow-step-num {
+  position: absolute; top: -22px; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono); font-style: normal;
+  font-size: 14px;
+  color: var(--accent);
+  background: var(--bg-alt);
+  padding: 0 8px;
+  z-index: 3;
+}
+.flow-step-title {
+  font-family: var(--sans);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.flow-step-tag {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+.flow-loop {
+  position: absolute;
+  bottom: 14px; left: 110px; right: 130px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  font-family: var(--sans);
+}
+.flow-loop::before, .flow-loop::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule-dk);
+  margin: 0 16px;
+}
+
+/* flow problems list */
+.flow-problems {
+  display: grid;
+  grid-template-columns: 90px repeat(5, 1fr) 110px;
+  margin-top: 32px;
+}
+.flow-problems-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-right: 16px;
+  padding-top: 4px;
+  line-height: 1.6;
+}
+.flow-problem {
+  padding: 0 16px;
+  border-left: 1px solid var(--rule);
+}
+.flow-problem:first-of-type { border-left: 1px solid var(--rule); }
+.flow-problem-num {
+  font-family: var(--mono); font-style: normal;
+  font-size: 13px;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 8px;
+}
+.flow-problem-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: -0.005em;
+}
+.flow-problem-body {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.flow-footnote {
+  margin-top: 36px;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-soft);
+  letter-spacing: -0.008em;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── INTEGRATIONS ROW ───────────────────────────── */
+.integrations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.integrations-col {
+  padding: 56px 48px;
+  border-right: 1px solid var(--rule);
+}
+.integrations-col:last-child { border-right: none; }
+.integrations-col-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: block;
+}
+.integrations-col-title {
+  font-family: var(--sans);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+.integrations-col-body {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  max-width: 440px;
+}
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.integration-pill {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 68px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  text-align: center;
+}
+.integration-pill img {
+  max-height: 22px;
+  width: auto;
+  max-width: 80%;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(0.1);
+}
+.integration-pill-more {
+  background: transparent;
+  font-style: italic;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* ─── PRINCIPLES (Why) ──────────────────────────── */
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.principle {
+  padding: 56px 40px 56px 0;
+  border-right: 1px solid var(--rule);
+}
+.principle:first-child { padding-left: 0; }
+.principle:not(:first-child) { padding-left: 40px; }
+.principle:last-child { border-right: none; padding-right: 0; }
+.principle-num {
+  font-family: var(--mono); font-style: normal;
+  font-size: 14px;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 18px;
+}
+.principle-title {
+  font-family: var(--sans);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.principle-body {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+/* ─── CTA BAND ──────────────────────────────────── */
+.cta-band {
+  padding: 100px 0;
+  background: var(--ink);
+  color: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.cta-band::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 80% 20%, rgba(91,72,36,0.35), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(91,72,36,0.18), transparent 60%);
+  pointer-events: none;
+}
+.cta-band-inner {
+  max-width: 1320px; margin: 0 auto; padding: 0 64px;
+  position: relative;
+  display: flex; align-items: flex-end;
+  justify-content: space-between; gap: 80px;
+}
+.cta-band-heading {
+  font-family: var(--sans);
+  font-size: clamp(40px, 5.2vw, 80px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  color: var(--bg);
+  max-width: 800px;
+}
+.cta-band-heading em { font-style: italic; color: var(--bg); }
+.cta-band-action {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 13.5px; font-weight: 500;
+  letter-spacing: 0.04em;
+  background: var(--bg); color: var(--ink);
+  padding: 18px 26px;
+  border: 1px solid var(--bg);
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  margin-bottom: 8px;
+}
+.cta-band-action:hover { background: transparent; color: var(--bg); }
+.cta-band-action svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+/* ─── FOOTER ────────────────────────────────────── */
+.footer {
+  padding: 72px 0 48px;
+  background: var(--ink);
+}
+.footer-inner {
+  max-width: 1440px; margin: 0 auto; padding: 0 64px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.footer-logo {
+  font-family: var(--sans);
+  font-size: 22px; font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--bg);
+}
+.footer-logo em { color: var(--bg); font-style: normal; }
+.footer-links {
+  display: flex; gap: 32px; list-style: none;
+  justify-self: center;
+}
+.footer-links a {
+  font-size: 13.5px; font-weight: 400;
+  color: rgba(242,239,232,0.85);
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--bg); }
+.footer-copy {
+  font-size: 12px; font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(242,239,232,0.6);
+  justify-self: end;
+}
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 1s cubic-bezier(.16,1,.3,1), transform 1s cubic-bezier(.16,1,.3,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 1024px) {
+  .nav-inner, .p-hero-inner, .section-inner, .cta-band-inner, .footer-inner {
+    padding-left: 32px; padding-right: 32px;
+  }
+  .section-header { grid-template-columns: 1fr; gap: 24px; margin-bottom: 56px; }
+  .stack-row, .stack-row-4 { grid-template-columns: repeat(2, 1fr); }
+  .stack-connector { padding: 0 8%; }
+  .integrations { grid-template-columns: 1fr; }
+  .integrations-col { border-right: none; border-bottom: 1px solid var(--rule); padding: 40px 32px; }
+  .principles { grid-template-columns: 1fr; }
+  .principle { padding: 40px 0 !important; border-right: none; border-bottom: 1px solid var(--rule); }
+  .principle:last-child { border-bottom: none; }
+  .cta-band-inner { flex-direction: column; align-items: flex-start; }
+  .footer-inner { grid-template-columns: 1fr; justify-items: start; }
+  .footer-links { justify-self: start; flex-wrap: wrap; }
+  .footer-copy { justify-self: start; }
+  .flow-row { grid-template-columns: 60px repeat(5, 1fr) 80px; }
+  .flow-step-title { font-size: 16px; }
+  .flow-problems { grid-template-columns: 60px repeat(5, 1fr) 80px; }
+  .flow-step, .flow-problem { min-width: 0; }
+  .flow-problem-title { font-size: 12px; }
+  .flow-problem-body { font-size: 11.5px; }
+}
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .int-logos { grid-template-columns: repeat(2, 1fr); }
+  .flow-row { grid-template-columns: 1fr; gap: 8px; padding-top: 0; }
+  .flow-step { border-left: none; border-top: 1px dashed rgba(242,239,232,0.18); padding: 24px 0 0; text-align: left; }
+  .flow-step-num { position: static; transform: none; padding: 0; background: transparent; display: inline-block; margin-right: 12px; }
+  .flow-end { text-align: left; padding: 16px 0; }
+  .flow-loop { position: static; margin-top: 20px; }
+  .flow-problems { grid-template-columns: 1fr; gap: 16px; }
+  .flow-problem { border-left: 2px solid var(--rule); padding-left: 16px; }
+}
+
+
+
+
+/* ─── vLight: unbold preview ─── */
+body, p, div, a, li, span { font-weight: 300; }
+.hero-headline, .section-heading, .cap-cell-title, .row-title, .cta-band-heading,
+.uc-headline, .uc-section-heading, .uc-item-title, .p-headline, .sec-headline,
+.ov-card-title, .feature-title, .integrations-col-title, .flow-step-title,
+.stack-layer-title, .principle-title, .statement-heading, .measure-title,
+.cert-title, .sec-col-title, .image-break-quote, .stat-num {
+  font-weight: 300 !important;
+}
+.hero-eyebrow-label, .section-label, .uc-section-label, .p-eyebrow-label, .sec-eyebrow-label,
+.stat-label, .feature-eyebrow, .cap-cell-cat, .footer-col-title, .commitment-eyebrow,
+.nav-links a, .nav-login, .nav-cta, .nav-logo, .nav-logo em, .footer-logo, .footer-logo em,
+.row-num, .cap-cell-num, .ov-card-num, .feature-num, .principle-num, .sec-col-badge,
+.measure-num, .uc-item-num, .stack-layer-num, .hero-fig-num {
+  font-weight: 400 !important;
+}
+
+</style>
+  <!-- Ahrefs Web Analytics -->
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="e7xxeXJ+Sn5f0De0j0cSEg" async></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Product | VectorShift", "url": "https://vectorshift.ai/product", "isPartOf": {"@type": "WebSite", "name": "VectorShift", "url": "https://vectorshift.ai"}}</script>
+<style id="vs-mnav1">/* unified mobile nav (desktop unchanged): logo left, Log In + Request Demo hard-right; no grid auto-placement jump; login stays visible. */@media (max-width:1024px){nav .nav-inner{display:flex!important;grid-template-columns:none!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;}nav .nav-links{display:none!important;}nav .nav-logo{justify-self:auto!important;}nav .nav-actions{display:flex!important;align-items:center!important;gap:16px!important;justify-self:auto!important;}nav .nav-login{display:inline-flex!important;font-size:14px!important;white-space:nowrap!important;}nav .nav-cta{white-space:nowrap!important;}}@media (max-width:420px){nav .nav-inner{padding-left:16px!important;padding-right:16px!important;gap:10px!important;}nav .nav-actions{gap:10px!important;}nav .nav-login{font-size:13px!important;}nav .nav-cta{font-size:13px!important;padding:7px 12px!important;}nav .vs-wordmark{height:20px!important;}}</style></head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img class="vs-wordmark" src="../assets/vectorshift-wordmark_2af079f5.png" alt="VectorShift" width="1842" height="400" style="height:24px;width:auto;display:block"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" class="active">Product</a></li>
+      <li><a href="use-cases.html">Use Cases</a></li>
+      <li><a href="security.html">Security</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://app.vectorshift.ai" class="nav-login">Log In</a>
+      <a href="#" class="nav-cta">Request Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────── -->
+<section class="p-hero">
+  <div class="p-hero-bg"></div>
+  <div class="p-hero-overlay"></div>
+  <div class="p-hero-inner">
+    <div class="p-eyebrow">
+      <span class="p-eyebrow-rule"></span>
+      <span class="p-eyebrow-label">Product</span>
+      <span class="p-eyebrow-rule"></span>
+    </div>
+    <h1 class="p-headline" style="font-weight: 300;">One platform, every workflow</h1>
+    <p class="p-sub">Agentic AI built for the way investment firms actually work</p>
+  </div>
+</section>
+
+<!-- ── SECTION 1 · The Stack ──────────────────────── -->
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="section-inner reveal">
+    <div class="section-header">
+      <div class="section-label">Overview</div>
+      <div>
+        <h2 class="section-heading" style="font-weight: 300;">A single platform for <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">AI financial workflows</em></h2>
+        <p class="section-sub">The foundation for AI adoption at investment firms, built on your firm's data and ready for every team</p>
+      </div>
+    </div>
+    <div class="ov-grid ov-grid-4">
+      <div class="ov-card"><span class="ov-card-num">01</span><h3 class="ov-card-title">Unified knowledge layer</h3><p class="ov-card-body">Your files, deals, and external market data in one secure, searchable layer.</p></div>
+      <div class="ov-card"><span class="ov-card-num">02</span><h3 class="ov-card-title">Provenance by default</h3><p class="ov-card-body">Every figure traceable to the document, page, and paragraph it came from.</p></div>
+      <div class="ov-card"><span class="ov-card-num">03</span><h3 class="ov-card-title">End-to-end automation</h3><p class="ov-card-body">Automate any workflow your firm runs, from NDA review to DDQ responses to portfolio monitoring. Compose in natural language or use the skills library.</p></div>
+      <div class="ov-card"><span class="ov-card-num">04</span><h3 class="ov-card-title">Partner-ready materials</h3><p class="ov-card-body">Decks, memos, Excel models, and DDQs generated from your underlying data and formatted to your firm's standard.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED DATA -->
+<section class="section section-alt">
+  <div class="section-inner reveal">
+    <div class="section-header">
+      <div class="section-label">Trusted data</div>
+      <div>
+        <h2 class="section-heading" style="font-weight: 300;">Built on the <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">data your firm already trusts</em></h2>
+        <p class="section-sub">Connected to your internal data and the market providers your team relies on, every answer grounded in the source</p>
+      </div>
+    </div>
+    <div class="data-grid">
+      <div class="data-cell"><span class="data-cell-dot"></span>Your firm's data</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>Capital IQ</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>FactSet</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>PitchBook</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>Crunchbase</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>Quartr</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>SEC filings</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>International filings</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>Earnings transcripts</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>Press releases</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>Live trading data</div>
+      <div class="data-cell"><span class="data-cell-dot"></span>Real-time web &amp; news</div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM INTERFACES -->
+<section class="section">
+  <div class="section-inner reveal">
+    <div class="section-header">
+      <div class="section-label">Custom interfaces</div>
+      <div>
+        <h2 class="section-heading" style="font-weight: 300;">Purpose-built surfaces for <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">financial work</em></h2>
+        <p class="section-sub">Configured interfaces for the work your team runs every day</p>
+      </div>
+    </div>
+    <div class="ov-grid ov-grid-5">
+      <div class="ov-card"><span class="ov-card-num">01</span><h3 class="ov-card-title">Presentation review</h3><p class="ov-card-body">Decks cross-referenced against the data room. Inconsistencies flagged before they reach the IC.</p></div>
+      <div class="ov-card"><span class="ov-card-num">02</span><h3 class="ov-card-title">Portfolio monitoring</h3><p class="ov-card-body">Real-time visibility across your portfolio. Flags deviations from thesis and surfaces risks before they reach a board meeting.</p></div>
+      <div class="ov-card"><span class="ov-card-num">03</span><h3 class="ov-card-title">Table interface</h3><p class="ov-card-body">Hundreds of companies, deals, or contracts analyzed side-by-side in one view.</p></div>
+      <div class="ov-card"><span class="ov-card-num">04</span><h3 class="ov-card-title">Data room tracker</h3><p class="ov-card-body">New filings flagged, changes tracked, gaps identified across the deal.</p></div>
+      <div class="ov-card"><span class="ov-card-num">05</span><h3 class="ov-card-title">Meeting recorder</h3><p class="ov-card-body">Partner calls, expert interviews, and management meetings captured and searchable.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS & INTEGRATIONS -->
+<section class="section section-alt">
+  <div class="section-inner reveal">
+    <div class="section-header">
+      <div class="section-label">Skills &amp; integrations</div>
+      <div>
+        <h2 class="section-heading" style="font-weight: 300;">A skills library and <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">100+ integrations</em></h2>
+        <p class="section-sub">Pre-built prompts and pre-built workflows for the patterns finance teams run every day, with 100+ integrations into the systems your firm already uses</p>
+      </div>
+    </div>
+    <div class="ov-grid ov-grid-2">
+      <div class="ov-card"><span class="ov-card-num">01</span><h3 class="ov-card-title">Skills library</h3><p class="ov-card-body">A curated catalog of finance workflows your team can run on demand. DCFs, LBOs, M&amp;A analyses, comps tables, strip profiles, deck proofreading, sponsor overviews, and dozens more. Point a skill at your data and get partner-ready output in minutes.</p></div>
+      <div class="ov-card"><span class="ov-card-num">02</span><h3 class="ov-card-title">100+ integrations</h3>
+        <div class="int-logos">
+          <div class="int-logo">SharePoint</div>
+          <div class="int-logo">OneDrive</div>
+          <div class="int-logo">Outlook</div>
+          <div class="int-logo">Excel</div>
+          <div class="int-logo">PowerPoint</div>
+          <div class="int-logo">OneNote</div>
+          <div class="int-logo">Box</div>
+          <div class="int-logo int-logo-more">+ more</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner reveal">
+    <div class="section-header">
+      <div class="section-label">Architecture</div>
+      <div>
+        <h2 class="section-heading" style="font-weight: 300;">A three-layer platform connecting your <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">people</em>, your <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">workflows</em>, and your <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">data</em></h2>
+        <p class="section-sub">VectorShift meets your team where they work, orchestrates the work behind them, and connects to every system your firm runs on</p>
+      </div>
+    </div>
+
+    <div class="stack">
+      <!-- Layer 1 -->
+      <div class="stack-layer">
+        <div class="stack-layer-head">
+          <div class="stack-layer-title">Interface Layer</div>
+        </div>
+        <p class="stack-layer-desc">VectorShift shows up where your team already works. No new app, no new habit.</p>
+        <div class="stack-row">
+          <div class="stack-chip"><div class="stack-chip-title">VectorShift</div><div class="stack-chip-sub">Web · Custom Interfaces · API</div></div>
+          <div class="stack-chip"><div class="stack-chip-title">Email</div><div class="stack-chip-sub">Outlook</div></div>
+          <div class="stack-chip"><div class="stack-chip-title">Chat</div><div class="stack-chip-sub">Slack · Teams</div></div>
+        </div>
+      </div>
+
+      <div class="stack-connector">
+        <div class="stack-arrow stack-arrow-down"><span class="stack-arrow-label">User query ↓</span></div>
+        <div class="stack-arrow stack-arrow-up"><span class="stack-arrow-label">Response ↑</span></div>
+      </div>
+
+      <!-- Layer 2 -->
+      <div class="stack-layer">
+        <div class="stack-layer-head">
+          <div class="stack-layer-title">Orchestration Layer</div>
+        </div>
+        <p class="stack-layer-desc">The engine that decomposes a goal into steps, runs the right tools and agents, and verifies the result.</p>
+        <div class="stack-row">
+          <div class="stack-chip"><div class="stack-chip-title">Workflow builder</div><div class="stack-chip-sub">Pre-built · custom</div></div>
+          <div class="stack-chip"><div class="stack-chip-title">Agent builder</div><div class="stack-chip-sub">Long-running · async</div></div>
+          <div class="stack-chip"><div class="stack-chip-title">Tools</div><div class="stack-chip-sub">APIs · actions</div></div>
+        </div>
+      </div>
+
+      <div class="stack-connector">
+        <div class="stack-arrow stack-arrow-down"><span class="stack-arrow-label">Reads ↓</span></div>
+        <div class="stack-arrow stack-arrow-up"><span class="stack-arrow-label">Writes ↑</span></div>
+      </div>
+
+      <!-- Layer 3 -->
+      <div class="stack-layer">
+        <div class="stack-layer-head">
+          <div class="stack-layer-title">Infrastructure Layer</div>
+        </div>
+        <p class="stack-layer-desc">Every model, every data room, every record your firm relies on, connected through one permissioned layer.</p>
+        <div class="stack-row stack-row-4">
+          <div class="stack-chip"><div class="stack-chip-title">Models</div><div class="stack-chip-sub">Frontier LLMs</div></div>
+          <div class="stack-chip"><div class="stack-chip-title">File storage</div><div class="stack-chip-sub">SharePoint · Box · Drive</div></div>
+          <div class="stack-chip"><div class="stack-chip-title">Systems of record</div><div class="stack-chip-sub">Salesforce · DealCloud</div></div>
+          <div class="stack-chip"><div class="stack-chip-title">External data</div><div class="stack-chip-sub">PitchBook · Capital IQ</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 2 · Agentic flow ───────────────────── -->
+<section class="section section-alt">
+  <div class="section-inner reveal">
+    <div class="section-header">
+      <div class="section-label">Orchestration</div>
+      <div>
+        <h2 class="section-heading" style="font-weight: 300;">How a goal becomes a <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">finished workflow</em></h2>
+        <p class="section-sub">Foundation models alone can't plan, act, or self-correct. VectorShift turns a goal into a multi-step plan, runs it against your data, and verifies the result</p>
+      </div>
+    </div>
+
+    <div class="flow">
+      <div class="flow-track">
+        <div class="flow-track-label">VectorShift Agentic Orchestration Platform</div>
+
+        <div class="flow-row">
+          <div class="flow-end"><strong>Goal</strong>Generate the IC memo</div>
+
+          <div class="flow-step">
+            <span class="flow-step-num">01</span>
+            <div class="flow-step-title">Plan</div>
+            <div class="flow-step-tag">Decompose</div>
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">02</span>
+            <div class="flow-step-title">Act</div>
+            <div class="flow-step-tag">Tools &amp; data</div>
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">03</span>
+            <div class="flow-step-title">Reason</div>
+            <div class="flow-step-tag">Frontier LLMs</div>
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">04</span>
+            <div class="flow-step-title">Observe</div>
+            <div class="flow-step-tag">Guardrails</div>
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">05</span>
+            <div class="flow-step-title">Reflect</div>
+            <div class="flow-step-tag">Self-correct</div>
+          </div>
+
+          <div class="flow-end"><strong>Output</strong>Sourced, formatted</div>
+        </div>
+
+        <div class="flow-loop">Iterate until goal is achieved</div>
+      </div>
+
+      <p class="flow-footnote">Foundation models alone can't plan, act, or self-correct. Agentic orchestration is what unlocks enterprise impact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION · For the IT buyer ──────────────────── -->
+<section class="section section-alt">
+  <div class="section-inner reveal">
+    <div class="section-header">
+      <div class="section-label">For IT</div>
+      <div>
+        <h2 class="section-heading" style="font-weight: 300;">Security and compliance, <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">by design</em></h2>
+        <p class="section-sub">For the IT, security, and compliance buyer. VectorShift deploys on terms institutional finance requires</p>
+      </div>
+    </div>
+
+    <div class="principles">
+      <div class="principle">
+        <span class="principle-num">i.</span>
+        <h3 class="principle-title">Single-tenant deployment</h3>
+        <p class="principle-body">Run in your VPC, dedicated cloud, or fully on-prem. Your data never leaves your perimeter.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">ii.</span>
+        <h3 class="principle-title">Permissioned by design</h3>
+        <p class="principle-body">Inherits your firm's access controls. Users see only the data they are entitled to, by deal, fund, or role.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">iii.</span>
+        <h3 class="principle-title">Never used for training</h3>
+        <p class="principle-body">Your data is contractually excluded from model training. SOC 2 Type II audited. GDPR compliant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ─────────────────────────────────────── -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2 class="cta-band-heading" style="font-weight: 300;">See the platform <em style="color: inherit; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.12em;">running on your data</em></h2>
+    <a href="#" class="cta-band-action">
+      Request Demo
+      <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-4-4l4 4-4 4"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────── -->
+<style>.vsx-foot{background:#0F131A;padding:56px 0 40px;font-family:"Public Sans","Helvetica Neue",Helvetica,Arial,sans-serif;}.vsx-foot__inner{max-width:1440px;margin:0 auto;padding:0 64px;display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:center;}.vsx-foot__logo{font-family:"Public Sans","Helvetica Neue",Arial,sans-serif;font-size:22px;font-weight:600;letter-spacing:-0.015em;color:#FFFEFB;white-space:nowrap;}.vsx-foot__logo em{font-style:normal;color:#C5A562;}.vsx-foot__links{display:flex;gap:22px;list-style:none;flex-wrap:nowrap;justify-content:center;}.vsx-foot__links a{font-size:14px;color:rgba(242,239,232,0.85);text-decoration:none;transition:color .2s;white-space:nowrap;}.vsx-foot__links a:hover{color:#C5A562;}.vsx-foot__copy{font-size:12px;color:rgba(242,239,232,0.6);text-align:right;white-space:nowrap;}@media(max-width:820px){.vsx-foot__inner{grid-template-columns:1fr;justify-items:start;gap:18px;padding:0 32px;}.vsx-foot__links{flex-wrap:wrap;justify-content:flex-start;gap:16px 22px;}.vsx-foot__copy{text-align:left;}}</style><footer class="vsx-foot"><div class="vsx-foot__inner"><div class="vsx-foot__logo"><img class="vs-wordmark" src="../assets/vectorshift-wordmark-light_9f5ed477.png" alt="VectorShift" width="1842" height="400" style="height:22px;width:auto;display:block"></div><ul class="vsx-foot__links"><li><a href="/product">Product</a></li><li><a href="/use-cases">Use Cases</a></li><li><a href="/security">Security</a></li><li><a href="/resources">Resources</a></li><li><a href="https://docs.vectorshift.ai/">Docs</a></li><li><a href="/data-and-privacy">Privacy</a></li><li><a href="/terms-conditions">Terms</a></li><li><a href="mailto:contact@vectorshift.ai">contact@vectorshift.ai</a></li></ul><div class="vsx-foot__copy">© 2026 VectorShift, Inc.</div></div></footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+<!-- HubSpot embed script -->
+<!-- Request Demo modal (baked in by chrome.py) -->
+<div class="demo-modal" id="demoModal" aria-hidden="true">
+  <div class="demo-modal-backdrop" data-close></div>
+  <div class="demo-modal-panel" role="dialog" aria-modal="true">
+    <button class="demo-modal-close" data-close aria-label="Close">&times;</button>
+    <div class="demo-modal-scroll">
+      <div class="demo-split">
+        <aside class="demo-hero">
+          <span class="demo-hero-eyebrow">Live Demo</span>
+          <h2 class="demo-hero-title">See what your team can accomplish</h2>
+          <p class="demo-hero-sub">Get a personalized walkthrough from one of our experts and discover how we can help your business move faster.</p>
+          <ul class="demo-hero-list">
+            <li><svg class="demo-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none"/><path d="M8 12.4l2.6 2.6 5-5.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>See the platform live with your own data</span></li>
+            <li><svg class="demo-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none"/><path d="M8 12.4l2.6 2.6 5-5.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Get answers from a product expert</span></li>
+            <li><svg class="demo-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none"/><path d="M8 12.4l2.6 2.6 5-5.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No commitment required</span></li>
+          </ul>
+        </aside>
+        <div class="demo-form-main">
+        <form class="demo-form" id="demoForm" novalidate>
+          <div class="demo-form-head">
+            <h3>Request a Demo</h3>
+            <p>We'll be in touch within one business day.</p>
+          </div>
+          <div class="demo-row">
+            <div class="demo-field"><label for="df-first">First Name</label><input id="df-first" name="firstName" type="text" autocomplete="given-name" required></div>
+            <div class="demo-field"><label for="df-last">Last Name</label><input id="df-last" name="lastName" type="text" autocomplete="family-name" required></div>
+          </div>
+          <div class="demo-field"><label for="df-email">Work Email</label><input id="df-email" name="email" type="email" autocomplete="email" required><small class="demo-err-msg" data-for="email">Please use your work email address.</small></div>
+          <div class="demo-field"><label for="df-company">Company</label><input id="df-company" name="company" type="text" autocomplete="organization" required></div>
+          <div class="demo-field"><label for="df-phone">Phone Number</label>
+            <div class="demo-phone">
+              <div class="demo-select"><select id="df-cc" name="countryCode" aria-label="Country Code">
+                <option value="+1">🇺🇸 +1</option><option value="+44">🇬🇧 +44</option><option value="+91">🇮🇳 +91</option>
+                <option value="+61">🇦🇺 +61</option><option value="+49">🇩🇪 +49</option><option value="+33">🇫🇷 +33</option>
+                <option value="+65">🇸🇬 +65</option><option value="+971">🇦🇪 +971</option><option value="+81">🇯🇵 +81</option>
+                <option value="+86">🇨🇳 +86</option><option value="+55">🇧🇷 +55</option><option value="+31">🇳🇱 +31</option>
+                <option value="+34">🇪🇸 +34</option><option value="+39">🇮🇹 +39</option><option value="+41">🇨🇭 +41</option>
+                <option value="+46">🇸🇪 +46</option><option value="+353">🇮🇪 +353</option><option value="+852">🇭🇰 +852</option>
+              </select></div>
+              <input id="df-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="Phone number" maxlength="10" required>
+            </div>
+          </div>
+          <p class="demo-form-error" id="demoErr" role="alert" hidden></p>
+          <button class="demo-form-submit" type="submit">Request Demo <svg viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-4-4l4 4-4 4"/></svg></button>
+          <p class="demo-form-fine">By submitting you agree to our <a href="/terms-conditions">Terms</a> &amp; <a href="/data-and-privacy">Privacy&nbsp;Policy</a>.</p>
+        </form>
+        <div class="demo-form-done" id="demoDone" hidden>
+          <div class="demo-form-done-badge">&#10003;</div>
+          <h3>Thanks for reaching out</h3>
+          <p>We'll be in touch at <strong id="demoDoneEmail"></strong> within one business day to find a time.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.demo-modal{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:12px;overflow:hidden;}
+.demo-modal[aria-hidden="false"]{display:flex;animation:demoFadeIn .25s ease-out;}
+@keyframes demoFadeIn{from{opacity:0;}to{opacity:1;}}
+.demo-modal-backdrop{position:absolute;inset:0;background:rgba(15,19,26,0.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+.demo-modal-panel{position:relative;z-index:1;background:#FFFEFB;width:min(1040px,95vw);border:1px solid #BFB7A4;overflow:hidden;transform-origin:center center;animation:demoFadeIn .3s ease-out;}
+.demo-modal-close{position:absolute;top:12px;right:12px;width:36px;height:36px;background:transparent;border:none;font-size:28px;line-height:1;cursor:pointer;color:#54585F;display:flex;align-items:center;justify-content:center;transition:color .2s;z-index:2;}
+.demo-modal-close:hover{color:#0F131A;}
+.demo-modal-scroll{padding:0;}
+/* native VectorShift demo form — two-column split (hero + form) */
+.demo-split{display:flex;align-items:stretch;}
+.demo-hero{flex:0 0 44%;position:relative;overflow:hidden;padding:44px 40px;display:flex;flex-direction:column;justify-content:flex-end;color:#FFFEFB;background:#0F131A url("/research/assets/new-york-skyline.jpg") center/cover no-repeat;}
+/* dark+gold overlay keeps text legible over the skyline photo */
+.demo-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 90% 50% at 80% 10%,rgba(197,165,98,0.22),transparent 60%),linear-gradient(180deg,rgba(15,19,26,0.25) 0%,rgba(15,19,26,0.55) 55%,rgba(15,19,26,0.93) 100%);pointer-events:none;}
+.demo-hero>*{position:relative;z-index:1;}
+.demo-hero-eyebrow{font-family:"Public Sans","Helvetica Neue",Arial,sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#C5A562;margin-bottom:14px;}
+.demo-hero-title{font-family:"Inter Tight","Helvetica Neue",Arial,sans-serif;font-size:30px;font-weight:600;line-height:1.1;letter-spacing:-0.02em;margin:0 0 14px;color:#FFFEFB;}
+.demo-hero-sub{font-family:"Public Sans","Helvetica Neue",Arial,sans-serif;font-size:14px;line-height:1.55;color:rgba(242,239,232,0.82);margin:0 0 26px;}
+.demo-hero-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px;}
+.demo-hero-list li{display:flex;align-items:flex-start;gap:11px;font-size:14px;line-height:1.4;color:rgba(242,239,232,0.95);font-family:"Public Sans","Helvetica Neue",Arial,sans-serif;}
+.demo-check{width:19px;height:19px;flex:none;margin-top:1px;stroke:#C5A562;fill:none;stroke-width:1.7;}
+.demo-form-main{flex:1 1 auto;min-width:0;padding:40px 44px 36px;font-family:"Public Sans","Helvetica Neue",Arial,sans-serif;color:#0F131A;background:#FFFEFB;}
+.demo-form-head{margin-bottom:24px;}
+.demo-form-head h3{font-family:"Inter Tight","Helvetica Neue",Arial,sans-serif;font-size:24px;font-weight:500;letter-spacing:-0.02em;margin:0 0 6px;}
+.demo-form-head p{font-size:14px;color:#54585F;margin:0;line-height:1.5;}
+.demo-field{margin-bottom:16px;}
+.demo-field label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:#0F131A;}
+.demo-field label::after{content:"*";color:#C0392B;margin-left:3px;font-weight:700;}
+.demo-field label span{font-weight:400;color:#8A8E96;}
+.demo-field input,.demo-field textarea,.demo-select select{width:100%;box-sizing:border-box;font-family:inherit;font-size:14.5px;color:#0F131A;background:#FFFFFF;border:1px solid #BFB7A4;padding:11px 13px;transition:border-color .15s,box-shadow .15s;}
+.demo-field input:focus,.demo-field textarea:focus,.demo-select select:focus{outline:none;border-color:#0F131A;box-shadow:0 0 0 3px rgba(15,19,26,0.08);}
+.demo-field textarea{resize:vertical;min-height:64px;}
+.demo-field input.err,.demo-field textarea.err{border-color:#C0392B;box-shadow:0 0 0 3px rgba(192,57,43,0.08);}
+.demo-select{position:relative;}
+.demo-select::after{content:"";position:absolute;right:15px;top:45%;width:8px;height:8px;border-right:1.5px solid #54585F;border-bottom:1.5px solid #54585F;transform:translateY(-50%) rotate(45deg);pointer-events:none;}
+.demo-select select{appearance:none;-webkit-appearance:none;padding-right:36px;}
+.demo-form-submit{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#0F131A;color:#FFFEFB;border:1px solid #0F131A;font-family:inherit;font-size:14px;font-weight:500;letter-spacing:0.02em;padding:14px 20px;cursor:pointer;transition:background .2s,color .2s,border-color .2s;margin-top:4px;}
+.demo-form-submit:hover{background:#C5A562;border-color:#C5A562;color:#0F131A;}
+.demo-form-submit[disabled]{opacity:0.55;cursor:default;}
+.demo-form-submit svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.6;}
+.demo-form-fine{font-size:11.5px;color:#8A8E96;margin:14px 0 0;line-height:1.5;text-align:center;}
+.demo-form-fine a{color:#54585F;}
+.demo-row{display:flex;gap:12px;}
+.demo-row>.demo-field{flex:1 1 0;min-width:0;}
+.demo-phone{display:flex;gap:8px;}
+.demo-phone .demo-select{flex:0 0 100px;}
+.demo-phone .demo-select select{padding-left:12px;}
+.demo-phone input{flex:1 1 auto;}
+.demo-err-msg{display:none;margin-top:6px;font-size:12px;color:#C0392B;}
+.demo-field.work-err .demo-err-msg{display:block;}
+.demo-form-error{margin:0 0 12px;padding:10px 13px;background:#FBEAE8;border:1px solid #E3B4AE;color:#B02A1E;font-size:13px;line-height:1.4;}
+.demo-form-error[hidden]{display:none;}
+.demo-form-error strong{display:block;margin-bottom:3px;}
+.demo-err-help{display:block;font-size:12px;color:#8A5B55;}
+.demo-err-help a{color:#B02A1E;}
+.demo-modal-panel.is-done{width:min(520px,94vw);}
+.demo-modal-panel.is-done .demo-hero{display:none;}
+.demo-modal-panel.is-done .demo-form-main{padding:60px 44px;text-align:center;}
+.demo-form-done{padding:56px 24px;text-align:center;}
+.demo-form-done-badge{width:52px;height:52px;border-radius:50%;background:#C5A562;color:#0F131A;font-size:24px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
+.demo-form-done h3{font-family:"Inter Tight",Arial,sans-serif;font-size:22px;font-weight:500;margin:0 0 8px;}
+.demo-form-done p{font-size:14px;color:#54585F;margin:0;line-height:1.55;}
+@media(max-width:820px){.demo-hero{display:none;}.demo-modal-panel{width:min(480px,94vw);}.demo-form-main{padding:36px 26px 30px;}}
+</style>
+<script>
+(function(){
+  var modal=document.getElementById("demoModal");
+  if(!modal)return;
+  var panel=modal.querySelector(".demo-modal-panel");
+  function fit(){
+    if(!panel)return;
+    var avail=window.innerHeight-24, h=panel.offsetHeight; // offsetHeight is transform-independent
+    var t=h>avail?"scale("+(avail/h).toFixed(4)+")":"none";
+    if(panel.style.transform!==t)panel.style.transform=t; // write only on change -> no flicker/loop
+  }
+  function openModal(){modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";fit();setTimeout(fit,250);setTimeout(fit,800);setTimeout(fit,1600);}
+  function closeModal(){modal.setAttribute("aria-hidden","true");document.body.style.overflow="";}
+  document.addEventListener("click",function(e){
+    var closer=e.target.closest("[data-close]");
+    if(closer&&modal.contains(closer)){e.preventDefault();closeModal();return;}
+    if(e.target.closest("#demoModal"))return;
+    var el=e.target.closest("a, button");
+    if(!el)return;
+    var text=(el.textContent||"").trim().toLowerCase();
+    if(text==="request demo"||text.startsWith("request demo")){e.preventDefault();openModal();}
+  });
+  window.addEventListener("resize",fit);
+  if(window.ResizeObserver&&panel){new ResizeObserver(fit).observe(panel);}
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.getAttribute("aria-hidden")==="false")closeModal();});
+})();
+</script>
+
+<!-- Native demo-form submit -> Attio-backed endpoint (mock success until DEMO_ENDPOINT is set) -->
+<script>
+(function(){
+  var form=document.getElementById("demoForm"); if(!form)return;
+  var done=document.getElementById("demoDone");
+  var modal=document.getElementById("demoModal");
+  var panel=modal&&modal.querySelector(".demo-modal-panel");
+  var btn=form.querySelector(".demo-form-submit");
+  var btnHTML=btn.innerHTML;
+  var errEl=document.getElementById("demoErr");
+  // Point at your Attio-backed serverless endpoint (see attio_demo_endpoint.example.js).
+  // Empty = MOCK mode: shows success without a network call, so the UX is demoable now.
+  var DEMO_ENDPOINT="https://hook.us2.make.com/t4oeq4j6cdcpvftxbt30gyovyv8a6l4m";
+  var re=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  var FREE={"gmail.com":1,"googlemail.com":1,"outlook.com":1,"hotmail.com":1,"live.com":1,"msn.com":1,"yahoo.com":1,"ymail.com":1,"icloud.com":1,"me.com":1,"aol.com":1,"proton.me":1,"protonmail.com":1,"gmx.com":1,"mail.com":1};
+  var LABELS={firstName:"First Name",lastName:"Last Name",email:"Work Email",company:"Company",phone:"Phone Number"};
+  var REQ=["firstName","lastName","email","company","phone"];
+  function domainOf(v){var p=v.split("@");return p.length===2?p[1].toLowerCase():"";}
+  var HELP='<span class="demo-err-help">Facing repeated errors? Say hi at <a href="mailto:contact@vectorshift.ai">contact@vectorshift.ai</a>.</span>';
+  function showBanner(html){ if(errEl){errEl.innerHTML="<strong>"+html+"</strong>"+HELP; errEl.hidden=false;} }
+  function clearErr(){ if(errEl)errEl.hidden=true;
+    Array.prototype.forEach.call(form.querySelectorAll(".err"),function(el){el.classList.remove("err");});
+  }
+  // Phone: digits only, hard cap at 10.
+  if(form.elements.phone){form.elements.phone.addEventListener("input",function(){this.value=this.value.replace(/\D/g,"").slice(0,10);});}
+  // All fields required — keep the submit button disabled until every field is filled.
+  function filled(){return REQ.every(function(n){var el=form.elements[n];return el&&el.value.trim();});}
+  function syncBtn(){btn.disabled=!filled();}
+  form.addEventListener("input",syncBtn);
+  form.addEventListener("change",syncBtn);
+  syncBtn(); // start disabled (empty form)
+  function reset(){
+    form.hidden=false; done.hidden=true; btn.innerHTML=btnHTML;
+    if(panel)panel.classList.remove("is-done");
+    form.reset(); clearErr(); syncBtn();
+  }
+  // Reopening after a successful submit must show a FRESH form, not the old thank-you state.
+  if(modal&&window.MutationObserver){
+    new MutationObserver(function(){
+      if(modal.getAttribute("aria-hidden")==="false"&&!done.hidden)reset();
+    }).observe(modal,{attributes:true,attributeFilter:["aria-hidden"]});
+  }
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    clearErr();
+    // Validate and name EXACTLY what's wrong.
+    var msgs=[], firstBad=null;
+    REQ.forEach(function(n){
+      var el=form.elements[n], v=el.value.trim(), bad=false, m=null;
+      if(!v){bad=true; m=LABELS[n]+" is required.";}
+      else if(n==="email"){
+        if(!re.test(v)){bad=true; m="Please enter a valid email address.";}
+        else if(FREE[domainOf(v)]){bad=true; m="Please use your work email — personal addresses (Gmail, Yahoo, etc.) aren't accepted.";}
+      } else if(n==="phone"){
+        var dg=v.replace(/\D/g,"").length;
+        if(dg<6||dg>10){bad=true; m="Phone number must be between 6 and 10 digits.";}
+      }
+      el.classList.toggle("err",bad);
+      if(bad){ if(!firstBad)firstBad=el; if(m)msgs.push(m); }
+    });
+    if(msgs.length){ if(firstBad)firstBad.focus(); showBanner(msgs.join("<br>")); return; }
+    btn.disabled=true; btn.innerHTML="Sending…";
+    var payload={firstName:form.elements.firstName.value.trim(),lastName:form.elements.lastName.value.trim(),email:form.elements.email.value.trim(),company:form.elements.company.value.trim(),countryCode:form.elements.countryCode.value,phone:form.elements.phone.value.trim(),source:"demo-request",page:location.href};
+    // Make-independent backup: also POST every demo request to a Google Apps Script sheet
+    // (fire-and-forget; no-cors + text/plain, no CORS preflight). If Make is down, the lead
+    // is still captured in the sheet. Never blocks the primary submit.
+    var BACKUP_ENDPOINT="https://script.google.com/macros/s/AKfycbzG0OgNsp0XllYZebivLf6WORfOviFulOozUpq_gLcuIcOXFWaNP4hIrQAw_0F_fAc/exec";
+    if(BACKUP_ENDPOINT){try{fetch(BACKUP_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)});}catch(e){}}
+    function success(){
+      document.getElementById("demoDoneEmail").textContent=payload.email;
+      form.hidden=true; done.hidden=false;
+      if(panel)panel.classList.add("is-done");
+      window.dispatchEvent(new Event("resize"));
+    }
+    function fail(title){btn.disabled=false; btn.innerHTML=btnHTML; showBanner(title||"Submission failed — something went wrong on our end.");}
+    function onErr(code){
+      if(code==="work_email_required"){form.elements.email.classList.add("err");form.elements.email.focus();fail("Please use your work email — personal addresses aren't accepted.");}
+      else if(code==="phone_invalid"){form.elements.phone.classList.add("err");form.elements.phone.focus();fail("Phone number must be between 6 and 10 digits.");}
+      else if(code==="missing_fields"){fail("Please fill in all required fields.");}
+      else fail("Submission failed — something went wrong on our end.");
+    }
+    if(!DEMO_ENDPOINT){setTimeout(success,600);return;}
+    fetch(DEMO_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
+      .then(function(r){if(r.ok){success();return;}return r.json().then(function(j){onErr(j&&j.error);},function(){fail();});})
+      .catch(function(){fail();});
+  });
+})();
+</script>
+</body>
+</html>
