@@ -2347,3 +2347,177 @@ section[id] {
   font-size: 0.62rem;
   color: var(--ink-muted);
 }
+
+/* ==========================================================================
+   INTELLIGENT RESEARCH MAPPING (SECTION VI -> RESEARCH FOOTER)
+   ========================================================================== */
+.research-mapping-banner {
+  background: var(--paper-surface);
+  border: 1px solid var(--ink-rule-subtle);
+  border-left: 4px solid var(--accent-burgundy);
+  border-radius: 3px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.research-mapping-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-burgundy);
+  margin-bottom: 0.35rem;
+}
+
+.research-mapping-text {
+  font-family: var(--font-serif-body);
+  font-size: 0.94rem;
+  color: var(--ink-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.research-mapping-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.research-map-chip {
+  background: var(--paper-bg);
+  border: 1px solid var(--ink-rule-subtle);
+  border-radius: 3px;
+  padding: 0.25rem 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.research-map-chip:hover {
+  background: var(--accent-burgundy);
+  color: #ffffff;
+  border-color: var(--accent-burgundy);
+  transform: translateY(-1px);
+}
+
+.research-map-chip.chip-audit {
+  border-color: var(--accent-burgundy);
+  color: var(--accent-burgundy);
+}
+
+.research-map-chip.chip-audit:hover {
+  background: var(--accent-burgundy);
+  color: #ffffff;
+}
+
+.research-map-chip.chip-all {
+  background: var(--code-bg);
+  font-weight: 700;
+  color: var(--ink-primary);
+}
+
+.research-map-chip.chip-all:hover {
+  background: var(--ink-primary);
+  color: var(--paper-bg);
+  border-color: var(--ink-primary);
+}
+
+/* Plate Caption Citation Row */
+.plate-citations-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 0.4rem;
+  margin-top: 0.4rem;
+  border-top: 1px dashed var(--ink-rule-subtle);
+}
+
+.plate-citations-label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  font-weight: 700;
+}
+
+/* Modal Research Mapping Box */
+.modal-research-mapping-box {
+  width: 100%;
+  background: var(--paper-surface);
+  border: 1px solid var(--ink-rule-subtle);
+  border-left: 3px solid var(--accent-burgundy);
+  border-radius: 3px;
+  padding: 1rem 1.1rem;
+  margin-top: 1.2rem;
+  text-align: left;
+}
+
+.modal-research-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-burgundy);
+  margin-bottom: 0.35rem;
+}
+
+.modal-research-desc {
+  font-family: var(--font-serif-body);
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+.modal-research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-research-item {
+  background: var(--paper-bg);
+  border: 1px solid var(--ink-rule-subtle);
+  border-radius: 3px;
+  padding: 0.6rem 0.8rem;
+}
+
+.modal-research-jump-btn {
+  background: transparent;
+  border: 1px solid var(--accent-burgundy);
+  color: var(--accent-burgundy);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.modal-research-jump-btn:hover {
+  background: var(--accent-burgundy);
+  color: #ffffff;
+}
