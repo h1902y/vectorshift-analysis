@@ -1,6 +1,5 @@
 import React from 'react';
-import { Moon, Sun, Globe } from 'lucide-react';
-import { Button } from '../../design-system';
+import { Globe } from 'lucide-react';
 
 function GithubIcon({ size = 15 }) {
   return (
@@ -21,7 +20,7 @@ function LinkedinIcon({ size = 15 }) {
   );
 }
 
-export function Masthead({ theme, toggleTheme }) {
+export function Masthead() {
   return (
     <header className="broadsheet-masthead" style={{ marginBottom: '1.2rem' }}>
       {/* Top Metadata Navigation */}
@@ -60,25 +59,16 @@ export function Masthead({ theme, toggleTheme }) {
             </a>
 
             <a
-              href="https://harshitkrishnachoudhary.com"
+              href="https://h1902y.com"
               target="_blank"
               rel="noreferrer"
               className="masthead-icon-link"
-              title="Personal Website"
+              title="Personal Website (h1902y.com)"
               aria-label="Personal Website"
             >
               <Globe size={14} />
             </a>
           </div>
-
-          <span className="masthead-action-separator" aria-hidden="true"></span>
-
-          <Button
-            variant="icon"
-            onClick={toggleTheme}
-            title={theme === 'dark' ? 'Switch to Morning Edition (Warm Newsprint)' : 'Switch to Evening Edition (Dark Broadsheet)'}
-            icon={theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
-          />
         </div>
       </div>
 

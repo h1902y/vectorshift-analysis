@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Mail, ArrowUp, ShieldCheck } from 'lucide-react';
+import { Globe, ArrowUp, ShieldCheck } from 'lucide-react';
 import { EditorialDivider, StatusBadge } from '../../design-system';
 
 function GithubIcon({ size = 14 }) {
@@ -98,25 +98,15 @@ export function EditorialFooter() {
               </a>
 
               <a
-                href="https://harshitkrishnachoudhary.com"
+                href="https://h1902y.com"
                 target="_blank"
                 rel="noreferrer"
                 className="colophon-social-btn"
-                title="Personal Website"
+                title="Personal Website (h1902y.com)"
                 aria-label="Personal Website"
               >
                 <Globe size={14} />
                 <span>Website</span>
-              </a>
-
-              <a
-                href="mailto:contactingharshit@gmail.com"
-                className="colophon-social-btn"
-                title="Email Candidate"
-                aria-label="Email Candidate"
-              >
-                <Mail size={14} />
-                <span>Email</span>
               </a>
             </div>
           </div>

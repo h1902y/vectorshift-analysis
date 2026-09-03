@@ -15,17 +15,12 @@ import { FloatingAgentOmnichat } from './components/copilot/FloatingAgentOmnicha
 import { useSimulation } from './hooks/useSimulation';
 
 export default function App() {
-  const [theme, setTheme] = useState('light'); // Default to exact Daily Diff warm parchment
   const [activeSection, setActiveSection] = useState('lead');
   const simulation = useSimulation();
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
-  };
+    document.documentElement.setAttribute('data-theme', 'light');
+  }, []);
 
   const handleNavigate = (sectionId) => {
     setActiveSection(sectionId);
@@ -58,10 +53,7 @@ export default function App() {
 
       <div className="broadsheet-wrapper">
         {/* Exact Daily Diff Masthead: Sub-bar, Title, Double Rule */}
-        <Masthead 
-          theme={theme} 
-          toggleTheme={toggleTheme} 
-        />
+        <Masthead />
 
         {/* Sticky Sectional Navigation Bar (Scroll-Spy Active) */}
         <StickySectionNav 
