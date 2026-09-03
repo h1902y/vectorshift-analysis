@@ -26,9 +26,8 @@ export function Masthead({ theme, toggleTheme }) {
     <header className="broadsheet-masthead" style={{ marginBottom: '1.2rem' }}>
       {/* Top Metadata Navigation */}
       <div className="masthead-sub-bar">
-        <div>
-          <span>BY <strong>HARSHIT KRISHNA CHOUDHARY</strong> &middot; </span>
-          <a href="https://vectorshift.ai" target="_blank" rel="noreferrer">vectorshift.ai</a>
+        <div style={{ fontWeight: 700, letterSpacing: '0.03em', color: 'var(--ink-primary)' }}>
+          Harshit Choudhary
         </div>
 
         <div className="masthead-center-date">

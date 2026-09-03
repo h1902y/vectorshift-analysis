@@ -1,7 +1,8 @@
 /**
  * Pydantic AI Agent Runtime Engine
  * Orchestrates MCP Server (JSON-RPC 2.0), Vector Knowledge Base,
- * Typed Pydantic Skills, and Observable Step-by-Step Execution Traces.
+ * Typed Pydantic Skills, Observable Step-by-Step Execution Traces,
+ * and Live Streaming from OpenRouter Free Models (minimax/minimax-m3:free).
  */
 
 import { validatePydanticSchema } from './pydanticSchemas';
@@ -44,13 +45,20 @@ export class PydanticAgentRuntime {
   constructor({ onNavigate, onRunSimulation } = {}) {
     this.onNavigate = onNavigate;
     this.onRunSimulation = onRunSimulation;
+
+    // Read OpenRouter API configuration (Free Model: minimax/minimax-m3:free)
+    this.openRouterKey = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_OPENROUTER_API_KEY) || '';
+    this.openRouterModel = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_OPENROUTER_MODEL) || 'minimax/minimax-m3:free';
+
     this.mcpStatus = {
       serverName: "pydantic-mcp-v2.8",
       status: "connected",
       latencyMs: 11.4,
       transport: "JSON-RPC 2.0 via In-Process Bus",
-      toolsCount: MCP_TOOLS_REGISTRY.length
+      toolsCount: MCP_TOOLS_REGISTRY.length,
+      llmModel: this.openRouterKey ? `${this.openRouterModel} (Free Tier)` : "Pydantic Deterministic Engine"
     };
+
     this.kbStatus = {
       name: "vectorshift-hybrid-rag",
       status: "indexed",
@@ -165,6 +173,78 @@ export class PydanticAgentRuntime {
       response: rpcResponse,
       reqValidation
     };
+  }
+
+  /**
+   * Stream live completion from OpenRouter Free Model (minimax/minimax-m3:free)
+   */
+  async streamFromOpenRouter({ systemPrompt, userMessage, onStreamDelta }) {
+    if (!this.openRouterKey) return null;
+
+    try {
+      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${this.openRouterKey}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "https://vectorshift.ai",
+          "X-Title": "VectorShift Diff Pydantic Agent"
+        },
+        body: JSON.stringify({
+          model: this.openRouterModel,
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: userMessage }
+          ],
+          stream: true,
+          max_tokens: 480,
+          temperature: 0.3
+        })
+      });
+
+      if (!response.ok || !response.body) {
+        throw new Error(`OpenRouter HTTP ${response.status}`);
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder("utf-8");
+      let fullText = "";
+      let isDone = false;
+
+      while (!isDone) {
+        const { value, done } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value, { stream: true });
+        const lines = chunk.split("\n");
+
+        for (const line of lines) {
+          const cleanLine = line.trim();
+          if (cleanLine.startsWith("data: ")) {
+            const dataStr = cleanLine.replace("data: ", "").trim();
+            if (dataStr === "[DONE]") {
+              isDone = true;
+              break;
+            }
+            try {
+              const parsed = JSON.parse(dataStr);
+              const delta = parsed.choices?.[0]?.delta?.content || "";
+              if (delta) {
+                fullText += delta;
+                if (onStreamDelta) onStreamDelta(fullText);
+              }
+            } catch {
+              // Ignore partial JSON chunks
+            }
+          }
+        }
+      }
+
+      return fullText.trim() || null;
+    } catch (err) {
+      console.warn("[OpenRouter Free Model Fallback]:", err.message);
+      return null; // Triggers deterministic fallback seamlessly
+    }
   }
 
   /**
@@ -312,29 +392,61 @@ export class PydanticAgentRuntime {
     await new Promise(r => setTimeout(r, 60));
 
     // ── STEP 4: SYNTHESIS & STREAMING RESPONSE ──
+    const llmLabel = this.openRouterKey ? `OpenRouter [${this.openRouterModel}]` : "Pydantic Deterministic Engine";
     pushStep(
       "SYNTHESIS",
-      "Pydantic Response Synthesis",
-      "Grounding retrieved chunks with strict output contracts.",
+      `Synthesizing via ${llmLabel}`,
+      "Grounding retrieved vector chunks with strict Pydantic output contracts.",
       {
+        model: this.openRouterModel,
+        provider: this.openRouterKey ? "OpenRouter (Free Tier)" : "Local Pydantic Engine",
         validated_schema: "AgentResponsePayload",
         citations_count: 2
       }
     );
 
-    const responseContent = this.generateResponseContent(selectedSkill, text, mcpResult.response.result);
+    const defaultResponse = this.generateResponseContent(selectedSkill, text, mcpResult.response.result);
 
-    // Stream text word by word for dynamic live feedback
-    const words = responseContent.markdown.split(" ");
-    let accumulated = "";
+    let finalMarkdown = "";
 
-    for (let i = 0; i < words.length; i++) {
-      accumulated += (i === 0 ? "" : " ") + words[i];
-      if (onStreamDelta) {
-        onStreamDelta(accumulated);
+    // If OpenRouter key is configured, stream from live free model!
+    if (this.openRouterKey) {
+      const systemPrompt = `You are the Pydantic AI Agent Oracle for The VectorShift Diff (an architectural evaluation broadsheet).
+Knowledge Grounding:
+${matchedChunks.map(c => `[${c.section_title}]: ${c.content}`).join("\n\n")}
+Active Pydantic Skill: ${selectedSkill}
+MCP Tool Executed: ${toolName} -> Result: ${JSON.stringify(mcpResult.response.result)}
+
+Formatting Rules:
+1. Provide a sharp, concise, authoritative answer in Neo-Brutalist technical style.
+2. Include a clean Python Pydantic V2 BaseModel code block highlighting schema invariants.
+3. Reference relevant broadsheet sections using markdown links e.g. [View Section](#cim) or [Simulation Lab](#simulation).
+4. Do not mention that you are a language model. Speak as the architectural oracle.`;
+
+      const openRouterResult = await this.streamFromOpenRouter({
+        systemPrompt,
+        userMessage: text,
+        onStreamDelta
+      });
+
+      if (openRouterResult) {
+        finalMarkdown = openRouterResult;
       }
-      // Small random delay for human-scale streaming feel
-      await new Promise(r => setTimeout(r, 12));
+    }
+
+    // Fallback or default deterministic streaming
+    if (!finalMarkdown) {
+      finalMarkdown = defaultResponse.markdown;
+      const words = finalMarkdown.split(" ");
+      let accumulated = "";
+
+      for (let i = 0; i < words.length; i++) {
+        accumulated += (i === 0 ? "" : " ") + words[i];
+        if (onStreamDelta) {
+          onStreamDelta(accumulated);
+        }
+        await new Promise(r => setTimeout(r, 12));
+      }
     }
 
     const totalElapsed = Math.round((performance.now() - startTime) * 10) / 10;
@@ -348,9 +460,9 @@ export class PydanticAgentRuntime {
 
     return {
       queryId,
-      content: responseContent.markdown,
-      citations: responseContent.citations,
-      followUpOptions: responseContent.followUpOptions,
+      content: finalMarkdown,
+      citations: defaultResponse.citations,
+      followUpOptions: defaultResponse.followUpOptions,
       trace: finalTrace
     };
   }

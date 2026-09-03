@@ -12,7 +12,7 @@ export function EditorialFooter() {
             Analysis of VectorShift &middot; Assessment Colophon
           </strong>
           <p style={{ color: 'var(--ink-secondary)', fontSize: '0.86rem', marginTop: '0.4rem', lineHeight: 1.5 }}>
-            An independent platform teardown, persona model, and field roadmap for VectorShift. Prepared by <strong>Harshit Krishna Choudhary</strong> for the Product Manager (Platform) evaluation. All assertions verified against 292 Mintlify documentation pages, 227 marketing assets, 43 live builder exploration plates, and an end-to-end editorial design system.
+            An independent platform teardown, persona model, and field roadmap for VectorShift. Prepared by <strong>Harshit Choudhary</strong> for the Product Manager (Platform) evaluation. All assertions verified against 292 Mintlify documentation pages, 227 marketing assets, 43 live builder exploration plates, and an end-to-end editorial design system.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export function EditorialFooter() {
       <div className="diff-footer-links">
         <span>&copy; 2026 Analysis of VectorShift</span>
         <span>&bull;</span>
-        <span>Harshit Krishna Choudhary</span>
+        <span>Harshit Choudhary</span>
         <span>&bull;</span>
         <span>September 3, 2026</span>
         <span>&bull;</span>

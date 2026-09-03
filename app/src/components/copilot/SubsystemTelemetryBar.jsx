@@ -1,10 +1,27 @@
 import React from 'react';
-import { ShieldCheck, Database, Wrench, Sparkles, ExternalLink } from 'lucide-react';
+import { ShieldCheck, Database, Wrench, Sparkles, ExternalLink, Zap } from 'lucide-react';
 
 export function SubsystemTelemetryBar({ onOpenInspector }) {
+  const hasOpenRouter = typeof import.meta !== 'undefined' && Boolean(import.meta.env?.VITE_OPENROUTER_API_KEY);
+  const openRouterModel = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_OPENROUTER_MODEL) || 'minimax/minimax-m3:free';
+
   return (
     <div className="subsystem-telemetry-ribbon">
       <div className="telemetry-items-scroll">
+        {/* OpenRouter Free Model Active Badge */}
+        {hasOpenRouter && (
+          <div 
+            className="telemetry-chip openrouter clickable"
+            onClick={onOpenInspector}
+            title="Streaming Live from OpenRouter Free Model"
+          >
+            <Zap size={11} style={{ color: 'var(--accent-gold)' }} />
+            <span style={{ color: 'var(--accent-burgundy)', fontWeight: 800 }}>
+              OPENROUTER: {openRouterModel} (100% FREE TIER)
+            </span>
+          </div>
+        )}
+
         {/* Pydantic V2 Indicator */}
         <div 
           className="telemetry-chip pydantic clickable"
