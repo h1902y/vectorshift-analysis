@@ -7,9 +7,8 @@ const SECTIONS = [
   { id: 'roadmap', num: 'III', label: 'Roadmap' },
   { id: 'simulation', num: 'IV', label: 'Eval Bench' },
   { id: 'competitors', num: 'V', label: 'Teardown' },
-  { id: 'plates', num: 'VI', label: 'Plates' },
-  { id: 'specimen', num: 'VII', label: 'Specimen' },
-  { id: 'citations-gazette', num: 'VIII', label: 'Citations' }
+  { id: 'research-archive', num: 'VI', label: 'Research & Evidence' },
+  { id: 'specimen', num: 'VII', label: 'Specimen' }
 ];
 
 export function StickySectionNav({ activeSection, onActiveSectionChange }) {

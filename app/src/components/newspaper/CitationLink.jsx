@@ -8,16 +8,18 @@ export function CitationLink({ id, children }) {
 
   const handleClick = (e) => {
     e.preventDefault();
+    window.dispatchEvent(new CustomEvent('show-citation', { detail: { id } }));
     const targetId = `citation-${id}`;
-    const el = document.getElementById(targetId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      // Add pulse class
-      el.classList.add('citation-pulse-active');
-      setTimeout(() => {
-        el.classList.remove('citation-pulse-active');
-      }, 2500);
-    }
+    setTimeout(() => {
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('citation-pulse-active');
+        setTimeout(() => {
+          el.classList.remove('citation-pulse-active');
+        }, 2500);
+      }
+    }, 80);
   };
 
   return (

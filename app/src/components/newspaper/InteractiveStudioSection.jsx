@@ -1,5 +1,5 @@
-import React from 'react';
-import { Play, Zap, ArrowRight, X, Check } from 'lucide-react';
+import React, { useState } from 'react';
+import { Play, Zap, ArrowRight, X, Check, ShieldCheck, BarChart2, Layers } from 'lucide-react';
 import { 
   NewspaperSection, 
   GraphicCard, 
@@ -10,6 +10,7 @@ import {
   ScoreProgress,
   CodeBlock 
 } from '../../design-system';
+import { CitationLink } from './CitationLink';
 
 export function InteractiveStudioSection({ simulation }) {
   const {
@@ -26,6 +27,16 @@ export function InteractiveStudioSection({ simulation }) {
     runSingleNode,
     applyHardening
   } = simulation;
+
+  const [activeStep, setActiveStep] = useState(1);
+
+  const solutionSteps = [
+    { num: 1, title: 'Topology & Cache', citationId: 'c1', label: 'DAG REPL' },
+    { num: 2, title: 'World Model (50x)', citationId: 'c6', label: 'Cartesian Suite' },
+    { num: 3, title: 'Cached Batch Run', citationId: 'c7', label: '<12s Latency' },
+    { num: 4, title: 'LLM Rubric Audit', citationId: 'c8', label: 'Judge Scores' },
+    { num: 5, title: 'Auto-Hardening', citationId: 'c9', label: '+4% Verified Lift' }
+  ];
 
   return (
     <NewspaperSection
@@ -52,7 +63,7 @@ export function InteractiveStudioSection({ simulation }) {
           </div>
 
           <div style={{ fontSize: '0.74rem', color: 'var(--ink-muted)', marginBottom: '0.9rem' }}>
-            Evaluated across 50 synthetic stress scenarios
+            Evaluated across 50 synthetic stress scenarios <CitationLink id="c8" />
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
@@ -71,12 +82,62 @@ export function InteractiveStudioSection({ simulation }) {
         {/* Right Drop Cap Editorial Text */}
         <div className="story-editorial-text">
           <p className="daily-drop-cap">
-            In private equity diligence, an investment committee will never deploy an autonomous pipeline on a fifty-million-dollar buyout based on a sample size of one manual test prompt. Decision-makers demand empirical backtesting: <em>“How does this agent behave when presented with forty-eight pages of distressed debt and non-GAAP add-backs?”</em>
+            In private equity diligence, an investment committee will never deploy an autonomous pipeline on a fifty-million-dollar buyout based on a sample size of one manual test prompt <CitationLink id="c6" />. Decision-makers demand empirical backtesting: <em>“How does this agent behave when presented with forty-eight pages of distressed debt and non-GAAP add-backs?”</em>
           </p>
 
           <p>
-            The interactive desk below demonstrates our solution: a synthetic Cartesian generator (<InlineCode>Scenario x Persona</InlineCode>) evaluating outputs against quantitative rubrics, with single-node caching for sub-two-second iteration cycles.
+            The interactive desk below demonstrates our solution: a synthetic Cartesian generator (<InlineCode>Scenario x Persona</InlineCode> <CitationLink id="c6" />) evaluating outputs against quantitative rubrics <CitationLink id="c8" />, with single-node caching for sub-two-second iteration cycles <CitationLink id="c1" /> <CitationLink id="c7" />.
           </p>
+        </div>
+      </div>
+
+      {/* 5-Stage Progressive Solution Flow Stepper */}
+      <div style={{ 
+        background: 'var(--paper-surface-alt)', 
+        border: '1px solid var(--ink-rule-subtle)', 
+        borderRadius: '4px', 
+        padding: '0.7rem 1rem', 
+        marginBottom: '1rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        gap: '0.5rem'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--accent-burgundy)' }}>
+            Solution Flow:
+          </span>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+          {solutionSteps.map((step, idx) => (
+            <React.Fragment key={step.num}>
+              <div 
+                onClick={() => setActiveStep(step.num)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  cursor: 'pointer',
+                  padding: '0.2rem 0.5rem',
+                  borderRadius: '3px',
+                  background: activeStep === step.num ? 'var(--accent-burgundy)' : 'var(--paper-bg)',
+                  color: activeStep === step.num ? '#ffffff' : 'var(--ink-secondary)',
+                  border: '1px solid var(--ink-rule-subtle)',
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '0.7rem',
+                  fontWeight: 600
+                }}
+              >
+                <span>{step.num}. {step.title}</span>
+                <CitationLink id={step.citationId} />
+              </div>
+              {idx < solutionSteps.length - 1 && (
+                <span style={{ color: 'var(--ink-muted)', fontSize: '0.7rem' }}>➔</span>
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </div>
 
@@ -97,7 +158,15 @@ export function InteractiveStudioSection({ simulation }) {
             variant="solid"
             size="sm"
             loading={isRunning}
-            onClick={runBatchSimulation}
+            onClick={() => {
+              setActiveStep(3);
+              runBatchSimulation();
+            }}
+            icon={!isRunning ? <Play size={12} /> : null}
+          >
+            {isRunning ? `Testing (${progress}%)...` : 'Run 50-Scenario Test Bench'}
+          </Button>
+        </div>
             icon={!isRunning ? <Play size={12} /> : null}
           >
             {isRunning ? `Testing (${progress}%)...` : 'Run 50-Scenario Test Bench'}

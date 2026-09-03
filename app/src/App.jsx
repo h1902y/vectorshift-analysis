@@ -7,9 +7,8 @@ import { TechnicalBlueprint } from './components/newspaper/TechnicalBlueprint';
 import { RoadmapStory } from './components/newspaper/RoadmapStory';
 import { InteractiveStudioSection } from './components/newspaper/InteractiveStudioSection';
 import { BenchmarkStory } from './components/newspaper/BenchmarkStory';
-import { ExhibitsSection } from './components/newspaper/ExhibitsSection';
-import { DesignSpecimenSection } from './components/newspaper/DesignSpecimenSection';
 import { ResearchFooterGazette } from './components/newspaper/ResearchFooterGazette';
+import { DesignSpecimenSection } from './components/newspaper/DesignSpecimenSection';
 import { EditorialFooter } from './components/newspaper/EditorialFooter';
 import { FloatingAgentOmnichat } from './components/copilot/FloatingAgentOmnichat';
 import { useSimulation } from './hooks/useSimulation';
@@ -81,14 +80,11 @@ export default function App() {
           {/* Section V: Comparative Intelligence: VectorShift vs. Clay vs. Fin (Bonus) */}
           <BenchmarkStory />
 
-          {/* Section VI: Field Evidence: 43 Photographic Exploration Plates (Task 1) */}
-          <ExhibitsSection />
+          {/* Section VI: Research, Prior Art & Field Evidence Archive (Tasks 1 & 5) */}
+          <ResearchFooterGazette />
 
           {/* Section VII: Living Design System Specimen & Token Architecture */}
           <DesignSpecimenSection />
-
-          {/* Section VIII: Notes, Prior Art & Empirical Citations Gazette */}
-          <ResearchFooterGazette />
         </main>
 
         {/* Editorial Colophon & Footer */}

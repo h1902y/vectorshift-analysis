@@ -1,5 +1,6 @@
 import React from 'react';
 import { NewspaperSection, GraphicCard, BoxedCallout, NoticeBanner, CodeBlock, StatusBadge } from '../../design-system';
+import { CitationLink } from './CitationLink';
 
 export function TechnicalBlueprint() {
   const dagAscii = `[Inbound 50-Page CIM PDF]
@@ -55,11 +56,11 @@ export function TechnicalBlueprint() {
         {/* Right Drop Cap Editorial Text */}
         <div className="story-editorial-text">
           <p className="daily-drop-cap">
-            In investment banking and private equity buyout deals, financial statements in confidential information memorandums (CIMs) are deliberately crafted with aggressive, non-standardized earnings add-backs. An off-the-shelf generative model will casually accept discretionary owner perks—such as luxury vehicle leases or family travel—as operating EBITDA.
+            In investment banking and private equity buyout deals, financial statements in confidential information memorandums (CIMs) are deliberately crafted with aggressive, non-standardized earnings add-backs. An off-the-shelf generative model will casually accept discretionary owner perks—such as luxury vehicle leases or family travel—as operating EBITDA <CitationLink id="c9" />.
           </p>
 
           <p>
-            To eliminate mathematical hallucinations, VectorShift pairs qualitative extraction with deterministic calculator nodes:
+            To eliminate mathematical hallucinations, VectorShift pairs qualitative extraction with deterministic calculator nodes <CitationLink id="c3" /> <CitationLink id="c11" />:
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '0.8rem' }}>

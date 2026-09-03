@@ -1,6 +1,7 @@
 import React from 'react';
-import { Globe, ArrowUp, ShieldCheck } from 'lucide-react';
-import { EditorialDivider, StatusBadge } from '../../design-system';
+import { Globe, ArrowUp } from 'lucide-react';
+import { EditorialDivider } from '../../design-system';
+import { ProfileCard } from '../ProfileCard';
 
 function GithubIcon({ size = 14 }) {
   return (
@@ -131,37 +132,13 @@ export function EditorialFooter() {
             </nav>
           </div>
 
-          {/* Column 3: Audit & Assessment Dossier */}
+          {/* Column 3: Candidate Profile from h1902y */}
           <div className="colophon-col colophon-col--dossier">
             <div className="colophon-section-eyebrow">
-              <span>&sect;</span> Evaluation Dossier
+              <span>&sect;</span> Candidate Architect
             </div>
-            <div className="colophon-dossier-card">
-              <div className="colophon-dossier-row">
-                <span className="dossier-label">Author</span>
-                <span className="dossier-val dossier-val--bold">Harshit Choudhary</span>
-              </div>
-              <div className="colophon-dossier-row">
-                <span className="dossier-label">Candidate Role</span>
-                <span className="dossier-val">Product Manager (Platform)</span>
-              </div>
-              <div className="colophon-dossier-row">
-                <span className="dossier-label">Publication Date</span>
-                <span className="dossier-val">September 3, 2026</span>
-              </div>
-              <div className="colophon-dossier-row">
-                <span className="dossier-label">Audit Evidence</span>
-                <span className="dossier-val">43 Exploration Plates</span>
-              </div>
-              <div className="colophon-dossier-row">
-                <span className="dossier-label">Research Citations</span>
-                <span className="dossier-val">12 Verified Gazette Items</span>
-              </div>
-              <div className="colophon-dossier-row">
-                <span className="dossier-label">Pipeline Verification</span>
-                <StatusBadge variant="emerald" icon={<ShieldCheck size={11} />}>Verified DAG</StatusBadge>
-              </div>
-            </div>
+
+            <ProfileCard />
 
             <button
               type="button"
