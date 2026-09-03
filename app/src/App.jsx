@@ -8,7 +8,6 @@ import { RoadmapStory } from './components/newspaper/RoadmapStory';
 import { InteractiveStudioSection } from './components/newspaper/InteractiveStudioSection';
 import { BenchmarkStory } from './components/newspaper/BenchmarkStory';
 import { ResearchFooterGazette } from './components/newspaper/ResearchFooterGazette';
-import { DesignSpecimenSection } from './components/newspaper/DesignSpecimenSection';
 import { EditorialFooter } from './components/newspaper/EditorialFooter';
 import { FloatingAgentOmnichat } from './components/copilot/FloatingAgentOmnichat';
 import { useSimulation } from './hooks/useSimulation';
@@ -82,9 +81,6 @@ export default function App() {
 
           {/* Section VI: Research, Prior Art & Field Evidence Archive (Tasks 1 & 5) */}
           <ResearchFooterGazette />
-
-          {/* Section VII: Living Design System Specimen & Token Architecture */}
-          <DesignSpecimenSection />
         </main>
 
         {/* Editorial Colophon & Footer */}

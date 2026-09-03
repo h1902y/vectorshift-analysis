@@ -7,9 +7,7 @@ export function JumpBar() {
     { id: 'cim', label: 'II. CIM Blueprint' },
     { id: 'roadmap', label: 'III. 5 Improvements' },
     { id: 'simulation', label: 'IV. Simulation Studio' },
-    { id: 'competitors', label: 'V. Clay & Fin Audit' },
-    { id: 'plates', label: 'VI. 43 Evidence Plates' },
-    { id: 'specimen', label: 'VII. Style Specimen' },
+    { id: 'research-archive', label: 'VI. Research & Evidence' }
   ];
 
   const scrollTo = (id) => {

@@ -4,12 +4,12 @@
  */
 
 export const ROTATING_PROMPTS = [
-  "How does the CIM Deconstruction workflow work?",
-  "Why is the Simulation & Eval Bench the #1 improvement?",
-  "Who is the Forward-Deployed AI Operator persona?",
-  "How does VectorShift compare with Clay and Fin?",
-  "What do the 43 builder exploration plates show?",
-  "How does Pydantic V2 guarantee schema invariants?",
+  "Ask: 'How does the 3-stage CIM pipeline eliminate EBITDA hallucinations?'",
+  "Ask: 'Why is the Simulation & Eval Bench the #1 builder intervention?'",
+  "Ask: 'Who is the Forward-Deployed AI Operator and why are they the real ICP?'",
+  "Ask: 'Run 50-sample Monte Carlo simulation on CIM DAG' (Dispatches MCP Tool)",
+  "Ask: 'Compare VectorShift vs. Clay and Fin across private market workflows'",
+  "Ask: 'Inspect the 43 builder exploration plates and field telemetry'",
 ];
 
 export const POPOVER_CATEGORIES = [

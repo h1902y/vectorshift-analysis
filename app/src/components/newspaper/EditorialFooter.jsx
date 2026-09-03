@@ -59,9 +59,7 @@ export function EditorialFooter() {
       title: '03 · FIELD AUDIT & STANDARDS',
       links: [
         { id: 'competitors', num: 'V', label: 'Clay & Fin Teardown' },
-        { id: 'plates', num: 'VI', label: '43 Photographic Exploration Plates', badge: '43 Plates' },
-        { id: 'specimen', num: 'VII', label: 'Living Design System Specimen', badge: 'Tokens' },
-        { id: 'citations-gazette', num: 'VIII', label: 'Research Notes & Citations', badge: '12 Items' }
+        { id: 'research-archive', num: 'VI', label: 'Research & Evidence Archive', badge: '12 + 43' }
       ]
     }
   ];

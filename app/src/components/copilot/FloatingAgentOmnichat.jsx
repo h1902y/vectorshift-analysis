@@ -337,8 +337,10 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
               onChange={(e) => setInputVal(e.target.value)}
               placeholder={
                 messages.length > 0
-                  ? "Resume conversation with Agent..."
-                  : ROTATING_PROMPTS[promptIndex]
+                  ? "Resume conversation with Agent (⌘K)..."
+                  : (isPopOpen || isFocused)
+                    ? "Select an inquiry above or type your prompt..."
+                    : ROTATING_PROMPTS[promptIndex]
               }
               className="omnichat-text-input"
             />
@@ -575,7 +577,7 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                   name="chatInput"
                   type="text"
                   disabled={isLoading}
-                  placeholder="Ask about CIM deconstruction, the #1 eval bench, or trigger a tool..."
+                  placeholder="Ask an architectural question, request an analysis, or trigger an MCP tool (⌘K)..."
                   className="omnichat-modal-input"
                 />
                 <button

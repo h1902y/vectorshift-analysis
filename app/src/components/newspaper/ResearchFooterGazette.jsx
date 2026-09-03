@@ -42,6 +42,7 @@ export function ResearchFooterGazette() {
   const [plateCategory, setPlateCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedExhibit, setSelectedExhibit] = useState(null);
+  const [selectedScreenExhibit, setSelectedScreenExhibit] = useState(null);
 
   // Listen for global jump events to ensure correct sub-view is visible
   useEffect(() => {
@@ -315,26 +316,125 @@ export function ResearchFooterGazette() {
                   {item.source}
                 </div>
 
-                {/* Verbatim Finding Block */}
-                <div className="citation-finding-box">
-                  <div className="citation-finding-label">Verbatim Evidence / Finding:</div>
-                  <blockquote className="citation-finding-quote">
-                    &ldquo;{item.verbatimFinding}&rdquo;
-                  </blockquote>
-                </div>
+                {/* ROW 1: 'SCREEN' EVIDENCE (Mobbin UI / Platform Screencap) */}
+                {item.screen && (
+                  <div className="evidence-row-screen">
+                    <div className="evidence-row-tag">
+                      <Camera size={12} />
+                      <span>ROW 1 &middot; SCREEN EVIDENCE ({item.screen.platform || 'Mobbin UI Screen'})</span>
+                    </div>
+                    <div className="evidence-screen-body">
+                      <div 
+                        className="screen-thumb-container" 
+                        onClick={() => setSelectedScreenExhibit(item.screen)}
+                        title="Click to inspect high-resolution screen in lightbox"
+                      >
+                        <img 
+                          src={item.screen.thumbnail} 
+                          alt={item.screen.title} 
+                          className="evidence-screen-thumb" 
+                        />
+                        <div className="screen-thumb-overlay">
+                          <ZoomIn size={14} />
+                        </div>
+                      </div>
+                      <div className="evidence-screen-meta">
+                        <div className="evidence-screen-title">
+                          {item.screen.title}
+                        </div>
+                        <div className="evidence-screen-pattern">
+                          {item.screen.pattern}
+                        </div>
+                        <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap', marginTop: '3px' }}>
+                          <button
+                            type="button"
+                            onClick={() => setSelectedScreenExhibit(item.screen)}
+                            style={{
+                              background: 'none',
+                              border: 'none',
+                              padding: 0,
+                              fontFamily: 'var(--font-mono)',
+                              fontSize: '0.65rem',
+                              fontWeight: 700,
+                              color: 'var(--accent-burgundy)',
+                              cursor: 'pointer',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '3px'
+                            }}
+                          >
+                            <ZoomIn size={11} />
+                            <span>Inspect Screen</span>
+                          </button>
+                          {item.screen.mobbinUrl && (
+                            <a 
+                              href={item.screen.mobbinUrl} 
+                              target="_blank" 
+                              rel="noreferrer" 
+                              className="mobbin-screen-link"
+                            >
+                              <span>Mobbin Catalog</span>
+                              <ArrowUpRight size={11} />
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* ROW 2: OFFICIAL 'DOCS' CITATION */}
+                {item.docs && (
+                  <div className="evidence-row-docs">
+                    <div className="evidence-row-tag">
+                      <BookOpen size={12} />
+                      <span>ROW 2 &middot; OFFICIAL DOCS CITATION</span>
+                    </div>
+                    <div className="evidence-docs-body">
+                      <div className="evidence-docs-citation-line">
+                        <a 
+                          href={item.docs.url} 
+                          target="_blank" 
+                          rel="noreferrer" 
+                          className="evidence-docs-url"
+                          title="Open official documentation in new tab"
+                        >
+                          <span>{item.docs.citation}</span>
+                          <ArrowUpRight size={11} />
+                        </a>
+                      </div>
+                      <div className="evidence-docs-spec">
+                        &ldquo;{item.docs.specExcerpt}&rdquo;
+                      </div>
+                      <div className="evidence-docs-roadmap">
+                        <span>✓</span> {item.docs.roadmapAnchor}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Verbatim Finding Block (Preserved for Academic Papers / Literature) */}
+                {(!item.screen || !item.docs) && (
+                  <div className="citation-finding-box">
+                    <div className="citation-finding-label">Verbatim Evidence / Finding:</div>
+                    <blockquote className="citation-finding-quote">
+                      &ldquo;{item.verbatimFinding}&rdquo;
+                    </blockquote>
+                  </div>
+                )}
 
                 {/* The VectorShift Architectural Explainer */}
                 <div className="citation-explainer-callout">
                   <div className="citation-explainer-heading">
                     <span style={{ fontSize: '1rem' }}>💡</span>
-                    <strong>The VectorShift Explainer &amp; Architectural Rationale:</strong>
+                    <strong>The VectorShift Explainer &amp; Strategic Rationale:</strong>
                   </div>
                   <p className="citation-explainer-text">
                     {item.explainer}
                   </p>
                 </div>
 
-                {/* Mapped Field Plates Proof Row */}
+                {/* Mapped Field Plates Proof Row (with miniature screenshot thumbnail icons) */}
                 {item.id === 'c12' ? (
                   <div style={{ 
                     background: 'rgba(21, 128, 61, 0.08)', 
@@ -376,7 +476,7 @@ export function ResearchFooterGazette() {
                     <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.68rem', fontWeight: 700, color: 'var(--accent-burgundy)', textTransform: 'uppercase' }}>
                       Field Proof:
                     </span>
-                    <div style={{ display: 'inline-flex', gap: '4px', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'inline-flex', gap: '5px', flexWrap: 'wrap' }}>
                       {mappedPlates.slice(0, 4).map(p => (
                         <button
                           key={p.id}
@@ -384,19 +484,15 @@ export function ResearchFooterGazette() {
                           onClick={() => {
                             setSelectedExhibit(p);
                           }}
-                          style={{
-                            background: 'var(--paper-surface-alt)',
-                            border: '1px solid var(--ink-rule-subtle)',
-                            borderRadius: '2px',
-                            padding: '0.1rem 0.35rem',
-                            fontSize: '0.66rem',
-                            fontFamily: 'var(--font-mono)',
-                            color: 'var(--ink-secondary)',
-                            cursor: 'pointer'
-                          }}
-                          title={`Click to inspect Plate #${p.id}: ${p.title}`}
+                          className="field-proof-thumb-pill"
+                          title={`Inspect Plate #${p.id}: ${p.title}`}
                         >
-                          Plate #{p.id}
+                          <img 
+                            src={`/screenshots/${p.name}`} 
+                            alt={`Plate #${p.id}`}
+                            className="field-proof-mini-thumb" 
+                          />
+                          <span>Plate #{p.id}</span>
                         </button>
                       ))}
                       {mappedPlates.length > 4 && (
@@ -405,16 +501,11 @@ export function ResearchFooterGazette() {
                           onClick={() => {
                             setActiveDimension('plates');
                           }}
-                          style={{
-                            background: 'none',
-                            border: 'none',
-                            fontSize: '0.66rem',
-                            color: 'var(--accent-burgundy)',
-                            cursor: 'pointer',
-                            textDecoration: 'underline'
-                          }}
+                          className="field-proof-thumb-pill"
+                          style={{ fontStyle: 'italic' }}
+                          title="View remaining plates in catalog"
                         >
-                          +{mappedPlates.length - 4} more
+                          <span>+{mappedPlates.length - 4} more</span>
                         </button>
                       )}
                     </div>
@@ -618,6 +709,54 @@ export function ResearchFooterGazette() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        )}
+      </ModalDialog>
+
+      {/* Accessible Full-Resolution Competitor & Mobbin Screen Lightbox Modal */}
+      <ModalDialog
+        isOpen={Boolean(selectedScreenExhibit)}
+        onClose={() => setSelectedScreenExhibit(null)}
+        title={selectedScreenExhibit?.title || ''}
+        subtitle={selectedScreenExhibit ? `${selectedScreenExhibit.platform || 'Mobbin UI Screen'} · Competitive Benchmark Inspection` : ''}
+      >
+        {selectedScreenExhibit && (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <img
+              src={selectedScreenExhibit.fullImage || selectedScreenExhibit.thumbnail}
+              alt={selectedScreenExhibit.title}
+              style={{ 
+                maxWidth: '100%', 
+                maxHeight: '56vh', 
+                objectFit: 'contain', 
+                border: '1px solid var(--ink-rule-subtle)', 
+                borderRadius: '3px',
+                boxShadow: '0 6px 20px rgba(0, 0, 0, 0.12)' 
+              }}
+            />
+
+            <div style={{ marginTop: '1rem', width: '100%', background: 'var(--paper-surface-alt)', border: '1px solid var(--ink-rule-subtle)', borderRadius: '4px', padding: '0.85rem 1rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.45rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 800, color: 'var(--accent-burgundy)', textTransform: 'uppercase' }}>
+                  Observed UX &amp; Architecture Pattern
+                </span>
+                {selectedScreenExhibit.mobbinUrl && (
+                  <a
+                    href={selectedScreenExhibit.mobbinUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mobbin-screen-link"
+                    style={{ fontSize: '0.72rem' }}
+                  >
+                    <span>View in Mobbin Catalog</span>
+                    <ArrowUpRight size={12} />
+                  </a>
+                )}
+              </div>
+              <p style={{ fontSize: '0.84rem', color: 'var(--ink-secondary)', lineHeight: 1.5, margin: 0 }}>
+                {selectedScreenExhibit.pattern}
+              </p>
             </div>
           </div>
         )}
