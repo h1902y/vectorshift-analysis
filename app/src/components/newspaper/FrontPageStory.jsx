@@ -8,11 +8,6 @@ export function FrontPageStory() {
     <NewspaperSection
       id="lead"
       kicker="TOP STORY &middot; THE STRATEGIC THESIS (TASK 2)"
-      byline={
-        <>
-          BY <strong>HARSHIT CHOUDHARY</strong> &middot; CANDIDATE FOR PRODUCT MANAGER (PLATFORM) &middot; <a href="#lead">DISCUSS &rsaquo;</a> &middot; &#9432;
-        </>
-      }
       headline="The Forward-Deployed Operator: Why Private Equity cannot buy consumer chatbots"
     >
       <div className="story-grid-2col">
