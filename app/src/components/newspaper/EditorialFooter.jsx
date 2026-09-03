@@ -87,20 +87,20 @@ export function EditorialFooter() {
               {/* Executive Metadata Micro-Ledger to balance vertical column height */}
               <div className="colophon-meta-ledger">
                 <div className="colophon-meta-row">
-                  <span className="colophon-meta-label">Assessment Scope</span>
+                  <span className="colophon-meta-label">Scope</span>
                   <span className="colophon-meta-val">3 Core Tasks + 2 Deep Dives</span>
                 </div>
                 <div className="colophon-meta-row">
-                  <span className="colophon-meta-label">Empirical Evidence</span>
+                  <span className="colophon-meta-label">Evidence</span>
                   <span className="colophon-meta-val">43 Exploration Plates</span>
                 </div>
                 <div className="colophon-meta-row">
-                  <span className="colophon-meta-label">Pipeline Engine</span>
+                  <span className="colophon-meta-label">Engine</span>
                   <span className="colophon-meta-val">Deterministic Python AST Bridge</span>
                 </div>
                 <div className="colophon-meta-row">
-                  <span className="colophon-meta-label">Documentation Base</span>
-                  <span className="colophon-meta-val">292 Pages &middot; 12 Research Citations</span>
+                  <span className="colophon-meta-label">Gazette</span>
+                  <span className="colophon-meta-val">12 Research Citations &middot; Tokens</span>
                 </div>
               </div>
             </div>
