@@ -28,6 +28,7 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [activeOptions, setActiveOptions] = useState([]);
+  const [activeSubsystem, setActiveSubsystem] = useState(null);
   const [toolToast, setToolToast] = useState(null);
 
   const containerRef = useRef(null);
@@ -501,7 +502,14 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                         {isLoading && i === messages.length - 1 && !msg.content && (
                           <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--ink-secondary)', padding: '0.4rem 0' }}>
                             <span className="telemetry-dot-pulse green" style={{ width: 6, height: 6 }} />
-                            <span>Synthesizing verified architectural response...</span>
+                            <span>
+                              {activeSubsystem === 'KB_RETRIEVAL' && 'Scanning 1,842 vector chunks...'}
+                              {activeSubsystem === 'SKILL_ACTIVATION' && 'Mounting domain skills...'}
+                              {activeSubsystem === 'MCP_DISPATCH' && 'Dispatching MCP tool via JSON-RPC 2.0...'}
+                              {activeSubsystem === 'TOOL_EXECUTION' && 'Executing tool payload...'}
+                              {activeSubsystem === 'SYNTHESIS' && 'Synthesizing response via Pydantic model...'}
+                              {!activeSubsystem && 'Processing architectural query...'}
+                            </span>
                           </div>
                         )}
                       </>
