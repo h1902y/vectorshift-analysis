@@ -70,7 +70,7 @@ export function DesignSpecimenSection() {
         title="Editorial Design System Verification"
         style={{ marginBottom: '1.8rem' }}
       >
-        This living specimen documents all design tokens, font scales, and atomic React primitives powering <em>The VectorShift Diff</em>. Every element adheres to high-contrast financial publishing guidelines with full dark-mode parity.
+        This living specimen documents all design tokens, font scales, and atomic React primitives powering <em>Analysis of VectorShift</em>. Every element adheres to high-contrast financial publishing guidelines with full dark-mode parity.
       </NoticeBanner>
 
       {/* Sub-Navigation Pills */}

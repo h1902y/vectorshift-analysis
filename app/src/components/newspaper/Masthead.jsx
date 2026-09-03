@@ -26,10 +26,10 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
 
   return (
     <header style={{ marginBottom: '2.5rem' }}>
-      {/* Top Metadata Navigation (Exact Daily Diff Sub-Bar) */}
+      {/* Top Metadata Navigation */}
       <div className="masthead-sub-bar">
         <div>
-          <span>&larr; ASSESSMENT &middot; </span>
+          <span>BY <strong>HARSHIT KRISHNA CHOUDHARY</strong> &middot; </span>
           <a href="https://vectorshift.ai" target="_blank" rel="noreferrer">vectorshift.ai</a>
         </div>
 
@@ -48,10 +48,25 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
         </div>
       </div>
 
-      {/* The Daily Diff Main Title */}
-      <h1 className="masthead-main-title">The VectorShift Diff</h1>
+      {/* The Main Title */}
+      <h1 className="masthead-main-title">Analysis of VectorShift</h1>
+      
+      {/* Prominent Author Byline & Date Bar */}
+      <div style={{
+        fontFamily: 'var(--font-sans)',
+        fontSize: '0.76rem',
+        fontWeight: 700,
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase',
+        textAlign: 'center',
+        color: 'var(--accent-burgundy)',
+        margin: '0.35rem 0 0.25rem 0'
+      }}>
+        By Harshit Krishna Choudhary &middot; Thursday, September 3, 2026 &middot; Platform Product Manager Assessment
+      </div>
+
       <div className="masthead-sub-motto">
-        Architectural Evaluation & Field Blueprint for Private Markets
+        Architectural Evaluation &amp; Field Blueprint for Private Markets
       </div>
 
       {/* The Double Rule */}
