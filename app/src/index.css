@@ -460,6 +460,145 @@ section[id] {
   object-fit: contain;
 }
 
+/* ==========================================================================
+   FIG 1: PERSONA TRIANGULATION MODEL
+   ========================================================================== */
+.persona-model-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.persona-tier-card {
+  background: var(--paper-surface);
+  border: 1px solid var(--ink-rule-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-fast);
+}
+
+.persona-tier-card:hover {
+  background: var(--paper-surface-hover);
+  border-color: var(--ink-rule);
+}
+
+.persona-tier-card--builder {
+  border-top: 3px solid var(--accent-burgundy);
+}
+
+.persona-tier-card--consumer {
+  border-top: 3px solid var(--accent-emerald);
+}
+
+.persona-tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.persona-tier-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.persona-tier-icon {
+  color: var(--ink-secondary);
+}
+
+.persona-tier-title {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--ink-primary);
+  margin: 0 0 0.15rem 0;
+  line-height: 1.2;
+}
+
+.persona-tier-role {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  margin-bottom: 0.55rem;
+}
+
+.persona-spec-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.55rem;
+}
+
+.persona-spec-tag {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+  background: var(--paper-bg);
+  border: 1px solid var(--ink-rule-subtle);
+  color: var(--ink-secondary);
+}
+
+.persona-tier-desc {
+  font-family: var(--font-serif-body);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+  margin: 0;
+}
+
+/* Packaging Layer Bridge */
+.persona-bridge-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.25rem 0;
+}
+
+.persona-bridge-line {
+  flex: 1;
+  height: 1px;
+  background: var(--ink-rule-subtle);
+}
+
+.persona-bridge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-burgundy);
+  background: var(--paper-bg);
+  border: 1px solid var(--ink-rule-subtle);
+  padding: 0.22rem 0.6rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.persona-bridge-code {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: none;
+  color: var(--ink-primary);
+}
+
 /* Right Editorial Text with Burgundy Drop Cap */
 .story-editorial-text {
   font-size: 1.06rem;
