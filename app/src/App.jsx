@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Masthead } from './components/newspaper/Masthead';
+import { StickySectionNav } from './components/newspaper/StickySectionNav';
 import { FrontPageStory } from './components/newspaper/FrontPageStory';
 import { LifecycleStory } from './components/newspaper/LifecycleStory';
 import { TechnicalBlueprint } from './components/newspaper/TechnicalBlueprint';
@@ -31,10 +32,14 @@ export default function App() {
       <div className="top-ribbon-stripe"></div>
 
       <div className="broadsheet-wrapper">
-        {/* Exact Daily Diff Masthead: Sub-bar, Title, Double Rule, Filter Pills */}
+        {/* Exact Daily Diff Masthead: Sub-bar, Title, Double Rule */}
         <Masthead 
           theme={theme} 
           toggleTheme={toggleTheme} 
+        />
+
+        {/* Sticky Sectional Navigation Bar (Scroll-Spy Active) */}
+        <StickySectionNav 
           activeSection={activeSection}
           onSelectSection={setActiveSection}
         />

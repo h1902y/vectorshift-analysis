@@ -1,0 +1,88 @@
+import React, { useState, useEffect } from 'react';
+
+const SECTIONS = [
+  { id: 'lead', num: 'TOP', label: 'Lead Story' },
+  { id: 'lifecycle', num: 'I', label: 'Lifecycle' },
+  { id: 'cim', num: 'II', label: 'CIM DAG' },
+  { id: 'roadmap', num: 'III', label: 'Roadmap' },
+  { id: 'simulation', num: 'IV', label: 'Eval Bench' },
+  { id: 'competitors', num: 'V', label: 'Teardown' },
+  { id: 'plates', num: 'VI', label: 'Plates' },
+  { id: 'specimen', num: 'VII', label: 'Specimen' },
+  { id: 'citations-gazette', num: 'VIII', label: 'Citations' }
+];
+
+export function StickySectionNav({ activeSection, onSelectSection }) {
+  const [isStuck, setIsStuck] = useState(false);
+
+  // Smooth scroll handler with sticky offset compensation
+  const scrollTo = (id) => {
+    onSelectSection(id);
+    const el = document.getElementById(id);
+    if (el) {
+      const navOffset = 65;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = el.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - navOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Real-time Scroll Spy & Sticky elevation detector
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      // Detect when navbar is sticking past the masthead
+      setIsStuck(scrollY > 160);
+
+      // Determine currently visible section
+      const triggerLine = scrollY + 110;
+
+      for (let i = SECTIONS.length - 1; i >= 0; i--) {
+        const el = document.getElementById(SECTIONS[i].id);
+        if (el) {
+          if (el.offsetTop <= triggerLine) {
+            onSelectSection(SECTIONS[i].id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial active calculation on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [onSelectSection]);
+
+  return (
+    <nav 
+      className={`sticky-sectional-nav ${isStuck ? 'sticky-sectional-nav--stuck' : ''}`}
+      aria-label="Sectional Navigation"
+    >
+      <div className="sticky-sectional-track">
+        {SECTIONS.map(s => {
+          const isActive = activeSection === s.id;
+          return (
+            <button
+              key={s.id}
+              type="button"
+              className={`editorial-tab-btn ${isActive ? 'active' : ''}`}
+              onClick={() => scrollTo(s.id)}
+              aria-current={isActive ? 'true' : undefined}
+            >
+              <span className="editorial-tab-num">{s.num}</span>
+              <span>{s.label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}

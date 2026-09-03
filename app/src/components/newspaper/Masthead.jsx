@@ -1,32 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '../../design-system';
 
-export function Masthead({ theme, toggleTheme, activeSection, onSelectSection }) {
-  const [signal, setSignal] = useState('all');
-
-  const sections = [
-    { id: 'lead', num: 'TOP', label: 'Lead Story', type: 'executive' },
-    { id: 'lifecycle', num: 'I', label: 'Lifecycle', type: 'executive' },
-    { id: 'cim', num: 'II', label: 'CIM DAG', type: 'technical' },
-    { id: 'roadmap', num: 'III', label: 'Roadmap', type: 'executive' },
-    { id: 'simulation', num: 'IV', label: 'Eval Bench', type: 'technical' },
-    { id: 'competitors', num: 'V', label: 'Teardown', type: 'executive' },
-    { id: 'plates', num: 'VI', label: 'Plates (43)', type: 'technical' },
-    { id: 'specimen', num: 'VII', label: 'Specimen', type: 'technical' },
-    { id: 'citations-gazette', num: 'VIII', label: 'Citations', type: 'executive' }
-  ];
-
-  const scrollTo = (id) => {
-    onSelectSection(id);
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
+export function Masthead({ theme, toggleTheme }) {
   return (
-    <header style={{ marginBottom: '2.5rem' }}>
+    <header className="broadsheet-masthead" style={{ marginBottom: '1.2rem' }}>
       {/* Top Metadata Navigation */}
       <div className="masthead-sub-bar">
         <div>
@@ -56,66 +34,8 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
         Architectural Evaluation &amp; Field Blueprint for Private Markets
       </div>
 
-      {/* The Double Rule */}
+      {/* The Classic Broadsheet Double Rule */}
       <div className="masthead-double-rule"></div>
-
-      {/* Broadsheet Editorial Navigation Bar (Zero-Wrap Disciplined Index) */}
-      <nav className="editorial-nav-bar" aria-label="Broadsheet Department Index">
-        <div className="editorial-nav-sections">
-          <span className="editorial-nav-label">
-            <span>&sect;</span> DEPARTMENTS:
-          </span>
-          {sections.map(s => {
-            const isHighlighted = signal === 'all' || s.type === signal;
-            const isActive = activeSection === s.id;
-            return (
-              <button
-                key={s.id}
-                type="button"
-                className={`editorial-tab-btn ${isActive ? 'active' : ''}`}
-                style={{
-                  opacity: isHighlighted ? 1 : 0.45,
-                  transform: isActive ? 'translateY(-1px)' : 'none'
-                }}
-                onClick={() => scrollTo(s.id)}
-              >
-                <span className="editorial-tab-num">{s.num}</span>
-                <span>{s.label}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="editorial-signal-group">
-          <span className="editorial-signal-label">SIGNAL:</span>
-          <div className="editorial-segmented-control" role="group" aria-label="Filter sections by signal">
-            <button
-              type="button"
-              className={`editorial-segment-btn ${signal === 'all' ? 'active' : ''}`}
-              onClick={() => setSignal('all')}
-              title="Show all broadsheet sections"
-            >
-              ALL
-            </button>
-            <button
-              type="button"
-              className={`editorial-segment-btn ${signal === 'executive' ? 'active' : ''}`}
-              onClick={() => setSignal('executive')}
-              title="Highlight Executive Core sections"
-            >
-              CORE
-            </button>
-            <button
-              type="button"
-              className={`editorial-segment-btn ${signal === 'technical' ? 'active' : ''}`}
-              onClick={() => setSignal('technical')}
-              title="Highlight Technical Deep-Dive sections"
-            >
-              DEEP-DIVE
-            </button>
-          </div>
-        </div>
-      </nav>
     </header>
   );
 }
