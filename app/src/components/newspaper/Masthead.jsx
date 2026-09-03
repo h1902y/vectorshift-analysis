@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '../../design-system';
 
 export function Masthead({ theme, toggleTheme, activeSection, onSelectSection }) {
+  const [signal, setSignal] = useState('all');
+
   const sections = [
-    { id: 'lead', label: 'Top Story' },
-    { id: 'lifecycle', label: 'I. Lifecycle' },
-    { id: 'cim', label: 'II. CIM Blueprint' },
-    { id: 'roadmap', label: 'III. 5 Improvements' },
-    { id: 'simulation', label: 'IV. Simulation Lab' },
-    { id: 'competitors', label: 'V. Clay & Fin Audit' },
-    { id: 'plates', label: 'VI. 43 Plates' },
-    { id: 'specimen', label: 'VII. Style Specimen' }
+    { id: 'lead', num: 'TOP', label: 'Lead Story', type: 'executive' },
+    { id: 'lifecycle', num: 'I', label: 'Lifecycle', type: 'executive' },
+    { id: 'cim', num: 'II', label: 'CIM DAG', type: 'technical' },
+    { id: 'roadmap', num: 'III', label: 'Roadmap', type: 'executive' },
+    { id: 'simulation', num: 'IV', label: 'Eval Bench', type: 'technical' },
+    { id: 'competitors', num: 'V', label: 'Teardown', type: 'executive' },
+    { id: 'plates', num: 'VI', label: 'Plates (43)', type: 'technical' },
+    { id: 'specimen', num: 'VII', label: 'Specimen', type: 'technical' }
   ];
 
   const scrollTo = (id) => {
@@ -23,7 +25,7 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
   };
 
   return (
-    <header style={{ marginBottom: '2rem' }}>
+    <header style={{ marginBottom: '2.5rem' }}>
       {/* Top Metadata Navigation (Exact Daily Diff Sub-Bar) */}
       <div className="masthead-sub-bar">
         <div>
@@ -55,29 +57,63 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
       {/* The Double Rule */}
       <div className="masthead-double-rule"></div>
 
-      {/* Filter / Category Pills Control Bar */}
-      <div className="pills-control-bar">
-        <div className="pills-group">
-          <span className="pills-group-label">Section:</span>
-          {sections.map(s => (
-            <Button
-              key={s.id}
-              variant="pill"
-              active={activeSection === s.id}
-              onClick={() => scrollTo(s.id)}
-            >
-              {s.label}
-            </Button>
-          ))}
+      {/* Broadsheet Editorial Navigation Bar (Zero-Wrap Disciplined Index) */}
+      <nav className="editorial-nav-bar" aria-label="Broadsheet Department Index">
+        <div className="editorial-nav-sections">
+          <span className="editorial-nav-label">
+            <span>&sect;</span> DEPARTMENTS:
+          </span>
+          {sections.map(s => {
+            const isHighlighted = signal === 'all' || s.type === signal;
+            const isActive = activeSection === s.id;
+            return (
+              <button
+                key={s.id}
+                type="button"
+                className={`editorial-tab-btn ${isActive ? 'active' : ''}`}
+                style={{
+                  opacity: isHighlighted ? 1 : 0.45,
+                  transform: isActive ? 'translateY(-1px)' : 'none'
+                }}
+                onClick={() => scrollTo(s.id)}
+              >
+                <span className="editorial-tab-num">{s.num}</span>
+                <span>{s.label}</span>
+              </button>
+            );
+          })}
         </div>
 
-        <div className="pills-group">
-          <span className="pills-group-label">Signal:</span>
-          <Button variant="pill" active>ALL</Button>
-          <Button variant="pill">RECOMMENDED</Button>
-          <Button variant="pill">MUST-READ</Button>
+        <div className="editorial-signal-group">
+          <span className="editorial-signal-label">SIGNAL:</span>
+          <div className="editorial-segmented-control" role="group" aria-label="Filter sections by signal">
+            <button
+              type="button"
+              className={`editorial-segment-btn ${signal === 'all' ? 'active' : ''}`}
+              onClick={() => setSignal('all')}
+              title="Show all broadsheet sections"
+            >
+              ALL
+            </button>
+            <button
+              type="button"
+              className={`editorial-segment-btn ${signal === 'executive' ? 'active' : ''}`}
+              onClick={() => setSignal('executive')}
+              title="Highlight Executive Core sections"
+            >
+              CORE
+            </button>
+            <button
+              type="button"
+              className={`editorial-segment-btn ${signal === 'technical' ? 'active' : ''}`}
+              onClick={() => setSignal('technical')}
+              title="Highlight Technical Deep-Dive sections"
+            >
+              DEEP-DIVE
+            </button>
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
   );
 }
