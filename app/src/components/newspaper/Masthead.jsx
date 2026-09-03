@@ -37,7 +37,7 @@ export function Masthead() {
           {/* Social Profiles: Icons Only */}
           <div className="masthead-social-links">
             <a
-              href="https://github.com/harshit-vibes"
+              href="https://github.com/h1902y"
               target="_blank"
               rel="noreferrer"
               className="masthead-icon-link"
@@ -48,7 +48,7 @@ export function Masthead() {
             </a>
 
             <a
-              href="https://linkedin.com/in/harshitkrishnachoudhary"
+              href="https://linkedin.com/in/h1902y"
               target="_blank"
               rel="noreferrer"
               className="masthead-icon-link"

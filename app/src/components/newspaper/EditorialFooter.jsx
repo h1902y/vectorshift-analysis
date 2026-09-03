@@ -105,11 +105,11 @@ export function EditorialFooter() {
             {/* Candidate Connect Icons docked cleanly at base */}
             <div className="colophon-social-row" style={{ marginTop: '1.2rem' }}>
               <a
-                href="https://github.com/harshit-vibes"
+                href="https://github.com/h1902y"
                 target="_blank"
                 rel="noreferrer"
                 className="colophon-social-btn"
-                title="GitHub Profile (harshit-vibes)"
+                title="GitHub Profile (h1902y)"
                 aria-label="GitHub Profile"
               >
                 <GithubIcon size={13} />
@@ -117,11 +117,11 @@ export function EditorialFooter() {
               </a>
 
               <a
-                href="https://linkedin.com/in/harshitkrishnachoudhary"
+                href="https://linkedin.com/in/h1902y"
                 target="_blank"
                 rel="noreferrer"
                 className="colophon-social-btn"
-                title="LinkedIn Profile"
+                title="LinkedIn Profile (h1902y)"
                 aria-label="LinkedIn Profile"
               >
                 <LinkedinIcon size={13} />

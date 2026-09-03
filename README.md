@@ -3,7 +3,7 @@
 
 **Candidate**: Harshit Choudhary  
 **Email**: [contactingharshit@gmail.com](mailto:contactingharshit@gmail.com)  
-**Portfolio**: [h1902y.com](https://h1902y.com) · [LinkedIn](https://linkedin.com/in/harshitkrishnachoudhary) · [GitHub](https://github.com/h1902y)  
+**Portfolio**: [h1902y.com](https://h1902y.com) · [LinkedIn](https://linkedin.com/in/h1902y) · [GitHub](https://github.com/h1902y)  
 **Live Application**: [https://h1902y.github.io/vectorshift-analysis/](https://h1902y.github.io/vectorshift-analysis/)  
 **Publication-Grade PDF Report (20 Pages)**: [`VectorShift_Executive_Diligence_Report.pdf`](./VectorShift_Executive_Diligence_Report.pdf)
 
