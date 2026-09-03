@@ -1,5 +1,6 @@
 import React from 'react';
 import { Moon, Sun } from 'lucide-react';
+import { Button } from '../../design-system';
 
 export function Masthead({ theme, toggleTheme, activeSection, onSelectSection }) {
   const sections = [
@@ -9,7 +10,8 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
     { id: 'roadmap', label: 'III. 5 Improvements' },
     { id: 'simulation', label: 'IV. Simulation Lab' },
     { id: 'competitors', label: 'V. Clay & Fin Audit' },
-    { id: 'plates', label: 'VI. 43 Plates' }
+    { id: 'plates', label: 'VI. 43 Plates' },
+    { id: 'specimen', label: 'VII. Style Specimen' }
   ];
 
   const scrollTo = (id) => {
@@ -34,14 +36,13 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
         </div>
 
         <div className="masthead-right-actions">
-          <span>6 SECTIONS &middot; 43 PLATES</span>
-          <button 
+          <span>7 SECTIONS &middot; 43 PLATES &middot; DESIGN SPECIMEN</span>
+          <Button
+            variant="icon"
             onClick={toggleTheme}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--ink-secondary)', display: 'flex', alignItems: 'center' }}
-            title="Toggle Evening/Morning Edition"
-          >
-            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
-          </button>
+            title={theme === 'dark' ? 'Switch to Morning Edition (Warm Newsprint)' : 'Switch to Evening Edition (Dark Broadsheet)'}
+            icon={theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          />
         </div>
       </div>
 
@@ -59,21 +60,22 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
         <div className="pills-group">
           <span className="pills-group-label">Section:</span>
           {sections.map(s => (
-            <button
+            <Button
               key={s.id}
-              className={`pill-btn ${activeSection === s.id ? 'active' : ''}`}
+              variant="pill"
+              active={activeSection === s.id}
               onClick={() => scrollTo(s.id)}
             >
               {s.label}
-            </button>
+            </Button>
           ))}
         </div>
 
         <div className="pills-group">
           <span className="pills-group-label">Signal:</span>
-          <button className="pill-btn active">ALL</button>
-          <button className="pill-btn">RECOMMENDED</button>
-          <button className="pill-btn">MUST-READ</button>
+          <Button variant="pill" active>ALL</Button>
+          <Button variant="pill">RECOMMENDED</Button>
+          <Button variant="pill">MUST-READ</Button>
         </div>
       </div>
     </header>

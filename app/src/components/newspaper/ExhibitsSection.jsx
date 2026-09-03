@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SCREENSHOTS_CATALOG } from '../../data/screenshotsData';
-import { X, ZoomIn } from 'lucide-react';
-import { NewspaperSection, Pill } from '../../design-system';
+import { ZoomIn } from 'lucide-react';
+import { NewspaperSection, Button, ModalDialog } from '../../design-system';
 
 export function ExhibitsSection() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -24,18 +24,18 @@ export function ExhibitsSection() {
       kicker="SECTION VI &middot; FIELD EVIDENCE (TASK 1)"
       byline="FORTY-THREE EXPLORATION PLATES &middot; LIVE PLATFORM AUDIT &middot; RETRIEVAL INSPECTION"
       headline="Field evidence: Forty-three photographic plates of the live builder platform"
-      isLast={true}
     >
       {/* Filter Category Pills */}
       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
         {categories.map(c => (
-          <Pill
+          <Button
             key={c.id}
+            variant="pill"
             active={activeCategory === c.id}
             onClick={() => setActiveCategory(c.id)}
           >
             {c.label} ({c.count})
-          </Pill>
+          </Button>
         ))}
       </div>
 
@@ -46,6 +46,11 @@ export function ExhibitsSection() {
             key={item.id}
             className="plate-card"
             onClick={() => setSelectedExhibit(item)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') setSelectedExhibit(item);
+            }}
           >
             <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--paper-bg)' }}>
               <img
@@ -83,66 +88,26 @@ export function ExhibitsSection() {
         ))}
       </div>
 
-      {/* Modal */}
-      {selectedExhibit && (
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0, 0, 0, 0.88)',
-            backdropFilter: 'blur(6px)',
-            zIndex: 300,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '2rem'
-          }}
-          onClick={() => setSelectedExhibit(null)}
-        >
-          <div
-            style={{
-              background: 'var(--paper-bg)',
-              border: '2px solid var(--ink-rule-subtle)',
-              borderRadius: '4px',
-              maxWidth: '920px',
-              width: '100%',
-              maxHeight: '90vh',
-              overflowY: 'auto',
-              padding: '1.5rem',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)'
-            }}
-            onClick={e => e.stopPropagation()}
-          >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--ink-rule-subtle)', paddingBottom: '0.6rem', marginBottom: '0.8rem' }}>
-              <div>
-                <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--accent-burgundy)' }}>
-                  Photographic Plate #{selectedExhibit.id} &middot; Category: {selectedExhibit.cat.toUpperCase()}
-                </span>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--ink-primary)', marginTop: '0.2rem' }}>
-                  {selectedExhibit.title}
-                </h3>
-              </div>
-              <button
-                style={{ background: 'none', border: 'none', color: 'var(--ink-primary)', cursor: 'pointer' }}
-                onClick={() => setSelectedExhibit(null)}
-              >
-                <X size={20} />
-              </button>
-            </div>
-
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <img
-                src={`/screenshots/${selectedExhibit.name}`}
-                alt={selectedExhibit.title}
-                style={{ maxWidth: '100%', maxHeight: '60vh', objectFit: 'contain', border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px' }}
-              />
-              <p style={{ marginTop: '0.8rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--ink-secondary)', maxWidth: '680px', lineHeight: 1.45 }}>
-                {selectedExhibit.desc}
-              </p>
-            </div>
+      {/* Accessible Broadsheet Modal Primitive */}
+      <ModalDialog
+        isOpen={Boolean(selectedExhibit)}
+        onClose={() => setSelectedExhibit(null)}
+        title={selectedExhibit?.title || ''}
+        subtitle={selectedExhibit ? `Photographic Plate #${selectedExhibit.id} · Category: ${selectedExhibit.cat.toUpperCase()}` : ''}
+      >
+        {selectedExhibit && (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <img
+              src={`/screenshots/${selectedExhibit.name}`}
+              alt={selectedExhibit.title}
+              style={{ maxWidth: '100%', maxHeight: '60vh', objectFit: 'contain', border: '1px solid var(--ink-rule-subtle)', borderRadius: '3px' }}
+            />
+            <p style={{ marginTop: '0.9rem', textAlign: 'center', fontSize: '0.86rem', color: 'var(--ink-secondary)', maxWidth: '680px', lineHeight: 1.5 }}>
+              {selectedExhibit.desc}
+            </p>
           </div>
-        </div>
-      )}
+        )}
+      </ModalDialog>
     </NewspaperSection>
   );
 }

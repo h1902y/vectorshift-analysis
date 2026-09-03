@@ -9,6 +9,7 @@ export function JumpBar() {
     { id: 'simulation', label: 'IV. Simulation Studio' },
     { id: 'competitors', label: 'V. Clay & Fin Audit' },
     { id: 'plates', label: 'VI. 43 Evidence Plates' },
+    { id: 'specimen', label: 'VII. Style Specimen' },
   ];
 
   const scrollTo = (id) => {
@@ -30,6 +31,7 @@ export function JumpBar() {
         {sections.map(s => (
           <button
             key={s.id}
+            type="button"
             onClick={() => scrollTo(s.id)}
             style={{
               background: 'none',

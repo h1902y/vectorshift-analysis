@@ -1,5 +1,14 @@
 export { DESIGN_TOKENS } from './tokens';
 export { Pill } from './components/Pill';
+export { Button } from './components/Button';
+export { StatusBadge } from './components/StatusBadge';
+export { MetricCard } from './components/MetricCard';
+export { ScoreProgress } from './components/ScoreProgress';
+export { NoticeBanner } from './components/NoticeBanner';
+export { AccordionCard } from './components/AccordionCard';
+export { ModalDialog } from './components/ModalDialog';
+export { CodeBlock } from './components/CodeBlock';
+export { EditorialDivider } from './components/EditorialDivider';
 export { InlineCode } from './components/InlineCode';
 export { GraphicCard } from './components/GraphicCard';
 export { NewspaperSection } from './components/NewspaperSection';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { LIFECYCLE_STAGES, PRIVATE_MARKET_MOAT } from '../../data/assessmentData';
-import { NewspaperSection, GraphicCard, LedgerTable, BoxedCallout } from '../../design-system';
+import { NewspaperSection, GraphicCard, LedgerTable, BoxedCallout, StatusBadge } from '../../design-system';
 
 export function LifecycleStory() {
   const moatColumns = [
@@ -26,7 +26,7 @@ export function LifecycleStory() {
           figureTitle="PRIVATE MARKET AUDIT STANDARDS"
           caption="Non-negotiable verification benchmarks in private buyout transactions."
         >
-          <LedgerTable columns={moatColumns} data={PRIVATE_MARKET_MOAT} style={{ margin: 0 }} />
+          <LedgerTable columns={moatColumns} data={PRIVATE_MARKET_MOAT} compact style={{ margin: 0 }} />
         </GraphicCard>
 
         {/* Right Drop Cap Editorial Text */}
@@ -43,10 +43,11 @@ export function LifecycleStory() {
             {LIFECYCLE_STAGES.map((s, i) => (
               <BoxedCallout
                 key={s.id}
-                title={`Stage 0${i + 1} &middot; ${s.name}`}
+                title={s.name}
+                badge={<StatusBadge variant="burgundy">Stage 0{i + 1}</StatusBadge>}
                 style={{ padding: '0.8rem 1rem', marginBottom: 0 }}
               >
-                <div style={{ fontSize: '0.82rem', color: 'var(--ink-secondary)' }}>
+                <div style={{ fontSize: '0.82rem', color: 'var(--ink-secondary)', lineHeight: 1.5 }}>
                   {s.description}
                 </div>
               </BoxedCallout>

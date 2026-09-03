@@ -1,10 +1,7 @@
 import React from 'react';
-import { PERSONA_TRIANGULATION } from '../../data/assessmentData';
-import { NewspaperSection, GraphicCard, InlineCode } from '../../design-system';
+import { NewspaperSection, GraphicCard, InlineCode, BoxedCallout, StatusBadge } from '../../design-system';
 
 export function FrontPageStory() {
-  const { anchorICP, excludedPersonas } = PERSONA_TRIANGULATION;
-
   return (
     <NewspaperSection
       id="lead"
@@ -25,29 +22,33 @@ export function FrontPageStory() {
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
             {/* Anchor Box */}
-            <div style={{ background: 'var(--paper-bg)', borderLeft: '4px solid var(--accent-burgundy)', padding: '0.6rem 0.8rem', borderRadius: '2px', border: '1px solid var(--ink-rule-subtle)' }}>
-              <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.78rem', fontWeight: 800, color: 'var(--accent-burgundy)', textTransform: 'uppercase' }}>
-                Anchor ICP: The Forward-Deployed Operator
-              </div>
+            <BoxedCallout
+              title="Anchor ICP: The Forward-Deployed Operator"
+              accent="var(--accent-burgundy)"
+              badge={<StatusBadge variant="burgundy" dot>Primary Builder</StatusBadge>}
+              style={{ padding: '0.7rem 0.9rem', marginBottom: 0 }}
+            >
               <div style={{ fontSize: '0.75rem', color: 'var(--ink-secondary)', marginTop: '0.2rem' }}>
                 Builds on Visual DAG + Python SDK &middot; Ships White-Label Portals to Deal Teams.
               </div>
-            </div>
+            </BoxedCallout>
 
             {/* Hand-off Indicator */}
-            <div style={{ textAlign: 'center', color: 'var(--ink-muted)', fontSize: '0.7rem', fontWeight: 700 }}>
-              &darr; Packaging Layer Hand-Off (portal.firm.com)
+            <div style={{ textAlign: 'center', color: 'var(--ink-muted)', fontSize: '0.72rem', fontWeight: 700, padding: '0.1rem 0' }}>
+              &darr; Packaging Layer Hand-Off (<InlineCode>portal.firm.com</InlineCode>)
             </div>
 
             {/* End-User Box */}
-            <div style={{ background: 'var(--paper-bg)', borderLeft: '4px solid var(--accent-emerald)', padding: '0.6rem 0.8rem', borderRadius: '2px', border: '1px solid var(--ink-rule-subtle)' }}>
-              <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.78rem', fontWeight: 800, color: 'var(--accent-emerald)', textTransform: 'uppercase' }}>
-                End-User View: The Managing Director
-              </div>
+            <BoxedCallout
+              title="End-User View: The Managing Director"
+              accent="var(--accent-emerald)"
+              badge={<StatusBadge variant="emerald" dot>Consumer</StatusBadge>}
+              style={{ padding: '0.7rem 0.9rem', marginBottom: 0 }}
+            >
               <div style={{ fontSize: '0.75rem', color: 'var(--ink-secondary)', marginTop: '0.2rem' }}>
                 Consumes 1-Page Tear Sheets &middot; Zero Node Wiring &middot; Audit-Grade Citations.
               </div>
-            </div>
+            </BoxedCallout>
           </div>
         </GraphicCard>
 

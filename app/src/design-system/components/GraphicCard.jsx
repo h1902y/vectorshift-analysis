@@ -1,21 +1,45 @@
 import React from 'react';
 
-export function GraphicCard({ figureNumber, figureTitle, caption, children, style = {} }) {
+/**
+ * GraphicCard - Editorial graphic container for charts, DAG diagrams, and figures
+ */
+export function GraphicCard({
+  figureNumber,
+  figureTitle,
+  caption,
+  badge = null,
+  headerAction = null,
+  children,
+  style = {}
+}) {
   return (
     <div className="story-graphic-box" style={style}>
       <div style={{ width: '100%' }}>
-        {(figureNumber || figureTitle) && (
+        {(figureNumber || figureTitle || badge || headerAction) && (
           <div style={{ 
-            fontFamily: 'var(--font-sans)', 
-            fontSize: '0.72rem', 
-            fontWeight: 800, 
-            textTransform: 'uppercase', 
-            color: 'var(--accent-burgundy)', 
-            letterSpacing: '0.06em', 
-            marginBottom: '0.6rem' 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center', 
+            marginBottom: '0.75rem',
+            flexWrap: 'wrap',
+            gap: '0.5rem'
           }}>
-            {figureNumber && <span>{figureNumber} &middot; </span>}
-            {figureTitle}
+            <div style={{ 
+              fontFamily: 'var(--font-sans)', 
+              fontSize: '0.72rem', 
+              fontWeight: 800, 
+              textTransform: 'uppercase', 
+              color: 'var(--accent-burgundy)', 
+              letterSpacing: '0.06em',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem'
+            }}>
+              {figureNumber && <span>{figureNumber} &middot; </span>}
+              <span>{figureTitle}</span>
+              {badge}
+            </div>
+            {headerAction}
           </div>
         )}
 
@@ -27,8 +51,10 @@ export function GraphicCard({ figureNumber, figureTitle, caption, children, styl
             color: 'var(--ink-muted)', 
             fontStyle: 'italic', 
             textAlign: 'center', 
-            marginTop: '0.6rem',
-            lineHeight: 1.35
+            marginTop: '0.75rem',
+            lineHeight: 1.4,
+            borderTop: '1px solid var(--ink-rule-subtle)',
+            paddingTop: '0.5rem'
           }}>
             {caption}
           </div>

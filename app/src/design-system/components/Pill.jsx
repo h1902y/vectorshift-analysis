@@ -1,13 +1,20 @@
 import React from 'react';
+import { Button } from './Button';
 
-export function Pill({ children, active = false, onClick, style = {} }) {
+/**
+ * Pill - Classic Daily Diff filter pill selector (alias for Button variant="pill")
+ */
+export function Pill({ children, active = false, onClick, style = {}, className = '' }) {
   return (
-    <button
-      className={`pill-btn ${active ? 'active' : ''}`}
+    <Button
+      variant="pill"
+      size="sm"
+      active={active}
       onClick={onClick}
       style={style}
+      className={className}
     >
       {children}
-    </button>
+    </Button>
   );
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { IMPROVEMENTS_DATA } from '../../data/improvementsData';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { NewspaperSection, GraphicCard, LedgerTable, BoxedCallout } from '../../design-system';
+import { NewspaperSection, GraphicCard, LedgerTable, AccordionCard, StatusBadge } from '../../design-system';
 
 export function RoadmapStory() {
   const [expandedId, setExpandedId] = useState('sim-eval-bench');
@@ -37,7 +36,7 @@ export function RoadmapStory() {
           figureTitle="KEY VELOCITY GAINS (PRIORITY #1)"
           caption="Empirical before/after metrics from implementing local node caching and synthetic benchmarking."
         >
-          <LedgerTable columns={metricColumns} data={topMetricsData} style={{ margin: 0 }} />
+          <LedgerTable columns={metricColumns} data={topMetricsData} compact style={{ margin: 0 }} />
         </GraphicCard>
 
         {/* Right Drop Cap Editorial Text */}
@@ -52,43 +51,29 @@ export function RoadmapStory() {
         </div>
       </div>
 
-      {/* 5 Ranked Interventions */}
+      {/* 5 Ranked Interventions using AccordionCard */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
         {IMPROVEMENTS_DATA.map(item => {
           const isExpanded = expandedId === item.id;
           return (
-            <BoxedCallout key={item.id} style={{ marginBottom: 0 }}>
-              <div 
-                style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}
-                onClick={() => setExpandedId(isExpanded ? null : item.id)}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--accent-burgundy)' }}>
-                    Priority #{item.rank}
-                  </span>
-                  <strong style={{ fontSize: '1rem', color: 'var(--ink-primary)' }}>{item.title}</strong>
-                </div>
-
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontFamily: 'var(--font-sans)', fontSize: '0.74rem', color: 'var(--ink-muted)' }}>
-                  <span>Pillar: <strong>{item.lifecyclePillar}</strong></span>
-                  {isExpanded ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
-                </div>
-              </div>
-
-              {isExpanded && (
-                <div style={{ marginTop: '0.8rem', paddingTop: '0.8rem', borderTop: '1px solid var(--ink-rule-subtle)', fontSize: '0.82rem' }}>
-                  <p style={{ color: 'var(--ink-secondary)', marginBottom: '0.6rem' }}>
-                    <strong>The Friction:</strong> {item.friction}
-                  </p>
-                  <p style={{ color: 'var(--ink-secondary)', marginBottom: '0.6rem' }}>
-                    <strong>Root Cause:</strong> {item.rootCause}
-                  </p>
-                  <p style={{ color: 'var(--ink-primary)', whiteSpace: 'pre-line' }}>
-                    <strong>The Engineering Solution:</strong> {item.solution}
-                  </p>
-                </div>
-              )}
-            </BoxedCallout>
+            <AccordionCard
+              key={item.id}
+              title={item.title}
+              badge={<StatusBadge variant="burgundy">Priority #{item.rank}</StatusBadge>}
+              meta={<span>Pillar: <strong style={{ color: 'var(--ink-primary)' }}>{item.lifecyclePillar}</strong></span>}
+              expanded={isExpanded}
+              onToggle={() => setExpandedId(isExpanded ? null : item.id)}
+            >
+              <p style={{ color: 'var(--ink-secondary)', marginBottom: '0.6rem' }}>
+                <strong>The Friction:</strong> {item.friction}
+              </p>
+              <p style={{ color: 'var(--ink-secondary)', marginBottom: '0.6rem' }}>
+                <strong>Root Cause:</strong> {item.rootCause}
+              </p>
+              <p style={{ color: 'var(--ink-primary)', whiteSpace: 'pre-line' }}>
+                <strong>The Engineering Solution:</strong> {item.solution}
+              </p>
+            </AccordionCard>
           );
         })}
       </div>

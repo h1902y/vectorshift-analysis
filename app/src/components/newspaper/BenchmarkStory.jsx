@@ -1,6 +1,6 @@
 import React from 'react';
 import { STRATEGIC_PLAYBOOK } from '../../data/competitorData';
-import { NewspaperSection, GraphicCard, LedgerTable, BoxedCallout } from '../../design-system';
+import { NewspaperSection, GraphicCard, LedgerTable, BoxedCallout, StatusBadge } from '../../design-system';
 
 export function BenchmarkStory() {
   const competitorColumns = [
@@ -33,7 +33,7 @@ export function BenchmarkStory() {
           figureTitle="THREE VERTICAL VALUE PARADIGMS"
           caption="Pricing and operational alignment across modern enterprise agent platforms."
         >
-          <LedgerTable columns={competitorColumns} data={paradigmsData} style={{ margin: 0 }} />
+          <LedgerTable columns={competitorColumns} data={paradigmsData} compact style={{ margin: 0 }} />
         </GraphicCard>
 
         {/* Right Drop Cap Editorial Text */}
@@ -51,14 +51,16 @@ export function BenchmarkStory() {
       {/* 4 Strategic Borrowing Boxes */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
         {STRATEGIC_PLAYBOOK.map((item, idx) => (
-          <BoxedCallout key={idx} style={{ marginBottom: 0 }}>
-            <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--accent-burgundy)', marginBottom: '0.3rem' }}>
-              Borrowing #{idx + 1} &middot; {item.source}
-            </div>
-            <strong style={{ fontSize: '0.92rem', color: 'var(--ink-primary)', display: 'block', marginBottom: '0.3rem' }}>
+          <BoxedCallout 
+            key={idx} 
+            badge={<StatusBadge variant="burgundy">Lesson #{idx + 1}</StatusBadge>}
+            subtitle={item.source}
+            style={{ marginBottom: 0 }}
+          >
+            <strong style={{ fontSize: '0.94rem', color: 'var(--ink-primary)', display: 'block', marginBottom: '0.4rem', lineHeight: 1.3 }}>
               {item.lesson}
             </strong>
-            <p style={{ fontSize: '0.78rem', color: 'var(--ink-secondary)', lineHeight: 1.45 }}>
+            <p style={{ fontSize: '0.78rem', color: 'var(--ink-secondary)', lineHeight: 1.5 }}>
               {item.description}
             </p>
           </BoxedCallout>
