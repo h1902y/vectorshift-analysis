@@ -46,9 +46,17 @@ export class PydanticAgentRuntime {
     this.onNavigate = onNavigate;
     this.onRunSimulation = onRunSimulation;
 
-    // Read OpenRouter API configuration (Free Model: minimax/minimax-m3:free)
-    this.openRouterKey = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_OPENROUTER_API_KEY) || '';
+    // Read OpenRouter API configuration (injected via Vite env or optional local storage)
+    const envKey = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_OPENROUTER_API_KEY) || '';
+    const storedKey = (typeof window !== 'undefined' && (window.localStorage?.getItem('VITE_OPENROUTER_API_KEY') || window.localStorage?.getItem('OPENROUTER_API_KEY'))) || '';
+
+    this.openRouterKey = envKey || storedKey;
     this.openRouterModel = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_OPENROUTER_MODEL) || 'minimax/minimax-m3:free';
+    this.fallbackModels = [
+      'minimax/minimax-m3:free',
+      'nvidia/nemotron-3.5-lightning:free',
+      'liquid/lfm-2.5-2.6b:free'
+    ];
 
     this.mcpStatus = {
       serverName: "pydantic-mcp-v2.8",
@@ -56,7 +64,7 @@ export class PydanticAgentRuntime {
       latencyMs: 11.4,
       transport: "JSON-RPC 2.0 via In-Process Bus",
       toolsCount: MCP_TOOLS_REGISTRY.length,
-      llmModel: this.openRouterKey ? `${this.openRouterModel} (Free Tier)` : "Pydantic Deterministic Engine"
+      llmModel: this.openRouterKey ? `${this.openRouterModel} (Live Free Tier)` : "Pydantic Deterministic Engine"
     };
 
     this.kbStatus = {
@@ -181,70 +189,81 @@ export class PydanticAgentRuntime {
   async streamFromOpenRouter({ systemPrompt, userMessage, onStreamDelta }) {
     if (!this.openRouterKey) return null;
 
-    try {
-      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${this.openRouterKey}`,
-          "Content-Type": "application/json",
-          "HTTP-Referer": "https://vectorshift.ai",
-          "X-Title": "VectorShift Diff Pydantic Agent"
-        },
-        body: JSON.stringify({
-          model: this.openRouterModel,
-          messages: [
-            { role: "system", content: systemPrompt },
-            { role: "user", content: userMessage }
-          ],
-          stream: true,
-          max_tokens: 480,
-          temperature: 0.3
-        })
-      });
+    const modelsToTry = Array.from(new Set([this.openRouterModel, ...(this.fallbackModels || [])]));
 
-      if (!response.ok || !response.body) {
-        throw new Error(`OpenRouter HTTP ${response.status}`);
-      }
+    for (const model of modelsToTry) {
+      try {
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${this.openRouterKey}`,
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://h1902y.github.io/vectorshift-analysis/",
+            "X-Title": "VectorShift Executive Diligence Copilot"
+          },
+          body: JSON.stringify({
+            model,
+            messages: [
+              { role: "system", content: systemPrompt },
+              { role: "user", content: userMessage }
+            ],
+            stream: true,
+            max_tokens: 480,
+            temperature: 0.3
+          })
+        });
 
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder("utf-8");
-      let fullText = "";
-      let isDone = false;
+        if (!response.ok || !response.body) {
+          console.warn(`[OpenRouter ${model}] HTTP ${response.status}, attempting fallback model...`);
+          continue;
+        }
 
-      while (!isDone) {
-        const { value, done } = await reader.read();
-        if (done) break;
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let fullText = "";
+        let buffer = "";
+        let isDone = false;
 
-        const chunk = decoder.decode(value, { stream: true });
-        const lines = chunk.split("\n");
+        while (!isDone) {
+          const { value, done } = await reader.read();
+          if (done) break;
 
-        for (const line of lines) {
-          const cleanLine = line.trim();
-          if (cleanLine.startsWith("data: ")) {
-            const dataStr = cleanLine.replace("data: ", "").trim();
-            if (dataStr === "[DONE]") {
-              isDone = true;
-              break;
-            }
-            try {
-              const parsed = JSON.parse(dataStr);
-              const delta = parsed.choices?.[0]?.delta?.content || "";
-              if (delta) {
-                fullText += delta;
-                if (onStreamDelta) onStreamDelta(fullText);
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split("\n");
+          buffer = lines.pop() || "";
+
+          for (const line of lines) {
+            const cleanLine = line.trim();
+            if (!cleanLine || cleanLine.startsWith(":")) continue;
+            if (cleanLine.startsWith("data: ")) {
+              const dataStr = cleanLine.slice(6).trim();
+              if (dataStr === "[DONE]") {
+                isDone = true;
+                break;
               }
-            } catch {
-              // Ignore partial JSON chunks
+              try {
+                const parsed = JSON.parse(dataStr);
+                const delta = parsed.choices?.[0]?.delta?.content || "";
+                if (delta) {
+                  fullText += delta;
+                  if (onStreamDelta) onStreamDelta(fullText);
+                }
+              } catch {
+                // Ignore partial JSON
+              }
             }
           }
         }
-      }
 
-      return fullText.trim() || null;
-    } catch (err) {
-      console.warn("[OpenRouter Free Model Fallback]:", err.message);
-      return null; // Triggers deterministic fallback seamlessly
+        if (fullText.trim()) {
+          return fullText.trim();
+        }
+      } catch (err) {
+        console.warn(`[OpenRouter ${model} error]:`, err.message);
+      }
     }
+
+    return null; // Gracefully triggers deterministic local engine if all free models busy
   }
 
   /**
