@@ -31,16 +31,21 @@ export default function App() {
     setActiveSection(sectionId);
     const el = document.getElementById(sectionId);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const navOffset = 65;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = el.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - navOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
   const handleRunSimulation = () => {
-    setActiveSection('simulation');
-    const el = document.getElementById('simulation');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    handleNavigate('simulation');
     if (simulation && simulation.runBatchSimulation) {
       simulation.runBatchSimulation();
     }
@@ -61,7 +66,7 @@ export default function App() {
         {/* Sticky Sectional Navigation Bar (Scroll-Spy Active) */}
         <StickySectionNav 
           activeSection={activeSection}
-          onSelectSection={handleNavigate}
+          onActiveSectionChange={setActiveSection}
         />
 
         {/* The Continuous Editorial Broadsheet Flow */}
