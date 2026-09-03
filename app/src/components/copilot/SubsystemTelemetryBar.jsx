@@ -1,31 +1,14 @@
 import React from 'react';
-import { ShieldCheck, Database, Wrench, Sparkles, ExternalLink, Zap } from 'lucide-react';
+import { ShieldCheck, Database, Wrench, Sparkles, ExternalLink } from 'lucide-react';
 
 export function SubsystemTelemetryBar({ onOpenInspector, activeSubsystem }) {
-  const hasOpenRouter = typeof import.meta !== 'undefined' && Boolean(import.meta.env?.VITE_OPENROUTER_API_KEY);
-  const openRouterModel = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_OPENROUTER_MODEL) || 'minimax/minimax-m3:free';
-
   const isKbActive = activeSubsystem === 'KB_RETRIEVAL';
   const isSkillActive = activeSubsystem === 'SKILL_ACTIVATION';
   const isMcpActive = activeSubsystem === 'MCP_DISPATCH' || activeSubsystem === 'TOOL_EXECUTION';
-  const isSynthesisActive = activeSubsystem === 'SYNTHESIS';
 
   return (
     <div className="subsystem-telemetry-ribbon">
       <div className="telemetry-items-scroll">
-        {/* OpenRouter Free Model Active Badge */}
-        {hasOpenRouter && (
-          <div 
-            className={`telemetry-chip openrouter clickable ${isSynthesisActive ? 'active-pulse' : ''}`}
-            onClick={onOpenInspector}
-            title="Streaming Live from OpenRouter Free Model"
-          >
-            <Zap size={11} style={{ color: 'var(--accent-gold)' }} />
-            <span style={{ color: 'var(--accent-burgundy)', fontWeight: 800 }}>
-              {isSynthesisActive ? '● SYNTHESIZING: ' : 'OPENROUTER: '}{openRouterModel} (FREE TIER)
-            </span>
-          </div>
-        )}
 
         {/* Pydantic V2 Indicator */}
         <div 
