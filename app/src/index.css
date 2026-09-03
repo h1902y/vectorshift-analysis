@@ -164,10 +164,42 @@ body {
 .masthead-right-actions {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  gap: 0.6rem;
+}
+
+.masthead-social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.masthead-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--ink-rule-subtle);
+  background: var(--paper-surface);
+  color: var(--ink-secondary);
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.masthead-icon-link:hover {
+  background: var(--paper-surface-hover);
+  color: var(--ink-primary);
+  border-color: var(--ink-rule);
+  transform: translateY(-1px);
+}
+
+.masthead-action-separator {
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background-color: var(--ink-rule-subtle);
+  margin: 0 0.1rem;
 }
 
 /* The Main Newspaper Title */
