@@ -218,7 +218,7 @@ export function EditorialFooter() {
           </div>
 
           <div className="colophon-origin-seal">
-            Bengaluru &middot; San Francisco &middot; h1902y.com
+            Bengaluru, India &middot; h1902y.com
           </div>
 
           <div className="colophon-typesetting">
