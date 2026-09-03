@@ -51,20 +51,6 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
 
       {/* The Main Title */}
       <h1 className="masthead-main-title">Analysis of VectorShift</h1>
-      
-      {/* Prominent Author Byline & Date Bar */}
-      <div style={{
-        fontFamily: 'var(--font-sans)',
-        fontSize: '0.76rem',
-        fontWeight: 700,
-        letterSpacing: '0.08em',
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        color: 'var(--accent-burgundy)',
-        margin: '0.35rem 0 0.25rem 0'
-      }}>
-        By Harshit Krishna Choudhary &middot; Thursday, September 3, 2026 &middot; Platform Product Manager Assessment
-      </div>
 
       <div className="masthead-sub-motto">
         Architectural Evaluation &amp; Field Blueprint for Private Markets
