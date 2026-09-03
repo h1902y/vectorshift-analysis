@@ -64,13 +64,6 @@ export function ProfileCard({ className = '' }) {
         className={`h1902y-profile-back-bloom ${isHovered ? 'hovered' : ''}`}
       />
 
-      {/* ── TOP FLOATING STATUS CHIP ── */}
-      <div className="h1902y-profile-status-bar" style={{ justifyContent: 'flex-end' }}>
-        <div className="h1902y-status-chip telemetry">
-          <span>🇮🇳 Bengaluru, IST</span>
-        </div>
-      </div>
-
       {/* ── 3D TRANSFORMED CARD CONTAINER ── */}
       <div
         className="h1902y-profile-card-3d"

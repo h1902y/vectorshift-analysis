@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Mail, ArrowUp } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { EditorialDivider } from '../../design-system';
 import { ProfileCard } from '../ProfileCard';
 
@@ -37,10 +37,6 @@ export function EditorialFooter() {
         behavior: 'smooth'
       });
     }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const directoryClusters = [
@@ -146,16 +142,6 @@ export function EditorialFooter() {
                 <Globe size={13} />
                 <span>Website</span>
               </a>
-
-              <a
-                href="mailto:contactingharshit@gmail.com"
-                className="colophon-social-btn"
-                title="Email Candidate (contactingharshit@gmail.com)"
-                aria-label="Email Candidate"
-              >
-                <Mail size={13} />
-                <span>Email</span>
-              </a>
             </div>
           </div>
 
@@ -198,16 +184,6 @@ export function EditorialFooter() {
             </div>
 
             <ProfileCard />
-
-            <button
-              type="button"
-              className="colophon-top-btn"
-              onClick={scrollToTop}
-              title="Return to the top of the broadsheet"
-            >
-              <ArrowUp size={13} />
-              <span>Back to Top of Publication</span>
-            </button>
           </div>
         </div>
 
@@ -219,10 +195,6 @@ export function EditorialFooter() {
 
           <div className="colophon-origin-seal">
             Bengaluru, India &middot; h1902y.com
-          </div>
-
-          <div className="colophon-typesetting">
-            Typeset in Playfair Display, Inter, Newsreader &amp; JetBrains Mono
           </div>
         </div>
       </div>
