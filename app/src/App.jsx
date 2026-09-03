@@ -11,6 +11,7 @@ import { ExhibitsSection } from './components/newspaper/ExhibitsSection';
 import { DesignSpecimenSection } from './components/newspaper/DesignSpecimenSection';
 import { ResearchFooterGazette } from './components/newspaper/ResearchFooterGazette';
 import { EditorialFooter } from './components/newspaper/EditorialFooter';
+import { FloatingAgentOmnichat } from './components/copilot/FloatingAgentOmnichat';
 import { useSimulation } from './hooks/useSimulation';
 
 export default function App() {
@@ -26,8 +27,27 @@ export default function App() {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   };
 
+  const handleNavigate = (sectionId) => {
+    setActiveSection(sectionId);
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleRunSimulation = () => {
+    setActiveSection('simulation');
+    const el = document.getElementById('simulation');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    if (simulation && simulation.runBatchSimulation) {
+      simulation.runBatchSimulation();
+    }
+  };
+
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', position: 'relative' }}>
       {/* Exact Daily Diff Top Burgundy Stripe */}
       <div className="top-ribbon-stripe"></div>
 
@@ -41,7 +61,7 @@ export default function App() {
         {/* Sticky Sectional Navigation Bar (Scroll-Spy Active) */}
         <StickySectionNav 
           activeSection={activeSection}
-          onSelectSection={setActiveSection}
+          onSelectSection={handleNavigate}
         />
 
         {/* The Continuous Editorial Broadsheet Flow */}
@@ -77,6 +97,12 @@ export default function App() {
         {/* Editorial Colophon & Footer */}
         <EditorialFooter />
       </div>
+
+      {/* Pydantic End-to-End Observable AI Agent Omnichat */}
+      <FloatingAgentOmnichat 
+        onNavigate={handleNavigate}
+        onRunSimulation={handleRunSimulation}
+      />
     </div>
   );
 }
