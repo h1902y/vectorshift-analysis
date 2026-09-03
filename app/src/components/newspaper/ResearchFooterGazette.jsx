@@ -117,12 +117,19 @@ export function ResearchFooterGazette() {
   const [plateCategory, setPlateCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedExhibit, setSelectedExhibit] = useState(null);
+  const [platesPage, setPlatesPage] = useState(1);
+  const [literaturePage, setLiteraturePage] = useState(1);
 
   // Listen for global jump events to ensure correct sub-view is visible
   useEffect(() => {
     const handleShowCitation = (e) => {
       setActiveDimension('literature');
       if (e.detail?.id) {
+        const citIdx = CITATIONS_DATA.findIndex(c => c.id === e.detail.id);
+        if (citIdx !== -1) {
+          const targetPage = Math.floor(citIdx / LITERATURE_PER_PAGE) + 1;
+          setLiteraturePage(targetPage);
+        }
         setTimeout(() => {
           const el = document.getElementById(`citation-${e.detail.id}`);
           if (el) {
@@ -137,7 +144,13 @@ export function ResearchFooterGazette() {
     const handleShowPlate = (e) => {
       setActiveDimension('plates');
       if (e.detail?.id) {
-        const found = SCREENSHOTS_CATALOG.find(p => p.id === Number(e.detail.id));
+        const pId = Number(e.detail.id);
+        const plateIdx = SCREENSHOTS_CATALOG.findIndex(p => p.id === pId);
+        if (plateIdx !== -1) {
+          const targetPage = Math.floor(plateIdx / PLATES_PER_PAGE) + 1;
+          setPlatesPage(targetPage);
+        }
+        const found = SCREENSHOTS_CATALOG.find(p => p.id === pId);
         if (found) {
           setSelectedExhibit(found);
         }
@@ -189,6 +202,33 @@ export function ResearchFooterGazette() {
     return matchesCategory && matchesSearch;
   });
 
+  const scrollToArchiveTop = () => {
+    const el = document.getElementById('archive-controls-top');
+    if (el) {
+      const navOffset = 70;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = el.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - navOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Pagination Slicing
+  const totalPlatePages = Math.ceil(filteredPlates.length / PLATES_PER_PAGE) || 1;
+  const currentPlatePage = Math.min(platesPage, totalPlatePages);
+  const startPlateIdx = (currentPlatePage - 1) * PLATES_PER_PAGE;
+  const displayedPlates = filteredPlates.slice(startPlateIdx, startPlateIdx + PLATES_PER_PAGE);
+
+  const totalLiteraturePages = Math.ceil(filteredCitations.length / LITERATURE_PER_PAGE) || 1;
+  const currentLiteraturePage = Math.min(literaturePage, totalLiteraturePages);
+  const startLitIdx = (currentLiteraturePage - 1) * LITERATURE_PER_PAGE;
+  const displayedCitations = filteredCitations.slice(startLitIdx, startLitIdx + LITERATURE_PER_PAGE);
+
   const jumpToStory = (targetId) => {
     const el = document.getElementById(targetId);
     if (el) {
@@ -199,6 +239,11 @@ export function ResearchFooterGazette() {
   const jumpToCitationFromModal = (citationId) => {
     setSelectedExhibit(null);
     setActiveDimension('literature');
+    const citIdx = CITATIONS_DATA.findIndex(c => c.id === citationId);
+    if (citIdx !== -1) {
+      const targetPage = Math.floor(citIdx / LITERATURE_PER_PAGE) + 1;
+      setLiteraturePage(targetPage);
+    }
     setTimeout(() => {
       const el = document.getElementById(`citation-${citationId}`);
       if (el) {
@@ -278,7 +323,7 @@ export function ResearchFooterGazette() {
             <button
               type="button"
               className={`pill-btn ${activeDimension === 'literature' ? 'active' : ''}`}
-              onClick={() => { setActiveDimension('literature'); setSearchQuery(''); }}
+              onClick={() => { setActiveDimension('literature'); setLiteraturePage(1); setSearchQuery(''); }}
               style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
             >
               <BookOpen size={13} />
@@ -287,7 +332,7 @@ export function ResearchFooterGazette() {
             <button
               type="button"
               className={`pill-btn ${activeDimension === 'plates' ? 'active' : ''}`}
-              onClick={() => { setActiveDimension('plates'); setSearchQuery(''); }}
+              onClick={() => { setActiveDimension('plates'); setPlatesPage(1); setSearchQuery(''); }}
               style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
             >
               <Camera size={13} />
@@ -297,7 +342,9 @@ export function ResearchFooterGazette() {
         </div>
 
         <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.74rem', color: 'var(--ink-muted)' }}>
-          {activeDimension === 'literature' ? 'Displaying 12 Peer-Reviewed & Industry Findings' : 'Displaying 43 High-Res Platform Screencaps'}
+          {activeDimension === 'literature' 
+            ? `Displaying ${filteredCitations.length} Findings · Page ${currentLiteraturePage} of ${totalLiteraturePages}` 
+            : `Displaying ${filteredPlates.length} Exploration Plates · Page ${currentPlatePage} of ${totalPlatePages}`}
         </div>
       </div>
 
@@ -310,7 +357,7 @@ export function ResearchFooterGazette() {
               <button
                 key={cat.key}
                 className={`pill-btn ${citationFilter === cat.key ? 'active' : ''}`}
-                onClick={() => setCitationFilter(cat.key)}
+                onClick={() => { setCitationFilter(cat.key); setLiteraturePage(1); }}
               >
                 {cat.label} <span style={{ opacity: 0.7, fontSize: '0.72rem', marginLeft: '3px' }}>({cat.count})</span>
               </button>
@@ -320,7 +367,7 @@ export function ResearchFooterGazette() {
               <button
                 key={cat.id}
                 className={`pill-btn ${plateCategory === cat.id ? 'active' : ''}`}
-                onClick={() => setPlateCategory(cat.id)}
+                onClick={() => { setPlateCategory(cat.id); setPlatesPage(1); }}
               >
                 {cat.label} <span style={{ opacity: 0.7, fontSize: '0.72rem', marginLeft: '3px' }}>({cat.count})</span>
               </button>
@@ -335,7 +382,11 @@ export function ResearchFooterGazette() {
             type="text"
             placeholder={activeDimension === 'literature' ? "Search citations, authors, findings..." : "Search 43 plates by title or caption..."}
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setLiteraturePage(1);
+              setPlatesPage(1);
+            }}
             className="citations-search-input"
           />
         </div>
@@ -345,8 +396,9 @@ export function ResearchFooterGazette() {
       {/* DIMENSION 1: LITERATURE & PRIOR ART CARDS                                */}
       {/* ========================================================================= */}
       {activeDimension === 'literature' && (
-        <div className="citations-explainer-grid">
-          {filteredCitations.map((item) => {
+        <div>
+          <div className="citations-explainer-grid">
+            {displayedCitations.map((item) => {
             const mappedPlates = SCREENSHOTS_CATALOG.filter(p => getPlateCitations(p).includes(item.id));
             
             return (
@@ -516,6 +568,19 @@ export function ResearchFooterGazette() {
               </article>
             );
           })}
+          </div>
+
+          <EditorialPagination
+            currentPage={currentLiteraturePage}
+            totalPages={totalLiteraturePages}
+            totalItems={filteredCitations.length}
+            itemsPerPage={LITERATURE_PER_PAGE}
+            dimensionLabel="Literature Explainer Cards"
+            onPageChange={(page) => {
+              setLiteraturePage(page);
+              scrollToArchiveTop();
+            }}
+          />
         </div>
       )}
 
@@ -525,7 +590,7 @@ export function ResearchFooterGazette() {
       {activeDimension === 'plates' && (
         <div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.2rem' }}>
-            {filteredPlates.map(item => {
+            {displayedPlates.map(item => {
               const mappedCitations = getPlateCitations(item);
 
               return (
