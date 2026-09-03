@@ -13,7 +13,8 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
     { id: 'simulation', num: 'IV', label: 'Eval Bench', type: 'technical' },
     { id: 'competitors', num: 'V', label: 'Teardown', type: 'executive' },
     { id: 'plates', num: 'VI', label: 'Plates (43)', type: 'technical' },
-    { id: 'specimen', num: 'VII', label: 'Specimen', type: 'technical' }
+    { id: 'specimen', num: 'VII', label: 'Specimen', type: 'technical' },
+    { id: 'citations-gazette', num: 'VIII', label: 'Citations', type: 'executive' }
   ];
 
   const scrollTo = (id) => {
@@ -38,7 +39,7 @@ export function Masthead({ theme, toggleTheme, activeSection, onSelectSection })
         </div>
 
         <div className="masthead-right-actions">
-          <span>7 SECTIONS &middot; 43 PLATES &middot; DESIGN SPECIMEN</span>
+          <span>8 SECTIONS &middot; 43 PLATES &middot; 12 CITATIONS</span>
           <Button
             variant="icon"
             onClick={toggleTheme}

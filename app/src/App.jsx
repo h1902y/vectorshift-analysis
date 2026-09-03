@@ -8,6 +8,7 @@ import { InteractiveStudioSection } from './components/newspaper/InteractiveStud
 import { BenchmarkStory } from './components/newspaper/BenchmarkStory';
 import { ExhibitsSection } from './components/newspaper/ExhibitsSection';
 import { DesignSpecimenSection } from './components/newspaper/DesignSpecimenSection';
+import { ResearchFooterGazette } from './components/newspaper/ResearchFooterGazette';
 import { EditorialFooter } from './components/newspaper/EditorialFooter';
 import { useSimulation } from './hooks/useSimulation';
 
@@ -63,6 +64,9 @@ export default function App() {
 
           {/* Section VII: Living Design System Specimen & Token Architecture */}
           <DesignSpecimenSection />
+
+          {/* Section VIII: Notes, Prior Art & Empirical Citations Gazette */}
+          <ResearchFooterGazette />
         </main>
 
         {/* Editorial Colophon & Footer */}

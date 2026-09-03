@@ -1,6 +1,7 @@
 import React from 'react';
 import { STRATEGIC_PLAYBOOK } from '../../data/competitorData';
 import { NewspaperSection, GraphicCard, LedgerTable, BoxedCallout, StatusBadge } from '../../design-system';
+import { CitationLink } from './CitationLink';
 
 export function BenchmarkStory() {
   const competitorColumns = [
@@ -39,7 +40,7 @@ export function BenchmarkStory() {
         {/* Right Drop Cap Editorial Text */}
         <div className="story-editorial-text">
           <p className="daily-drop-cap">
-            Comparing VectorShift against the category kings of enterprise verticalization reveals critical playbook maneuvers. Clay dominates outbound sales by turning spreadsheet columns into enrichment waterfalls, while Intercom Fin dominates customer support by refusing to charge for tokens, instead aligning pricing directly with business outcomes at ninety-nine cents per resolved ticket.
+            Comparing VectorShift against the category kings of enterprise verticalization reveals critical playbook maneuvers. Clay dominates outbound sales by turning spreadsheet columns into enrichment waterfalls <CitationLink id="c2" />, while Intercom Fin dominates customer support by refusing to charge for tokens, instead aligning pricing directly with business outcomes at ninety-nine cents per resolved ticket <CitationLink id="c3" />.
           </p>
 
           <p>
@@ -53,7 +54,12 @@ export function BenchmarkStory() {
         {STRATEGIC_PLAYBOOK.map((item, idx) => (
           <BoxedCallout 
             key={idx} 
-            badge={<StatusBadge variant="burgundy">Lesson #{idx + 1}</StatusBadge>}
+            badge={
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <StatusBadge variant="burgundy">Lesson #{idx + 1}</StatusBadge>
+                {item.source.toLowerCase().includes('clay') ? <CitationLink id="c2" /> : item.source.toLowerCase().includes('fin') ? <CitationLink id="c3" /> : <CitationLink id="c5" />}
+              </div>
+            }
             subtitle={item.source}
             style={{ marginBottom: 0 }}
           >

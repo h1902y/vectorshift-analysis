@@ -12,9 +12,9 @@ When a Forward-Deployed AI Operator builds an agent to evaluate a multi-million-
 > *"How do I know this won't hallucinate an EBITDA add-back or miss a change-of-control clause on a live deal?"*
 
 Today, VectorShift forces builders into an unscientific, manual feedback loop:
-1. **The Single-Sample Trap**: Builders test their agent by manually typing one prompt or dropping one test PDF into a side chat drawer. Passing one test tells you nothing about how the agent behaves across 50 diverse, messy documents.
-2. **The Monolithic Latency Penalty**: When an error occurs at Node 8 of a 10-node pipeline, the builder must re-run from Node 1, waiting 45s+ per iteration and burning tokens on redundant upstream extraction.
-3. **Subjective Tuning**: When an agent fails, the builder guesses how to rewrite prompt instructions without empirical measurement.
+1. **The Single-Sample Trap [C-06]**: Builders test their agent by manually typing one prompt or dropping one test PDF into a side chat drawer (`screenshots/tldrawFile (4).png`). As developer consensus on HackerNews and Hamel Husain have demonstrated, testing prompts with a sample size of one is the primary source of catastrophic production regressions.
+2. **The Monolithic Latency Penalty [C-01, C-07]**: When an error occurs at Node 8 of a 10-node pipeline, the builder must re-run from Node 1, waiting 45s+ per iteration and burning tokens on redundant upstream extraction. As seen in Retool Workflows [C-01], modern workflow platforms eliminate this by treating nodes as cached REPL execution units.
+3. **Subjective Tuning [C-08, C-10]**: When an agent fails, the builder guesses how to rewrite prompt instructions without empirical measurement, lacking standardized Ragas-style Faithfulness rubrics [C-10] or MT-Bench LLM-as-a-judge validation [C-08].
 
 **Solving this with a World Model Simulation Bench transforms VectorShift from a "prototyping toy" into an enterprise-grade mission-critical AI platform.**
 

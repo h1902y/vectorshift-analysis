@@ -1,5 +1,6 @@
 import React from 'react';
 import { NewspaperSection, GraphicCard, InlineCode, BoxedCallout, StatusBadge } from '../../design-system';
+import { CitationLink } from './CitationLink';
 
 export function FrontPageStory() {
   return (
@@ -55,19 +56,19 @@ export function FrontPageStory() {
         {/* Right Editorial Text with Burgundy Drop Cap */}
         <div className="story-editorial-text">
           <p className="daily-drop-cap">
-            In private equity and corporate diligence, you might think an enterprise chatbot is the answer for accelerating deal velocity, but often, it is a sign you are fighting the realities of high finance. A Managing Director evaluating a seventy-million-dollar buyout will never configure an embedding dimension, wire a <InlineCode>Merge / Pick First</InlineCode> node, or tune a <InlineCode>voyageai/voyage-4-lite</InlineCode> threshold. Expecting them to do so guarantees catastrophic platform churn.
+            In private equity and corporate diligence, you might think an enterprise chatbot is the answer for accelerating deal velocity, but often, it is a sign you are fighting the realities of high finance. A Managing Director evaluating a seventy-million-dollar buyout will never configure an embedding dimension, wire a <InlineCode>Merge / Pick First</InlineCode> node, or tune a <InlineCode>voyageai/voyage-4-lite</InlineCode> threshold <CitationLink id="c12" />. Expecting them to do so guarantees catastrophic platform churn.
           </p>
 
           <p>
-            Understanding where the true builder sits is crucial. By relying on the <strong>Forward-Deployed AI Operator</strong>—whether an internal Solutions Architect, an enterprise AI Lead, or an automation consultant—enterprises unlock maximum leverage. This operator is technical enough to write Python transformations and regex validation schemas, but needs the ten-times speed of VectorShift's visual DAG to deconstruct messy document dossiers in days rather than quarters.
+            Understanding where the true builder sits is crucial. By relying on the <strong>Forward-Deployed AI Operator</strong>—whether an internal Solutions Architect, an enterprise AI Lead, or an automation consultant—enterprises unlock maximum leverage. This operator is technical enough to write Python transformations and regex validation schemas, but needs the ten-times speed of VectorShift's visual DAG to deconstruct messy document dossiers in days rather than quarters <CitationLink id="c5" />.
           </p>
 
           <p>
-            Most critically, VectorShift provides the <strong>packaging layer</strong> that pure developer libraries like LangGraph lack. With a single click, an operator publishes a locked-down, branded white-label portal (<InlineCode>portal.firm.com</InlineCode>) with SSO and RBAC. The deal team receives an intuitive web form, while the operator retains full governance over the underlying neural engine.
+            Most critically, VectorShift provides the <strong>packaging layer</strong> that pure developer libraries like LangGraph lack <CitationLink id="c5" />. With a single click, an operator publishes a locked-down, branded white-label portal (<InlineCode>portal.firm.com</InlineCode>) with SSO and RBAC. The deal team receives an intuitive web form, while the operator retains full governance over the underlying neural engine.
           </p>
 
           <p>
-            This separation of surfaces ensures VectorShift remains fast by default for builders, while delivering audit-grade, hallucination-free intelligence to the partnership.
+            This separation of surfaces ensures VectorShift remains fast by default for builders, while delivering audit-grade, hallucination-free intelligence to the partnership <CitationLink id="c3" /> <CitationLink id="c11" />.
           </p>
         </div>
       </div>

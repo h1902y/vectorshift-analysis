@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IMPROVEMENTS_DATA } from '../../data/improvementsData';
 import { NewspaperSection, GraphicCard, LedgerTable, AccordionCard, StatusBadge } from '../../design-system';
+import { CitationLink } from './CitationLink';
 
 export function RoadmapStory() {
   const [expandedId, setExpandedId] = useState('sim-eval-bench');
@@ -42,11 +43,11 @@ export function RoadmapStory() {
         {/* Right Drop Cap Editorial Text */}
         <div className="story-editorial-text">
           <p className="daily-drop-cap">
-            Studying where forward-deployed builders lose time reveals that eighty percent of developer hours are expended debugging edge cases rather than connecting nodes. Forcing an operator to re-run an entire ten-node pipeline from scratch when a downstream prompt fails burns flow state and token capital.
+            Studying where forward-deployed builders lose time reveals that eighty percent of developer hours are expended debugging edge cases rather than connecting nodes. Forcing an operator to re-run an entire ten-node pipeline from scratch when a downstream prompt fails burns flow state and token capital <CitationLink id="c1" /> <CitationLink id="c12" />.
           </p>
 
           <p>
-            The five engineering interventions below are ranked strictly by enterprise retention leverage, prioritizing developer velocity, compile-time validation, and domain-native financial accuracy.
+            The five engineering interventions below are ranked strictly by enterprise retention leverage, prioritizing developer velocity <CitationLink id="c1" />, compile-time validation <CitationLink id="c4" />, and domain-native financial accuracy <CitationLink id="c9" />.
           </p>
         </div>
       </div>
@@ -58,7 +59,14 @@ export function RoadmapStory() {
           return (
             <AccordionCard
               key={item.id}
-              title={item.title}
+              title={
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                  {item.title}
+                  {item.citations && item.citations.map(cId => (
+                    <CitationLink key={cId} id={cId} />
+                  ))}
+                </span>
+              }
               badge={<StatusBadge variant="burgundy">Priority #{item.rank}</StatusBadge>}
               meta={<span>Pillar: <strong style={{ color: 'var(--ink-primary)' }}>{item.lifecyclePillar}</strong></span>}
               expanded={isExpanded}
@@ -70,9 +78,20 @@ export function RoadmapStory() {
               <p style={{ color: 'var(--ink-secondary)', marginBottom: '0.6rem' }}>
                 <strong>Root Cause:</strong> {item.rootCause}
               </p>
-              <p style={{ color: 'var(--ink-primary)', whiteSpace: 'pre-line' }}>
+              <p style={{ color: 'var(--ink-primary)', whiteSpace: 'pre-line', marginBottom: '0.6rem' }}>
                 <strong>The Engineering Solution:</strong> {item.solution}
               </p>
+
+              {item.citations && item.citations.length > 0 && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap', paddingTop: '0.5rem', borderTop: '1px dashed var(--ink-rule-subtle)' }}>
+                  <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', textTransform: 'uppercase', color: 'var(--ink-muted)' }}>
+                    Empirical Citations in Footer Gazette:
+                  </span>
+                  {item.citations.map(cId => (
+                    <CitationLink key={cId} id={cId} />
+                  ))}
+                </div>
+              )}
             </AccordionCard>
           );
         })}

@@ -1081,3 +1081,283 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* ==========================================================================
+   RESEARCH CITATIONS GAZETTE & EXPLAINER BOXES
+   ========================================================================== */
+.citation-inline-link {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent-burgundy);
+  text-decoration: none;
+  vertical-align: super;
+  padding: 0 2px;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.citation-inline-link:hover {
+  background: var(--accent-burgundy);
+  color: #fff;
+  text-decoration: none;
+}
+
+.citations-gazette-section {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 3px double var(--ink-rule);
+}
+
+.citations-control-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ink-rule-subtle);
+}
+
+.citations-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.citations-search-box {
+  display: flex;
+  align-items: center;
+  background: var(--paper-surface);
+  border: 1px solid var(--ink-rule-subtle);
+  border-radius: 4px;
+  padding: 0.35rem 0.75rem;
+  min-width: 260px;
+}
+
+.citations-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--ink-primary);
+  width: 100%;
+}
+
+.citations-explainer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .citations-explainer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.citation-explainer-card {
+  background: var(--paper-surface);
+  border: 1px solid var(--ink-rule-subtle);
+  border-top: 3px solid var(--accent-burgundy);
+  border-radius: 3px;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.citation-explainer-card:hover {
+  border-color: var(--ink-rule);
+  border-top-color: var(--accent-burgundy);
+  box-shadow: var(--shadow-editorial);
+  transform: translateY(-2px);
+}
+
+@keyframes citationPulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 29, 59, 0.7);
+    border-color: var(--accent-burgundy);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(139, 29, 59, 0);
+    border-color: var(--accent-burgundy);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 29, 59, 0);
+  }
+}
+
+.citation-pulse-active {
+  animation: citationPulseGlow 1.2s ease-in-out 2;
+  border-color: var(--accent-burgundy) !important;
+  background-color: var(--paper-surface-hover) !important;
+}
+
+.citation-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.citation-badge-mono {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-burgundy);
+  background: var(--code-bg);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  border: 1px solid var(--code-border);
+}
+
+.citation-category-pill {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid;
+}
+
+.citation-source-link {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: color 0.15s ease;
+}
+
+.citation-source-link:hover {
+  color: var(--accent-burgundy);
+  text-decoration: underline;
+}
+
+.citation-card-title {
+  font-family: var(--font-serif-headline);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.citation-card-source {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.9rem;
+  font-style: italic;
+}
+
+.citation-finding-box {
+  background: var(--paper-bg);
+  border-left: 3px solid var(--ink-rule-subtle);
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: 0 3px 3px 0;
+}
+
+.citation-finding-label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--ink-muted);
+  margin-bottom: 0.3rem;
+}
+
+.citation-finding-quote {
+  font-family: var(--font-serif-body);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+  font-style: italic;
+}
+
+.citation-explainer-callout {
+  background: var(--paper-surface-alt);
+  border: 1px dashed var(--ink-rule-subtle);
+  border-radius: 3px;
+  padding: 0.85rem;
+  margin-bottom: 1.1rem;
+}
+
+.citation-explainer-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-burgundy);
+  margin-bottom: 0.4rem;
+}
+
+.citation-explainer-text {
+  font-family: var(--font-serif-body);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-primary);
+}
+
+.citation-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ink-rule-subtle);
+}
+
+.citation-jump-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-burgundy);
+  padding: 0;
+  transition: opacity 0.15s ease;
+}
+
+.citation-jump-btn:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.citation-tags-row {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.citation-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  background: var(--code-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+}

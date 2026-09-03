@@ -17,6 +17,7 @@ This folder contains the complete, modular work product for the **VectorShift Pr
 | [03_builder_improvements_ranked.md](file:///Users/hkc/Documents/vectorShift_harshit/submission/03_builder_improvements_ranked.md) | **Task 4** | Ranked top 5 improvements for the canvas/builder view (specific screens, friction points, and proposed fixes). |
 | [04_deep_dive_number_one.md](file:///Users/hkc/Documents/vectorShift_harshit/submission/04_deep_dive_number_one.md) | **Task 5** | Deep dive on the #1 priority: problem statement, engineering architecture, prototype mockup, and success metrics. |
 | [05_competitor_analysis.md](file:///Users/hkc/Documents/vectorShift_harshit/submission/05_competitor_analysis.md) | **Bonus** | Competitive teardown (e.g. Clay, Dify, Langflow), feature gap audit, and prioritization roadmap. |
+| [06_citations_and_evidence.md](file:///Users/hkc/Documents/vectorShift_harshit/submission/06_citations_and_evidence.md) | **Research Gazette** | 12 Explainer Boxes across Mobbin UI benchmarks, HackerNews debates, arXiv papers, and field audits. |
 | [master_deliverable.md](file:///Users/hkc/Documents/vectorShift_harshit/submission/master_deliverable.md) | **Final** | The consolidated 2-to-3-page deliverable ready for final submission. |
 
 ---
