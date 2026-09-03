@@ -14,14 +14,15 @@ import { PydanticAgentRuntime } from '../../lib/agent/pydanticAgentRuntime';
 import { SubsystemTelemetryBar } from './SubsystemTelemetryBar';
 import { AgentTraceView } from './AgentTraceView';
 import { AgentMarkdown } from './AgentMarkdown';
-import { PydanticSchemaModal } from './PydanticSchemaModal';
+import { SchemaInspectorView } from './SchemaInspectorView';
 
 export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [isPopOpen, setIsPopOpen] = useState(false);
-  const [isInspectorOpen, setIsInspectorOpen] = useState(false);
+  const [activeDialogTab, setActiveDialogTab] = useState('chat'); // 'chat' | 'schemas'
+  const [selectedSchemaKey, setSelectedSchemaKey] = useState('AgentResponsePayload');
   const [promptIndex, setPromptIndex] = useState(0);
   const [inputVal, setInputVal] = useState('');
 
@@ -69,7 +70,6 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
         setIsFocused(false);
         setIsHovered(false);
         setIsPopOpen(false);
-        setIsInspectorOpen(false);
       }
     };
 
@@ -202,12 +202,6 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
 
   return (
     <>
-      {/* ── PYDANTIC SCHEMA & MCP INSPECTOR MODAL ── */}
-      <PydanticSchemaModal
-        open={isInspectorOpen}
-        onClose={() => setIsInspectorOpen(false)}
-      />
-
       {/* ── PINNED BOTTOM FLOATING CONSOLE ── */}
       <div
         ref={containerRef}
@@ -381,18 +375,29 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                 </div>
               </div>
 
-              {/* Header Action Buttons */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              {/* In-Dialog Tabbed Navigation */}
+              <div className="omnichat-header-tab-bar">
                 <button
                   type="button"
-                  onClick={() => setIsInspectorOpen(true)}
-                  className="omnichat-header-action-btn"
-                  title="Inspect Pydantic V2 JSON-Schemas"
+                  className={`omnichat-header-tab-btn ${activeDialogTab === 'chat' ? 'active' : ''}`}
+                  onClick={() => setActiveDialogTab('chat')}
                 >
-                  <ShieldCheck size={12} style={{ color: 'var(--accent-gold)' }} />
-                  <span>Inspect Schemas</span>
+                  <Sparkles size={12} />
+                  <span>Chat &amp; Execution</span>
                 </button>
 
+                <button
+                  type="button"
+                  className={`omnichat-header-tab-btn ${activeDialogTab === 'schemas' ? 'active' : ''}`}
+                  onClick={() => setActiveDialogTab('schemas')}
+                >
+                  <ShieldCheck size={12} style={{ color: 'var(--accent-gold)' }} />
+                  <span>Schemas &amp; MCP (8)</span>
+                </button>
+              </div>
+
+              {/* Header Action Buttons */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <button
                   type="button"
                   onClick={handleReset}
@@ -417,7 +422,10 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
             {/* Subsystem Telemetry Ribbon (Always Visible) */}
             <SubsystemTelemetryBar 
               activeSubsystem={activeSubsystem}
-              onOpenInspector={() => setIsInspectorOpen(true)} 
+              onOpenInspector={(schemaKey) => {
+                if (typeof schemaKey === 'string') setSelectedSchemaKey(schemaKey);
+                setActiveDialogTab('schemas');
+              }} 
             />
 
             {/* Active MCP Tool Execution Toast Banner */}
@@ -428,8 +436,10 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
               </div>
             )}
 
-            {/* Modal Body / Chat Flow */}
-            <div className="omnichat-modal-body">
+            {activeDialogTab === 'chat' ? (
+              <>
+                {/* Modal Body / Chat Flow */}
+                <div className="omnichat-modal-body">
               {/* Empty State: 4 Guided Architectural Journeys */}
               {messages.length === 0 && (
                 <div className="guided-journeys-container">
@@ -601,8 +611,17 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                 </div>
               </div>
             </div>
+          </>
+        ) : (
+          <div className="omnichat-modal-body omnichat-modal-body--schemas" style={{ padding: '0.9rem 1.2rem', overflowY: 'auto', flex: 1 }}>
+            <SchemaInspectorView 
+              initialSchema={selectedSchemaKey}
+              onReturnToChat={() => setActiveDialogTab('chat')}
+            />
           </div>
-        </div>
+        )}
+      </div>
+    </div>
       )}
     </>
   );
