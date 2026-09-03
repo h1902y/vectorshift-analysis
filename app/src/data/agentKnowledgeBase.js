@@ -14,74 +14,74 @@ export const ROTATING_PROMPTS = [
 
 export const POPOVER_CATEGORIES = [
   {
-    index: "§ 01",
-    category: "CORE ARCHITECTURE & OPERATOR THESIS",
+    index: "01",
+    category: "STRATEGY & OPERATOR ICP",
     items: [
       {
         icon: "🏛️",
-        label: "Who is VectorShift really for? (Forward-Deployed Operator)",
-        tag: "PERSONA",
+        label: "Forward-Deployed Operator Thesis",
+        tag: "ICP",
         query: "Explain the Forward-Deployed AI Operator thesis and why it is VectorShift's true high-LTV ICP.",
         skill: "broadsheet-navigator",
         tool: "navigate_broadsheet",
         toolArgs: { section: "lead" }
       },
       {
+        icon: "🛡️",
+        label: "Private Market Workflow Moat",
+        tag: "MOAT",
+        query: "What is VectorShift's core moat in private markets and client white-label packaging?",
+        skill: "broadsheet-navigator",
+        tool: "navigate_broadsheet",
+        toolArgs: { section: "lifecycle" }
+      },
+    ]
+  },
+  {
+    index: "02",
+    category: "BLUEPRINT & FIELD EVALS",
+    items: [
+      {
         icon: "⚡",
-        label: "Explain the 3-stage CIM Deconstructor agentic DAG",
+        label: "3-Stage CIM Deconstructor DAG",
         tag: "WORKFLOW",
         query: "How does the CIM Deconstruction workflow execute across tables, footnotes, and memo synthesis?",
         skill: "cim-deconstructor",
         tool: "navigate_broadsheet",
         toolArgs: { section: "cim" }
       },
-    ]
-  },
-  {
-    index: "§ 02",
-    category: "FIELD PRIORITIZATION & EVAL BENCH (#1)",
-    items: [
       {
         icon: "🧪",
-        label: "Deep Dive on #1: The Evaluation & Simulation Test Bench",
+        label: "Evaluation & Simulation Bench (#1)",
         tag: "DEEP DIVE",
         query: "Why is the Evaluation and Simulation Test Bench the #1 builder intervention and how does it prevent single-sample deployment risk?",
         skill: "eval-bench-evaluator",
         tool: "run_monte_carlo",
         toolArgs: { runs: 50, edgeCases: true }
       },
+    ]
+  },
+  {
+    index: "03",
+    category: "BENCHMARKS & INTERACTIVE LAB",
+    items: [
       {
         icon: "📊",
-        label: "Benchmark: VectorShift vs. Clay vs. Fin (Gaps & Moats)",
-        tag: "COMPETITOR",
+        label: "Clay vs. Fin Comparative Audit",
+        tag: "BENCHMARK",
         query: "Provide the strategic competitor breakdown: VectorShift vs. Clay vs. Fin across extensibility, execution telemetry, and UX.",
         skill: "competitor-auditor",
         tool: "navigate_broadsheet",
         toolArgs: { section: "competitors" }
-      }
-    ]
-  },
-  {
-    index: "§ 03",
-    category: "INTERACTIVE SIMULATION LAB & PLATES",
-    items: [
+      },
       {
         icon: "🎛️",
-        label: "Run a 50-Run Monte Carlo Simulation in the Lab",
-        tag: "LAB TOOL",
+        label: "Execute 50-Run Simulation Lab",
+        tag: "TOOL",
         query: "Trigger a 50-sample Monte Carlo simulation run across clean and adversarial CIM documents.",
         skill: "eval-bench-evaluator",
         tool: "run_monte_carlo",
         toolArgs: { runs: 50, edgeCases: true }
-      },
-      {
-        icon: "📸",
-        label: "Inspect Builder Evidence: Explore the 43 Plates",
-        tag: "EVIDENCE",
-        query: "What specific UX and interaction friction points are documented in the 43 evidence plates?",
-        skill: "broadsheet-navigator",
-        tool: "navigate_broadsheet",
-        toolArgs: { section: "plates" }
       }
     ]
   }

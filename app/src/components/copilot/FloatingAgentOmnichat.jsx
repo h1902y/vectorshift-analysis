@@ -3,7 +3,6 @@ import {
   ArrowUp,
   Sparkles,
   Send,
-  CornerDownLeft,
   ArrowRight,
   RefreshCw,
   X,
@@ -211,12 +210,12 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
             {/* Popover Header */}
             <div className="blueprint-drawer-header">
               <span className="blueprint-header-title">
-                <Sparkles size={13} style={{ color: 'var(--accent-crimson)' }} />
-                <span>§ 00 &middot; PYDANTIC AGENT KNOWLEDGE GRAPH</span>
+                <Sparkles size={12} style={{ color: 'var(--accent-crimson)' }} />
+                <span>KNOWLEDGE GRAPH &middot; DIRECT DISPATCH</span>
               </span>
               <span className="blueprint-live-badge">
                 <span className="telemetry-dot-pulse green" />
-                <span>MCP CONNECTED</span>
+                <span>MCP ACTIVE</span>
               </span>
             </div>
 
@@ -242,11 +241,7 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
                           <span className="blueprint-item-text">{item.label}</span>
                         </div>
                         <div className="blueprint-item-right">
-                          <kbd className="blueprint-kbd">
-                            <span>↵</span>
-                            <span>Enter</span>
-                          </kbd>
-                          <CornerDownLeft size={12} className="blueprint-corner-arrow" />
+                          <kbd className="blueprint-kbd">↵</kbd>
                         </div>
                       </button>
                     ))}
@@ -257,8 +252,8 @@ export function FloatingAgentOmnichat({ onNavigate, onRunSimulation }) {
 
             {/* Telemetry Footnote */}
             <div className="blueprint-drawer-footer">
-              <span>⚡ Grounded in 519 Scraped Pages &middot; 43 Evidence Plates &middot; Pydantic V2 Contracts</span>
-              <span>1-Click Dispatch</span>
+              <span>519 Pages &middot; 43 Evidence Plates &middot; Pydantic V2</span>
+              <span>Click to query &rarr;</span>
             </div>
           </div>
         )}

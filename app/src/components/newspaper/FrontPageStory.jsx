@@ -1,5 +1,6 @@
 import React from 'react';
-import { NewspaperSection, GraphicCard, InlineCode, BoxedCallout, StatusBadge } from '../../design-system';
+import { Cpu, UserCheck, Lock, ArrowDown } from 'lucide-react';
+import { NewspaperSection, GraphicCard, InlineCode, StatusBadge } from '../../design-system';
 import { CitationLink } from './CitationLink';
 
 export function FrontPageStory() {
@@ -9,47 +10,77 @@ export function FrontPageStory() {
       kicker="TOP STORY &middot; THE STRATEGIC THESIS (TASK 2)"
       byline={
         <>
-          BY <strong>HARSHIT KRISHNA CHOUDHARY</strong> &middot; CANDIDATE FOR PRODUCT MANAGER (PLATFORM) &middot; <a href="#lead">DISCUSS &rsaquo;</a> &middot; &#9432;
+          BY <strong>HARSHIT CHOUDHARY</strong> &middot; CANDIDATE FOR PRODUCT MANAGER (PLATFORM) &middot; <a href="#lead">DISCUSS &rsaquo;</a> &middot; &#9432;
         </>
       }
       headline="The Forward-Deployed Operator: Why Private Equity cannot buy consumer chatbots"
     >
       <div className="story-grid-2col">
-        {/* Left Graphic Box */}
+        {/* Left Graphic Box: Persona Triangulation */}
         <GraphicCard
           figureNumber="FIG. 1"
           figureTitle="THE PERSONA TRIANGULATION MODEL"
-          caption="Architectural Duality: The Operator assembles the engine; the executive consumes the output."
+          caption="Architectural Duality: The Operator assembles the neural DAG engine; the deal executive consumes audit-grade output."
         >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-            {/* Anchor Box */}
-            <BoxedCallout
-              title="Anchor ICP: The Forward-Deployed Operator"
-              accent="var(--accent-burgundy)"
-              badge={<StatusBadge variant="burgundy" dot>Primary Builder</StatusBadge>}
-              style={{ padding: '0.7rem 0.9rem', marginBottom: 0 }}
-            >
-              <div style={{ fontSize: '0.75rem', color: 'var(--ink-secondary)', marginTop: '0.2rem' }}>
-                Builds on Visual DAG + Python SDK &middot; Ships White-Label Portals to Deal Teams.
+          <div className="persona-model-container">
+            {/* SURFACE 01: BUILDER PLATFORM */}
+            <div className="persona-tier-card persona-tier-card--builder">
+              <div className="persona-tier-header">
+                <div className="persona-tier-eyebrow">
+                  <Cpu size={12} className="persona-tier-icon" />
+                  <span>SURFACE 01 &middot; BUILDER PLATFORM</span>
+                </div>
+                <StatusBadge variant="burgundy" dot>Primary ICP</StatusBadge>
               </div>
-            </BoxedCallout>
 
-            {/* Hand-off Indicator */}
-            <div style={{ textAlign: 'center', color: 'var(--ink-muted)', fontSize: '0.72rem', fontWeight: 700, padding: '0.1rem 0' }}>
-              &darr; Packaging Layer Hand-Off (<InlineCode>portal.firm.com</InlineCode>)
+              <h4 className="persona-tier-title">The Forward-Deployed Operator</h4>
+              <div className="persona-tier-role">Solutions Architect &middot; AI Engineering Lead</div>
+
+              <div className="persona-spec-tags">
+                <span className="persona-spec-tag">Visual DAG Studio</span>
+                <span className="persona-spec-tag">Python SDK</span>
+                <span className="persona-spec-tag">Regex Schemas</span>
+              </div>
+
+              <p className="persona-tier-desc">
+                Constructs multi-node extraction graphs, configures custom embeddings, and ships white-label deal rooms in days.
+              </p>
             </div>
 
-            {/* End-User Box */}
-            <BoxedCallout
-              title="End-User View: The Managing Director"
-              accent="var(--accent-emerald)"
-              badge={<StatusBadge variant="emerald" dot>Consumer</StatusBadge>}
-              style={{ padding: '0.7rem 0.9rem', marginBottom: 0 }}
-            >
-              <div style={{ fontSize: '0.75rem', color: 'var(--ink-secondary)', marginTop: '0.2rem' }}>
-                Consumes 1-Page Tear Sheets &middot; Zero Node Wiring &middot; Audit-Grade Citations.
+            {/* HAND-OFF GATEWAY */}
+            <div className="persona-bridge-connector">
+              <div className="persona-bridge-line"></div>
+              <div className="persona-bridge-pill">
+                <Lock size={11} />
+                <span>PACKAGING LAYER: <code className="persona-bridge-code">portal.pe-firm.com</code></span>
+                <ArrowDown size={11} />
               </div>
-            </BoxedCallout>
+              <div className="persona-bridge-line"></div>
+            </div>
+
+            {/* SURFACE 02: CONSUMPTION INTERFACE */}
+            <div className="persona-tier-card persona-tier-card--consumer">
+              <div className="persona-tier-header">
+                <div className="persona-tier-eyebrow">
+                  <UserCheck size={12} className="persona-tier-icon" />
+                  <span>SURFACE 02 &middot; DEAL INTERFACE</span>
+                </div>
+                <StatusBadge variant="emerald" dot>End-User</StatusBadge>
+              </div>
+
+              <h4 className="persona-tier-title">The Managing Director</h4>
+              <div className="persona-tier-role">Private Equity Partner &middot; Investment Committee</div>
+
+              <div className="persona-spec-tags">
+                <span className="persona-spec-tag">1-Page Tear Sheets</span>
+                <span className="persona-spec-tag">Zero Node Wiring</span>
+                <span className="persona-spec-tag">Audit Provenance</span>
+              </div>
+
+              <p className="persona-tier-desc">
+                Interacts through locked-down executive forms with SSO. Consumes audit-grade citations without touching graph topology.
+              </p>
+            </div>
           </div>
         </GraphicCard>
 
